@@ -1,0 +1,268 @@
+{
+  "format": "malbolge-e15-natural-region-dispatch/1",
+  "preregistration_sha256": "06cd718190aae180cc060c6333a6c7ceb9539a3dfa4b2884e822111dc653c089",
+  "target": {
+    "status": "HALTED",
+    "halt_reason": "halt_opcode",
+    "steps": 139,
+    "stdout_hex": "8dc6",
+    "final_registers": {
+      "a": 2391493,
+      "c": 7174468,
+      "d": 142
+    },
+    "full_crazy_fill_completed": true,
+    "memory_cells": 14348907,
+    "offsets": [
+      0,
+      105,
+      116
+    ],
+    "first_entries": {
+      "0": {
+        "step": 1,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      "1": {
+        "step": 3,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 61
+      },
+      "2": {
+        "step": 79,
+        "a": 14348901,
+        "c": 14348902,
+        "d": 82,
+        "opcode": 70
+      }
+    },
+    "region_transitions": [
+      {
+        "step": 1,
+        "region": 0,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      {
+        "step": 3,
+        "region": 1,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 61
+      },
+      {
+        "step": 38,
+        "region": 0,
+        "a": 14348906,
+        "c": 59,
+        "d": 77,
+        "opcode": 85
+      },
+      {
+        "step": 79,
+        "region": 2,
+        "a": 14348901,
+        "c": 14348902,
+        "d": 82,
+        "opcode": 70
+      },
+      {
+        "step": 84,
+        "region": 0,
+        "a": 2391494,
+        "c": 0,
+        "d": 87,
+        "opcode": 27
+      },
+      {
+        "step": 89,
+        "region": 1,
+        "a": 2391494,
+        "c": 7174480,
+        "d": 92,
+        "opcode": 93
+      }
+    ],
+    "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+    "final_tape_sha256": "f86b2859d68b24e8297e300e3de50cf9683b99f08cdcf9dcd85ab7bb5949df32",
+    "load_seconds": 7.311533999999938
+  },
+  "target_pass": true,
+  "region1_offset_sensitivity_control": {
+    "status": "HALTED",
+    "halt_reason": "halt_opcode",
+    "steps": 19,
+    "stdout_hex": "",
+    "final_registers": {
+      "a": 7174456,
+      "c": 7174499,
+      "d": 75
+    },
+    "full_crazy_fill_completed": true,
+    "memory_cells": 14348907,
+    "offsets": [
+      0,
+      106,
+      116
+    ],
+    "first_entries": {
+      "0": {
+        "step": 1,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      "1": {
+        "step": 3,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 62
+      }
+    },
+    "region_transitions": [
+      {
+        "step": 1,
+        "region": 0,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      {
+        "step": 3,
+        "region": 1,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 62
+      }
+    ],
+    "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+    "final_tape_sha256": "de091dd1b10baac5dc099befe8ae47019159998f736372d01cd1869de46b6371",
+    "load_seconds": 11.970088900000064
+  },
+  "region1_control_pass": true,
+  "region2_offset_sensitivity_control": {
+    "status": "HALTED",
+    "halt_reason": "halt_opcode",
+    "steps": 198,
+    "stdout_hex": "8d",
+    "final_registers": {
+      "a": 4783023,
+      "c": 7174468,
+      "d": 7174600
+    },
+    "full_crazy_fill_completed": true,
+    "memory_cells": 14348907,
+    "offsets": [
+      0,
+      105,
+      117
+    ],
+    "first_entries": {
+      "0": {
+        "step": 1,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      "1": {
+        "step": 3,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 61
+      },
+      "2": {
+        "step": 79,
+        "a": 14348901,
+        "c": 14348902,
+        "d": 82,
+        "opcode": 71
+      }
+    },
+    "region_transitions": [
+      {
+        "step": 1,
+        "region": 0,
+        "a": 0,
+        "c": 0,
+        "d": 0,
+        "opcode": 40
+      },
+      {
+        "step": 3,
+        "region": 1,
+        "a": 0,
+        "c": 7174483,
+        "d": 42,
+        "opcode": 61
+      },
+      {
+        "step": 38,
+        "region": 0,
+        "a": 14348906,
+        "c": 59,
+        "d": 77,
+        "opcode": 85
+      },
+      {
+        "step": 79,
+        "region": 2,
+        "a": 14348901,
+        "c": 14348902,
+        "d": 82,
+        "opcode": 71
+      },
+      {
+        "step": 84,
+        "region": 0,
+        "a": 4783002,
+        "c": 0,
+        "d": 7174486,
+        "opcode": 27
+      },
+      {
+        "step": 86,
+        "region": 1,
+        "a": 4783002,
+        "c": 7174483,
+        "d": 7174488,
+        "opcode": 61
+      },
+      {
+        "step": 121,
+        "region": 0,
+        "a": 4783002,
+        "c": 59,
+        "d": 7174523,
+        "opcode": 85
+      },
+      {
+        "step": 186,
+        "region": 1,
+        "a": 4783023,
+        "c": 7174456,
+        "d": 7174588,
+        "opcode": 69
+      }
+    ],
+    "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+    "final_tape_sha256": "bdd21cc91bcdfb9e2bfd512b02c029742f2c3e75d1e49d897764883e81872dbc",
+    "load_seconds": 11.647308099999918
+  },
+  "region2_control_pass": true,
+  "null_hypothesis_rejected": true,
+  "claim": "NATURAL_RUNTIME_DISPATCH_E15_REGIONS_0_1_2=DEMONSTRATED"
+}

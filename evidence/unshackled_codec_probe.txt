@@ -1,0 +1,27 @@
+Unshackled 3^19 positional codec probe — 2026-09-12
+
+Decode used by bolge19:
+  op = (mem[c] + c + offs[c // 3^18]) mod 94
+
+Inverse implemented in unshackled_codec.py:
+  r = (op - c - offs[region]) mod 94
+  ASCII = r if r >= 33 else r + 94
+
+Static round-trip passed all eight valid opcodes at positions:
+  0, 1, 3^18-1, 3^18, 3^18+1,
+  2*3^18-1, 2*3^18, 3^19-1
+
+The same toy used for Classic was generated:
+  [IN, OUT, END] -> ubO
+
+Actual 3^19 runtime probe:
+  runtime: MALBOLGE-MB-DATABASE/runners/malbolge-unshackled/bolge19.exe
+  image: 3-byte file `ubO`
+  stdin: Z
+  stdout_hex: 5a
+  HALT steps=2 c=2 d=2 a=90
+
+Conclusion: the positional inverse works for Unshackled exactly as it does for
+Classic, with the region offset added. The 3^19 memory/crazy/rotation model is
+not thereby claimed equivalent to Classic; this probe demonstrates instruction
+encoding and a real cross-runtime toy execution.

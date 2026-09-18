@@ -1,0 +1,30 @@
+PITON <-> Malbolge Classic mirror — 2026-09-12
+
+Direction A, same byte-stream behavior:
+  PITON fixture: fixtures/piton_mirror.piton
+  Malbolge: formula-assembled [IN,OUT] x input_size, then END
+  Corpus sizes: 0, 1, 5, 7, 256 bytes
+  Binary corpus includes every byte 00..ff.
+
+Observed:
+    0 bytes: PITON=0 Malbolge=HALTED/1 parity=PASS
+    1 bytes: PITON=0 Malbolge=HALTED/3 parity=PASS
+    5 bytes: PITON=0 Malbolge=HALTED/11 parity=PASS
+    7 bytes: PITON=0 Malbolge=HALTED/15 parity=PASS
+  256 bytes: PITON=0 Malbolge=HALTED/513 parity=PASS
+  MIRROR PASS: PITON == Malbolge Classic
+
+Direction B, PITON executes Malbolge:
+  piton ejecutar pibolge.piton fixtures/classic_challenge.mal
+  stdin: Z
+  exit=0
+  stdout_hex=5a0a
+  stderr={"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+
+Pibolge's CLI deliberately appends 0a after non-empty Malbolge output; its
+reported semantic output_len is 1 and the computed byte is 5a ('Z').
+
+Claim scope: byte-exact parity of the bounded stream mirror over the recorded
+corpus, including all 256 byte values; plus a real PITON-hosted execution of
+the formula-generated Classic challenge. This is not full PITON semantics in
+Malbolge.

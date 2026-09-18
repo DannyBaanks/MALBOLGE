@@ -1,0 +1,19 @@
+{
+  "format": "malbolge-tape-epoch/1",
+  "state_size": 108,
+  "layout": {
+    "tape": 108
+  },
+  "program_bf": "fixtures\\tape_epoch_108.bf",
+  "program_mal": "fixtures\\tape_epoch_108.mal",
+  "program_sha256": "2cbaa5eb6787f467375128b24fef8dbd429d09b6b38b783e8a27fe720f9e9060",
+  "state_before_hex": "030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0",
+  "state_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0",
+  "expected_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0",
+  "state_before_sha256": "e0cfd9f04dd5ddba567539bcd694ce47cff5ac057cb56b80127fcd3a604f2a7a",
+  "state_after_sha256": "5536410ae65ae1ba088a53fd7d325c15935d3a70858d5294cae340fe2e6f6dfe",
+  "status": "HALTED",
+  "steps": 975,
+  "matches_reference": true,
+  "created_utc": "2026-09-12T15:24:34Z"
+}

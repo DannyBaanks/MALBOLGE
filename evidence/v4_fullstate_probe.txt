@@ -1,0 +1,23 @@
+V4 full-state probe — 2026-09-12
+
+State format: [pointer][cell0..cell7] = 9 bytes.
+
+Initial layout attempt (read all bytes into the BF tape, seek back, mutate,
+write) was rejected by the gate: returned bytes did not preserve the payload
+(first output: 2a542a5727572a542a). This negative result is preserved; the
+long cursor/layout lowering was not promoted.
+
+Accepted streaming layout:
+  , . , + . , . , . , . , . , . , .
+The epoch reads and emits all nine state bytes, incrementing byte 1. It does
+not claim arbitrary pointer indexing; this is a full-payload transport and a
+selected-slot transform.
+
+Observed:
+  000000000000000000 -> 000100000000000000
+  000100000000000000 -> 000200000000000000
+  000200000000000000 -> 000300000000000000
+
+Each epoch: status=HALTED, steps=76. Replay OK. Tamper REJECTS.
+Claim: DEMONSTRATED for complete 9-byte payload crossing.
+Not demonstrated: dynamic pointer-indexed cell mutation inside the epoch.

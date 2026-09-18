@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "malbolge-dimension-epoch-ladder/1",
+  "type": "object",
+  "required": [
+    "format",
+    "schema_version",
+    "profile",
+    "memory_model",
+    "source",
+    "dimensions",
+    "epochs",
+    "final_state_hex"
+  ],
+  "properties": {
+    "format": {"const": "malbolge-dimension-epoch-ladder/1"},
+    "schema_version": {"const": 1},
+    "profile": {"const": "TOY_ZERO_OFFSET"},
+    "memory_model": {"const": "SPARSE_TOY"},
+    "source": {"const": "ubO"},
+    "dimensions": {
+      "const": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    },
+    "epochs": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "schema_version", "profile", "memory_model", "dimension",
+          "memory_cells", "source", "source_sha256",
+          "state_before_hex", "state_after_hex",
+          "state_before_sha256", "state_after_sha256",
+          "decoded_ops", "status", "steps", "final_a", "final_c", "final_d"
+        ]
+      }
+    },
+    "final_state_hex": {"type": "string"}
+  }
+}

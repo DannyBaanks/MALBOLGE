@@ -1,0 +1,53 @@
+{
+  "format": "malbolge-episodic-v2/1",
+  "program": "+++-",
+  "register_start_hex": "30",
+  "register_final_hex": "32",
+  "created_utc": "2026-09-12T16:06:22Z",
+  "links": [
+    {
+      "op": "+",
+      "register_before": "30",
+      "register_after": "31",
+      "program_file": "fixtures/plus.mal",
+      "program_sha256": "fb76c178a0bf57ab1f7bc52e2979317e57daf3d11b158a9b9553b9016784cc80",
+      "stdin_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "status": "HALTED",
+      "steps": 12,
+      "stdout_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    {
+      "op": "+",
+      "register_before": "31",
+      "register_after": "32",
+      "program_file": "fixtures/plus.mal",
+      "program_sha256": "fb76c178a0bf57ab1f7bc52e2979317e57daf3d11b158a9b9553b9016784cc80",
+      "stdin_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "status": "HALTED",
+      "steps": 12,
+      "stdout_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "op": "+",
+      "register_before": "32",
+      "register_after": "33",
+      "program_file": "fixtures/plus.mal",
+      "program_sha256": "fb76c178a0bf57ab1f7bc52e2979317e57daf3d11b158a9b9553b9016784cc80",
+      "stdin_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "status": "HALTED",
+      "steps": 12,
+      "stdout_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+    },
+    {
+      "op": "-",
+      "register_before": "33",
+      "register_after": "32",
+      "program_file": "fixtures/minus.mal",
+      "program_sha256": "17ec22ca2236d6f4ea6f230f2b00f77ecd9d65295571bb421e349ddb4307060c",
+      "stdin_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "status": "HALTED",
+      "steps": 12,
+      "stdout_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    }
+  ]
+}

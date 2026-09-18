@@ -1,0 +1,32 @@
+{
+  "format": "malbolge-e15-natural-region-dispatch-preregistration/1",
+  "registered_on": "2026-09-12",
+  "provenance": "Confirmatory replication after an explicitly exploratory search of 128 length-3 suffixes. Candidate selection is not blind and the exploration is not counted as confirmatory evidence.",
+  "null_hypothesis": "H0: from standard a=c=d=0, the frozen source does not naturally execute in all three E15 regions and reproduce the registered terminal state under the frozen offset table.",
+  "alternative_hypothesis": "H1: after complete E15 crazy-fill, the frozen source naturally executes in regions 0,1,2 and reproduces the registered trace milestones and terminal state.",
+  "dimension": 15,
+  "memory_cells": 14348907,
+  "third": 4782969,
+  "offsets": [0, 105, 116],
+  "source": "(a`r:",
+  "source_hex": "286160723a",
+  "loaded_plan": [40, 4, 4, 23, 62],
+  "initial_state": {"a": 0, "c": 0, "d": 0, "stdin_hex": "", "max_steps": 512},
+  "success_criterion": {
+    "full_crazy_fill_completed": true,
+    "visited_regions": [0, 1, 2],
+    "first_region_entry_steps": {"0": 1, "1": 3, "2": 79},
+    "region2_entry_state": {"a": 14348901, "c": 14348902, "d": 82},
+    "status": "HALTED",
+    "halt_reason": "halt_opcode",
+    "steps": 139,
+    "final_registers": {"a": 2391493, "c": 7174468, "d": 142}
+  },
+  "baseline": "The frozen [IN,OUT,END] E15 full-VM report remains the region-0 baseline.",
+  "controls": [
+    "Change only region-1 offset 105 to 106; first dispatch in region 1 must differ from the frozen run.",
+    "Change only region-2 offset 116 to 117; first dispatch in region 2 must differ from the frozen run."
+  ],
+  "claim_rule": "NATURAL_RUNTIME_DISPATCH_E15_REGIONS_0_1_2=DEMONSTRATED only if every success criterion and both offset-sensitivity controls pass.",
+  "scope_exclusion": "No external E15 oracle exists. This tests the predeclared parametric VM profile and runtime use of each offset, not historical canonicality or other epochs."
+}

@@ -1,0 +1,10 @@
+{
+  "format": "malbolge-direct-encoding/1",
+  "generated_utc": "2026-09-12",
+  "files": {
+    "unshackled_codec.py": "ef30aaa75be45d12523eb7b7d4e3bd3376829b067db137ae412bf9ce17ff3d5a",
+    "test_unshackled_codec.py": "19d22a78719af8fe3808d0aa9953990762b856f905a9c47901fac911a82d9325",
+    "quijote_divergence.py": "ccf86ed5ba668afe90f9295feef1143b66fb2085dcccb90a8b1fb6bbe7900005",
+    "evidence/quijote_first_divergence_20260912.json": "b0d51afcd4975833e82668d0b810fbbb4b9daaef6f7a5dc66af831210f729834"
+  }
+}

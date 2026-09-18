@@ -1,0 +1,4 @@
+# Must be rejected: a loop re-executes cells, which v0 cannot lay out
+top:    in
+        out
+        goto top

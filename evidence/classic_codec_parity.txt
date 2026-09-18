@@ -1,0 +1,25 @@
+Classic positional codec parity — 2026-09-12
+
+Domain: all 8 valid Classic instructions at every one of the 59,049 memory
+positions. Property: decode(encode(opcode, position), position) == opcode.
+
+Command:
+  py classic_codec.py parity
+
+Observed:
+  PARITY PASS: 472392 positional instruction pairs
+
+Executable round trip:
+  plan     = in,out,rot,movd,opr,nop,end
+  source   = ub%%:?K
+  decoded  = 23,5,39,40,62,68,81
+  rebuilt  = ub%%:?K (byte exact)
+  run      = HALTED, 7 steps, stdout=b'Z'
+
+Tests:
+  py -m unittest test_classic_encoder.py test_classic_codec.py -v
+  Ran 7 tests in 0.297s — OK
+
+Claim scope: exhaustive parity of the static positional codec over valid
+Classic instructions. Dynamic execution after jumps and self-encryption is
+not a static decompilation claim; it requires runtime trace reconstruction.

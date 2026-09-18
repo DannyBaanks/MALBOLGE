@@ -1,0 +1,28 @@
+{
+  "format": "mbir-2l-fixtures/1",
+  "profile": "MBIR-2L-v0",
+  "value_model": "u8-mod-256",
+  "cases": [
+    {
+      "id": "arithmetic_add",
+      "intent": "2 + 3 -> byte 5",
+      "expected_output_bytes": [5]
+    },
+    {
+      "id": "byte_io",
+      "intent": "input byte passes to output",
+      "input_bytes": [90],
+      "expected_output_bytes": [90]
+    },
+    {
+      "id": "conditional",
+      "intent": "true branch emits 1, false branch emits 0",
+      "expected_outputs": [[1], [0]]
+    },
+    {
+      "id": "negative_unsupported",
+      "intent": "frontend features outside the closed profile are rejected",
+      "expected_status": "UNSUPPORTED"
+    }
+  ]
+}

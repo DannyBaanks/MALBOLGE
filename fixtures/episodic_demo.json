@@ -1,0 +1,51 @@
+{
+  "format": "malbolge-episodic/1",
+  "created_utc": "2026-09-12T12:12:47Z",
+  "macro_states": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "links": [
+    {
+      "macro_state_before": 0,
+      "macro_state_after": 1,
+      "program_file": "fixtures/hello.mal",
+      "program_sha256": "956c134aa67fa3fc049bda71406673050b64b18663ee603b16c7b694e13fe6c1",
+      "fuel": 200000,
+      "stdin_hex": "",
+      "stdin_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "HALTED",
+      "steps": 40,
+      "stdout_hex": "48656c6c6f20576f726c6421",
+      "stdout_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+    },
+    {
+      "macro_state_before": 1,
+      "macro_state_after": 2,
+      "program_file": "fixtures/echo12.mal",
+      "program_sha256": "12266a20b3085855158eacd08f5fbc00c06500d0ded33e21e0aeadc2e86a9408",
+      "fuel": 200000,
+      "stdin_hex": "48656c6c6f20576f726c6421",
+      "stdin_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "status": "HALTED",
+      "steps": 25,
+      "stdout_hex": "48656c6c6f20576f726c6421",
+      "stdout_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+    },
+    {
+      "macro_state_before": 2,
+      "macro_state_after": 3,
+      "program_file": "fixtures/echo12.mal",
+      "program_sha256": "12266a20b3085855158eacd08f5fbc00c06500d0ded33e21e0aeadc2e86a9408",
+      "fuel": 200000,
+      "stdin_hex": "48656c6c6f20576f726c6421",
+      "stdin_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
+      "status": "HALTED",
+      "steps": 25,
+      "stdout_hex": "48656c6c6f20576f726c6421",
+      "stdout_sha256": "7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069"
+    }
+  ]
+}

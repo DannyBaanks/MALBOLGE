@@ -1,0 +1,12 @@
+# Two different subroutines, each called once
+main:   in
+        call echo
+        in
+        call echo_twice
+        end
+echo:   out
+        ret
+echo_twice:
+        out
+        out
+        ret

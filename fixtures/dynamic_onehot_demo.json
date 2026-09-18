@@ -1,0 +1,95 @@
+{
+  "format": "malbolge-dynamic-onehot/1",
+  "payload_size": 17,
+  "program_sha256": "69dea1caef996dd802bc479ecf15232a999c3ad83e6a79c2d37ffe9fc9b36e27",
+  "records": [
+    {
+      "pointer": 0,
+      "before_hex": "00010a000b000c000d000e000f00100011",
+      "after_hex": "00000b000b000c000d000e000f00100011",
+      "expected_hex": "00000b000b000c000d000e000f00100011",
+      "before_sha256": "204204db6df8366f97a5071275d8d07abfdbdb504513bfaea73b7b5c5676b29a",
+      "after_sha256": "abd144b777e58993ab8ba69b040d621f6c5fc409e212c5f6ec70eafe629182b0",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 1,
+      "before_hex": "01000a010b000c000d000e000f00100011",
+      "after_hex": "01000a000c000c000d000e000f00100011",
+      "expected_hex": "01000a000c000c000d000e000f00100011",
+      "before_sha256": "2a7edb86e00e09b6460a0f85d7a670c6f2ba6f9647f59b52fc5886e5bd4fc78f",
+      "after_sha256": "1f6d9678f9266e053a728ddee44b17065d21fcfc7d974de8834c60e23a80eed0",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 2,
+      "before_hex": "02000a000b010c000d000e000f00100011",
+      "after_hex": "02000a000b000d000d000e000f00100011",
+      "expected_hex": "02000a000b000d000d000e000f00100011",
+      "before_sha256": "cea65ed8bce04be94f1004484d9a0e513e677380108196391962ab853c95004e",
+      "after_sha256": "81ffb0bced60c8b1e7ab492c8040c169c24b413f5e4eace473be65ea4767323f",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 3,
+      "before_hex": "03000a000b000c010d000e000f00100011",
+      "after_hex": "03000a000b000c000e000e000f00100011",
+      "expected_hex": "03000a000b000c000e000e000f00100011",
+      "before_sha256": "1cbac75707eb52f7692287842f802c8e1ddda054761b2809a09edbeeeeb51707",
+      "after_sha256": "fcc6137558302f61a8d5716b4b028fffc9f5b9005dc39de8d351b032c1837874",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 4,
+      "before_hex": "04000a000b000c000d010e000f00100011",
+      "after_hex": "04000a000b000c000d000f000f00100011",
+      "expected_hex": "04000a000b000c000d000f000f00100011",
+      "before_sha256": "95ea530153f770d9c22432f9439b6dcdb5e99e9a494bc2fe387f4f1bd25fdb8d",
+      "after_sha256": "86a2bd4bc0798dbdf527e8bcb4cc56d1bc76fefeaf2ca0071f02a74b3f7d9ec6",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 5,
+      "before_hex": "05000a000b000c000d000e010f00100011",
+      "after_hex": "05000a000b000c000d000e001000100011",
+      "expected_hex": "05000a000b000c000d000e001000100011",
+      "before_sha256": "a2a828b4d0a84f6cbc289702bd3f943c333547c74b1869a700929198b26138a9",
+      "after_sha256": "de652523f6ce45e250e2f9b221b691bcb67d68cd3368a22fbbfb22218100e788",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 6,
+      "before_hex": "06000a000b000c000d000e000f01100011",
+      "after_hex": "06000a000b000c000d000e000f00110011",
+      "expected_hex": "06000a000b000c000d000e000f00110011",
+      "before_sha256": "3e4c4a63d197e6c06fd7f8ec4664d6cc58e7d9b8f4056c52a4f0634117faffdc",
+      "after_sha256": "ca4253426055fe7772aa7797a13a623e9658b23f835608a9f3ae672553af33c8",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    },
+    {
+      "pointer": 7,
+      "before_hex": "07000a000b000c000d000e000f00100111",
+      "after_hex": "07000a000b000c000d000e000f00100012",
+      "expected_hex": "07000a000b000c000d000e000f00100012",
+      "before_sha256": "16bf1bbaf7da7ee253d905e43a08b78eba0cfd58fa7545b1186bbae28bf0a999",
+      "after_sha256": "df094301d26aec2c4d697b4740b7f1dde00f993ff887573b8b256f0a711fc1e5",
+      "status": "HALTED",
+      "steps": 233,
+      "matches_reference": true
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+importar sys
+
+datos = sys.stdin.buffer.read()
+sys.stdout.buffer.write(datos)

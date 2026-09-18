@@ -1,0 +1,9 @@
+# Same behaviour as Calcbolge's hand-made llamada_y_retorno.mal
+main:   in          # read first byte
+        out         # print it
+        call sub
+        out         # print what sub left in A
+        end
+sub:    in          # read second byte
+        out
+        ret

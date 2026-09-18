@@ -1,0 +1,53 @@
+{
+  "format": "malbolge-intermediate-full-vm-sweep-preregistration-addendum/1",
+  "registered_on": "2026-09-12",
+  "frozen_before_first_sweep_execution": true,
+  "amends": {
+    "file": "intermediate_vm_sweep_preregistration.json",
+    "sha256": "675ff9939019c9f3241215eae3c9a4939fe6fedad76f3faaf8e8324ffbf472bf"
+  },
+  "why": [
+    "The original run_intermediate_sweep.py never produced evidence and did not implement the preregistered gates.",
+    "It parsed the runner's RESULT line from stdout, but the runner prints it on stderr, so every field would have been missing.",
+    "It required fill to be the boolean True, but parsing yields the string 'true', so every gate would have failed.",
+    "It required visited == 0b111 for the TOY gate, which the preregistration does not require and a region-0 toy can never satisfy.",
+    "It ran offset controls for the TOY, which the preregistration does not register.",
+    "It invoked the extensionless runner path, which Windows CreateProcess does not resolve."
+  ],
+  "gates_unchanged": "TOY and REGIONAL_WITNESS success criteria, controls, failure policy, resource policy and claim rule are applied exactly as frozen in the amended file.",
+  "runner_changes": {
+    "semantics": "unchanged",
+    "reporting_added": [
+      "full out_hex",
+      "initial_tape_sha256",
+      "final_tape_sha256"
+    ],
+    "safety_added": [
+      "OUTPUT_CAP status instead of buffer overflow",
+      "program length >= 2 guard",
+      "empty stdin accepted",
+      "@path source form for programs above the argv limit"
+    ],
+    "build": "zig 0.16.0 build-exe -O ReleaseSafe -femit-bin=intermediate_vm_runner.exe"
+  },
+  "added_gate": {
+    "name": "IMPLEMENTATION_PARITY_Ek",
+    "status": "NOT in the original preregistration; added here before execution",
+    "reference": "reference_width_vm.py, written from the vm_profile block, with a different algorithm for the top k mod 5 crazy trits",
+    "rule": "Zig runner and reference agree on status, steps, stdout_hex, a, c, d, visited regions, first-entry step and opcode per visited region, initial_tape_sha256 and final_tape_sha256, for every run executed at width k",
+    "resource_rule": "If either implementation cannot allocate or times out, IMPLEMENTATION_PARITY_Ek is NOT_DEMONSTRATED, never FAIL"
+  },
+  "anchors_run_before_sweep": {
+    "zig_vs_frozen_python_e10_e15": "PASS 5/5 including full-tape hashes of 14,348,907 cells",
+    "zig_e10_vs_classic_oracle": "PASS 6/6 (3 executed identically, 3 rejected at load by both)",
+    "zig_e10_lutter_quine": "PASS: output byte-identical to the 59,852-byte source file, HALTED at 69,547,437 steps",
+    "reference_crazy_vs_trit_definition": "PASS 27,036 pairs, k=10..18",
+    "reference_e10_vs_classic_oracle": "PASS 3/3",
+    "reference_e15_vs_frozen_python": "PASS 4/4 including full-tape hashes"
+  },
+  "not_claimed": [
+    "external or canonical semantics for any k other than 10",
+    "that the regional witness selected at E15 is a natural-dispatch witness at other widths",
+    "independence stronger than: different language, different author, different top-chunk crazy algorithm"
+  ]
+}

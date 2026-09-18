@@ -1,0 +1,21 @@
+MBIR-2L parity probe
+Date: 2026-09-12
+
+Command:
+  py parity_mbir_2l.py
+
+Output:
+  {"cases": [{"befunge": {"output_bytes": [5], "stack": [], "status": "HALTED", "steps": 9, "trace": null}, "equal": true, "id": "arithmetic_add", "steps_equal": false, "wasm": {"output_bytes": [5], "stack": [], "status": "HALTED", "steps": 5, "trace": null}}], "format": "mbir-2l-parity/1", "status": "PASS"}
+
+Claim:
+  PASS for one equivalent arithmetic fixture. Semantic fields match; step
+  counts differ because the Befunge lowering contains explicit control jumps.
+  This is not universal language equivalence and does not cover memory, imports
+  or floats.
+
+SHA-256 of implementation inputs:
+  MBIR_2L_CONTRACT.md 5287038D766FC7059B23F8E4694715C649AB00495CAFBE73909775A4D2443CF8
+  mbir_2l.py 2B6AFC9A85D13EF2B08878764F7BCA52EB4BE4F8087F5C94FE344D1C77C53F4F
+  befunge_mbir.py CD8F6232BEB3C2786D0512F30C1F61B17EF3304EC733F99396ACFE985D0591E6
+  wasm_mbir.py 35E8DC8212A7C53F1C72AADE4BFD2909106D86B17D82099C32713802038D2500
+  parity_mbir_2l.py 3D78BCC788735FC55038F09EDDB93F76428202992A4E79D4D1382311B1D0AED9

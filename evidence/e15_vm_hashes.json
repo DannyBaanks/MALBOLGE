@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "e15_vm_probe.py": "ca31bf1c398da652ea34abcce97367a4224013a0966d295836e38036d6e7552d",
+    "test_e15_vm_probe.py": "846c834a529ede0aa8816ea6e2673a40ce7a6ecb75b483a6f37f4de8fd15fb64",
+    "evidence/e15_vm_preregistration.json": "6e9eb2537dd163c4cbc849a739f0d60f2047a561d3e5ad80685f21e8890e0ee3",
+    "evidence/e15_vm_report.json": "71b841de0829f20ca7d77e298a5efe3dee08e80d5331bcaf6948fdb5920299e3",
+    "evidence/E15_VM_EXPERIMENT.md": "5510fc18fa771de785819324f25293164f501f33ff1a6bbb430ca28d53e187ec"
+  },
+  "full_tape_hashes": {
+    "e10_initial": "c177c59e4e6621b749b25fb9985f7c41efbd3bd62756d434bf20c8496c034a7b",
+    "e10_final": "fe965367d6898f5fe25e8e204c04d3d865d8eac9302153ba4372e436bc8b283f",
+    "e15_initial": "64dddb6a3ad30122332426def7983474d528cb5e903efac17692e510546c5d84",
+    "e15_final": "453abfcd3e5eb2ae956c77e0b382678dd464420c472d9eec076af52496339868"
+  }
+}

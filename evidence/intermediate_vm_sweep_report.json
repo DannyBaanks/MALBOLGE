@@ -1,0 +1,1527 @@
+{
+  "format": "malbolge-intermediate-full-vm-sweep-report/1",
+  "preregistration_sha256": "675ff9939019c9f3241215eae3c9a4939fe6fedad76f3faaf8e8324ffbf472bf",
+  "addendum_sha256": "8f291e3b2badbe7173ae95c113056b457c8178c36a281c5b0637833f7c40d7e6",
+  "runner_sha256": "006b585706d41138c9f9813ef09a261a856ecdee3540d15d48956e35a34917f1",
+  "reference_sha256": "c12c35f973ea25b165af7ffd96b78ac74e1556d667ae405c6db90239738412df",
+  "widths": [
+    {
+      "dimension": 11,
+      "memory_cells": 177147,
+      "offsets": [
+        0,
+        171,
+        154
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          171,
+          154
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "c4687c7494e07debd9f3fd637d3ddfb34dc1bdd129a443c2417c7094898b35dc",
+          "final_tape_sha256": "0015a46ee198fc09398450a0eb90a3317528d86d44b52a79047b8a4f83c3c215",
+          "fill_completed": true,
+          "memory_cells": 177147,
+          "seconds": 0.02,
+          "raw": "RESULT status=HALTED dimension=11 memory_cells=177147 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=c4687c7494e07debd9f3fd637d3ddfb34dc1bdd129a443c2417c7094898b35dc final_tape_sha256=0015a46ee198fc09398450a0eb90a3317528d86d44b52a79047b8a4f83c3c215"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 11,
+          "memory_cells": 177147,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "c4687c7494e07debd9f3fd637d3ddfb34dc1bdd129a443c2417c7094898b35dc",
+          "final_tape_sha256": "0015a46ee198fc09398450a0eb90a3317528d86d44b52a79047b8a4f83c3c215",
+          "load_seconds": 0.06,
+          "seconds": 0.06
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          171,
+          154
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 223,
+          "stdout_hex": "00",
+          "a": 29535,
+          "c": 88588,
+          "d": 160,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 89
+            }
+          },
+          "initial_tape_sha256": "140a9564a4c1cd9c86d03bfce36db3b10be01d3b0562ae69a701b0de0d319e92",
+          "final_tape_sha256": "3cb6af80f92afa750ece781dba1c9eb128cb7abc9eba918fb37e5adf9565794c",
+          "fill_completed": true,
+          "memory_cells": 177147,
+          "seconds": 0.02,
+          "raw": "RESULT status=HALTED dimension=11 memory_cells=177147 fill=true steps=223 out_len=1 out0=0 out1=-1 a=29535 c=88588 d=160 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=89 e2op=0 out_hex=00 initial_tape_sha256=140a9564a4c1cd9c86d03bfce36db3b10be01d3b0562ae69a701b0de0d319e92 final_tape_sha256=3cb6af80f92afa750ece781dba1c9eb128cb7abc9eba918fb37e5adf9565794c"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 11,
+          "memory_cells": 177147,
+          "steps": 223,
+          "stdout_hex": "00",
+          "a": 29535,
+          "c": 88588,
+          "d": 160,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 89
+            }
+          },
+          "initial_tape_sha256": "140a9564a4c1cd9c86d03bfce36db3b10be01d3b0562ae69a701b0de0d319e92",
+          "final_tape_sha256": "3cb6af80f92afa750ece781dba1c9eb128cb7abc9eba918fb37e5adf9565794c",
+          "load_seconds": 0.05,
+          "seconds": 0.06
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 0.2
+    },
+    {
+      "dimension": 12,
+      "memory_cells": 531441,
+      "offsets": [
+        0,
+        120,
+        146
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          120,
+          146
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "8eee3d197742c7919c1b92e41a90742dd00fca79c41f168cfb65acfb2d6f5392",
+          "final_tape_sha256": "ceb4c6aa500e8c8deed4bcda205496aa354527a8c5ca21a8699c63635e0e7bc0",
+          "fill_completed": true,
+          "memory_cells": 531441,
+          "seconds": 0.02,
+          "raw": "RESULT status=HALTED dimension=12 memory_cells=531441 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=8eee3d197742c7919c1b92e41a90742dd00fca79c41f168cfb65acfb2d6f5392 final_tape_sha256=ceb4c6aa500e8c8deed4bcda205496aa354527a8c5ca21a8699c63635e0e7bc0"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 12,
+          "memory_cells": 531441,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "8eee3d197742c7919c1b92e41a90742dd00fca79c41f168cfb65acfb2d6f5392",
+          "final_tape_sha256": "ceb4c6aa500e8c8deed4bcda205496aa354527a8c5ca21a8699c63635e0e7bc0",
+          "load_seconds": 0.18,
+          "seconds": 0.18
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          120,
+          146
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 41,
+          "stdout_hex": "",
+          "a": 88583,
+          "c": 73,
+          "d": 80,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "77f9f70920497018b946e3d093b948c01a5e9f548b942452b083cffab9563e8e",
+          "final_tape_sha256": "4fd370183c367f3490d922732fbc6e383e61560d2e6391204cb5d89323015f69",
+          "fill_completed": true,
+          "memory_cells": 531441,
+          "seconds": 0.02,
+          "raw": "RESULT status=HALTED dimension=12 memory_cells=531441 fill=true steps=41 out_len=0 out0=-1 out1=-1 a=88583 c=73 d=80 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=2 e2op=0 out_hex=- initial_tape_sha256=77f9f70920497018b946e3d093b948c01a5e9f548b942452b083cffab9563e8e final_tape_sha256=4fd370183c367f3490d922732fbc6e383e61560d2e6391204cb5d89323015f69"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 12,
+          "memory_cells": 531441,
+          "steps": 41,
+          "stdout_hex": "",
+          "a": 88583,
+          "c": 73,
+          "d": 80,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "77f9f70920497018b946e3d093b948c01a5e9f548b942452b083cffab9563e8e",
+          "final_tape_sha256": "4fd370183c367f3490d922732fbc6e383e61560d2e6391204cb5d89323015f69",
+          "load_seconds": 0.18,
+          "seconds": 0.18
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 0.4
+    },
+    {
+      "dimension": 13,
+      "memory_cells": 1594323,
+      "offsets": [
+        0,
+        155,
+        122
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          155,
+          122
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "d1e7fd076f5bc7cdb4f3341063647fbe814cff78a82d898aa17818cb629b423e",
+          "final_tape_sha256": "8c5d95c1dd1b179f976181ef71e774a3aa9104523d5b288329d728762f99e408",
+          "fill_completed": true,
+          "memory_cells": 1594323,
+          "seconds": 0.04,
+          "raw": "RESULT status=HALTED dimension=13 memory_cells=1594323 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=d1e7fd076f5bc7cdb4f3341063647fbe814cff78a82d898aa17818cb629b423e final_tape_sha256=8c5d95c1dd1b179f976181ef71e774a3aa9104523d5b288329d728762f99e408"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 13,
+          "memory_cells": 1594323,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "d1e7fd076f5bc7cdb4f3341063647fbe814cff78a82d898aa17818cb629b423e",
+          "final_tape_sha256": "8c5d95c1dd1b179f976181ef71e774a3aa9104523d5b288329d728762f99e408",
+          "load_seconds": 0.54,
+          "seconds": 0.54
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          155,
+          122
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 407,
+          "stdout_hex": "00",
+          "a": 1594322,
+          "c": 797228,
+          "d": 330,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 11
+            }
+          },
+          "initial_tape_sha256": "434875f77e220447bd311d3b6ce331e667cb0a40fac19a3c973726e831970bd8",
+          "final_tape_sha256": "9cfd7b7145ac47b3b515ce6ccf17a95eb04b7187bc08641bf92ed973d7db85dd",
+          "fill_completed": true,
+          "memory_cells": 1594323,
+          "seconds": 0.04,
+          "raw": "RESULT status=HALTED dimension=13 memory_cells=1594323 fill=true steps=407 out_len=1 out0=0 out1=-1 a=1594322 c=797228 d=330 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=11 e2op=0 out_hex=00 initial_tape_sha256=434875f77e220447bd311d3b6ce331e667cb0a40fac19a3c973726e831970bd8 final_tape_sha256=9cfd7b7145ac47b3b515ce6ccf17a95eb04b7187bc08641bf92ed973d7db85dd"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 13,
+          "memory_cells": 1594323,
+          "steps": 407,
+          "stdout_hex": "00",
+          "a": 1594322,
+          "c": 797228,
+          "d": 330,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 11
+            }
+          },
+          "initial_tape_sha256": "434875f77e220447bd311d3b6ce331e667cb0a40fac19a3c973726e831970bd8",
+          "final_tape_sha256": "9cfd7b7145ac47b3b515ce6ccf17a95eb04b7187bc08641bf92ed973d7db85dd",
+          "load_seconds": 0.53,
+          "seconds": 0.54
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 1.2
+    },
+    {
+      "dimension": 14,
+      "memory_cells": 4782969,
+      "offsets": [
+        0,
+        166,
+        50
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          166,
+          50
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "e83c39c1f5213f4f8b62ed160803260bed3b45ffeca9ffc1c2d1373f73225462",
+          "final_tape_sha256": "b3a90f34c02c570c7ba8584255d8993cd180f4668b33adacaf5eb7821a24f072",
+          "fill_completed": true,
+          "memory_cells": 4782969,
+          "seconds": 0.09,
+          "raw": "RESULT status=HALTED dimension=14 memory_cells=4782969 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=e83c39c1f5213f4f8b62ed160803260bed3b45ffeca9ffc1c2d1373f73225462 final_tape_sha256=b3a90f34c02c570c7ba8584255d8993cd180f4668b33adacaf5eb7821a24f072"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 14,
+          "memory_cells": 4782969,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "e83c39c1f5213f4f8b62ed160803260bed3b45ffeca9ffc1c2d1373f73225462",
+          "final_tape_sha256": "b3a90f34c02c570c7ba8584255d8993cd180f4668b33adacaf5eb7821a24f072",
+          "load_seconds": 2.0,
+          "seconds": 2.04
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          166,
+          50
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 101,
+          "stdout_hex": "0000",
+          "a": 1594342,
+          "c": 36,
+          "d": 140,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "7e2ee8c6f928111af11473a37c7665a7181f3ac46aca5a63c707467d7852d8eb",
+          "final_tape_sha256": "fa2d8515877363a5b9a86a595dd87caa26e8fa1dd616278b3b4f1dea9ae9f4e8",
+          "fill_completed": true,
+          "memory_cells": 4782969,
+          "seconds": 0.09,
+          "raw": "RESULT status=HALTED dimension=14 memory_cells=4782969 fill=true steps=101 out_len=2 out0=0 out1=0 a=1594342 c=36 d=140 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=2 e2op=0 out_hex=0000 initial_tape_sha256=7e2ee8c6f928111af11473a37c7665a7181f3ac46aca5a63c707467d7852d8eb final_tape_sha256=fa2d8515877363a5b9a86a595dd87caa26e8fa1dd616278b3b4f1dea9ae9f4e8"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 14,
+          "memory_cells": 4782969,
+          "steps": 101,
+          "stdout_hex": "0000",
+          "a": 1594342,
+          "c": 36,
+          "d": 140,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "7e2ee8c6f928111af11473a37c7665a7181f3ac46aca5a63c707467d7852d8eb",
+          "final_tape_sha256": "fa2d8515877363a5b9a86a595dd87caa26e8fa1dd616278b3b4f1dea9ae9f4e8",
+          "load_seconds": 3.07,
+          "seconds": 3.11
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 5.3
+    },
+    {
+      "dimension": 15,
+      "memory_cells": 14348907,
+      "offsets": [
+        0,
+        105,
+        116
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          105,
+          116
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "64dddb6a3ad30122332426def7983474d528cb5e903efac17692e510546c5d84",
+          "final_tape_sha256": "453abfcd3e5eb2ae956c77e0b382678dd464420c472d9eec076af52496339868",
+          "fill_completed": true,
+          "memory_cells": 14348907,
+          "seconds": 0.27,
+          "raw": "RESULT status=HALTED dimension=15 memory_cells=14348907 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=64dddb6a3ad30122332426def7983474d528cb5e903efac17692e510546c5d84 final_tape_sha256=453abfcd3e5eb2ae956c77e0b382678dd464420c472d9eec076af52496339868"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 15,
+          "memory_cells": 14348907,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "64dddb6a3ad30122332426def7983474d528cb5e903efac17692e510546c5d84",
+          "final_tape_sha256": "453abfcd3e5eb2ae956c77e0b382678dd464420c472d9eec076af52496339868",
+          "load_seconds": 8.46,
+          "seconds": 8.56
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          105,
+          116
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 139,
+          "stdout_hex": "8dc6",
+          "a": 2391493,
+          "c": 7174468,
+          "d": 142,
+          "visited": [
+            0,
+            1,
+            2
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 61
+            },
+            "2": {
+              "step": 79,
+              "opcode": 70
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "f86b2859d68b24e8297e300e3de50cf9683b99f08cdcf9dcd85ab7bb5949df32",
+          "fill_completed": true,
+          "memory_cells": 14348907,
+          "seconds": 0.26,
+          "raw": "RESULT status=HALTED dimension=15 memory_cells=14348907 fill=true steps=139 out_len=2 out0=141 out1=198 a=2391493 c=7174468 d=142 visited=7 e0step=1 e1step=3 e2step=79 e0op=40 e1op=61 e2op=70 out_hex=8dc6 initial_tape_sha256=4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804 final_tape_sha256=f86b2859d68b24e8297e300e3de50cf9683b99f08cdcf9dcd85ab7bb5949df32"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 15,
+          "memory_cells": 14348907,
+          "steps": 139,
+          "stdout_hex": "8dc6",
+          "a": 2391493,
+          "c": 7174468,
+          "d": 142,
+          "visited": [
+            0,
+            1,
+            2
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 61
+            },
+            "2": {
+              "step": 79,
+              "opcode": 70
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "f86b2859d68b24e8297e300e3de50cf9683b99f08cdcf9dcd85ab7bb5949df32",
+          "load_seconds": 8.55,
+          "seconds": 8.65
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "PASS",
+      "natural_all_region": "DEMONSTRATED",
+      "control_region1": {
+        "offsets": [
+          0,
+          106,
+          116
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 19,
+          "stdout_hex": "",
+          "a": 7174456,
+          "c": 7174499,
+          "d": 75,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 62
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "de091dd1b10baac5dc099befe8ae47019159998f736372d01cd1869de46b6371",
+          "fill_completed": true,
+          "memory_cells": 14348907,
+          "seconds": 0.22,
+          "raw": "RESULT status=HALTED dimension=15 memory_cells=14348907 fill=true steps=19 out_len=0 out0=-1 out1=-1 a=7174456 c=7174499 d=75 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=62 e2op=0 out_hex=- initial_tape_sha256=4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804 final_tape_sha256=de091dd1b10baac5dc099befe8ae47019159998f736372d01cd1869de46b6371"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 15,
+          "memory_cells": 14348907,
+          "steps": 19,
+          "stdout_hex": "",
+          "a": 7174456,
+          "c": 7174499,
+          "d": 75,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 62
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "de091dd1b10baac5dc099befe8ae47019159998f736372d01cd1869de46b6371",
+          "load_seconds": 8.29,
+          "seconds": 8.4
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "control_region2": {
+        "offsets": [
+          0,
+          105,
+          117
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 198,
+          "stdout_hex": "8d",
+          "a": 4783023,
+          "c": 7174468,
+          "d": 7174600,
+          "visited": [
+            0,
+            1,
+            2
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 61
+            },
+            "2": {
+              "step": 79,
+              "opcode": 71
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "bdd21cc91bcdfb9e2bfd512b02c029742f2c3e75d1e49d897764883e81872dbc",
+          "fill_completed": true,
+          "memory_cells": 14348907,
+          "seconds": 0.22,
+          "raw": "RESULT status=HALTED dimension=15 memory_cells=14348907 fill=true steps=198 out_len=1 out0=141 out1=-1 a=4783023 c=7174468 d=7174600 visited=7 e0step=1 e1step=3 e2step=79 e0op=40 e1op=61 e2op=71 out_hex=8d initial_tape_sha256=4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804 final_tape_sha256=bdd21cc91bcdfb9e2bfd512b02c029742f2c3e75d1e49d897764883e81872dbc"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 15,
+          "memory_cells": 14348907,
+          "steps": 198,
+          "stdout_hex": "8d",
+          "a": 4783023,
+          "c": 7174468,
+          "d": 7174600,
+          "visited": [
+            0,
+            1,
+            2
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 61
+            },
+            "2": {
+              "step": 79,
+              "opcode": 71
+            }
+          },
+          "initial_tape_sha256": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+          "final_tape_sha256": "bdd21cc91bcdfb9e2bfd512b02c029742f2c3e75d1e49d897764883e81872dbc",
+          "load_seconds": 7.8,
+          "seconds": 7.9
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "control_region1_sensitive": true,
+      "control_region2_sensitive": true,
+      "implementation_parity": "PASS",
+      "runs_compared": 4,
+      "seconds": 34.5
+    },
+    {
+      "dimension": 16,
+      "memory_cells": 43046721,
+      "offsets": [
+        0,
+        110,
+        32
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          110,
+          32
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "82b95118549644eee5e83ea5a5ecec02bf07386df6763882837175d592cebcea",
+          "final_tape_sha256": "2f9f857c472ecd3c735eab6f0034ec20a5432d39c62b4691bee89dba30354534",
+          "fill_completed": true,
+          "memory_cells": 43046721,
+          "seconds": 0.76,
+          "raw": "RESULT status=HALTED dimension=16 memory_cells=43046721 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=82b95118549644eee5e83ea5a5ecec02bf07386df6763882837175d592cebcea final_tape_sha256=2f9f857c472ecd3c735eab6f0034ec20a5432d39c62b4691bee89dba30354534"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 16,
+          "memory_cells": 43046721,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "82b95118549644eee5e83ea5a5ecec02bf07386df6763882837175d592cebcea",
+          "final_tape_sha256": "2f9f857c472ecd3c735eab6f0034ec20a5432d39c62b4691bee89dba30354534",
+          "load_seconds": 32.78,
+          "seconds": 33.08
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          110,
+          32
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 58,
+          "stdout_hex": "00",
+          "a": 0,
+          "c": 21523396,
+          "d": 21523403,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "750450e5a877072053d832152cf3914290755cd3af14289e78bdd725a139c201",
+          "final_tape_sha256": "7b4d5aec3a9df000221a2b0b3326dd94f2b2977ff5baa4990a985394ef86040e",
+          "fill_completed": true,
+          "memory_cells": 43046721,
+          "seconds": 0.79,
+          "raw": "RESULT status=HALTED dimension=16 memory_cells=43046721 fill=true steps=58 out_len=1 out0=0 out1=-1 a=0 c=21523396 d=21523403 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=2 e2op=0 out_hex=00 initial_tape_sha256=750450e5a877072053d832152cf3914290755cd3af14289e78bdd725a139c201 final_tape_sha256=7b4d5aec3a9df000221a2b0b3326dd94f2b2977ff5baa4990a985394ef86040e"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 16,
+          "memory_cells": 43046721,
+          "steps": 58,
+          "stdout_hex": "00",
+          "a": 0,
+          "c": 21523396,
+          "d": 21523403,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "750450e5a877072053d832152cf3914290755cd3af14289e78bdd725a139c201",
+          "final_tape_sha256": "7b4d5aec3a9df000221a2b0b3326dd94f2b2977ff5baa4990a985394ef86040e",
+          "load_seconds": 34.2,
+          "seconds": 34.51
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 69.1
+    },
+    {
+      "dimension": 17,
+      "memory_cells": 129140163,
+      "offsets": [
+        0,
+        125,
+        62
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          125,
+          62
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "55004664917594630974e905e8751284871b32b7a3058e859e2b13aa05edf390",
+          "final_tape_sha256": "8bd34f7b0ba344f14bcdd8f845b6d7f76ae2315bb9796bf22c9684aa4d307a15",
+          "fill_completed": true,
+          "memory_cells": 129140163,
+          "seconds": 2.32,
+          "raw": "RESULT status=HALTED dimension=17 memory_cells=129140163 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=55004664917594630974e905e8751284871b32b7a3058e859e2b13aa05edf390 final_tape_sha256=8bd34f7b0ba344f14bcdd8f845b6d7f76ae2315bb9796bf22c9684aa4d307a15"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 17,
+          "memory_cells": 129140163,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "55004664917594630974e905e8751284871b32b7a3058e859e2b13aa05edf390",
+          "final_tape_sha256": "8bd34f7b0ba344f14bcdd8f845b6d7f76ae2315bb9796bf22c9684aa4d307a15",
+          "load_seconds": 113.94,
+          "seconds": 114.87
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          125,
+          62
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 319,
+          "stdout_hex": "00",
+          "a": 129140162,
+          "c": 64570096,
+          "d": 208,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 41
+            }
+          },
+          "initial_tape_sha256": "d09478e27aa119a80abe169ec03413b3de957e022b29fea20f9a138653f2f3c0",
+          "final_tape_sha256": "89d2bc49ab7a98544ec85f3d34b63c8f6c49f9227aedace1b20f737a424649f9",
+          "fill_completed": true,
+          "memory_cells": 129140163,
+          "seconds": 2.26,
+          "raw": "RESULT status=HALTED dimension=17 memory_cells=129140163 fill=true steps=319 out_len=1 out0=0 out1=-1 a=129140162 c=64570096 d=208 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=41 e2op=0 out_hex=00 initial_tape_sha256=d09478e27aa119a80abe169ec03413b3de957e022b29fea20f9a138653f2f3c0 final_tape_sha256=89d2bc49ab7a98544ec85f3d34b63c8f6c49f9227aedace1b20f737a424649f9"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 17,
+          "memory_cells": 129140163,
+          "steps": 319,
+          "stdout_hex": "00",
+          "a": 129140162,
+          "c": 64570096,
+          "d": 208,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 41
+            }
+          },
+          "initial_tape_sha256": "d09478e27aa119a80abe169ec03413b3de957e022b29fea20f9a138653f2f3c0",
+          "final_tape_sha256": "89d2bc49ab7a98544ec85f3d34b63c8f6c49f9227aedace1b20f737a424649f9",
+          "load_seconds": 122.76,
+          "seconds": 123.62
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 243.1
+    },
+    {
+      "dimension": 18,
+      "memory_cells": 387420489,
+      "offsets": [
+        0,
+        170,
+        152
+      ],
+      "toy": {
+        "offsets": [
+          0,
+          170,
+          152
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "ce3f6dbb367203484bcec8e3d054d418c6bd48fa493789388756854eac24da1f",
+          "final_tape_sha256": "3d3e57e7902c4785fd499c8c9eb5bd136ca963db3d4920a2ad83a9da1155748e",
+          "fill_completed": true,
+          "memory_cells": 387420489,
+          "seconds": 14.7,
+          "raw": "RESULT status=HALTED dimension=18 memory_cells=387420489 fill=true steps=3 out_len=1 out0=90 out1=-1 a=90 c=2 d=2 visited=1 e0step=1 e1step=0 e2step=0 e0op=23 e1op=0 e2op=0 out_hex=5a initial_tape_sha256=ce3f6dbb367203484bcec8e3d054d418c6bd48fa493789388756854eac24da1f final_tape_sha256=3d3e57e7902c4785fd499c8c9eb5bd136ca963db3d4920a2ad83a9da1155748e"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 18,
+          "memory_cells": 387420489,
+          "steps": 3,
+          "stdout_hex": "5a",
+          "a": 90,
+          "c": 2,
+          "d": 2,
+          "visited": [
+            0
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 23
+            }
+          },
+          "initial_tape_sha256": "ce3f6dbb367203484bcec8e3d054d418c6bd48fa493789388756854eac24da1f",
+          "final_tape_sha256": "3d3e57e7902c4785fd499c8c9eb5bd136ca963db3d4920a2ad83a9da1155748e",
+          "load_seconds": 290.1,
+          "seconds": 292.21
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "toy_gate": "PASS",
+      "witness": {
+        "offsets": [
+          0,
+          170,
+          152
+        ],
+        "zig": {
+          "status": "HALTED",
+          "steps": 189,
+          "stdout_hex": "00",
+          "a": 64570092,
+          "c": 193710265,
+          "d": 193710418,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "b4c5cd9242fe640bdcf5545cc9e98e3065461c1faf85fb557554d97497f65e7d",
+          "final_tape_sha256": "c67e055a07f3916efe0df3b915848e6316a86513914c2391053fe7a35cdff768",
+          "fill_completed": true,
+          "memory_cells": 387420489,
+          "seconds": 9.44,
+          "raw": "RESULT status=HALTED dimension=18 memory_cells=387420489 fill=true steps=189 out_len=1 out0=0 out1=-1 a=64570092 c=193710265 d=193710418 visited=3 e0step=1 e1step=3 e2step=0 e0op=40 e1op=2 e2op=0 out_hex=00 initial_tape_sha256=b4c5cd9242fe640bdcf5545cc9e98e3065461c1faf85fb557554d97497f65e7d final_tape_sha256=c67e055a07f3916efe0df3b915848e6316a86513914c2391053fe7a35cdff768"
+        },
+        "reference": {
+          "status": "HALTED",
+          "dimension": 18,
+          "memory_cells": 387420489,
+          "steps": 189,
+          "stdout_hex": "00",
+          "a": 64570092,
+          "c": 193710265,
+          "d": 193710418,
+          "visited": [
+            0,
+            1
+          ],
+          "first_entries": {
+            "0": {
+              "step": 1,
+              "opcode": 40
+            },
+            "1": {
+              "step": 3,
+              "opcode": 2
+            }
+          },
+          "initial_tape_sha256": "b4c5cd9242fe640bdcf5545cc9e98e3065461c1faf85fb557554d97497f65e7d",
+          "final_tape_sha256": "c67e055a07f3916efe0df3b915848e6316a86513914c2391053fe7a35cdff768",
+          "load_seconds": 242.0,
+          "seconds": 244.26
+        },
+        "parity": {
+          "verdict": "PASS",
+          "fields": [
+            "status",
+            "steps",
+            "stdout_hex",
+            "a",
+            "c",
+            "d",
+            "visited",
+            "first_entries",
+            "initial_tape_sha256",
+            "final_tape_sha256"
+          ],
+          "differences": []
+        }
+      },
+      "witness_gate": "FAIL",
+      "natural_all_region": "NOT_DEMONSTRATED",
+      "implementation_parity": "PASS",
+      "runs_compared": 2,
+      "seconds": 560.6
+    }
+  ],
+  "first_failing_width": {
+    "toy": null,
+    "region": 11,
+    "parity": null
+  },
+  "claims": {
+    "FULL_VM_TOY_E11": "DEMONSTRATED",
+    "FULL_VM_TOY_E12": "DEMONSTRATED",
+    "FULL_VM_TOY_E13": "DEMONSTRATED",
+    "FULL_VM_TOY_E14": "DEMONSTRATED",
+    "FULL_VM_TOY_E15": "DEMONSTRATED",
+    "FULL_VM_TOY_E16": "DEMONSTRATED",
+    "FULL_VM_TOY_E17": "DEMONSTRATED",
+    "FULL_VM_TOY_E18": "DEMONSTRATED",
+    "NATURAL_ALL_REGION_E11": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E12": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E13": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E14": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E15": "DEMONSTRATED",
+    "NATURAL_ALL_REGION_E16": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E17": "NOT_DEMONSTRATED",
+    "NATURAL_ALL_REGION_E18": "NOT_DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E11": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E12": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E13": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E14": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E15": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E16": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E17": "DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E18": "DEMONSTRATED",
+    "FULL_VM_TOY_E11_TO_E18": "DEMONSTRATED",
+    "NATURAL_ALL_REGION_E11_TO_E18": "NOT_DEMONSTRATED",
+    "IMPLEMENTATION_PARITY_E11_TO_E18": "DEMONSTRATED"
+  }
+}

@@ -1,0 +1,25 @@
+Dynamic pointer probe — 2026-09-12
+
+Payload format: [pointer][flag0,cell0]...[flag7,cell7] (17 bytes).
+The scalar pointer is persistent. One-hot flags are explicit workspace and are
+consumed by the epoch. The epoch adds each flag to its paired cell, so exactly
+the cell selected by the pointer is incremented inside Malbolge; the driver only
+recreates the workspace for the next invocation.
+
+Command:
+  zig build-exe epochtool.zig -O ReleaseFast
+  py dynamic_epoch.py compile
+  py dynamic_epoch.py run
+  py dynamic_epoch.py verify
+  py dynamic_epoch.py tamper-demo
+
+Observed: pointers 0..7 all PASS, 233 steps per epoch.
+Replay: dynamic selection replay OK: pointers 0..7
+Tamper: REJECTS (pointer 0: payload seal mismatch)
+
+Negative result preserved: the earlier flags-only payload selected correctly but
+lost the pointer because [->+<] consumes the flag. It was replaced by the
+persistent-pointer + explicit-workspace layout above.
+
+Claim: DEMONSTRATED for bounded 8-cell dynamic pointer selection.
+Remaining scope: general unbounded tape / arbitrary pointer range is not claimed.

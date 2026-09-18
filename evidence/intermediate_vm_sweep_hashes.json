@@ -1,0 +1,16 @@
+{
+  "format": "malbolge-intermediate-full-vm-sweep-hashes/1",
+  "captured_utc": "2026-09-12T20:23:19.354571+00:00",
+  "sha256": {
+    "intermediate_vm_runner.zig": "b60395d765c93fc2243bf111e5da0d3656c76e16b94c779eed9269722da59a64",
+    "intermediate_vm_runner.exe": "006b585706d41138c9f9813ef09a261a856ecdee3540d15d48956e35a34917f1",
+    "reference_width_vm.py": "c12c35f973ea25b165af7ffd96b78ac74e1556d667ae405c6db90239738412df",
+    "run_intermediate_sweep.py": "e92cfd155cdf860a9f431002092b60137efe4b0ac6c7293f13b890098b0a1e1c",
+    "GUIA_BARRIDO_E11_E18.md": "4e6b015ebe4aeec38d6987381b420cfcfd1ddde17d5fe7b7564a3780286fcc96",
+    "evidence/intermediate_vm_sweep_preregistration.json": "675ff9939019c9f3241215eae3c9a4939fe6fedad76f3faaf8e8324ffbf472bf",
+    "evidence/intermediate_vm_sweep_preregistration_addendum.json": "8f291e3b2badbe7173ae95c113056b457c8178c36a281c5b0637833f7c40d7e6",
+    "evidence/intermediate_vm_sweep_report.json": "e813ee861ff0269b18016c6031a5834c1aa444662e1f9731501397cd71402822",
+    "evidence/INTERMEDIATE_VM_SWEEP_EXPERIMENT.md": "36e885dcc9c9fc27b8f7a6ee9dd7ac4a9441793a584ec0585ab8e1a71981a424",
+    "evidence/E15_VM_EXPERIMENT.md": "7a162ff4a05725e339a4d96ff2a491619d628b5ec9115049933af6a2764803c9"
+  }
+}

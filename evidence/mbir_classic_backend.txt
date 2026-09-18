@@ -1,0 +1,16 @@
+MBIR-2L -> Classic backend frontier
+Date: 2026-09-12
+
+Command:
+  py -m unittest test_mbir_classic_backend.py -v
+
+Result:
+  2 tests ... OK
+
+Demonstrated lowering:
+  MBIR IN_BYTE, OUT_BYTE, HALT -> Classic source ubO
+  input Z -> status=HALTED steps=3 stdout=b'Z'
+
+Not demonstrated:
+  arithmetic, comparisons, branches, memory mutation and arbitrary MBIR
+  programs have no claimed Classic lowering yet and are rejected.

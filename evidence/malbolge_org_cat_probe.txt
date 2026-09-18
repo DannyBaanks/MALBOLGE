@@ -1,0 +1,24 @@
+malbolge.org canonical cat probe — 2026-09-12
+
+Source: https://malbolge.org/cat.mal
+Downloaded fixture: 9503 bytes
+SHA-256: CE04A6F27B7045B6E0010D6C97873AD8B34BA87C7BE6E16D53BE0B97A7224A52
+Input: MEOW
+Step limit: 10000
+
+All six runtimes reached the same machine state:
+  a=9477 c=9183 d=58963
+  halt_reason=StepsExhausted
+  output_len=2, bytes=4d45 (ME)
+
+Swiftbolge: stdout=4d450a, status label=HALTED
+Rustbolge:  stdout=4d450a, status label=TIMEOUT
+Javolge:   stdout=4d450a, status label=TIMEOUT
+Cobolge:   stdout=4d450a, status label=TIMEOUT
+Fortranbolge: stdout=4d450a, status label=TIMEOUT
+Wasmbolge: output=[77,69], status=TIMEOUT
+
+The extra 0a is the native CLI framing byte. The program is explicitly a
+non-terminating cat, so no halt is expected at EOF or at the finite probe
+limit. The Swiftbolge status-label difference is a report-contract divergence;
+registers, steps and output agree exactly.

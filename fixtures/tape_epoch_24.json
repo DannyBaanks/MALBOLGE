@@ -1,0 +1,19 @@
+{
+  "format": "malbolge-tape-epoch/1",
+  "state_size": 24,
+  "layout": {
+    "tape": 24
+  },
+  "program_bf": "fixtures\\tape_epoch_24.bf",
+  "program_mal": "fixtures\\tape_epoch_24.mal",
+  "program_sha256": "855b2937978d8a74c9d7e783412b37a5ebece3d8259b430410061f76f139a1d0",
+  "state_before_hex": "030a11181f262d343b424950575e656c737a81888f969da4",
+  "state_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4",
+  "expected_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4",
+  "state_before_sha256": "73281455a5e6186744d4ddbb1d5a10958c9d8e34f150c9f8912eaa4b8f3996ad",
+  "state_after_sha256": "ffc2e5520710de7a9bbec6f17a68748fccdb93a600c798423779068853b756f4",
+  "status": "HALTED",
+  "steps": 219,
+  "matches_reference": true,
+  "created_utc": "2026-09-12T15:24:30Z"
+}

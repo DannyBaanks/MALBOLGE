@@ -1,0 +1,19 @@
+{
+  "format": "malbolge-tape-epoch/1",
+  "state_size": 54,
+  "layout": {
+    "tape": 54
+  },
+  "program_bf": "fixtures\\tape_epoch_54.bf",
+  "program_mal": "fixtures\\tape_epoch_54.mal",
+  "program_sha256": "7bc8a95c65c44d1f1eb6d15625283f528d40d410c546272f6edfa3d94486ac68",
+  "state_before_hex": "030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f76",
+  "state_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f76",
+  "expected_after_hex": "040a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f76",
+  "state_before_sha256": "160bbf14b458c877b7049e7cb5771dd653930f97d20bdd8ee795c16062906233",
+  "state_after_sha256": "296ccf35cbf9024bac2e24d00d7cbb509fa2af8d5b8d23cc7d842cc03f19e39c",
+  "status": "HALTED",
+  "steps": 489,
+  "matches_reference": true,
+  "created_utc": "2026-09-12T15:24:31Z"
+}

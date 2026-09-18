@@ -1,0 +1,26 @@
+MalbolgeLISP probe — 2026-09-12
+
+The real MalbolgeLISP image was executed by the native 3^19 runtime with the
+expression `(+ 1 2)` on stdin. The runtime booted its REPL, printed `3`, then
+closed on EOF and emitted its farewell verse.
+
+Observed stdout (semantic excerpt):
+  MALBOLGELISP V1.2 ...
+  % ......|....
+  3
+  %
+  There is a sky illuminating us
+  Someone is out there that we truly trust
+  There is a rainbow for you and me
+  A beautiful sunrise eternally
+
+Observed stderr telemetry:
+  image=371331415 bytes
+  HALT steps=2401426208 elapsed=74s
+  final c=581143360 d=581861866 a=10
+
+This is a real MalbolgeLISP execution, not a Classic frontend translation.
+MalbolgeLISP targets the 3^19 model; the six runtimes tested in
+six_bolge_challenge.txt target Classic 3^10. A frontend can present a common
+surface, but it must declare which backend/model it emits rather than claiming
+source-level equivalence between those two machines.

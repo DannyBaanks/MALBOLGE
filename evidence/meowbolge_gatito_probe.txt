@@ -1,0 +1,30 @@
+Meowbolge real kitten probe — 2026-09-12
+
+Source artifact (read-only sibling repo): meowbolge/examples/gatito.malbolge
+  size=750 bytes
+  sha256=8322E77C74B3644ED22E8C8F8682D21B83080176961D833BAC3BD3574F37A1DF
+
+Expected output artifact:
+  sha256=CE7C1A3FE7E2D1874DAB8BFFA9BCC1DA004109E636F97D67B7CDD47B90DAAC0F
+
+Canonical current Python Classic oracle:
+  status=HALTED steps=652 byte_exact=PASS
+  output:
+   /\_/\
+  ( o.o )
+   > ^ <
+
+Independent runtimes, same source:
+  Swiftbolge   HALTED steps=652 final a=29500 c=749 d=651 PASS
+  Rustbolge    HALTED steps=652 final a=29500 c=749 d=651 PASS
+  Javolge      HALTED steps=652 final a=29500 c=749 d=651 PASS
+  Cobolge      HALTED steps=652 final a=29500 c=749 d=651 PASS
+  Fortranbolge HALTED steps=652 final a=29500 c=749 d=651 PASS
+  Wasmbolge    HALTED steps=652 final a=29500 c=749 d=651 PASS
+
+The five native CLI wrappers append one framing LF; after removing that host
+framing byte, their 21 output bytes equal the expected artifact exactly.
+Wasmbolge exposes the 21 machine bytes directly and matches without framing.
+
+No files were modified in the sibling meowbolge repository. This is a fresh
+execution probe of its existing real 750-cell program.

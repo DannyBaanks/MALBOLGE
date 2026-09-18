@@ -1,0 +1,44 @@
+{
+  "format": "malbolge-intermediate-full-vm-sweep-preregistration/1",
+  "registered_on": "2026-09-12",
+  "dimensions": [11, 12, 13, 14, 15, 16, 17, 18],
+  "offset_table_sha256": "f8c23e4c52882369807d18b21d155fe8ba80f142ca61fd29674ec7600b722e62",
+  "offsets": {
+    "11": [0, 171, 154], "12": [0, 120, 146],
+    "13": [0, 155, 122], "14": [0, 166, 50],
+    "15": [0, 105, 116], "16": [0, 110, 32],
+    "17": [0, 125, 62], "18": [0, 170, 152]
+  },
+  "null_hypotheses": {
+    "toy": "H0_TOY: at least one width fails complete-fill standard execution of [IN,OUT,END].",
+    "regional_witness": "H0_REGION: the single E15-selected witness does not naturally exercise all three regions at every intermediate width."
+  },
+  "vm_profile": {
+    "memory": "materialized unsigned-32 array of exactly 3^k cells",
+    "fill": "complete k-trit crazy-fill before execution",
+    "initial_registers": {"a": 0, "c": 0, "d": 0},
+    "rotation": "k-trit rotate-right",
+    "self_encryption": "Classic printable-ASCII XLAT after non-halting steps",
+    "dispatch": "(mem[c]+c+offset[region]) mod 94",
+    "eof": "3^k-1"
+  },
+  "toy": {
+    "source": "ubO", "source_hex": "75624f", "stdin_hex": "5a",
+    "max_steps": 10,
+    "success": {"status": "HALTED", "steps": 3, "stdout_hex": "5a",
+                "final_registers": {"a": 90, "c": 2, "d": 2}}
+  },
+  "regional_witness": {
+    "source": "(a`r:", "source_hex": "286160723a",
+    "selection": "Selected by E15 exploration before this cross-width preregistration; unchanged for every width.",
+    "stdin_hex": "", "max_steps": 512,
+    "success": "complete fill, standard start, HALTED within fuel, and visited regions exactly including 0,1,2",
+    "controls": "For each passing width, increment region-1 and region-2 offsets independently; require the first opcode in the altered region to differ."
+  },
+  "execution_order": "ascending E11 through E18; every result retained even after a failure",
+  "failure_policy": "Record the first failing width separately for TOY and REGION. A witness failure does not by itself falsify the offset formula.",
+  "resource_policy": "Allocation failure or host timeout is recorded as NOT_DEMONSTRATED, never coerced to semantic FAIL.",
+  "claim_rule": "FULL_VM_TOY_Ek is DEMONSTRATED only on its own gate. NATURAL_ALL_REGION_Ek is DEMONSTRATED only on target plus controls. Universal claims require every width to pass.",
+  "baseline": "E15 full-VM toy and natural-region experiments already demonstrated and are rerun in the common native runner.",
+  "scope_exclusion": "No external canonical oracle exists for E11-E18; this evaluates the frozen parametric profile."
+}

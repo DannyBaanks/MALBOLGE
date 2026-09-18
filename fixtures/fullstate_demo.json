@@ -1,0 +1,37 @@
+{
+  "format": "malbolge-fullstate/1",
+  "rounds": 3,
+  "links": [
+    {
+      "epoch": 0,
+      "state_before_hex": "000000000000000000",
+      "state_after_hex": "000100000000000000",
+      "stdin_sha256": "3e7077fd2f66d689e0cee6a7cf5b37bf2dca7c979af356d0a31cbc5c85605c7d",
+      "stdout_sha256": "51b09ceccfbec44595dd4241e6e2a693d279b72c899c8f60ec63524fe58b1d4f",
+      "program_sha256": "da4e43e8159fbd56a0432809a9eec58249fba9a4ad817115bcfdf318ebce1f0e",
+      "status": "HALTED",
+      "steps": 76
+    },
+    {
+      "epoch": 1,
+      "state_before_hex": "000100000000000000",
+      "state_after_hex": "000200000000000000",
+      "stdin_sha256": "51b09ceccfbec44595dd4241e6e2a693d279b72c899c8f60ec63524fe58b1d4f",
+      "stdout_sha256": "3b7aee3e7f3e7913273d9e7860e0388497282ed34eac943c8f923d073d774cb3",
+      "program_sha256": "da4e43e8159fbd56a0432809a9eec58249fba9a4ad817115bcfdf318ebce1f0e",
+      "status": "HALTED",
+      "steps": 76
+    },
+    {
+      "epoch": 2,
+      "state_before_hex": "000200000000000000",
+      "state_after_hex": "000300000000000000",
+      "stdin_sha256": "3b7aee3e7f3e7913273d9e7860e0388497282ed34eac943c8f923d073d774cb3",
+      "stdout_sha256": "5808c92598bb39efe08f1f64cba66bcce9d2e5e97ff3c2319e47b5c94817ad22",
+      "program_sha256": "da4e43e8159fbd56a0432809a9eec58249fba9a4ad817115bcfdf318ebce1f0e",
+      "status": "HALTED",
+      "steps": 76
+    }
+  ],
+  "final_state_hex": "000300000000000000"
+}

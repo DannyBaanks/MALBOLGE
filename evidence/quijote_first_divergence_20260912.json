@@ -1,0 +1,443 @@
+{
+  "format": "malbolge-quijote-first-divergence/1",
+  "created_utc": "2026-09-12T22:33:19.024588+00:00",
+  "question": "Classic literal flow under Malbolge-19: first divergence encoding or semantic?",
+  "offsets_k19": [
+    0,
+    117,
+    140
+  ],
+  "cases": {
+    "echo_control": {
+      "plan": [
+        23,
+        5,
+        81
+      ],
+      "plan_names": [
+        "in",
+        "out",
+        "end"
+      ],
+      "stdin_hex": "48",
+      "classic_source": "ubO",
+      "k19_source": "ubO",
+      "sources_identical": true,
+      "encoding_intact": true,
+      "classic_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 23,
+          "executed_op": 23,
+          "source_char": "u",
+          "cell_before": 117,
+          "mem_d_before": 117,
+          "mem_d_after": 117,
+          "a_after": 72,
+          "output": null,
+          "halted": false,
+          "encrypted_to": "o"
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 72,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 72,
+          "output": 72,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 72,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 72,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "k19_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 23,
+          "executed_op": 23,
+          "source_char": "u",
+          "cell_before": 117,
+          "mem_d_before": 117,
+          "mem_d_after": 117,
+          "a_after": 72,
+          "output": null,
+          "halted": false,
+          "encrypted_to": "o"
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 72,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 72,
+          "output": 72,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 72,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 72,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "first_divergence": null
+    },
+    "literal_opr": {
+      "plan": [
+        62,
+        5,
+        81
+      ],
+      "plan_names": [
+        "opr",
+        "out",
+        "end"
+      ],
+      "stdin_hex": "",
+      "classic_source": ">bO",
+      "k19_source": ">bO",
+      "sources_identical": true,
+      "encoding_intact": true,
+      "classic_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 62,
+          "executed_op": 62,
+          "source_char": ">",
+          "cell_before": 62,
+          "mem_d_before": 62,
+          "mem_d_after": 29555,
+          "a_after": 29555,
+          "output": null,
+          "halted": false
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 29555,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 29555,
+          "output": 115,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 29555,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 29555,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "k19_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 62,
+          "executed_op": 62,
+          "source_char": ">",
+          "cell_before": 62,
+          "mem_d_before": 62,
+          "mem_d_after": 581130764,
+          "a_after": 581130764,
+          "output": null,
+          "halted": false
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 581130764,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 581130764,
+          "output": 12,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 581130764,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 581130764,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "first_divergence": {
+        "step": 1,
+        "kind": "SEMANTIC",
+        "field": "mem_d_after",
+        "classic": {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 62,
+          "executed_op": 62,
+          "source_char": ">",
+          "cell_before": 62,
+          "mem_d_before": 62,
+          "mem_d_after": 29555,
+          "a_after": 29555,
+          "output": null,
+          "halted": false
+        },
+        "k19": {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 62,
+          "executed_op": 62,
+          "source_char": ">",
+          "cell_before": 62,
+          "mem_d_before": 62,
+          "mem_d_after": 581130764,
+          "a_after": 581130764,
+          "output": null,
+          "halted": false
+        }
+      }
+    },
+    "literal_rot": {
+      "plan": [
+        39,
+        5,
+        81
+      ],
+      "plan_names": [
+        "rot",
+        "out",
+        "end"
+      ],
+      "stdin_hex": "",
+      "classic_source": "'bO",
+      "k19_source": "'bO",
+      "sources_identical": true,
+      "encoding_intact": true,
+      "classic_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 39,
+          "executed_op": 39,
+          "source_char": "'",
+          "cell_before": 39,
+          "mem_d_before": 39,
+          "mem_d_after": 13,
+          "a_after": 13,
+          "output": null,
+          "halted": false
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 13,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 13,
+          "output": 13,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 13,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 13,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "k19_trace": [
+        {
+          "step": 1,
+          "c": 0,
+          "d": 0,
+          "a_before": 0,
+          "decoded_op": 39,
+          "executed_op": 39,
+          "source_char": "'",
+          "cell_before": 39,
+          "mem_d_before": 39,
+          "mem_d_after": 13,
+          "a_after": 13,
+          "output": null,
+          "halted": false
+        },
+        {
+          "step": 2,
+          "c": 1,
+          "d": 1,
+          "a_before": 13,
+          "decoded_op": 5,
+          "executed_op": 5,
+          "source_char": "b",
+          "cell_before": 98,
+          "mem_d_before": 98,
+          "mem_d_after": 98,
+          "a_after": 13,
+          "output": 13,
+          "halted": false,
+          "encrypted_to": "T"
+        },
+        {
+          "step": 3,
+          "c": 2,
+          "d": 2,
+          "a_before": 13,
+          "decoded_op": 81,
+          "executed_op": 81,
+          "source_char": "O",
+          "cell_before": 79,
+          "mem_d_before": 79,
+          "mem_d_after": 79,
+          "a_after": 13,
+          "output": null,
+          "halted": true
+        }
+      ],
+      "first_divergence": null
+    }
+  },
+  "classic_reference_crosscheck": {
+    "reference_run": {
+      "status": "HALTED",
+      "steps": 3,
+      "stdout_hex": "73"
+    },
+    "probe_trace_output": [
+      115
+    ]
+  },
+  "k19_zig_runner_crosscheck": {
+    "status": "RUN",
+    "results": [
+      {
+        "case": "echo_control",
+        "zig": {
+          "status": "RUN",
+          "command": "C:\\Development\\ISyCo Git\\MALBOLGE\\intermediate_vm_runner.exe 19 75624f 48 100 0 117 140",
+          "vm_status": "HALTED",
+          "steps": "3",
+          "a": 72,
+          "out_hex": "48"
+        },
+        "lazy_out_hex": "48",
+        "lazy_final_a": 72,
+        "match": true
+      },
+      {
+        "case": "literal_opr",
+        "zig": {
+          "status": "RUN",
+          "command": "C:\\Development\\ISyCo Git\\MALBOLGE\\intermediate_vm_runner.exe 19 3e624f 00 100 0 117 140",
+          "vm_status": "HALTED",
+          "steps": "3",
+          "a": 581130764,
+          "out_hex": "0c"
+        },
+        "lazy_out_hex": "0c",
+        "lazy_final_a": 581130764,
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "claims": {
+    "QUIJOTE_ENCODING_INTACT_ON_CASES": true,
+    "FIRST_DIVERGENCE_KINDS": {
+      "echo_control": null,
+      "literal_opr": "SEMANTIC",
+      "literal_rot": null
+    },
+    "QUIJOTE_OPCODE_PLAN": "DEMONSTRATED_SEMANTIC_DIVERGENCE_NOT_ENCODING"
+  }
+}

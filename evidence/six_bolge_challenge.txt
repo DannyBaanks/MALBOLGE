@@ -1,0 +1,35 @@
+Six-bolge challenge — 2026-09-12
+
+Program: fixtures/classic_challenge.mal (`ub%%:?K`)
+Input: ASCII `Z` (`5a`)
+Expected semantic result: one output byte `Z`, HALTED, 7 steps,
+final a=9856 c=6 d=40.
+
+Swiftbolge:
+  exit=0 stdout_hex=5a0a
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+Rustbolge:
+  exit=0 stdout_hex=5a0a
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+Javolge:
+  exit=0 stdout_hex=5a0a
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+Cobolge (with official COB_CONFIG_DIR and ucrt64 PATH):
+  exit=0 stdout_hex=5a0a
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+Fortranbolge:
+  exit=0 stdout_hex=5a0a
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+Wasmbolge:
+  output=[90]
+  {"final":{"a":9856,"c":6,"d":40},"halt_reason":"VInstruction","output_len":1,"status":"HALTED","steps":7}
+
+Result: 6/6 semantic parity on the generated Classic challenge.
+
+Native regression gates also passed:
+  Swiftbolge 5/5 XCTest
+  Rustbolge cargo test: 5/5 VM tests
+  Wasmbolge cargo test: 3/3
+  JavolgeTest: 4/4
+  Cobolge: all gate/snapshot/resume checks
+  Fortranbolge: canonical Hello gate, 48 steps, a=19758 c=85 d=63

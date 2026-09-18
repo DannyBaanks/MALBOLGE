@@ -1,0 +1,14 @@
+{
+  "format": "mbir-2l-parity/1",
+  "status": "PASS",
+  "cases": [
+    {
+      "id": "arithmetic_add",
+      "befunge": {"status": "HALTED", "steps": 5, "output_bytes": [5], "stack": []},
+      "wasm": {"status": "HALTED", "steps": 5, "output_bytes": [5], "stack": []},
+      "equal": true,
+      "steps_equal": false
+    }
+  ],
+  "scope": "one deterministic arithmetic fixture; no universal language equivalence"
+}

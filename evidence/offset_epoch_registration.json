@@ -1,0 +1,88 @@
+{
+  "format": "malbolge-offset-epoch-ladder/1",
+  "hypothesis": "E19_EXPRESSION_GENERALIZED_END_THIRD_ONLY",
+  "anchor_half": 29524,
+  "anchor_end": 59048,
+  "epochs": [
+    {
+      "dimension": 11,
+      "memory_cells": 177147,
+      "offsets": [
+        0,
+        171,
+        154
+      ]
+    },
+    {
+      "dimension": 12,
+      "memory_cells": 531441,
+      "offsets": [
+        0,
+        120,
+        146
+      ]
+    },
+    {
+      "dimension": 13,
+      "memory_cells": 1594323,
+      "offsets": [
+        0,
+        155,
+        122
+      ]
+    },
+    {
+      "dimension": 14,
+      "memory_cells": 4782969,
+      "offsets": [
+        0,
+        166,
+        50
+      ]
+    },
+    {
+      "dimension": 15,
+      "memory_cells": 14348907,
+      "offsets": [
+        0,
+        105,
+        116
+      ]
+    },
+    {
+      "dimension": 16,
+      "memory_cells": 43046721,
+      "offsets": [
+        0,
+        110,
+        32
+      ]
+    },
+    {
+      "dimension": 17,
+      "memory_cells": 129140163,
+      "offsets": [
+        0,
+        125,
+        62
+      ]
+    },
+    {
+      "dimension": 18,
+      "memory_cells": 387420489,
+      "offsets": [
+        0,
+        170,
+        152
+      ]
+    }
+  ],
+  "toy_opcodes": [
+    23,
+    5,
+    81
+  ],
+  "success_criterion": "FORMULA_GENERALIZES(E_k)=DEMONSTRATED iff roundtrip and boundary gates pass at k",
+  "failure_policy": "first failing k is preserved; later results do not erase it",
+  "table_sha256": "f8c23e4c52882369807d18b21d155fe8ba80f142ca61fd29674ec7600b722e62"
+}

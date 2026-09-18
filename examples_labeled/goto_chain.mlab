@@ -1,0 +1,8 @@
+# Three blocks visited out of source order: start -> c -> b -> end
+start:  in
+        goto c
+b:      out
+        end
+c:      out
+        in
+        goto b

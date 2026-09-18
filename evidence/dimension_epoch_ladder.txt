@@ -1,0 +1,25 @@
+Dimension epoch ladder — 2026-09-12
+
+Hypothesis: the positional equation can be parameterized by memory width and
+the same tiny [IN, OUT, END] program can cross sealed epoch boundaries from
+E10 through E19.
+
+Experiment: for k in 10..19, runtime memory size is 3^k, c and d wrap modulo
+3^k, and the zero-offset positional equation decodes `ubO` as [23,5,81]. The
+single state byte is sealed at every boundary. The manifest profile is
+`TOY_ZERO_OFFSET` and its memory model is `SPARSE_TOY`; no physical 3^k tape is
+allocated by this harness.
+
+Observed:
+  E10 -> E11 -> E12 -> E13 -> E14 -> E15 -> E16 -> E17 -> E18 -> E19
+  state is `5a` at every boundary (input/output byte `Z`)
+  every epoch HALTED in 3 steps with final a=90, c=2, d=2
+  memory sizes: 59049, 177147, 531441, 1594323, 4782969,
+                14348907, 43046721, 129140163, 387420489, 1162261467
+  replay verification: PASS
+  tamper control: REJECTS
+
+Claim: DEMONSTRATED for this bounded toy and state-transport ladder.
+Not demonstrated: equivalent crazy/rotation/encryption semantics for every
+intermediate k, nor arbitrary program equivalence. E19's real runtime was
+independently probed with `ubO` and returned Z in 2 counted non-halt steps.

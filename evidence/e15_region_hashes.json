@@ -1,0 +1,17 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "e15_region_search.py": "8b7fad849b395efb276178b104e9b31c5dc8dacd76d277ef840acb9e1d615e5f",
+    "e15_region_probe.py": "12a57026cb84a771e0266029426a5162321031ca0ec3c0f61bf9f4e71cac78c0",
+    "test_e15_region_probe.py": "4357e73746f2a86847694ca95e34db5a215957fb4df91264cbfd650979d3563d",
+    "evidence/e15_region_preregistration.json": "06cd718190aae180cc060c6333a6c7ceb9539a3dfa4b2884e822111dc653c089",
+    "evidence/e15_region_report.json": "832d958f098f51cf6df497c6f21751b22750d3bbe74ec18dc82b921fced0ce0f",
+    "evidence/E15_REGION_DISPATCH_EXPERIMENT.md": "ffda3ee6bb84dbdb8f7be20d6e6e68279730fa0a03a01b77d767001d723f017d"
+  },
+  "full_tape_hashes": {
+    "initial": "4a639c5cc5674681638de786ee0256d0151fb614e7a3613da6a64beaa0f8d804",
+    "target_final": "f86b2859d68b24e8297e300e3de50cf9683b99f08cdcf9dcd85ab7bb5949df32",
+    "region1_offset_control_final": "de091dd1b10baac5dc099befe8ae47019159998f736372d01cd1869de46b6371",
+    "region2_offset_control_final": "bdd21cc91bcdfb9e2bfd512b02c029742f2c3e75d1e49d897764883e81872dbc"
+  }
+}

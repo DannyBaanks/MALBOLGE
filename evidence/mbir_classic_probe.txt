@@ -1,0 +1,25 @@
+MBIR Classic bottom-up probe
+Timestamp: 2026-09-12
+Environment: Windows; py; local Classic reference in malbolge.py
+
+Command:
+  py mbir_classic.py run "in,out,rot,movd,opr,nop,end" --input Z
+
+Output:
+  source='ub%%:?K'
+  status=HALTED steps=7 stdout=b'Z'
+
+Interpretation:
+  PASS: symbolic ClassicPlan lowered through r=(opcode-c) mod 94 and executed
+  directly by the Classic a/c/d + memory machine. No upper-level runtime was
+  used for the execution.
+
+SHA-256:
+  mbir_classic.py 29BDB42C469054BD6EC5B713913BC15A605F6C87E9DCB3B96B291E1FAF536CA4
+  classic_encoder.py 5E5AE9BB9EDFE826E3E5D63F8E6993B532606DB843E1E20015D151ACE4FB6CE2
+  fixtures/classic_challenge.mal A200C69DBFAAF9434A19A9D68F75BCDFF59683F7C65278D431AC86844937AB37
+
+Not demonstrated:
+  - arbitrary runtime control flow as symbolic IR
+  - memory mutation represented as IR
+  - equivalence with MalbolgeLISP or Unshackled 3^19
