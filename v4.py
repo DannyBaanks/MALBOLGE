@@ -14,6 +14,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import binaries
+
 HERE = Path(__file__).resolve().parent
 EPOCH = "fixtures/fullstate_plus.mal"
 FORMAT = "malbolge-fullstate/1"
@@ -25,8 +27,8 @@ def sha(data: bytes) -> str:
 
 def run_epoch(state: bytes):
     p = subprocess.run(
-        [str(HERE / "epoch.exe"), "run", EPOCH, state.hex()],
-        capture_output=True, text=True, check=True)
+        [str(binaries.epoch()), "run", EPOCH, state.hex()],
+        capture_output=True, text=True, check=True, cwd=HERE)
     fields = dict(x.split("=", 1) for x in p.stderr.split())
     return fields["status"], int(fields["steps"]), bytes.fromhex(fields["stdout_hex"])
 
@@ -79,8 +81,8 @@ def main():
         print("usage: v4.py compile|run|verify|tamper-demo")
         return 2
     if sys.argv[1] == "compile":
-        subprocess.run([str(HERE / "epoch.exe"), "compile",
-                        "fixtures/fullstate_plus.bf", EPOCH], check=True)
+        subprocess.run([str(binaries.epoch()), "compile",
+                        "fixtures/fullstate_plus.bf", EPOCH], check=True, cwd=HERE)
         return 0
     if sys.argv[1] == "run":
         m = build()

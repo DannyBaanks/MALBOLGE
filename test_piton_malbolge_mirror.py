@@ -1,8 +1,10 @@
 import unittest
 
+import binaries
 from piton_malbolge_mirror import CORPUS, run_case
 
 
+@unittest.skipIf(binaries.find_piton() is None, "piton not on PATH")
 class PitonMalbolgeMirrorTests(unittest.TestCase):
     def test_byte_exact_corpus(self):
         for payload in CORPUS:

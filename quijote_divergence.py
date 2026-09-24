@@ -24,6 +24,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
+import binaries
 import malbolge  # Classic reference
 import unshackled_codec  # k19 positional codec
 from classic_codec import assemble as assemble_classic, decode as decode_classic
@@ -230,7 +231,7 @@ def main() -> int:
     # Cross-check the k19 lazy trace against the real 3^19 Zig runtime.
     zig_check: dict = {"status": "NOT_RUN"}
     if with_zig:
-        exe = HERE / "intermediate_vm_runner.exe"
+        exe = binaries.vm_runner()
         results = []
         for name in ("echo_control", "literal_opr"):
             case = cases[name]

@@ -15,14 +15,14 @@ This is the V2 claim in miniature and honestly:
 
 Compiled epoch programs (see .bf sources): from the vendored Malfuck semantic
 backend (Malbolge Free, width 10 fixed, TAPE_BASE assisted). Built with:
-  zig build-exe epochtool.zig -O ReleaseFast  (then Move-Item -> epoch.exe)
+  python3 build_native.py   (zig build-exe epochtool.zig -O ReleaseFast -femit-bin=epoch)
 
 Commands:
-  py v2.py compile                     build plus.mal / minus.mal from .bf
-  py v2.py run [PROGRAM] [--out PATH]  run a register program as epochs + seal
-  py v2.py verify FILE                 replay every epoch, re-check seals
-  py v2.py tamper-demo FILE            show a 1-bit change is rejected
-  py v2.py macro-trace FILE            print the register (macro-state) trace
+  python3 v2.py compile                     build plus.mal / minus.mal from .bf
+  python3 v2.py run [PROGRAM] [--out PATH]  run a register program as epochs + seal
+  python3 v2.py verify FILE                 replay every epoch, re-check seals
+  python3 v2.py tamper-demo FILE            show a 1-bit change is rejected
+  python3 v2.py macro-trace FILE            print the register (macro-state) trace
 """
 
 from __future__ import annotations
@@ -33,6 +33,8 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+
+import binaries
 
 HERE = Path(__file__).resolve().parent
 FORMAT_ID = "malbolge-episodic-v2/1"
@@ -49,8 +51,8 @@ def run_epoch(program_file: str, token: bytes) -> tuple[int, str]:
     """One atomic op: a complete fresh Malbolge Free computation, sealed."""
     in_hex = token.hex()
     result = subprocess.run(
-        [str(HERE / "epoch.exe"), "run", program_file, in_hex],
-        capture_output=True, text=True, check=True)
+        [str(binaries.epoch()), "run", program_file, in_hex],
+        capture_output=True, text=True, check=True, cwd=HERE)
     # output line: status=HALTED steps=N stdout_hex=.. (Zig debug.print -> stderr)
     fields = dict(kv.split("=", 1) for kv in result.stderr.split())
     status = fields["status"]
@@ -151,7 +153,7 @@ def main() -> int:
 
     if sys.argv[1] == "compile":
         for bf, mal in [("plus.bf", "fixtures/plus.mal"), ("minus.bf", "fixtures/minus.mal")]:
-            subprocess.run([str(HERE / "epoch.exe"), "compile", bf, mal], check=True)
+            subprocess.run([str(binaries.epoch()), "compile", bf, mal], check=True, cwd=HERE)
         print("compiled plus.mal + minus.mal")
         return 0
 

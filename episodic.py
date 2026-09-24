@@ -21,10 +21,10 @@ actually COMPUTES a macro transition (as opposed to just re-committing
 bytes) is the V2 question; see V2_NOTE in README.
 
 Commands:
-  py episodic.py run [--out PATH]     build + seal an episodic chain
-  py episodic.py verify FILE          replay every epoch, re-check seals
-  py episodic.py tamper-demo FILE     show a 1-bit change is rejected
-  py episodic.py macro-trace FILE     print the macro state timeline
+  python3 episodic.py run [--out PATH]     build + seal an episodic chain
+  python3 episodic.py verify FILE          replay every epoch, re-check seals
+  python3 episodic.py tamper-demo FILE     show a 1-bit change is rejected
+  python3 episodic.py macro-trace FILE     print the macro state timeline
 """
 
 from __future__ import annotations

@@ -10,10 +10,10 @@ This is not a general full-tape savestate or Brainfuck-compiler claim; it is
 the smallest verifiable savestate-routing proof.
 
 Commands:
-  py tape_epoch.py compile
-  py tape_epoch.py run --out fixtures\tape_epoch_demo.json
-  py tape_epoch.py verify fixtures\tape_epoch_demo.json
-  py tape_epoch.py tamper-demo fixtures\tape_epoch_demo.json
+  python3 tape_epoch.py compile
+  python3 tape_epoch.py run --out fixtures/tape_epoch_demo.json
+  python3 tape_epoch.py verify fixtures/tape_epoch_demo.json
+  python3 tape_epoch.py tamper-demo fixtures/tape_epoch_demo.json
 """
 from __future__ import annotations
 
@@ -22,7 +22,9 @@ import json
 import subprocess
 import sys
 import time
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
+
+import binaries
 
 HERE = Path(__file__).resolve().parent
 FORMAT_ID = "malbolge-tape-epoch/1"
@@ -57,17 +59,19 @@ def default_state() -> bytes:
     return bytes(tape)
 
 
-def expected_transition(state: bytes) -> bytes:
-    if len(state) != STATE_SIZE:
-        raise ValueError(f"state must be {STATE_SIZE} bytes")
+def expected_transition(state: bytes, size: int | None = None) -> bytes:
+    size = STATE_SIZE if size is None else size
+    if len(state) != size:
+        raise ValueError(f"state must be {size} bytes")
     tape = bytearray(state)
     tape[0] = (tape[0] + 1) & 0xFF
     return bytes(tape)
 
 
-def run_epoch(state: bytes) -> tuple[bytes, str, int]:
+def run_epoch(state: bytes, program: Path | None = None) -> tuple[bytes, str, int]:
+    program = STATE_MAL if program is None else program
     result = subprocess.run(
-        [str(HERE / "epoch.exe"), "run", str(STATE_MAL), state.hex()],
+        [str(binaries.epoch()), "run", str(program), state.hex()],
         capture_output=True,
         text=True,
         check=True,
@@ -102,7 +106,10 @@ def verify(manifest: dict) -> list[str]:
     problems = []
     if manifest.get("format") != FORMAT_ID:
         return ["unknown format"]
-    if sha256_file(STATE_MAL) != manifest["program_sha256"]:
+    # Manifests carry their own program and size (older ones use Windows paths).
+    program = HERE / PureWindowsPath(manifest["program_mal"]).as_posix()
+    size = manifest["state_size"]
+    if sha256_file(program) != manifest["program_sha256"]:
         problems.append("compiled epoch program differs from sealed hash")
     before = bytes.fromhex(manifest["state_before_hex"])
     after = bytes.fromhex(manifest["state_after_hex"])
@@ -110,13 +117,15 @@ def verify(manifest: dict) -> list[str]:
         problems.append("state before fails its seal")
     if sha256_hex(after) != manifest["state_after_sha256"]:
         problems.append("state after fails its seal")
-    replay, status, steps = run_epoch(before)
+    replay, status, steps = run_epoch(before, program)
     if status != manifest["status"] or steps != manifest["steps"]:
         problems.append("replay status/steps diverged")
     if replay != after:
         problems.append("replay output differs from sealed savestate")
-    if replay != expected_transition(before):
-        problems.append("replay output differs from reference transition")
+    # Sweep manifests also seal negative results (matches_reference=false):
+    # the replay must reproduce whichever outcome was recorded.
+    if (replay == expected_transition(before, size)) != manifest["matches_reference"]:
+        problems.append("replay disagrees with the recorded reference verdict")
     return problems
 
 
@@ -148,7 +157,7 @@ def main() -> int:
     if sys.argv[1] == "compile":
         STATE_PROGRAM.write_text(generated_bf(), encoding="ascii")
         subprocess.run(
-            [str(HERE / "epoch.exe"), "compile", str(STATE_PROGRAM), str(STATE_MAL)],
+            [str(binaries.epoch()), "compile", str(STATE_PROGRAM), str(STATE_MAL)],
             check=True,
         )
         print(f"compiled state={STATE_SIZE} bytes -> {STATE_MAL}")
@@ -178,7 +187,9 @@ def main() -> int:
             for problem in problems:
                 print("MISMATCH:", problem)
             return 1
-        print("savestate epoch replay OK; transition and seals verified")
+        verdict = ("transition matches reference" if manifest["matches_reference"]
+                   else "recorded FAIL against reference reproduced")
+        print(f"savestate epoch replay OK; seals verified; {verdict}")
         return 0
     if sys.argv[1] == "tamper-demo":
         tamper_demo(manifest)
