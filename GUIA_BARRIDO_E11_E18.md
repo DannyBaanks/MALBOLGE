@@ -10,20 +10,21 @@ independientes** (runner Zig y referencia Python) dan exactamente lo mismo.
 
 ## Compilar el runner
 
-```powershell
-zig build-exe intermediate_vm_runner.zig -O ReleaseSafe -femit-bin=intermediate_vm_runner.exe
+```bash
+python3 build_native.py   # o: zig build-exe intermediate_vm_runner.zig -O ReleaseSafe -femit-bin=intermediate_vm_runner
 ```
 
-Usa `intermediate_vm_runner.exe`. El binario sin extension que hay al lado es
-anterior a los arreglos y falla con stdin vacio.
+En Linux/macOS el binario es `./intermediate_vm_runner`; en Windows,
+`intermediate_vm_runner.exe`. Si tienes un binario viejo de antes de los
+arreglos (falla con stdin vacío), recompílalo.
 
 ## Una ejecucion suelta del runner
 
 Argumentos: `ancho  codigo_en_hex  stdin_en_hex  pasos_max  offset0 offset1 offset2`.
 El reporte sale por **stderr**.
 
-```powershell
-.\intermediate_vm_runner.exe 15 286160723a "" 512 0 105 116
+```bash
+./intermediate_vm_runner 15 286160723a "" 512 0 105 116
 ```
 
 ```text
@@ -33,14 +34,14 @@ RESULT status=HALTED dimension=15 memory_cells=14348907 fill=true steps=139 out_
 Para programas de mas de ~16 KB (limite de argv en Windows) usa `@archivo`
 en lugar del hex:
 
-```powershell
-.\intermediate_vm_runner.exe 10 @quine_lutter.mal "" 400000000 0 0 0
+```bash
+./intermediate_vm_runner 10 @quine_lutter.mal "" 400000000 0 0 0
 ```
 
 ## La referencia Python
 
-```powershell
-py reference_width_vm.py 11 "(a`r:" --offsets 0 171 154
+```bash
+python3 reference_width_vm.py 11 "(a`r:" --offsets 0 171 154
 ```
 
 ```text
@@ -49,8 +50,8 @@ py reference_width_vm.py 11 "(a`r:" --offsets 0 171 154
 
 ## El barrido completo
 
-```powershell
-py run_intermediate_sweep.py
+```bash
+python3 run_intermediate_sweep.py
 ```
 
 ```text

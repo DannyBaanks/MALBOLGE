@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import binaries
+
 import tape_epoch
 
 HERE = Path(__file__).resolve().parent
@@ -28,7 +30,7 @@ def main() -> int:
         tape_epoch.STATE_MAL = HERE / "fixtures" / f"tape_epoch_{size}.mal"
         tape_epoch.STATE_PROGRAM.write_text(tape_epoch.generated_bf(size), encoding="ascii")
         subprocess.run(
-            [str(HERE / "epoch.exe"), "compile", str(tape_epoch.STATE_PROGRAM), str(tape_epoch.STATE_MAL)],
+            [str(binaries.epoch()), "compile", str(tape_epoch.STATE_PROGRAM), str(tape_epoch.STATE_MAL)],
             check=True,
         )
         state = state_for(size)

@@ -28,18 +28,18 @@ V0 (malbolge-anchuring)  V1 (episodic)                      V2 (primitivas)
 única cosa que cruza la frontera son bytes sellados con SHA-256.
 
 ```
-$ py episodic.py run
+$ python3 episodic.py run
 epoch0: fixtures/hello.mal status=HALTED steps=40 out=b'Hello World!'
 epoch1: fixtures/echo12.mal status=HALTED steps=25 out=b'Hello World!'
 epoch2: fixtures/echo12.mal status=HALTED steps=25 out=b'Hello World!'
 
-$ py episodic.py macro-trace fixtures/episodic_demo.json
+$ python3 episodic.py macro-trace fixtures/episodic_demo.json
 macro trace: 0 -> 1 -> 2 -> 3
 
-$ py episodic.py verify fixtures/episodic_demo.json
+$ python3 episodic.py verify fixtures/episodic_demo.json
 replay OK: 3 epochs, all seals verified, deterministic
 
-$ py episodic.py tamper-demo fixtures/episodic_demo.json
+$ python3 episodic.py tamper-demo fixtures/episodic_demo.json
 1-bit tampered epoch output -> REJECTED
 ```
 
@@ -59,11 +59,11 @@ Los programas-época se compilan del backend semántico de Malfuck (vendored en
 `.[,-.].` → `minus.mal`.
 
 ```
-$ py v2.py compile
-$ py v2.py run "+++-"
+$ python3 v2.py compile
+$ python3 v2.py run "+++-"
 program '+++-' -> register 0x30 -> 0x32
 
-$ py v2.py macro-trace fixtures/v2_demo.json
+$ python3 v2.py macro-trace fixtures/v2_demo.json
 ops:      +  +  +  -
 register: 0x30 -> 0x31 -> 0x32 -> 0x33 -> 0x32
   epoch 0: +  0x30 -> 0x31  status=HALTED steps=12 sha=6b86b273…
@@ -71,10 +71,10 @@ register: 0x30 -> 0x31 -> 0x32 -> 0x33 -> 0x32
   epoch 2: +  0x32 -> 0x33  status=HALTED steps=12 sha=4e074085…
   epoch 3: -  0x33 -> 0x32  status=HALTED steps=12 sha=d4735e3a…
 
-$ py v2.py verify fixtures/v2_demo.json
+$ python3 v2.py verify fixtures/v2_demo.json
 replay OK: 4 epochs, all seals verified
 
-$ py v2.py tamper-demo fixtures/v2_demo.json
+$ python3 v2.py tamper-demo fixtures/v2_demo.json
 tampered epoch output -> REJECTS (seal mismatch)
 ```
 
@@ -101,16 +101,16 @@ instrucciones despacha exactamente una época Malbolge**:
 | `]` | `echo1.mal` (echo) | peek sellado; si no-cero, salto atrás |
 
 ```
-$ py primitives.py run fixtures\three.bf --out fixtures\three.json
+$ python3 primitives.py run fixtures/three.bf --out fixtures/three.json
 4 epochs, output=0x03 final_ptr=0
 
-$ py primitives.py run fixtures\cat.bf fixtures\cat.in --out fixtures\cat.json
+$ python3 primitives.py run fixtures/cat.bf fixtures/cat.in --out fixtures/cat.json
 11 epochs, output=0x414243 final_ptr=0      # "ABC", echo con loop
 
-$ py primitives.py verify fixtures\cat.json
+$ python3 primitives.py verify fixtures/cat.json
 replay OK: 11 epochs, all seals verified
 
-$ py primitives.py tamper-demo fixtures\cat.json
+$ python3 primitives.py tamper-demo fixtures/cat.json
 tampered epoch output -> REJECTS (seal mismatch)
 ```
 
@@ -165,44 +165,45 @@ cinta sin cota.
 
 ## Reproducir desde cero
 
-```powershell
+```bash
 # V1 (solo Python 3)
-py episodic.py run
-py episodic.py verify fixtures\episodic_demo.json
-py episodic.py tamper-demo fixtures\episodic_demo.json
+python3 episodic.py run
+python3 episodic.py verify fixtures/episodic_demo.json
+python3 episodic.py tamper-demo fixtures/episodic_demo.json
 
-# V2 (necesita zig 0.16)
-zig build-exe epochtool.zig -O ReleaseFast
-Move-Item epochtool.exe epoch.exe
-py v2.py compile
-py v2.py run "+++-"
-py v2.py verify fixtures\v2_demo.json
-py v2.py tamper-demo fixtures\v2_demo.json
+# Binarios nativos (zig 0.16: del sistema o `pip install ziglang==0.16.0`)
+python3 build_native.py      # -> ./epoch y ./intermediate_vm_runner
 
-# V3 (primitivas; necesita epoch.exe ya compilado)
-.\epoch.exe compile echo.bf fixtures\echo1.mal
-py primitives.py run fixtures\three.bf --out fixtures\three.json
-py primitives.py run fixtures\cat.bf fixtures\cat.in --out fixtures\cat.json
-py primitives.py verify fixtures\cat.json
-py primitives.py tamper-demo fixtures\cat.json
+# V2
+python3 v2.py compile
+python3 v2.py run "+++-"
+python3 v2.py verify fixtures/v2_demo.json
+python3 v2.py tamper-demo fixtures/v2_demo.json
 
-# V4 (estado completo; recompilar epoch.exe antes)
-py v4.py compile
-py v4.py run
-py v4.py verify
-py v4.py tamper-demo
+# V3 (primitivas; necesita ./epoch ya compilado)
+./epoch compile echo.bf fixtures/echo1.mal
+python3 primitives.py run fixtures/three.bf --out fixtures/three.json
+python3 primitives.py run fixtures/cat.bf fixtures/cat.in --out fixtures/cat.json
+python3 primitives.py verify fixtures/cat.json
+python3 primitives.py tamper-demo fixtures/cat.json
+
+# V4 (estado completo; necesita ./epoch)
+python3 v4.py compile
+python3 v4.py run
+python3 v4.py verify
+python3 v4.py tamper-demo
 
 # V4 selección dinámica bounded (8 celdas)
-py dynamic_epoch.py compile
-py dynamic_epoch.py run
-py dynamic_epoch.py verify
-py dynamic_epoch.py tamper-demo
+python3 dynamic_epoch.py compile
+python3 dynamic_epoch.py run
+python3 dynamic_epoch.py verify
+python3 dynamic_epoch.py tamper-demo
 
 # Encoder manual de Malbolge Classic
-py classic_encoder.py 68 17
-py classic_encoder.py 68 17 --c-range 3 9
-py classic_encoder.py 68 17 --table
-py -m unittest test_classic_encoder.py -v
+python3 classic_encoder.py 68 17
+python3 classic_encoder.py 68 17 --c-range 3 9
+python3 classic_encoder.py 68 17 --table
+python3 -m unittest test_classic_encoder.py -v
 ```
 
 `classic_encoder.py` solo invierte la ecuación `r=(opcode-c) mod 94` y
@@ -222,11 +223,11 @@ También reconstruye `ub%%:?K` byte por byte y comprueba igual ejecución. Esto
 es paridad del codec posicional; saltos y automodificación durante la ejecución
 necesitan un decompilador de trazas separado.
 
-```powershell
-py classic_codec.py assemble "in,out,rot,movd,opr,nop,end"
-py classic_codec.py disassemble "ub%%:?K"
-py classic_codec.py parity
-py -m unittest test_classic_codec.py -v
+```bash
+python3 classic_codec.py assemble "in,out,rot,movd,opr,nop,end"
+python3 classic_codec.py disassemble "ub%%:?K"
+python3 classic_codec.py parity
+python3 -m unittest test_classic_codec.py -v
 ```
 
 ### MBIR Classic — descenso bottom-up
@@ -237,10 +238,10 @@ posicional `r=(opcode-c) mod 94`. No compara contra una máquina superior ni
 pretende que Brainfuck sea el backend. El plan `in,out,rot,movd,opr,nop,end`
 produce `ub%%:?K` y la máquina Classic devuelve `Z` en 7 pasos.
 
-```powershell
-py mbir_classic.py assemble "in,out,rot,movd,opr,nop,end"
-py mbir_classic.py run "in,out,rot,movd,opr,nop,end" --input Z
-py -m unittest test_mbir_classic.py -v
+```bash
+python3 mbir_classic.py assemble "in,out,rot,movd,opr,nop,end"
+python3 mbir_classic.py run "in,out,rot,movd,opr,nop,end" --input Z
+python3 -m unittest test_mbir_classic.py -v
 ```
 
 El alcance actual es intencionalmente estrecho: el IR ya baja a la máquina
@@ -256,9 +257,9 @@ el último contiene todos los valores `00..ff`. En dirección inversa, Pibolge
 (el intérprete Malbolge escrito en PITON) ejecuta `classic_challenge.mal` en 7
 pasos y produce `Z`. Evidencia: `evidence/piton_malbolge_mirror.txt`.
 
-```powershell
-py piton_malbolge_mirror.py
-py -m unittest test_piton_malbolge_mirror.py -v
+```bash
+python3 piton_malbolge_mirror.py
+python3 -m unittest test_piton_malbolge_mirror.py -v
 ```
 
 El alcance es un espejo byte-stream acotado, no toda la semántica CPython/PITON
@@ -306,9 +307,9 @@ VM local de bytecode; `befunge_mbir.py` baja el subconjunto determinista 2D de
 Befunge y `wasm_mbir.py` baja expresiones binarias Wasm MVP restringidas. Ambos
 frontends producen el mismo resultado MBIR para el fixture aritmético común.
 
-```powershell
-py -m unittest test_mbir_2l.py test_befunge_mbir.py test_wasm_mbir.py test_mbir_2l_parity.py -v
-py parity_mbir_2l.py
+```bash
+python3 -m unittest test_mbir_2l.py test_befunge_mbir.py test_wasm_mbir.py test_mbir_2l_parity.py -v
+python3 parity_mbir_2l.py
 ```
 
 Probe actual: Befunge `23+,@` y Wasm `i32.const 2; i32.const 3; i32.add`
@@ -329,11 +330,11 @@ que lee `d` contenga la dirección de aterrizaje. Sus libertades son cuántos `n
 ejecutados insertar antes del salto y cuál de los 8 bytes válidos poner en una celda
 de dato libre. Usa búsqueda con backtracking. Guía paso a paso: `GUIA_ETIQUETAS.md`.
 
-```powershell
-py labeled_asm.py compile examples_labeled/call_return.mlab
-py labeled_asm.py explain examples_labeled/call_return.mlab
-py labeled_asm.py verify  examples_labeled/call_return.mlab
-py -m unittest test_labeled_asm -v
+```bash
+python3 labeled_asm.py compile examples_labeled/call_return.mlab
+python3 labeled_asm.py explain examples_labeled/call_return.mlab
+python3 labeled_asm.py verify  examples_labeled/call_return.mlab
+python3 -m unittest test_labeled_asm -v
 ```
 
 `verify` exige, con 5 entradas distintas:
@@ -357,6 +358,20 @@ Límites de v0 (se rechazan con explicación):
 - **Destinos de salto hasta la celda 127.**
 - **Camino fijo.** Sin condicionales, el camino no depende de la entrada: los saltos
   cambian el acomodo, no lo que el programa puede calcular.
+
+## Tests
+
+```bash
+pip install -r requirements-dev.txt   # zig 0.16 si no lo tienes instalado
+python3 build_native.py                 # opcional: sin ./epoch los tests V2-V4 se saltan
+python3 -m unittest discover -v
+```
+
+Los tests que necesitan `./epoch` se marcan `skipped` si el binario no existe;
+`test_piton_malbolge_mirror.py` se salta si `piton` no está en el `PATH`. Las
+rutas de los binarios se pueden forzar con `MALBOLGE_EPOCH` y
+`MALBOLGE_VM_RUNNER`. CI (`.github/workflows/tests.yml`) compila los binarios con
+zig 0.16 y corre la suite completa en Linux.
 
 ## Procedencia
 

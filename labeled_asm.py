@@ -57,6 +57,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import binaries
 import malbolge
 from classic_encoder import encode
 
@@ -303,8 +304,8 @@ def trace(source: str, stdin: bytes, max_steps: int = 100_000):
 
 
 def zig_runner(source: str, stdin: bytes):
-    exe = Path(__file__).resolve().parent / "intermediate_vm_runner.exe"
-    if not exe.exists():
+    exe = binaries.find_vm_runner()
+    if exe is None:
         return None
     p = subprocess.run([str(exe), "10", source.encode().hex(), stdin.hex(), "100000", "0", "0", "0"],
                        capture_output=True, text=True, timeout=60)

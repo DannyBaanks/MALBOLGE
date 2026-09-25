@@ -14,6 +14,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import binaries
+
 HERE = Path(__file__).resolve().parent
 BF = HERE / "fixtures" / "dynamic_onehot.bf"
 MAL = HERE / "fixtures" / "dynamic_onehot.mal"
@@ -45,7 +47,7 @@ def onehot(pointer: int, cells: bytes) -> bytes:
 
 
 def run(payload: bytes):
-    p = subprocess.run([str(HERE / "epoch.exe"), "run", str(MAL), payload.hex()],
+    p = subprocess.run([str(binaries.epoch()), "run", str(MAL), payload.hex()],
                        capture_output=True, text=True, check=True)
     fields = dict(item.split("=", 1) for item in p.stderr.split())
     return fields["status"], int(fields["steps"]), bytes.fromhex(fields["stdout_hex"])
@@ -110,7 +112,7 @@ def main() -> int:
         return 2
     if sys.argv[1] == "compile":
         BF.write_text(program(), encoding="ascii")
-        subprocess.run([str(HERE / "epoch.exe"), "compile", str(BF), str(MAL)], check=True)
+        subprocess.run([str(binaries.epoch()), "compile", str(BF), str(MAL)], check=True)
         print(f"compiled dynamic payload={SIZE} bytes")
         return 0
     manifest_path = HERE / "fixtures" / "dynamic_onehot_demo.json"

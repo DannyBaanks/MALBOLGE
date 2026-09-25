@@ -20,10 +20,10 @@ El driver posee la cinta (256 celdas, como TAPE_BASE) + puntero + pc + input.
 Cada instrucción es UNA época; nada se resume; solo un byte sellado cruza.
 
 Commands:
-  py primitives.py run <program.bf> [input.bin] [--out PATH]
-  py primitives.py verify FILE
-  py primitives.py tamper-demo FILE
-  py primitives.py macro-trace FILE
+  python3 primitives.py run <program.bf> [input.bin] [--out PATH]
+  python3 primitives.py verify FILE
+  python3 primitives.py tamper-demo FILE
+  python3 primitives.py macro-trace FILE
 """
 
 from __future__ import annotations
@@ -34,6 +34,8 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+
+import binaries
 
 HERE = Path(__file__).resolve().parent
 FORMAT_ID = "malbolge-primitives/1"
@@ -61,8 +63,8 @@ def run_epoch(program_file: str, byte: int) -> tuple[int, str, int]:
     """One primitive = one complete Malbolge Free computation, sealed."""
     in_hex = f"{byte:02x}"
     result = subprocess.run(
-        [str(HERE / "epoch.exe"), "run", program_file, in_hex],
-        capture_output=True, text=True, check=True)
+        [str(binaries.epoch()), "run", program_file, in_hex],
+        capture_output=True, text=True, check=True, cwd=HERE)
     fields = dict(kv.split("=", 1) for kv in result.stderr.split())
     status = fields["status"]
     steps = int(fields["steps"])

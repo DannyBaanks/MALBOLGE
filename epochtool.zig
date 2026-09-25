@@ -3,7 +3,7 @@
 //   epochtool compile <in.bf> <out.mal>
 //       Brainfuck -> Malbolge Free text (width=10 fixed, TAPE_BASE assisted).
 //
-//   epochtool run <in.mal> <stdin-hex>
+//   epochtool run <in.mal> <stdin-hex> [max-steps]
 //       Run a compiled program on the Free core with the given stdin bytes,
 //       print "status=... stdout_hex=...".
 //
@@ -38,7 +38,7 @@ pub fn main(init: std.process.Init) !void {
     defer args.deinit();
     _ = args.next();
     const cmd = args.next() orelse {
-        std.debug.print("usage: epochtool compile <in.bf> <out.mal> | epochtool run <in.mal> <stdin-hex>\n", .{});
+        std.debug.print("usage: epochtool compile <in.bf> <out.mal> | epochtool run <in.mal> <stdin-hex> [max-steps]\n", .{});
         return;
     };
 
@@ -57,7 +57,9 @@ pub fn main(init: std.process.Init) !void {
         const hex = args.next() orelse return error.MissingArg;
         const program = try (std.Io.Dir.cwd()).readFileAlloc(init.io, mal_path, alloc, .unlimited);
         const input = try hexDecode(hex, alloc);
-        var report = try semantic.runText(program, input, alloc);
+        // Optional step limit, so manifests sealed under another limit still replay.
+        const max_steps = if (args.next()) |lim| try std.fmt.parseInt(u64, lim, 10) else semantic.DEFAULT_MAX_STEPS;
+        var report = try semantic.runTextLimit(program, input, max_steps, alloc);
         defer report.deinit(alloc);
         const shex = try hexEncode(report.stdout, alloc);
         std.debug.print("status={s} steps={d} stdout_hex={s}\n", .{ report.status, report.steps, shex });

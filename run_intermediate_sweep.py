@@ -18,10 +18,11 @@ import sys
 import time
 from pathlib import Path
 
+import binaries
 import reference_width_vm as reference
 
 HERE = Path(__file__).resolve().parent
-RUNNER = HERE / "intermediate_vm_runner.exe"
+RUNNER = binaries.find_vm_runner() or HERE / ("intermediate_vm_runner" + binaries.EXE_SUFFIX)
 PREREG = HERE / "evidence" / "intermediate_vm_sweep_preregistration.json"
 ADDENDUM = HERE / "evidence" / "intermediate_vm_sweep_preregistration_addendum.json"
 REPORT = HERE / "evidence" / "intermediate_vm_sweep_report.json"

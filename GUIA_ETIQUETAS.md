@@ -27,9 +27,9 @@ Instrucciones de v0: `in`, `out`, `nop`, `end`, `goto ETIQUETA`,
 
 ## 2. Compílalo
 
-```powershell
+```bash
 cd "C:\Development\ISyCo Git\MALBOLGE"
-py labeled_asm.py compile examples_labeled/call_return.mlab
+python3 labeled_asm.py compile examples_labeled/call_return.mlab
 ```
 
 ```
@@ -40,8 +40,8 @@ Con `-o salida.mal` además lo guarda en un archivo.
 
 ## 3. Mira por qué quedó así
 
-```powershell
-py labeled_asm.py explain examples_labeled/call_return.mlab
+```bash
+python3 labeled_asm.py explain examples_labeled/call_return.mlab
 ```
 
 Filas relevantes; el resto son `nop` de relleno que nunca se ejecutan ni se leen:
@@ -76,8 +76,8 @@ Cómo leerlo:
 
 ## 4. Verifícalo
 
-```powershell
-py labeled_asm.py verify examples_labeled/call_return.mlab
+```bash
+python3 labeled_asm.py verify examples_labeled/call_return.mlab
 ```
 
 ```
@@ -100,8 +100,8 @@ LABELED_VERIFY=PASS
 
 ## 5. Lo que v0 rechaza
 
-```powershell
-py labeled_asm.py compile examples_labeled/rejected_loop.mlab
+```bash
+python3 labeled_asm.py compile examples_labeled/rejected_loop.mlab
 ```
 
 ```
@@ -132,8 +132,8 @@ También se rechazan:
 
 ## 6. Tests
 
-```powershell
-py -m unittest test_labeled_asm -v
+```bash
+python3 -m unittest test_labeled_asm -v
 ```
 
 ```

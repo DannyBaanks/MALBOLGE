@@ -4,3 +4,5 @@ __pycache__/
 *.pdb
 *.o
 intermediate_vm_runner
+epoch
+.zig-cache/
