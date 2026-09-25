@@ -32,6 +32,8 @@ STATE_PROGRAM = HERE / "fixtures" / "tape_epoch.bf"
 STATE_MAL = HERE / "fixtures" / "tape_epoch.mal"
 TAPE_SIZE = 32
 STATE_SIZE = TAPE_SIZE
+# Must match DEFAULT_MAX_STEPS in vendor/malfuck/semantic.zig.
+DEFAULT_MAX_STEPS = 5_000_000
 
 
 def sha256_hex(data: bytes) -> str:
@@ -68,10 +70,11 @@ def expected_transition(state: bytes, size: int | None = None) -> bytes:
     return bytes(tape)
 
 
-def run_epoch(state: bytes, program: Path | None = None) -> tuple[bytes, str, int]:
+def run_epoch(state: bytes, program: Path | None = None,
+              max_steps: int = DEFAULT_MAX_STEPS) -> tuple[bytes, str, int]:
     program = STATE_MAL if program is None else program
     result = subprocess.run(
-        [str(binaries.epoch()), "run", str(program), state.hex()],
+        [str(binaries.epoch()), "run", str(program), state.hex(), str(max_steps)],
         capture_output=True,
         text=True,
         check=True,
@@ -97,9 +100,23 @@ def manifest_for(state: bytes) -> dict:
         "state_after_sha256": sha256_hex(out),
         "status": status,
         "steps": steps,
+        "max_steps": DEFAULT_MAX_STEPS,
         "matches_reference": out == expected,
         "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
+
+
+def manifest_max_steps(manifest: dict) -> int:
+    """Step limit the manifest was sealed under.
+
+    Older manifests predate the field. The ones that hit the limit record it
+    as their step count (the 50M/500M demos); the rest ran under the default.
+    """
+    if "max_steps" in manifest:
+        return manifest["max_steps"]
+    if manifest["status"] == "MAX_STEPS":
+        return manifest["steps"]
+    return DEFAULT_MAX_STEPS
 
 
 def verify(manifest: dict) -> list[str]:
@@ -117,7 +134,7 @@ def verify(manifest: dict) -> list[str]:
         problems.append("state before fails its seal")
     if sha256_hex(after) != manifest["state_after_sha256"]:
         problems.append("state after fails its seal")
-    replay, status, steps = run_epoch(before, program)
+    replay, status, steps = run_epoch(before, program, manifest_max_steps(manifest))
     if status != manifest["status"] or steps != manifest["steps"]:
         problems.append("replay status/steps diverged")
     if replay != after:

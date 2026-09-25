@@ -69,11 +69,15 @@ pub const RunReport = struct {
 /// Ejecuta un texto de programa ya compilado en el core Malbolge Free
 /// asistido (width 10, fixed). Útil para reusar un .mal con entrada nueva.
 pub fn runText(program_text: []const u8, input: []const u8, allocator: std.mem.Allocator) !RunReport {
+    return runTextLimit(program_text, input, DEFAULT_MAX_STEPS, allocator);
+}
+
+pub fn runTextLimit(program_text: []const u8, input: []const u8, max_steps: u64, allocator: std.mem.Allocator) !RunReport {
     var core = mb.MalbolgeCore.initFreeAssisted(allocator, 10, 59049, .fixed);
     defer core.deinit();
     try core.load(program_text);
 
-    var res = try core.run(DEFAULT_MAX_STEPS, input);
+    var res = try core.run(max_steps, input);
     defer res.stdout.deinit(allocator);
 
     const stdout_copy = try allocator.dupe(u8, res.stdout.items);

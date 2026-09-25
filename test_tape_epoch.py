@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 
 import binaries
@@ -20,6 +21,16 @@ class TapeLayoutTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             tape_epoch.expected_transition(b"\x00", 2)
 
+    def test_default_step_limit_matches_zig(self):
+        zig = (tape_epoch.HERE / "vendor" / "malfuck" / "semantic.zig").read_text(encoding="utf-8")
+        match = re.search(r"DEFAULT_MAX_STEPS: u64 = ([0-9_]+);", zig)
+        self.assertEqual(int(match.group(1).replace("_", "")), tape_epoch.DEFAULT_MAX_STEPS)
+
+    def test_legacy_manifest_step_limit(self):
+        self.assertEqual(tape_epoch.manifest_max_steps({"max_steps": 7, "status": "OK", "steps": 3}), 7)
+        self.assertEqual(tape_epoch.manifest_max_steps({"status": "MAX_STEPS", "steps": 500_000_000}), 500_000_000)
+        self.assertEqual(tape_epoch.manifest_max_steps({"status": "OK", "steps": 3}), tape_epoch.DEFAULT_MAX_STEPS)
+
 
 @unittest.skipIf(binaries.find_epoch() is None, "epoch binary not built (python3 build_native.py)")
 class TapeEpochTests(unittest.TestCase):
@@ -33,6 +44,12 @@ class TapeEpochTests(unittest.TestCase):
                 manifest = load(f"tape_epoch_{size}.json")
                 self.assertEqual(manifest["matches_reference"], passes)
                 self.assertEqual(tape_epoch.verify(manifest), [])
+
+    def test_legacy_demos_replay_under_their_own_limit(self):
+        # Sealed at 50M / 500M steps, before the default dropped to 5M.
+        for name in ("tape_epoch_demo.json", "tape_epoch_demo_v2.json", "tape_epoch_demo_v3.json"):
+            with self.subTest(name=name):
+                self.assertEqual(tape_epoch.verify(load(name)), [])
 
     def test_tampered_savestate_is_rejected(self):
         manifest = load("tape_epoch32_demo.json")
