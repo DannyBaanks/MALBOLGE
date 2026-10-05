@@ -1,0 +1,56 @@
+{
+  "format": "malbolge-lmao-classic-adder/1",
+  "registered_on": "2026-10-02",
+  "discovery": "LMAO (Low-level Malbolge Assembler, Ooh!, Matthias Lutter) is a CLASSIC Malbolge (10-trit, 59049) assembler, vendored at MALBOLGE-MB-DATABASE/third_party/lmao. The genealogy conflated it with LMFAO, which is the Unshackled one.",
+  "vendored_to": "MALBOLGE/vendor/lmao (copy, not integration)",
+  "lmao_sha256": "5a6039efd995af1cf57b9bf4d6ec70da3a5303efe0ec6a1fe0fad3abc03f3f44",
+  "adder_hell_sha256": "3de580abba03da59af5172e04da9a0822bfe50cb152b9b781a03af451a30fe6e",
+  "adder_mb_sha256": "6d5e68f621ef4e9bc67a7bb060c8e79f807d3db33d12196be074aa6950753edc",
+  "adder_mb_len": 55725,
+  "note_lmao_nondeterminism": "LMAO output is not byte-reproducible: initialize.c uses rand()%8 to pick among NOP-class opcodes (srand(time(NULL))). Two builds differ in 389 bytes; both run correctly.",
+  "cross_interpreter": [
+    {
+      "input": "123 456",
+      "expected": "579",
+      "oracle": "579",
+      "engine": "579",
+      "gost": "579",
+      "oracle_steps": 300228,
+      "oracle_status": "HALTED",
+      "all_agree": true
+    },
+    {
+      "input": "999 2",
+      "expected": "1001",
+      "oracle": "1001",
+      "engine": "1001",
+      "gost": "1001",
+      "oracle_steps": 253280,
+      "oracle_status": "HALTED",
+      "all_agree": true
+    },
+    {
+      "input": "0 0",
+      "expected": "0",
+      "oracle": "0",
+      "engine": "0",
+      "gost": "0",
+      "oracle_steps": 168058,
+      "oracle_status": "HALTED",
+      "all_agree": true
+    },
+    {
+      "input": "1 1",
+      "expected": "2",
+      "oracle": "2",
+      "engine": "2",
+      "gost": "2",
+      "oracle_steps": 168669,
+      "oracle_status": "HALTED",
+      "all_agree": true
+    }
+  ],
+  "claim": "CLASSIC_MALBOLGE_ADDER=DEMONSTRATED: example_adder.hell compiles with LMAO to a 55724-cell Classic Malbolge program whose decimal addition (including carry to 4 digits) is identical on malbolge.py, Malbolge-Engine and MalboGost.",
+  "technique": "uses xlat2 cycles of size 2 and 5 to represent each decimal digit; summing calls the R_ (successor) instruction to advance cycles, then converts back to ASCII.",
+  "captured_utc": "2026-10-03T02:37:37+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "format": "malbolge-mod59049-rustbolge-snapshot-readout/1",
+  "registered_on": "2026-10-02",
+  "method": "Reconstruct full memory from the Rustbolge snapshot at step 120000 (chain+overlay), decode the tick with the orbit-position decoder, and compare against an instrumented count of N1 visits up to the same step.",
+  "decoded_tick": 22049,
+  "digits": {
+    "N1": 8,
+    "N2": 1,
+    "N3": 2,
+    "N4": 3,
+    "N5": 3
+  },
+  "instrumented_visits": 22049,
+  "match": true,
+  "note": "The state is captured after step 120000; whether the last counted visit was already executed shifts the count by at most 1, and the decoded value matches the instrumented count within that convention.",
+  "claim": "CROSS_VM_TICK_READOUT=DEMONSTRATED: the tick is readable from an independent implementation's snapshot with the same decoder, agreeing with instrumented counting.",
+  "captured_utc": "2026-10-03T05:57:22+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "format": "malbolge-mod59049-crossvm-resume/1",
+  "registered_on": "2026-10-02",
+  "method": "Rustbolge ran 120000 steps and wrote a snapshot (chain+overlay). Python reconstructs full memory from that snapshot, compares with a Python run at the same step, then resumes the Rustbolge state in the Python interpreter and runs to halt. Compared against the Python monolithic run.",
+  "registers_match_at_120000": true,
+  "full_memory_match_at_120000": true,
+  "crossvm_resume_final_step": 314258,
+  "monolithic_final_step": 314258,
+  "crossvm_resume_equals_monolithic": true,
+  "claim": "MOD59049_CROSSVM_RESUME=DEMONSTRATED: an independent implementation (Rustbolge, Rust) and the Python interpreter agree on the full 59049-cell memory at step 120000, and the counter can be resumed from the Rustbolge snapshot in a different implementation and finish identically.",
+  "captured_utc": "2026-10-03T04:38:10+00:00"
+}

@@ -1,0 +1,81 @@
+v0.6.0
+- Complete source code refactoring
+- Improved Doxygen comments
+- Rewrote README with a full HeLL language reference.
+- Improved Makefile and added test suite.
+
+v0.5.6b
+- Improved robustness when building large programs near the memory size limit:
+  LMAO now continues trying alternative layouts instead of giving up early.
+- Revised README file.
+
+v0.5.6
+- Added more detail to debug output files.
+
+v0.5.5
+- Bug fix.
+
+v0.5.4
+- Slightly improved handling of fixed offsets in the .CODE section.
+
+v0.5.3
+- When fast mode fails due to a memory conflict, LMAO automatically retries
+  in normal mode instead of failing outright.
+
+v0.5.2
+- Slightly improved handling of fixed offsets.
+
+v0.5.1
+- When generating debug output, LMAO treats unused cells marked with ?- as
+  reserved (equivalent to ?).  This makes debugging with HeLL IDE easier,
+  at the cost of slightly larger output files.
+
+v0.5
+- LMAO can now write debug information files (.dbg) for use with HeLL IDE.
+
+v0.4.4
+- Added @ as a shorthand for .OFFSET.
+- Added curly braces { } for explicit block delimiting.
+- Error messages now include line and column numbers.
+
+v0.4.3
+- Reduced size of generated programs.
+
+v0.4.2
+- Arithmetic operators now work with label names as operands.
+
+v0.4.1
+- Added -l command-line option to control output line length.
+- The -o option is no longer required; the output filename is derived from
+  the input filename automatically.
+- Reduced size of generated programs.
+- Added Doxygen documentation.
+- Various bug fixes.
+
+v0.4
+- Added arithmetic operators for constant expressions: +, -, *, /, >>, <<, !
+- Changed the unused-cell marker from - to ?-.
+- Added string literals to the .DATA section.
+
+v0.3.2
+- Reduced size of generated programs.
+
+v0.3.1
+- Bug fix.
+
+v0.3
+- Added a constant-generation data module that significantly reduces the size
+  of assembled programs, especially for complex programs with many data cells.
+
+v0.2.1
+- Reduced size of generated programs.
+
+v0.2
+- Reduced size of generated programs.
+
+v0.1.1
+- Fixed a crash that could occur when .OFFSET is used in the .CODE section.
+- Added example_cat_halt_on_eof.hell.
+
+v0.1
+- Initial release.

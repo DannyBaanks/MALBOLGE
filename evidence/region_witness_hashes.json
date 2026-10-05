@@ -1,0 +1,16 @@
+{
+  "format": "malbolge-region-witness-hashes/1",
+  "captured_utc": "2026-10-02T22:38:11+00:00",
+  "algorithm": "sha256",
+  "files": {
+    "region_witness_confirm.py": "411cc19e921354a88223fce7d079018473b5d19061641713681373ffab3a8e06",
+    "region_witness_search.py": "7c9d21834353a82158503bb5602468027304c5ffa70529333453f9aa989e90a3",
+    "evidence/region_witness_preregistration.json": "c894d789bac645324a6d74cee155de24a7c4d14f29d37d55a762a4d3d582d30b",
+    "evidence/region_witness_report.json": "9dc83e7280a41d7f7b074fcb79eb7e65549a15d6544cfff5f191b9a1f188c1c7",
+    "intermediate_vm_runner.zig": "b60395d765c93fc2243bf111e5da0d3656c76e16b94c779eed9269722da59a64",
+    "evidence/REGION_WITNESS_EXPERIMENT.md": "201cead8de83288d2299f476cb8eba5efd4df0c29dad4d6d6b470be7ecdf15a9"
+  },
+  "instrument_sha256": "101b6876e52ecdbe599b43f7b8e44ac6e7381aece308ed32b1a5d821e987554b",
+  "claim": "NATURAL_ALL_REGION_E11_TO_E18=DEMONSTRATED",
+  "first_failing_width": null
+}

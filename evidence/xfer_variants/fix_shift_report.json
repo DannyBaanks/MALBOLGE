@@ -1,0 +1,96 @@
+{
+  "format": "malbolge-lmao-readout2-corrected/1",
+  "correccion": "El '4/5' del barrido shift era un BUG del generador: con shift2=False todos los bloques b_k imprimian '9' (ch=k+1 if (shift2 and k<9) else 9). Este es el rerun con la tabla de digitos correcta.",
+  "rows": [
+    {
+      "shift": false,
+      "p": 1,
+      "expected": "89",
+      "observed": "79",
+      "match": false,
+      "steps": 13896,
+      "hell_sha256": "e446311f3135bacbb266d99214c2599727f7a1031533d5bf28474120e3ae3058"
+    },
+    {
+      "shift": false,
+      "p": 2,
+      "expected": "79",
+      "observed": "78",
+      "match": false,
+      "steps": 13849,
+      "hell_sha256": "bb83f14d6796d083e30006861d08f7ea9096fff2d7e9f1d634bb66efad8684c8"
+    },
+    {
+      "shift": false,
+      "p": 4,
+      "expected": "59",
+      "observed": "58",
+      "match": false,
+      "steps": 14049,
+      "hell_sha256": "86586cd5fc72671b01a2f3405a986625a297d05362d820c095d19630b0f06d3d"
+    },
+    {
+      "shift": false,
+      "p": 5,
+      "expected": "49",
+      "observed": "48",
+      "match": false,
+      "steps": 14247,
+      "hell_sha256": "1175371e2f7f661a550407b55ca167c101cc60fa25ab3ab2dcb75bc0c864df82"
+    },
+    {
+      "shift": false,
+      "p": 6,
+      "expected": "39",
+      "observed": "38",
+      "match": false,
+      "steps": 14012,
+      "hell_sha256": "45b518ad8d90f2899109dbf43298a228f3b7aec90a663a9cbea4d819885f167b"
+    },
+    {
+      "shift": true,
+      "p": 1,
+      "expected": "89",
+      "observed": "7:",
+      "match": false,
+      "steps": 13912,
+      "hell_sha256": "fd857ed57b0afea8e013687581a0c41d3073c0379576c70483d0a73ff8785995"
+    },
+    {
+      "shift": true,
+      "p": 2,
+      "expected": "79",
+      "observed": "79",
+      "match": true,
+      "steps": 13872,
+      "hell_sha256": "f3fff0286e342a759ad8d22cfc7949665c50987cd849a59f6bbad2061ae8e439"
+    },
+    {
+      "shift": true,
+      "p": 4,
+      "expected": "59",
+      "observed": "59",
+      "match": true,
+      "steps": 14065,
+      "hell_sha256": "2fabba1be4ac6278ab697aa2f97cdf56a140636b40176d9a8bec4f706acfb764"
+    },
+    {
+      "shift": true,
+      "p": 5,
+      "expected": "49",
+      "observed": "49",
+      "match": true,
+      "steps": 14259,
+      "hell_sha256": "509ffc9e21dd67a0370b31a200a6470f2333fb0ea8f5fd9f0821fef9844ab32c"
+    },
+    {
+      "shift": true,
+      "p": 6,
+      "expected": "39",
+      "observed": "39",
+      "match": true,
+      "steps": 14028,
+      "hell_sha256": "320f9eacbbab2059d945dad3eda32c26c2f3f2a9488baefc47bcfe040f98317a"
+    }
+  ]
+}

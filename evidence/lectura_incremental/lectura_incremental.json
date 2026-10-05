@@ -1,0 +1,22 @@
+{
+  "format": "malbolge-lectura-incremental/1",
+  "pregunta": "El readout no destructivo permite observar la cascada tick a tick sin consumirla?",
+  "definicion_operacional": "READOUT_NO_DESTRUCTIVO + retorno al bucle de ticks; cada lectura de 5 digitos debe coincidir con la posicion predicha del tick correspondiente, calculada de forma independiente como ((T+t)//9^i) mod 9.",
+  "T": 10,
+  "stops": [
+    2,
+    5
+  ],
+  "status": "HALTED",
+  "steps": 39276,
+  "lecturas": 1,
+  "rows": [
+    {
+      "tick": 1,
+      "esperado": "78999",
+      "obtenido": "88999",
+      "coincide": false
+    }
+  ],
+  "n_ok": 0
+}

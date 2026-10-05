@@ -1,0 +1,36 @@
+{
+  "format": "malbolge-readout-reentrada/2",
+  "correccion": "La primera version de esta prueba paso el parametro reentry en la firma pero no en la llamada, asi que el fuente no cambiaba y el test era vacuo. Corregido y repetido.",
+  "rows": [
+    {
+      "reentry": "loop",
+      "hell": "7c1714ed6f515a92b7782ef036051a7a725057da5d2e627a3e37aab241282dad",
+      "primera": "78999",
+      "resto": "¢î¨\u001a\u001a\u001aOå",
+      "digitos": 0
+    },
+    {
+      "reentry": "w1",
+      "hell": "acdc126de831b1b8ca1c4ded90ad4e39f6ec96d8dbf0457b36c06b4c0044b115",
+      "primera": "78999",
+      "resto": "¢î¨\u001a\u001a\u001aOå",
+      "digitos": 0
+    },
+    {
+      "reentry": "s1",
+      "hell": "a0e60e42bf4c277f984562c33c04c7eb4ca4e58492fd413974713233858c11c9",
+      "primera": "78999",
+      "resto": "¢¨¨¨ÑgÞî",
+      "digitos": 0
+    },
+    {
+      "reentry": "read_1",
+      "hell": "98c1203e2703e9bebb636af5f406a9a48b63bd99a0aabab5f63a7217e920463e",
+      "primera": "78999",
+      "resto": "¢Ø&¨ííÞÞÞÞ",
+      "digitos": 0
+    }
+  ],
+  "fuentes_distintas": 4,
+  "esperado_T2": "78999(_tick2) 69999(3) 59999(4) ..."
+}

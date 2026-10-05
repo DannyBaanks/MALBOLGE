@@ -1,0 +1,82 @@
+{
+  "format": "malbolge-parametric-vm-report/1",
+  "preregistration": "e16_e18_vm_preregistration.json",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "mem_available_bytes_at_start": 5602914304
+  },
+  "results": [
+    {
+      "dimension": 16,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 43046721,
+      "initial_tape_sha256": "82b95118549644eee5e83ea5a5ecec02bf07386df6763882837175d592cebcea",
+      "final_tape_sha256": "2f9f857c472ecd3c735eab6f0034ec20a5432d39c62b4691bee89dba30354534",
+      "load_seconds": 29.575474673999906,
+      "execution_seconds": 0.07905532599988874,
+      "source": "ubO",
+      "pass": true
+    },
+    {
+      "dimension": 17,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 129140163,
+      "initial_tape_sha256": "55004664917594630974e905e8751284871b32b7a3058e859e2b13aa05edf390",
+      "final_tape_sha256": "8bd34f7b0ba344f14bcdd8f845b6d7f76ae2315bb9796bf22c9684aa4d307a15",
+      "load_seconds": 92.70548944500001,
+      "execution_seconds": 0.24612655300006736,
+      "source": "ubO",
+      "pass": true
+    },
+    {
+      "dimension": 18,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 387420489,
+      "initial_tape_sha256": "ce3f6dbb367203484bcec8e3d054d418c6bd48fa493789388756854eac24da1f",
+      "final_tape_sha256": "3d3e57e7902c4785fd499c8c9eb5bd136ca963db3d4920a2ad83a9da1155748e",
+      "load_seconds": 359.78442254800007,
+      "execution_seconds": 0.6610253880003256,
+      "source": "ubO",
+      "pass": true
+    }
+  ],
+  "negative_control_e16": {
+    "status": "INVALID",
+    "halt_reason": "invalid_opcode_24_at_0",
+    "steps": 0,
+    "stdout_hex": "",
+    "full_crazy_fill_completed": false,
+    "load_seconds": 0.08868734599991512,
+    "pass": true
+  },
+  "targets_pass": true,
+  "claim": "VM_EXECUTION_PARITY_E16_E18=DEMONSTRATED"
+}

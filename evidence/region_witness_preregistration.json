@@ -1,0 +1,279 @@
+{
+  "format": "malbolge-region-witness-preregistration/1",
+  "registered_on": "2026-10-02",
+  "provenance": "Exploratory, not confirmatory. Length-6 then length-7 plans over opcodes (4,23,39,40,62,68,81), low-prefix simulator (fill-before-execute, CAP=256) used only as a filter for region-2 entry. First simulator hit per width that the native rebuild of intermediate_vm_runner.zig reported visited=7 and HALTED was frozen. E11 used length 6; E12-E18 used length 7. The E15 historical witness (a`r: is a different source and is not this selection.",
+  "null_hypothesis": "H0: for at least one width in E11-E18, the frozen source does not, from a=c=d=0 and empty stdin, visit regions 0, 1 and 2 and halt, or an offset control fails to change that region's first opcode.",
+  "alternative_hypothesis": "H1: at every width E11-E18 the frozen source visits regions 0, 1 and 2, halts, replays the frozen milestones, and each of offset[1] and offset[2] participates in dispatch.",
+  "instrument": "native rebuild of intermediate_vm_runner.zig, Zig 0.16.0, ReleaseSafe, sha256 recorded at confirm time",
+  "widths": [
+    {
+      "dimension": 11,
+      "plan": [
+        23,
+        23,
+        40,
+        40,
+        39,
+        40
+      ],
+      "source": "ut&%##",
+      "steps": 13,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        10,
+        8
+      ],
+      "entry_ops": [
+        23,
+        17,
+        32
+      ],
+      "final": {
+        "a": 177146,
+        "c": 88554,
+        "d": 38
+      },
+      "initial_tape_sha256": "b0a4cf9a8be17ec072b36d0ffa01b7ebbe16f2a755b99c3a44990e9561c1d609",
+      "final_tape_sha256": "7a4a613baacc79502d18494a965d6234353e49ee614bfc8183f59a343a1f81f8",
+      "out_hex": "-"
+    },
+    {
+      "dimension": 12,
+      "plan": [
+        23,
+        40,
+        40,
+        39,
+        23,
+        40,
+        4
+      ],
+      "source": "u'&$q#\\",
+      "steps": 94,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        27,
+        8
+      ],
+      "entry_ops": [
+        23,
+        7,
+        80
+      ],
+      "final": {
+        "a": 442844,
+        "c": 265702,
+        "d": 125
+      },
+      "initial_tape_sha256": "b32425eb9beb5d4171d803f57fcc819d36bcf761ae859527cd50dbad3901fd24",
+      "final_tape_sha256": "419b00ff0b45434caf449cf8e7287c0230e517f05a620adb927084def37faa65",
+      "out_hex": "-"
+    },
+    {
+      "dimension": 13,
+      "plan": [
+        23,
+        40,
+        40,
+        62,
+        40,
+        4,
+        40
+      ],
+      "source": "u'&;$]\"",
+      "steps": 80,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        17,
+        7
+      ],
+      "entry_ops": [
+        23,
+        0,
+        71
+      ],
+      "final": {
+        "a": 531451,
+        "c": 797200,
+        "d": 797171
+      },
+      "initial_tape_sha256": "6bbaa3340bb1759a676c4fa0522039d1a11a7a912b112ce1289cd4b4cf1f6aab",
+      "final_tape_sha256": "89fac1678c1cd20548fbe4b190d91edbd2c59c27fdb3c908a9729920a2646043",
+      "out_hex": "-"
+    },
+    {
+      "dimension": 14,
+      "plan": [
+        23,
+        40,
+        40,
+        62,
+        40,
+        4,
+        40
+      ],
+      "source": "u'&;$]\"",
+      "steps": 18,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        17,
+        7
+      ],
+      "entry_ops": [
+        23,
+        18,
+        60
+      ],
+      "final": {
+        "a": 34,
+        "c": 2391461,
+        "d": 47
+      },
+      "initial_tape_sha256": "3e553a1e30f68e42dc1fb8a9398f15bafe4efb303bf417661cc4edeb1ac8a485",
+      "final_tape_sha256": "a5117237906657854b07bd10e08064150f0861d7e200b477a9e64aaf0c853fbc",
+      "out_hex": "-"
+    },
+    {
+      "dimension": 15,
+      "plan": [
+        23,
+        40,
+        40,
+        39,
+        40,
+        39,
+        23
+      ],
+      "source": "u'&$$\"o",
+      "steps": 264,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        33,
+        23
+      ],
+      "entry_ops": [
+        23,
+        78,
+        55
+      ],
+      "final": {
+        "a": 14348906,
+        "c": 164,
+        "d": 7174428
+      },
+      "initial_tape_sha256": "c9ac8b8f62ed905bd659242e0dd1a334718006fd1935c2dc7bbe5e5230bf7676",
+      "final_tape_sha256": "1d87ea1950f082e058bbab82429546023cbb95445316bc766c402c955266d70d",
+      "out_hex": "6ade"
+    },
+    {
+      "dimension": 16,
+      "plan": [
+        23,
+        40,
+        40,
+        62,
+        40,
+        4,
+        4
+      ],
+      "source": "u'&;$]\\",
+      "steps": 291,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        85,
+        7
+      ],
+      "entry_ops": [
+        23,
+        10,
+        18
+      ],
+      "final": {
+        "a": 0,
+        "c": 154,
+        "d": 107
+      },
+      "initial_tape_sha256": "e6b3230ad8bf82132007baf0382de7f78b2bc71c04e18f4df6cacdfdecdc14c0",
+      "final_tape_sha256": "a3aba3f8c06ad0f0332257937b3c4db2eb718c3a23bf14687557ea1ad71554c4",
+      "out_hex": "-"
+    },
+    {
+      "dimension": 17,
+      "plan": [
+        23,
+        23,
+        40,
+        23,
+        23,
+        62,
+        62
+      ],
+      "source": "ut&rq98",
+      "steps": 193,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        150,
+        83
+      ],
+      "entry_ops": [
+        23,
+        64,
+        71
+      ],
+      "final": {
+        "a": 129140162,
+        "c": 64570151,
+        "d": 157
+      },
+      "initial_tape_sha256": "1c2fd7968b16e1c4bde7a48e601285881ddb15c9fc80e8ff979d818c49b11534",
+      "final_tape_sha256": "030e34934f653cc339ac44e27cd0f65257a6f65c73deaa741413e448df86aeb3",
+      "out_hex": "34a0"
+    },
+    {
+      "dimension": 18,
+      "plan": [
+        23,
+        40,
+        40,
+        62,
+        4,
+        68,
+        39
+      ],
+      "source": "u'&;^?!",
+      "steps": 395,
+      "visited": 7,
+      "entry_steps": [
+        1,
+        59,
+        21
+      ],
+      "entry_ops": [
+        23,
+        66,
+        17
+      ],
+      "final": {
+        "a": 193710252,
+        "c": 193710270,
+        "d": 193710361
+      },
+      "initial_tape_sha256": "dee8e3d8171176a7a51087da90ae0726c9c8cdbaada8e138b7939cd646748e0b",
+      "final_tape_sha256": "8ed47df7eab2b51746fceaca64a499be58563a888207be47493fa21b66698c66",
+      "out_hex": "2748"
+    }
+  ],
+  "controls": [
+    "Change only offsets[1] by +1; e1op must differ from the frozen entry opcode.",
+    "Change only offsets[2] by +1; e2op must differ from the frozen entry opcode."
+  ],
+  "claim_rule": "NATURAL_ALL_REGION_E11_TO_E18=DEMONSTRATED only if every width replays status=HALTED, visited=7, steps, entry steps, entry ops, final a/c/d and both tape hashes, and both offset controls change the corresponding entry opcode. Otherwise NOT_DEMONSTRATED, first failing width preserved.",
+  "scope_exclusion": "No claim of canonical semantics, quines, or that these are the only witnesses. Exploration is not evidence; only the confirmatory replay counts."
+}

@@ -1,0 +1,36 @@
+{
+  "format": "malbolge-classic-increment-structure/3",
+  "registered_on": "2026-10-02",
+  "question": "Can a straight-line Classic program (IN, then ROT/CRAZY at deterministic addresses, then OUT) compute b -> (b+1) mod 256?",
+  "lemmas": {
+    "L1_crazy_injective_iff_m_is_29524": {
+      "statement": "crazy(., m) is injective on 0..3^10-1 exactly when m == (3^10-1)/2 == 29524.",
+      "method": "exhaustive: all 59049 values of m against all 59049 inputs",
+      "result": "exactly one qualifying m"
+    },
+    "L2_rotate_is_bijection": {
+      "statement": "rotate is a bijection on 0..3^10-1.",
+      "method": "exhaustive over all 59049 values",
+      "result": true
+    },
+    "L3_both_generators_are_coordinate_wise": {
+      "statement": "For ROT and for CRAZY(.,29524), every output trit is a function of exactly one input trit.",
+      "method": "3006 values per generator; for each output coordinate i, every candidate input coordinate j is tested for consistency",
+      "result": true
+    },
+    "L4_compositions_stay_coordinate_wise": {
+      "statement": "Compositions of ROT and CRAZY(.,29524) remain coordinate-wise, so each output trit still depends on exactly one input trit.",
+      "method": "closure of the two generators under composition",
+      "result": true
+    }
+  },
+  "consequence": "L1 restricts any injective straight-line program to CRAZY with m=29524; L2 keeps ROT injective; L3 and L4 say every such program is coordinate-wise. Increment is not coordinate-wise: no single input trit determines output trit 0, because increment carries. Verified for all 10 candidate coordinates j.",
+  "search_evidence": {
+    "straight_line_family": "IN + up to 8 of {ROT,CRAZY,NOP,MOVD} + OUT + HALT: no program maps all 256 bytes to b+1",
+    "jmp_family_with_complete_fill": "[MOVD,JMP] + up to 4 of {JMP,IN,ROT,MOVD,CRAZY,NOP} + OUT + HALT with the full 59049-cell lazy fill: no program found",
+    "control": "IN;OUT;HALT is the identity on probe bytes 0,1,2,127,255"
+  },
+  "claim": "CLASSIC_STRAIGHT_LINE_INCREMENT=IMPOSSIBLE, with machine-checked lemmas. The README row stays NOT_IMPLEMENTED and the missing ingredient is named: data-dependent control flow (computed JMP chains or loops).",
+  "not_claimed": "This does not prove +1 is impossible in Classic Malbolge. It excludes one family only.",
+  "self_correction": "Two earlier framings in this same session were wrong and are not used: the trit-multiset invariant (crazy swaps digits 0 and 1 per position, so counts change) and the same-index notion of trit-wise (ROT permutes positions). Both were replaced before any claim was written."
+}

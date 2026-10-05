@@ -1,0 +1,65 @@
+{
+  "format": "malbolge-truth-machine-three-interpreters/1",
+  "registered_on": "2026-10-02",
+  "copied_from": "MALPAD/evidence/m2_state/truth_machine.mal",
+  "source_sha256": "7062713e96dae33f5672fc4dcd654d5657e3c0ab44fd03bd93ebdd3ec43feb82",
+  "source_length": 254,
+  "interpreters": {
+    "oracle": "copy of MalbolgeOracle/oracle.py run in /tmp/tm_three",
+    "engine": "wine Malbolge-Engine/malbolge.exe",
+    "gost": "wine MalboGost/gost.exe"
+  },
+  "agreement": {
+    "input_0": {
+      "output": "0",
+      "steps": 136,
+      "halt": true,
+      "oracle": "halt_opcode a=48 c=70 d=51",
+      "engine": "HALTED steps 136",
+      "gost": "terminated=yes steps=136"
+    },
+    "input_1_at_200": {
+      "output_prefix": "11111111111",
+      "steps": 200,
+      "halt": false,
+      "engine": "TIMEOUT",
+      "gost": "terminated=no"
+    }
+  },
+  "cells_that_differ_at_step_136": [
+    {
+      "addr": 33,
+      "init": 100,
+      "input_0": 29494,
+      "input_1": 29493
+    },
+    {
+      "addr": 34,
+      "init": 100,
+      "input_0": 48,
+      "input_1": 49,
+      "note": "ASCII of the input byte itself"
+    },
+    {
+      "addr": 63,
+      "init": 112,
+      "input_0": 112,
+      "input_1": 68
+    },
+    {
+      "addr": 68,
+      "init": 107,
+      "input_0": 75,
+      "input_1": 107
+    },
+    {
+      "addr": 69,
+      "init": 124,
+      "input_0": 34,
+      "input_1": 124
+    }
+  ],
+  "cells_changed_vs_load_on_input_0": 151,
+  "claim": "TRUTH_MACHINE_THREE_INTERPRETERS=DEMONSTRATED for output and halt. The input-dependent footprint at the halt step of input 0 is 5 cells; cell 34 holds the input byte (48 vs 49). This is a state seed, not an adder.",
+  "not_claimed": "No ADD1. No editor cursor. No claim that these 5 cells are a general store."
+}

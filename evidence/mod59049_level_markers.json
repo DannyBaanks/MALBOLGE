@@ -1,0 +1,24 @@
+{
+  "format": "malbolge-mod59049-level-markers/1",
+  "registered_on": "2026-10-02",
+  "what": "Same five-cycle counter, but every carry level is observable: each N1 wrap prints 'T' except when the carry cascades further; the final wrap prints 'Z' and halts. Output length equals the number of N1 wraps (6561 = 3^8).",
+  "observed": {
+    "status": "HALTED",
+    "steps": 354721,
+    "len": 6561,
+    "counts": {
+      "T": 6560,
+      "Z": 1
+    }
+  },
+  "expected": {
+    "T": 6560,
+    "Z": 1,
+    "total": 6561
+  },
+  "exact": true,
+  "hell_sha256": "68a38e099dab6473fa33d55f4641789f3e0bb17202ce8a7303266d2797757ca7",
+  "mb_sha256": "90b7be20cd5222041bdac255ef622add5539aed0e1c4b141f277460cafd6e423",
+  "claim": "PROGRESS_MARKERS_PER_WRAP=DEMONSTRATED: the counter emits one marker per N1 wrap; a host consuming the stream can count wraps exactly.",
+  "captured_utc": "2026-10-03T05:58:40+00:00"
+}

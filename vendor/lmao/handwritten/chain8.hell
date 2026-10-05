@@ -1,0 +1,62 @@
+.CODE
+NINE:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+.DATA {
+ENTRY:
+	NINE e1
+	NINE e2
+	NINE e3
+	NINE e4
+	NINE e5
+	NINE e6
+	NINE e7
+	NINE e8
+	ROT 'X'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+e8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

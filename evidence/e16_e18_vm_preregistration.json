@@ -1,0 +1,66 @@
+{
+  "format": "malbolge-parametric-vm-preregistration/1",
+  "registered_on": "2026-10-02",
+  "null_hypothesis": "H0: the generalized probe does not produce complete VM executions at E16-E18 that halt after IN,OUT,END with stdout byte 0x5a and final registers a=90,c=2,d=2.",
+  "alternative_hypothesis": "H1: a full VM at each of E16, E17, E18 using the frozen ladder offsets executes the generated IN,OUT,END program and meets every registered state/output criterion.",
+  "dimensions": [
+    {
+      "dimension": 16,
+      "memory_cells": 43046721,
+      "offsets": [
+        0,
+        110,
+        32
+      ]
+    },
+    {
+      "dimension": 17,
+      "memory_cells": 129140163,
+      "offsets": [
+        0,
+        125,
+        62
+      ]
+    },
+    {
+      "dimension": 18,
+      "memory_cells": 387420489,
+      "offsets": [
+        0,
+        170,
+        152
+      ]
+    }
+  ],
+  "source_generation": "encode opcodes [23,5,81] with op=(mem[c]+c+offset[region]) mod 94, offsets from offset_epoch_ladder.offsets_for(k)",
+  "target": {
+    "stdin_hex": "5a",
+    "max_steps": 10
+  },
+  "required_vm_semantics": {
+    "memory": "materialized array of exactly 3^k unsigned cells",
+    "fill": "complete generalized k-trit crazy-fill before step 1",
+    "registers": "a=c=d=0 initially; c and d advance modulo 3^k",
+    "instructions": "all eight canonical Malbolge opcodes implemented",
+    "rotation": "k-trit rotate-right",
+    "self_encryption": "Classic printable-ASCII XLAT after each non-halting step",
+    "eof": "3^k-1 per dimension"
+  },
+  "success_criterion": {
+    "status": "HALTED",
+    "halt_reason": "halt_opcode",
+    "steps": 3,
+    "stdout_hex": "5a",
+    "final_registers": {
+      "a": 90,
+      "c": 2,
+      "d": 2
+    },
+    "full_crazy_fill_completed": true
+  },
+  "baseline": "The same generalized probe already passed E10 (byte/state parity vs malbolge.py, evidence/e15_vm_report.json) and E11-E14 (evidence/e11_e14_vm_report.json). This experiment reuses those baselines by reference; the E16-E18 fill path is additionally cross-checked by test_crazy_width_general against a tritwise-direct reference at E16-E18.",
+  "negative_control": "Decode the frozen E16-generated source with offset[region0] changed from 0 to 1; require load-time INVALID rather than a false PASS.",
+  "resource_policy": "If a dimension cannot be allocated within available RAM (cells*4 bytes + 1.5 GiB headroom), it is recorded SKIPPED_INSUFFICIENT_MEMORY and the claim is NOT_DEMONSTRATED for the set; skipped dimensions are never silently dropped.",
+  "claim_rule": "VM_EXECUTION_PARITY_E16_E18=DEMONSTRATED only if the formula-drift guard, the negative control, and every per-dimension success criterion pass (no skips). Otherwise NOT_DEMONSTRATED.",
+  "scope_exclusion": "No claim beyond this registered VM profile; no quines, no arbitrary programs, no canonical-semantics claims beyond the E10 baseline."
+}

@@ -1,0 +1,108 @@
+{
+  "format": "malbolge-readout-nondestructive-generality/1",
+  "pregunta": "El readout no destructivo (restauracion estatica, 1 llamada por bloque) funciona en otros T?",
+  "diseno": "Barrido pre en {0,1,2}^2 x shift en {0,1}^2 = 36 configs por T, non_destructive=True, nd_cap=1.",
+  "rows": [
+    {
+      "stops": [
+        2,
+        5
+      ],
+      "expected": "88999",
+      "reproducido": true,
+      "pre_shift": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pasos": 39276,
+      "configs_probadas": 14
+    },
+    {
+      "stops": [
+        2,
+        6
+      ],
+      "expected": "68999",
+      "reproducido": true,
+      "pre_shift": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pasos": 39286,
+      "configs_probadas": 14
+    },
+    {
+      "stops": [
+        9
+      ],
+      "expected": "99999",
+      "reproducido": true,
+      "pre_shift": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pasos": 37803,
+      "configs_probadas": 14
+    },
+    {
+      "stops": [
+        2,
+        45
+      ],
+      "expected": "94999",
+      "reproducido": false,
+      "pre_shift": null,
+      "pasos": null,
+      "configs_probadas": 36
+    },
+    {
+      "stops": [
+        5
+      ],
+      "expected": "49999",
+      "reproducido": true,
+      "pre_shift": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pasos": 37356,
+      "configs_probadas": 14
+    },
+    {
+      "stops": [
+        6
+      ],
+      "expected": "39999",
+      "reproducido": true,
+      "pre_shift": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pasos": 37142,
+      "configs_probadas": 14
+    },
+    {
+      "stops": [
+        2,
+        45
+      ],
+      "expected": "94999",
+      "reproducido": false,
+      "pre_shift": null,
+      "pasos": null,
+      "configs_probadas": 144,
+      "nota": "barridoAmpliado con shift hasta 3 porque T=90 tiene 3 digitos no nulos"
+    }
+  ],
+  "n_ok": 5
+}

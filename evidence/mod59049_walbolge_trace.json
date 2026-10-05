@@ -1,0 +1,159 @@
+{
+  "format": "malbolge-mod59049-walbolge-trace/1",
+  "registered_on": "2026-10-02",
+  "method": "Walbolge trace_program(classic=True) with on_step callback; records the first visits to N1..N5.",
+  "visits": [
+    {
+      "step": 4249,
+      "cell": "N1",
+      "cell_value_before": 67
+    },
+    {
+      "step": 4254,
+      "cell": "N1",
+      "cell_value_before": 85
+    },
+    {
+      "step": 4259,
+      "cell": "N1",
+      "cell_value_before": 73
+    },
+    {
+      "step": 4264,
+      "cell": "N1",
+      "cell_value_before": 50
+    },
+    {
+      "step": 4269,
+      "cell": "N1",
+      "cell_value_before": 80
+    },
+    {
+      "step": 4274,
+      "cell": "N1",
+      "cell_value_before": 66
+    },
+    {
+      "step": 4279,
+      "cell": "N1",
+      "cell_value_before": 62
+    },
+    {
+      "step": 4284,
+      "cell": "N1",
+      "cell_value_before": 76
+    },
+    {
+      "step": 4289,
+      "cell": "N1",
+      "cell_value_before": 79
+    },
+    {
+      "step": 4291,
+      "cell": "N2",
+      "cell_value_before": 80
+    },
+    {
+      "step": 4296,
+      "cell": "N1",
+      "cell_value_before": 67
+    },
+    {
+      "step": 4301,
+      "cell": "N1",
+      "cell_value_before": 85
+    },
+    {
+      "step": 4306,
+      "cell": "N1",
+      "cell_value_before": 73
+    },
+    {
+      "step": 4311,
+      "cell": "N1",
+      "cell_value_before": 50
+    },
+    {
+      "step": 4316,
+      "cell": "N1",
+      "cell_value_before": 80
+    },
+    {
+      "step": 4321,
+      "cell": "N1",
+      "cell_value_before": 66
+    },
+    {
+      "step": 4326,
+      "cell": "N1",
+      "cell_value_before": 62
+    },
+    {
+      "step": 4331,
+      "cell": "N1",
+      "cell_value_before": 76
+    },
+    {
+      "step": 4336,
+      "cell": "N1",
+      "cell_value_before": 79
+    },
+    {
+      "step": 4338,
+      "cell": "N2",
+      "cell_value_before": 66
+    },
+    {
+      "step": 4343,
+      "cell": "N1",
+      "cell_value_before": 67
+    },
+    {
+      "step": 4348,
+      "cell": "N1",
+      "cell_value_before": 85
+    },
+    {
+      "step": 4353,
+      "cell": "N1",
+      "cell_value_before": 73
+    },
+    {
+      "step": 4358,
+      "cell": "N1",
+      "cell_value_before": 50
+    },
+    {
+      "step": 4363,
+      "cell": "N1",
+      "cell_value_before": 80
+    },
+    {
+      "step": 4368,
+      "cell": "N1",
+      "cell_value_before": 66
+    },
+    {
+      "step": 4373,
+      "cell": "N1",
+      "cell_value_before": 62
+    },
+    {
+      "step": 4378,
+      "cell": "N1",
+      "cell_value_before": 76
+    },
+    {
+      "step": 4383,
+      "cell": "N1",
+      "cell_value_before": 79
+    },
+    {
+      "step": 4385,
+      "cell": "N2",
+      "cell_value_before": 62
+    }
+  ],
+  "claim": "The Walbolge trace shows N1 executed on consecutive loop passes and N2 first executed at the 9th pass of N1 (the wrap), matching the base-9 chain measured by instrumented counting.",
+  "captured_utc": "2026-10-03T04:23:08+00:00"
+}

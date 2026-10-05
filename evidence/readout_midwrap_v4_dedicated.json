@@ -1,0 +1,85 @@
+{
+  "format": "malbolge-lmao-readout-midwrap-trace/4",
+  "question": "Se puede encadenar el readout cuando una cadena envuelve a mitad de secuencia (p in 1..8)?",
+  "null_hypothesis": "El readout de 2 celdas con posicion p in {1,2,4,5,6} no imprime str(9-p)+'9' (H0).",
+  "metric": "out == str(9-p) + '9'",
+  "variant": "transicion con bloque MOV2 dedicado (usado 1 vez); sin gateway",
+  "history": {
+    "v1_MOVED_compartido_sin_restore": "0/5; digito extra 9-(p-1). Traza: MOVED[C] op=INV44",
+    "v2_MOVED_con_R_MOVED": "0/5; racha (p=6 -> '34567899')",
+    "v3_gateway_precargado": "0/5; caida al bloque de etiqueta siguiente (p=6 -> '4567898')",
+    "v4_MOV2_dedicado": "0/5"
+  },
+  "rows": [
+    {
+      "p": 1,
+      "predicted": "89",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "0f268e635455a4e1474ac0b869d272ae2742433c86ed9258eadc3772898612c5",
+      "mb_sha256": "dfc5761fd0f9705c4387a85719b8910ec71222e8b546f2613946252c48747ad1",
+      "status": "HALTED",
+      "steps": 13610,
+      "out": "899",
+      "match": false
+    },
+    {
+      "p": 2,
+      "predicted": "79",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "c594ad7f66a7bf03aa4a5141b3e88e263ca31b15e673226ebb8a863734a834fa",
+      "mb_sha256": "a85b75f549db28913eb075bbf3f2f1b6ea575bfe4ccad189d9127cfd80e6480b",
+      "status": "HALTED",
+      "steps": 13688,
+      "out": "898",
+      "match": false
+    },
+    {
+      "p": 4,
+      "predicted": "59",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "f87db5682440b55d6dc24e977aa19eba463b065834794781789de8f73aff5947",
+      "mb_sha256": "240f7d2d0a372d1fb208cd13c873df9a7683f382e2241f47bb8e13b17b3c9cad",
+      "status": "HALTED",
+      "steps": 13811,
+      "out": "678",
+      "match": false
+    },
+    {
+      "p": 5,
+      "predicted": "49",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "e1ed16ef32f7bc24685cee407378b5241e5a97c64d67e9d255d12b69a4cbb255",
+      "mb_sha256": "41bbc463d4a25cf59d4b08693d53a9d2a80659312d89a063c74757e7332908e2",
+      "status": "HALTED",
+      "steps": 13782,
+      "out": "568",
+      "match": false
+    },
+    {
+      "p": 6,
+      "predicted": "39",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "98b60f4867c514bd608e55a11ba18c167beac8ca3c54da9a57a860a1fa7954da",
+      "mb_sha256": "d3b2e7f281970479144c4bf4ab4c9e5f0cdc507b0766c9431f5fe938a7780bad",
+      "status": "HALTED",
+      "steps": 13776,
+      "out": "458",
+      "match": false
+    }
+  ],
+  "n_match": 0,
+  "claim": "MIDWRAP_CHAINING=NOT_DEMONSTRATED",
+  "root_cause": "El bloque MOVED compartido se agota: `MOVED loop` se usa 3 veces por tick y el readout no re-pasa por `loop: R_MOVED`, de modo que su celda movd llega cifrada (traza v1: MOVED[C] op=INV44) y el jmp cae en la llamada siguiente de la cadena N1.",
+  "scope": "Oraculo malbolge.py; 2 celdas; el readout de 5 celdas sigue sin cerrar.",
+  "not_demonstrated": [
+    "5 celdas",
+    "mod59049 real",
+    "segundo interprete",
+    "p=3,7,8 (LMAO rechaza el ciclo)"
+  ]
+}

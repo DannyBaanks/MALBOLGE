@@ -1,0 +1,84 @@
+{
+  "format": "malbolge-lmao-readout-midwrap-trace/3",
+  "question": "Se puede encadenar el readout cuando una cadena envuelve a mitad de secuencia (p in 1..8)?",
+  "null_hypothesis": "Ninguna variante imprime los 2 digitos esperados en todo p (H0).",
+  "metric": "out == str(9-p) + '9'",
+  "variant": "gateway precargado (8 llamadas) + transicion por wrap inmediato",
+  "history": {
+    "v1_MOVED_sin_restore": "0/5; digito extra 9-(p-1); traza: MOVED[C] op=INV44 (celda cifrada, movd no ejecuta)",
+    "v2_MOVED_con_R_MOVED": "0/5; racha de digitos (p=6 -> '34567899')",
+    "v3_gateway": "0/5"
+  },
+  "rows": [
+    {
+      "p": 1,
+      "predicted": "89",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "ac7d648e67315aa6360c9e74fcf790895474e304563624083587ae6a2c6eaeb1",
+      "mb_sha256": "f85dda451a737aaf3f5787965b87587c2c6699a25d61589eb0a4c104c6552da4",
+      "status": "HALTED",
+      "steps": 15463,
+      "out": "899",
+      "match": false
+    },
+    {
+      "p": 2,
+      "predicted": "79",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "746b51fb6bc0ee227d510813722b459f71a99f2d3011ec60a28203141b0e21a0",
+      "mb_sha256": "f4ccd02a634e1c241f22a2f88c33e517116a5c36c42ef03de5d71c2862ca0623",
+      "status": "HALTED",
+      "steps": 15335,
+      "out": "898",
+      "match": false
+    },
+    {
+      "p": 4,
+      "predicted": "59",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "7d76e51fcfe72eeada978cdef393498a9e35eabdbd292bae31624b6b1d1fd315",
+      "mb_sha256": "72fdda0f336cfb1824ddbf37ba89af22f508ea91e5e811676c6052a0d3c28a81",
+      "status": "HALTED",
+      "steps": 15460,
+      "out": "67898",
+      "match": false
+    },
+    {
+      "p": 5,
+      "predicted": "49",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "f839d6141a2852eb24c8c10ca354f34d685555dd8cdea5f1beebac3572d336bd",
+      "mb_sha256": "e590515f44cb0661ed7dd62508655600d4cf53a8e4a51f8e4e1890210695c89e",
+      "status": "HALTED",
+      "steps": 15585,
+      "out": "567898",
+      "match": false
+    },
+    {
+      "p": 6,
+      "predicted": "39",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "8eab0be8cc48c0c791e29d4182eca75d384c31a0d12f2d6d4f85c3194430407c",
+      "mb_sha256": "280180dd83179ec293b7a3c35c28cd04bca5a6a1b93f1346ccbb1b590b8be8b1",
+      "status": "HALTED",
+      "steps": 15499,
+      "out": "4567898",
+      "match": false
+    }
+  ],
+  "n_match": 0,
+  "claim": "MIDWRAP_CHAINING=NOT_DEMONSTRATED",
+  "root_cause_v1": "El bloque MOVED es un bloque de codigo COMPARTIDO por todas las lineas `MOVED`. En mod59049 lo rearma `R_MOVED` en `loop:` cada vuelta del bucle; el readout no tiene vuelta, asi que su 3o uso encuentra la celda cifrada y el movd no ejecuta.",
+  "scope": "Oraculo malbolge.py; 2 celdas; el readout de 5 celdas sigue sin cerrar.",
+  "not_demonstrated": [
+    "5 celdas",
+    "mod59049 real",
+    "segundo interprete",
+    "p=3,7,8 (LMAO rechaza esos ciclos)"
+  ]
+}

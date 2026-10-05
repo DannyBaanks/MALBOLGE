@@ -1,0 +1,1 @@
+{"format": "malbolge-t90-no-destructivo/1", "T": 90, "true": "98899", "rows": [{"stops": [9, 2, 5], "reproducido": true, "pre_shift": [1, 0, 0, 0]}, {"stops": [9, 5, 2], "reproducido": true, "pre_shift": [1, 0, 0, 0]}, {"stops": [5, 9, 2], "reproducido": true, "pre_shift": [1, 0, 0, 0]}, {"stops": [2, 5, 9], "reproducido": true, "pre_shift": [1, 0, 0, 0]}]}

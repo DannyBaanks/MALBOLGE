@@ -1,0 +1,101 @@
+{
+  "format": "malbolge-parametric-vm-report/1",
+  "preregistration": "e11_e14_vm_preregistration.json",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39"
+  },
+  "results": [
+    {
+      "dimension": 11,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 177147,
+      "initial_tape_sha256": "c4687c7494e07debd9f3fd637d3ddfb34dc1bdd129a443c2417c7094898b35dc",
+      "final_tape_sha256": "0015a46ee198fc09398450a0eb90a3317528d86d44b52a79047b8a4f83c3c215",
+      "load_seconds": 0.26365144500005044,
+      "execution_seconds": 0.0011128769999686483,
+      "source": "ubO",
+      "pass": true
+    },
+    {
+      "dimension": 12,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 531441,
+      "initial_tape_sha256": "8eee3d197742c7919c1b92e41a90742dd00fca79c41f168cfb65acfb2d6f5392",
+      "final_tape_sha256": "ceb4c6aa500e8c8deed4bcda205496aa354527a8c5ca21a8699c63635e0e7bc0",
+      "load_seconds": 0.9905121280000913,
+      "execution_seconds": 0.0033222019999357144,
+      "source": "ubO",
+      "pass": true
+    },
+    {
+      "dimension": 13,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 1594323,
+      "initial_tape_sha256": "d1e7fd076f5bc7cdb4f3341063647fbe814cff78a82d898aa17818cb629b423e",
+      "final_tape_sha256": "8c5d95c1dd1b179f976181ef71e774a3aa9104523d5b288329d728762f99e408",
+      "load_seconds": 3.2920615610000823,
+      "execution_seconds": 0.009732793000011952,
+      "source": "ubO",
+      "pass": true
+    },
+    {
+      "dimension": 14,
+      "status": "HALTED",
+      "halt_reason": "halt_opcode",
+      "steps": 3,
+      "stdout_hex": "5a",
+      "final_registers": {
+        "a": 90,
+        "c": 2,
+        "d": 2
+      },
+      "full_crazy_fill_completed": true,
+      "memory_cells": 4782969,
+      "initial_tape_sha256": "e83c39c1f5213f4f8b62ed160803260bed3b45ffeca9ffc1c2d1373f73225462",
+      "final_tape_sha256": "b3a90f34c02c570c7ba8584255d8993cd180f4668b33adacaf5eb7821a24f072",
+      "load_seconds": 5.1804699740000615,
+      "execution_seconds": 0.008260478000011062,
+      "source": "ubO",
+      "pass": true
+    }
+  ],
+  "negative_control_e12": {
+    "status": "INVALID",
+    "halt_reason": "invalid_opcode_24_at_0",
+    "steps": 0,
+    "stdout_hex": "",
+    "full_crazy_fill_completed": false,
+    "load_seconds": 0.0011253570000917534,
+    "pass": true
+  },
+  "targets_pass": true,
+  "claim": "VM_EXECUTION_PARITY_E11_E14=DEMONSTRATED"
+}

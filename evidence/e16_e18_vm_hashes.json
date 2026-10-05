@@ -1,0 +1,32 @@
+{
+  "format": "malbolge-e16-e18-vm-parity-hashes/1",
+  "captured_utc": "2026-10-02T18:36:48+00:00",
+  "algorithm": "sha256",
+  "files": {
+    "e16_e18_vm_parity.py": "bf38d30c6d6c64dc189c6fbd6afb933c59b03740b25121a2791c3444441a28bc",
+    "e15_vm_probe.py": "d3034341ad415216b728536aa510b0381d35b30dd5e7c7a3d26a138619bbb6a9",
+    "test_crazy_width_general.py": "1eb5882a8adfeda5c858fc3408cabf0a86d0c0199329762abbc6699c6f75d70c",
+    "evidence/e16_e18_vm_preregistration.json": "ab3bf007e8154716248778141bc6b318649e552575fe35a5f1444e73ac43e78d",
+    "evidence/e16_e18_vm_report.json": "39bca0123bbbd4310ca0cf63759bee4ceac8bbd6b9dfe3bc1aabea21419bb113"
+  },
+  "full_tape_hashes": {
+    "e16_initial": "82b95118549644eee5e83ea5a5ecec02bf07386df6763882837175d592cebcea",
+    "e16_final": "2f9f857c472ecd3c735eab6f0034ec20a5432d39c62b4691bee89dba30354534",
+    "e17_initial": "55004664917594630974e905e8751284871b32b7a3058e859e2b13aa05edf390",
+    "e17_final": "8bd34f7b0ba344f14bcdd8f845b6d7f76ae2315bb9796bf22c9684aa4d307a15",
+    "e18_initial": "ce3f6dbb367203484bcec8e3d054d418c6bd48fa493789388756854eac24da1f",
+    "e18_final": "3d3e57e7902c4785fd499c8c9eb5bd136ca963db3d4920a2ad83a9da1155748e"
+  },
+  "load_seconds": {
+    "e16_load_seconds": 29.58,
+    "e17_load_seconds": 92.71,
+    "e18_load_seconds": 359.78
+  },
+  "negative_control": {
+    "dimension": 16,
+    "corruption": "offset[0] 0->1 applied to the frozen source at load/execute",
+    "observed": "INVALID invalid_opcode_24_at_0 steps=0",
+    "pass": true
+  },
+  "resource_notes": "E18 = 387,420,489 cells (array('I') ~1478 MB); memory guard (cells*4 + 1.5 GiB headroom) passed; E18 load 359.78s. No dimension skipped."
+}

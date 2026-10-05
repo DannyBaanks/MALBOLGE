@@ -1,0 +1,24 @@
+{
+  "format": "malbolge-mod59049-pack-hashes/1",
+  "captured_utc": "2026-10-03T04:39:42+00:00",
+  "algorithm": "sha256",
+  "files": {
+    "vendor/lmao/handwritten/mod59049.hell": "98db1b625e017cf4b824e651e27505871b825b6eac228da86edd05e9390d5cab",
+    "vendor/lmao/bin/lmao": "5a6039efd995af1cf57b9bf4d6ec70da3a5303efe0ec6a1fe0fad3abc03f3f44",
+    "vendor/lmao/GUIA.md": "4667f95796bb340492c45cade95dde3e2d0d1b2d3bf3ce348cf9d1a59f369732",
+    "evidence/handwritten_mod59049.json": "3812b646e1d16ead2ade2cfe41698b38ef0b256ff673d09f3e01651e9c8b0b08",
+    "evidence/mod59049_instrumented.json": "c439e9266a601dcddfd686c6d73ca78244b0230bde80cc795c936212777827be",
+    "evidence/mod59049_boundary.json": "baab1d2ef10136a48dad83dd8d3f6d43342de205c1a425e9addb0de5f5b1e941",
+    "evidence/mod59049_snapshot_resume.json": "2623b3d3547657e6c3980034312631183a6ce159423394d56f845cc69398455d",
+    "evidence/mod59049_epoch_chain.json": "d1c3c67f27208cd3dc38194a370700e5116aab091ac5823af0db40edfe0e54e4",
+    "evidence/mod59049_one_tick_epochs.json": "c41a3ca009a598b91f304ded84cc0e6ed4b0ad466dcc4e6f9be80f5a64be092b",
+    "evidence/mod59049_walbolge_trace.json": "22ae05b6cbe8de6d2d2fba50cc62e95fe29fa8870b6315304bc10ced7473bdd3",
+    "evidence/mod59049_crossvm_resume.json": "cf02a81db27b609f0113ea3281dbe3338d9e91a0feb72d450b57b27ead4ece00",
+    "evidence/lmao_dispatch_negative.json": "7933452b67e70d4690b5ca1a1a4acd6c7ea11a41322ad2f319fe74d9f0183046",
+    "vendor/lmao/handwritten/levels_markers.hell": "68a38e099dab6473fa33d55f4641789f3e0bb17202ce8a7303266d2797757ca7",
+    "evidence/mod59049_host_readout.json": "71d3a6447ffdbf451e71cf4e7d8370ef99c8c7fdea53c3b3ed1fc0447730c2e7",
+    "evidence/mod59049_rustbolge_readout.json": "369e1276b453f2f9516d591474045b739b6b78831e9e9cf83d2d297dd7cdfe07",
+    "evidence/mod59049_level_markers.json": "dd79071d138756d06d99e1d5bcf570ab69d3a6c8dfeff00cb71c11883181f266",
+    "evidence/lmao_dispatch_mechanism.json": "b91fa73cedcf94d878f73d01b4b1474bacff184a74cc3b5a761d6eabcf99b8e3"
+  }
+}

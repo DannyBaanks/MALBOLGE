@@ -1,0 +1,63 @@
+{
+  "format": "lmao-free-space-budget/1",
+  "pregunta": "Cuantas instrucciones de restauracion admite LMAO antes de 'Free space exceeded'?",
+  "diseno": "T=10, verify=1, pre_v=0. nd_cap limita las llamadas de restauracion por bloque a min(9-kk, nd_cap); el total extra es 5 cadenas x sum_kk min(9-kk, nd_cap).",
+  "rows": [
+    {
+      "nd_cap": 0,
+      "instrucciones_extra": 0,
+      "compile_rc": 0,
+      "stderr_1a_line": "",
+      "out": "689999"
+    },
+    {
+      "nd_cap": 1,
+      "instrucciones_extra": 40,
+      "compile_rc": 0,
+      "stderr_1a_line": "",
+      "out": "689998"
+    },
+    {
+      "nd_cap": 2,
+      "instrucciones_extra": 75,
+      "compile_rc": 0,
+      "stderr_1a_line": "",
+      "out": "689997"
+    },
+    {
+      "nd_cap": 3,
+      "instrucciones_extra": 105,
+      "compile_rc": 0,
+      "stderr_1a_line": "",
+      "out": "689996"
+    },
+    {
+      "nd_cap": 4,
+      "instrucciones_extra": 130,
+      "compile_rc": 0,
+      "stderr_1a_line": "Error: Free space exceeded (Add Malbolge com",
+      "out": "689996"
+    },
+    {
+      "nd_cap": 6,
+      "instrucciones_extra": 165,
+      "compile_rc": 1,
+      "stderr_1a_line": "Error: Free space exceeded (Add Malbolge com",
+      "out": null
+    },
+    {
+      "nd_cap": 8,
+      "instrucciones_extra": 180,
+      "compile_rc": 1,
+      "stderr_1a_line": "Error: Free space exceeded (Add Malbolge com",
+      "out": null
+    },
+    {
+      "nd_cap": 99,
+      "instrucciones_extra": 180,
+      "compile_rc": 1,
+      "stderr_1a_line": "Error: Free space exceeded (Add Malbolge com",
+      "out": null
+    }
+  ]
+}

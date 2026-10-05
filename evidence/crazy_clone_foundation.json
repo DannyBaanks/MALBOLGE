@@ -1,0 +1,167 @@
+{
+  "format": "malbolge-crazy-clone-foundation/1",
+  "registered_on": "2026-10-02",
+  "method": "exhaustive computation over the 3^9 functions {0,1,2}^2 -> {0,1,2}",
+  "xlat2_cycles": [
+    {
+      "length": 2,
+      "chars": "FJ",
+      "ords": [
+        70,
+        74
+      ]
+    },
+    {
+      "length": 4,
+      "chars": "*r}i",
+      "ords": [
+        42,
+        114,
+        125,
+        105
+      ]
+    },
+    {
+      "length": 5,
+      "chars": ")f`<3",
+      "ords": [
+        41,
+        102,
+        96,
+        60,
+        51
+      ]
+    },
+    {
+      "length": 6,
+      "chars": "%guox:",
+      "ords": [
+        37,
+        103,
+        117,
+        111,
+        120,
+        58
+      ]
+    },
+    {
+      "length": 9,
+      "chars": "2PB>LOCUI",
+      "ords": [
+        50,
+        80,
+        66,
+        62,
+        76,
+        79,
+        67,
+        85,
+        73
+      ]
+    },
+    {
+      "length": 68,
+      "chars": "!5-wN1W0{GS^9[jMA;\\sRvkKhY8,(y#]bT=da.ecV_mX/4H7n~@Q6Z|\"z?+$&ql'tEpD",
+      "ords": [
+        33,
+        53,
+        45,
+        119,
+        78,
+        49,
+        87,
+        48,
+        123,
+        71,
+        83,
+        94,
+        57,
+        91,
+        106,
+        77,
+        65,
+        59,
+        92,
+        115,
+        82,
+        118,
+        107,
+        75,
+        104,
+        89,
+        56,
+        44,
+        40,
+        121,
+        35,
+        93,
+        98,
+        84,
+        61,
+        100,
+        97,
+        46,
+        101,
+        99,
+        86,
+        95,
+        109,
+        88,
+        47,
+        52,
+        72,
+        55,
+        110,
+        126,
+        64,
+        81,
+        54,
+        90,
+        124,
+        34,
+        122,
+        63,
+        43,
+        36,
+        38,
+        113,
+        108,
+        39,
+        116,
+        69,
+        112,
+        68
+      ]
+    }
+  ],
+  "xlat2_cycle_lengths": [
+    2,
+    4,
+    5,
+    6,
+    9,
+    68
+  ],
+  "xlat2_note": "94 printable chars form 6 cycles of lengths 2,4,5,6,9,68. A cell executed k times has its char advance along one cycle, so its opcode at position p is (v_k + p) % 94. No fixed points: a cell can never execute the same opcode twice in a row without being rewritten.",
+  "single_star_identity_impossible": {
+    "claim": "No single crazy op can leave W unchanged for all W: no y in {0,1,2} has T[w][y]=w for every w.",
+    "verified_y_set": []
+  },
+  "clone_with_constants": {
+    "closure_size": 19683,
+    "all_binary_trit_functions": true,
+    "F_trit_sum_reachable": true,
+    "F_depth_max": 4,
+    "G_carry_reachable": true,
+    "G_depth_max": 3,
+    "meaning": "the per-trit ripple step (sum trit and carry bit) is expressible as a crazy term over the two input trits"
+  },
+  "clone_without_constants": {
+    "reachable_F": false,
+    "reachable_G": false,
+    "depth": 6,
+    "size": 972
+  },
+  "next_step": "realize the ripple step as an op sequence on real cells; a single `*` on W is provably insufficient, so the realization must use multi-op sequences or carry the value through another cell.",
+  "captured_utc": "2026-10-03T02:05:16+00:00"
+}

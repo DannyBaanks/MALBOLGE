@@ -1,0 +1,20 @@
+{
+  "format": "malbolge-readout-nondestructive-confirm/1",
+  "no_regresion": {
+    "reproduccion": "12/12",
+    "hell_byte_identico": "12/12"
+  },
+  "readout_no_destructivo": {
+    "pre_shift": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "out": "88999"
+  },
+  "relectura": {
+    "destructivo": "889999",
+    "no_destructivo": "889998"
+  }
+}

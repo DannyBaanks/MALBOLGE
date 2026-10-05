@@ -1,0 +1,36 @@
+.CODE
+FIVE:
+	Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+.DATA {
+ENTRY:
+	FIVE wrapped
+	ROT '.'<<1 R_ROT
+	OUT ?- R_OUT
+	FIVE wrapped
+	ROT '.'<<1 R_ROT
+	OUT ?- R_OUT
+	FIVE wrapped
+	ROT '.'<<1 R_ROT
+	OUT ?- R_OUT
+	FIVE wrapped
+	ROT '.'<<1 R_ROT
+	OUT ?- R_OUT
+	FIVE wrapped
+wrapped:
+	ROT 'W'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

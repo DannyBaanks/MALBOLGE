@@ -1,0 +1,51 @@
+{
+  "format": "malbolge-lmao-readout-link/1",
+  "question": "Tras imprimir un digito, como se ejecuta la cadena de la celda siguiente?",
+  "null_hypothesis": "Ninguna variante imprime '99': el encadenado de readout no es posible (H0).",
+  "metric": "out == '99' (2 celdas leidas, ambas en posicion 0)",
+  "control": "chain8: 8 llamadas no envuelven (wrap no trivial)",
+  "rows": [
+    {
+      "variant": "bare",
+      "hell_sha256": "84f595944f29cb6874a3da449c686fabff8c1dc73c2be519d969395d21039012",
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "868d94ea6eeb89ff8ce3a678dcc0e5e5317cbf805d21d7978edfe0976c56cfb3",
+      "oracle_raw": "('HALTED', 11086, b'9')",
+      "out_hex": "39",
+      "out": "9",
+      "match": false
+    },
+    {
+      "variant": "gateway",
+      "hell_sha256": "9965ded5e17d2eb7217381132c07842ca61104a19b675444b949bf4c589586c2",
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "a64f28d41b7a37925890aeb381194e1714edc39f8e642e6974db0ce4469649ec",
+      "oracle_raw": "('HALTED', 13875, b'99')",
+      "out_hex": "3939",
+      "out": "99",
+      "match": true
+    },
+    {
+      "variant": "moved",
+      "hell_sha256": "d9d9fcd0b39592278c988a75a04dddfbb1f577f45850a8edd9bf6baccd391f62",
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "49771ccd28ab01616b56bad757d16bf6ef595906a6166df398315cbe17e651e9",
+      "oracle_raw": "('HALTED', 11920, b'99')",
+      "out_hex": "3939",
+      "out": "99",
+      "match": true
+    }
+  ],
+  "n_match": 2,
+  "winner": "gateway",
+  "claim": "READOUT_CHAINING=DEMONSTRATED via gateway en 2 celdas",
+  "scope": "Oraculo malbolge.py; solo el mecanismo de encadenado, no el readout de 5 celdas.",
+  "not_demonstrated": [
+    "5 celdas",
+    "segundo interprete",
+    "mod59049 real"
+  ]
+}

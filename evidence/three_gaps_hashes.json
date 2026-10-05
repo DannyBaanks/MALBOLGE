@@ -1,0 +1,12 @@
+{
+  "format": "malbolge-three-gaps-hashes/1",
+  "captured_utc": "2026-10-02T23:44:37+00:00",
+  "algorithm": "sha256",
+  "files": {
+    "evidence/classic_increment_structure.json": "bf2d5f74b8ed5816531e544fd62e80e152a370eaf534b103901f7924f14386a7",
+    "evidence/classic_increment_search.json": "0a1a77abe40701923a0f52e7036fccd494166f71872ac723ebe0ec0949e66608",
+    "evidence/tape_boundary_ladder.json": "aa34123e2b9dff8e649777954e06468b9e39ccd5dbdc58a3440da8ecdf6016ee",
+    "evidence/tape_savestate_ceiling.json": "0fd3f9241186793149c1bdaee5493568dcb04c84ade39d1369167b83d156d3a9",
+    "evidence/tc_probe_attempt.json": "6855582442e73d6bd5c8913b844521b7b5044132c0e4ecb55f22c9ef45662df2"
+  }
+}

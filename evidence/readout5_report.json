@@ -1,0 +1,476 @@
+{
+  "format": "malbolge-lmao-readout5/3",
+  "question": "Puede un programa Malbolge (Classic, LMAO/HeLL) emitir el estado de su cascada de 5 ciclos de 9 como 5 digitos, sin interprete externo?",
+  "null_hypothesis": "El readout de 5 celdas no imprime los 5 digitos esperados (H0).",
+  "metric": "out == ''.join(str(9 - ((T // 9**(i-1)) % 9)) for i in 1..5)",
+  "relation": "T = sum_{i=1..5} (9 - D_i) * 9^(i-1)",
+  "mechanism": "cadena de 9 llamadas por celda; el wrap imprime D=k; encadenado con MOVED <etiqueta> (medido OK en 2 celdas; la etiqueta desnuda en fallthrough imprime 1 digito)",
+  "stop_cascade": "S1..Sk con b_i posiciones; envuelve en T = b1*...*bk",
+  "sweep": {
+    "0": [],
+    "1": [
+      1
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      4
+    ],
+    "5": [
+      5
+    ],
+    "6": [
+      6
+    ],
+    "7": [
+      7
+    ],
+    "8": [
+      8
+    ],
+    "9": [
+      9
+    ],
+    "18": [
+      3,
+      6
+    ],
+    "27": [
+      9,
+      3
+    ],
+    "36": [
+      6,
+      6
+    ],
+    "54": [
+      9,
+      6
+    ],
+    "81": [
+      9,
+      9
+    ],
+    "243": [
+      9,
+      9,
+      3
+    ]
+  },
+  "rows": [
+    {
+      "T": 0,
+      "stops": [],
+      "predicted": "99999",
+      "hell_sha256": "ae93c423fb5b8a0302c577399ea0e51978509858259ded2db68091dfcaa5791b",
+      "hell_bytes": 3185,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "eee28006236dff9bfe8f784e924beb4be0953fb8a5b0bc5b8cce8d3a6426c273",
+      "mb_bytes": 29518,
+      "oracle_raw": "('HALTED', 29239, b'99999')",
+      "steps": 29239,
+      "out_hex": "3939393939",
+      "out": "99999",
+      "wall_s": 0.04,
+      "match": true
+    },
+    {
+      "T": 1,
+      "stops": [
+        1
+      ],
+      "predicted": "89999",
+      "hell_sha256": "7b0a3c4f4da99c876047154552b9fadae6dce2163eb6cd94ee12ff7cd3758cfb",
+      "hell_bytes": 3424,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "02f3494c1b9eebab0112f0d14511ef49de3f5d0d6a29e4139c0b1f59c2c9388b",
+      "mb_bytes": 32507,
+      "oracle_raw": "('HALTED', 32204, b'899999')",
+      "steps": 32204,
+      "out_hex": "383939393939",
+      "out": "899999",
+      "wall_s": 0.04,
+      "match": false
+    },
+    {
+      "T": 2,
+      "stops": [
+        2
+      ],
+      "predicted": "79999",
+      "hell_sha256": "4444b587386c2c5475289c50b2b6c66652a80bd5195eff3a37be158f3dd7d745",
+      "hell_bytes": 3428,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "acd74716074a22d857734f3fe77bb19fca3048b8ac1189c980e51b21daa7f164",
+      "mb_bytes": 32507,
+      "oracle_raw": "('HALTED', 32276, b'789999')",
+      "steps": 32276,
+      "out_hex": "373839393939",
+      "out": "789999",
+      "wall_s": 0.03,
+      "match": false
+    },
+    {
+      "T": 3,
+      "stops": [
+        3
+      ],
+      "predicted": "69999",
+      "hell_sha256": "af3631e8a1f3fcbf3d601f77098cd94bbca99cfa98c1918933d91eb993c16028",
+      "hell_bytes": 3432,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 4,
+      "stops": [
+        4
+      ],
+      "predicted": "59999",
+      "hell_sha256": "e25df92cfad7ab93ea72112341f04140d5d51e78b8a695a2fc58045d708f8b1d",
+      "hell_bytes": 3436,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "93aa1adc8206ca1bc12434aed73f4c1ba7b5967e484d89a669a697af14b860ed",
+      "mb_bytes": 32507,
+      "oracle_raw": "('HALTED', 32334, b'569999')",
+      "steps": 32334,
+      "out_hex": "353639393939",
+      "out": "569999",
+      "wall_s": 0.03,
+      "match": false
+    },
+    {
+      "T": 5,
+      "stops": [
+        5
+      ],
+      "predicted": "49999",
+      "hell_sha256": "f0bbc3ff9716d301ee64fb6d6b13881dd6905359ee973e718546d38a820a766a",
+      "hell_bytes": 3440,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "c02e87bdba1e98ecff5cbeb7dfc7158584be777c5868612e4e6a68584702714d",
+      "mb_bytes": 32513,
+      "oracle_raw": "('HALTED', 32350, b'459999')",
+      "steps": 32350,
+      "out_hex": "343539393939",
+      "out": "459999",
+      "wall_s": 0.04,
+      "match": false
+    },
+    {
+      "T": 6,
+      "stops": [
+        6
+      ],
+      "predicted": "39999",
+      "hell_sha256": "cc561b07d79e822f3d54cd5d1cc48e81e7c0320692a97e89936ed8a505cb8521",
+      "hell_bytes": 3444,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "4e0aad45ccb7273d1b27c999f1d461fc67462fd70f2a90df0dc2e7036361483d",
+      "mb_bytes": 32507,
+      "oracle_raw": "('HALTED', 32325, b'349999')",
+      "steps": 32325,
+      "out_hex": "333439393939",
+      "out": "349999",
+      "wall_s": 0.04,
+      "match": false
+    },
+    {
+      "T": 7,
+      "stops": [
+        7
+      ],
+      "predicted": "29999",
+      "hell_sha256": "562da1eb6a3cdc257e102934359c06a872c3487431df46afa1451e819db8c081",
+      "hell_bytes": 3448,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 8,
+      "stops": [
+        8
+      ],
+      "predicted": "19999",
+      "hell_sha256": "3cdb75176684a28f716076886c4f6e4c9304ba6a8d4c3551ec28ebaa555351c3",
+      "hell_bytes": 3452,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 9,
+      "stops": [
+        9
+      ],
+      "predicted": "98999",
+      "hell_sha256": "f11ac4df572de0e1d8323c694ee016d4e622c59ee130d13cb81224d80a74ef9f",
+      "hell_bytes": 3456,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "5bb9cb3590dbd39ce6a2b387867dd31e7d963ec21b5909b0eaadf13615abe812",
+      "mb_bytes": 32620,
+      "oracle_raw": "('HALTED', 32392, b'98999')",
+      "steps": 32392,
+      "out_hex": "3938393939",
+      "out": "98999",
+      "wall_s": 0.03,
+      "match": true
+    },
+    {
+      "T": 18,
+      "stops": [
+        3,
+        6
+      ],
+      "predicted": "97999",
+      "hell_sha256": "85957a99ca2335ec03ceda0af64e37e939cf4749468ee81f3be5fb79a2ba77f4",
+      "hell_bytes": 3542,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 27,
+      "stops": [
+        9,
+        3
+      ],
+      "predicted": "96999",
+      "hell_sha256": "a258fdb65cfb22fc6b5d5fc1b9faa152193662e32dcc4af662cf0ef6a1174118",
+      "hell_bytes": 3554,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 36,
+      "stops": [
+        6,
+        6
+      ],
+      "predicted": "95999",
+      "hell_sha256": "7e5573045e7fbd4da11f1b11d8df4187c10aa808e72d17c68ec2412f71977e93",
+      "hell_bytes": 3554,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 54,
+      "stops": [
+        9,
+        6
+      ],
+      "predicted": "93999",
+      "hell_sha256": "8a2f11edc1b43933f8554b6e7378fb0d03133baa01400e4661851681b490081a",
+      "hell_bytes": 3566,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 81,
+      "stops": [
+        9,
+        9
+      ],
+      "predicted": "99899",
+      "hell_sha256": "b7e0e3529b57a6f07fcc2b57c561d5f4dd5633c0572ec0334fd445085dcd12e9",
+      "hell_bytes": 3578,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 243,
+      "stops": [
+        9,
+        9,
+        3
+      ],
+      "predicted": "99699",
+      "hell_sha256": "7ddbfc3450c8176a39b3fbeb823aeb68cfffff67c23d5a28a9d8d451475b3ff0",
+      "hell_bytes": 3676,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Label S1 is defined multiple times at line 30 column 1."
+    }
+  ],
+  "n_rows": 16,
+  "n_match": 2,
+  "mismatches": [
+    {
+      "T": 1,
+      "stops": [
+        1
+      ],
+      "predicted": "89999",
+      "got": "899999",
+      "out_hex": "383939393939",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 2,
+      "stops": [
+        2
+      ],
+      "predicted": "79999",
+      "got": "789999",
+      "out_hex": "373839393939",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 3,
+      "stops": [
+        3
+      ],
+      "predicted": "69999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 4,
+      "stops": [
+        4
+      ],
+      "predicted": "59999",
+      "got": "569999",
+      "out_hex": "353639393939",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 5,
+      "stops": [
+        5
+      ],
+      "predicted": "49999",
+      "got": "459999",
+      "out_hex": "343539393939",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 6,
+      "stops": [
+        6
+      ],
+      "predicted": "39999",
+      "got": "349999",
+      "out_hex": "333439393939",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 7,
+      "stops": [
+        7
+      ],
+      "predicted": "29999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 8,
+      "stops": [
+        8
+      ],
+      "predicted": "19999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 23 column 2."
+    },
+    {
+      "T": 18,
+      "stops": [
+        3,
+        6
+      ],
+      "predicted": "97999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 27,
+      "stops": [
+        9,
+        3
+      ],
+      "predicted": "96999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 36,
+      "stops": [
+        6,
+        6
+      ],
+      "predicted": "95999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 54,
+      "stops": [
+        9,
+        6
+      ],
+      "predicted": "93999",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 81,
+      "stops": [
+        9,
+        9
+      ],
+      "predicted": "99899",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 26 column 1."
+    },
+    {
+      "T": 243,
+      "stops": [
+        9,
+        9,
+        3
+      ],
+      "predicted": "99699",
+      "got": null,
+      "out_hex": null,
+      "compile_rc": 1,
+      "stderr": "Error: Label S1 is defined multiple times at line 30 column 1."
+    }
+  ],
+  "claim": "READOUT5_MALBOLGE=NOT_DEMONSTRATED",
+  "scope": "Oraculo malbolge.py unicamente. Cascada de 5 celdas leida en 16 estados (fases de N1 completas, N2 parcial, N3 parcial).",
+  "not_demonstrated": [
+    "mod59049 real (T=59048) sin cascada de parada",
+    "replicacion en un segundo interprete",
+    "no destructividad del readout (leer dos veces el mismo estado)",
+    "lectura incremental / Stillwell"
+  ]
+}

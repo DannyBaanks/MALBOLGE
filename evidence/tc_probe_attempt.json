@@ -1,0 +1,20 @@
+{
+  "format": "malbolge-tc-probe-attempt/1",
+  "registered_on": "2026-10-02",
+  "question": "Can the composed Brainfuck -> Malbolge Free path be used as evidence for the README row 'Turing-completeness nueva'?",
+  "attempt": {
+    "program": ",>+<[->[->++<]>[<+]-<<]>.",
+    "intent": "read n from stdin, compute 2^n, print 2^n mod 256; the loop body doubles the accumulator, so the step count is provably unbounded in n",
+    "bf_reference": "an independent Brainfuck interpreter written for this attempt agrees with 2^n mod 256 for n=0..14, and its step count doubles per n (7 steps at n=0 up to 262247 at n=14)"
+  },
+  "why_it_did_not_close_the_claim": {
+    "reason_1_reference_rejects_the_family": "the vendored BFIR1 reference VM (bf_ir_vm.zig) returns PointerOutOfBounds for n>=1 on this program; only n=0 completes, and there all three comparisons match (stdout, full 256-cell tape, final pointer)",
+    "reason_2_backend_not_reproducible": "compiling nominally identical source produced a 59-cell program that HALTED with the correct byte for n=0 and n=4 (steps 16 and 437), and a 58-cell program that returns MAX_STEPS at 5e6 steps for n>=4. Both variants are byte-stable now; the difference was not reproduced",
+    "reason_3_degenerate_oracle": "for n>=8 the expected value 2^n mod 256 is 0, which is indistinguishable from a program that computes nothing, so only n=0..7 carry signal",
+    "reason_4_step_counts_diverge": "the backend reported 4702 steps at n=12 while the Brainfuck reference needed 65623; the growth rate differs (roughly linear versus exponential), which is unexplained"
+  },
+  "what_this_corroborates": "It matches the already recorded M7 findings on this compiler: branch-heavy Brainfuck at small sizes is emitted with has_target=0 and a mismatched count, i.e. silently wrong rather than rejected.",
+  "claim": "TURING_COMPLETENESS_NUEVA=NOT_DEMONSTRATED (unchanged). No universal computation was exhibited and no fidelity result was obtained for the attempted instrument.",
+  "next_experiment": "Instrument the compiler's own output rather than a new program: take a branch-heavy Brainfuck whose expected transcript is already sealed in fixtures/, compile it twice, and compare the two Malbolge texts byte for byte. That isolates compiler determinism from execution fidelity.",
+  "instrument_sha256_note": "The Free backend used here is a rebuild of vendor/malfuck/epochtool via epochtool.zig on this host; no repo file was modified."
+}

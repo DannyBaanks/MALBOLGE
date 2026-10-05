@@ -1,0 +1,23 @@
+{
+  "format": "malbolge-readout-nondestructivity/1",
+  "pregunta": "El readout de 5 celdas altera el estado de la cascada?",
+  "resultado": "NOT_DEMONSTRATED por medicion: dos caminos de medicion fallan, ambos por la sensibilidad al layout ya medida.",
+  "camino_A_retorno_al_bucle": {
+    "diseno": "modo multi-lectura: la salida de la lectura vuelve al bucle con R_MOVED + MOVED loop; el HALT natural llega por el wrap de N5",
+    "medido": "la primera lectura es correcta ('98999' con pre=[1,1,0,0,0] shift=[0,1,0,0,0]) pero la segunda devuelve basura ('\\u00a2\\u00e2\\u00a8\\u00a8')",
+    "diagnostico": "el fallo esta en el camino de RETORNO, no se puede atribuir al readout. Anadir el retorno cambia el layout y obliga a recalibrar"
+  },
+  "camino_B_cadena_de_verificacion": {
+    "diseno": "una cadena de verificacion (copia de la cadena 1) que relee la celda 1 tras el readout y hace HALT, evitando el retorno al bucle",
+    "sub_paso_a_instrumento_calibrado": "verify=2 (entrada directa a la cadena de verificacion, sin readout previo) lee el estado verdadero: con pre_v=1 reporta '8' cuando la posicion verdadera es 1. El instrumento queda calibrado y verificado.",
+    "sub_paso_b_combinacion": "verify=1 (readout de 5 celdas + verificacion): ninguna de las 16 configuraciones de pre1 x shift1 x pre2 x shift2 produce 6 digitos; la lectura principal no imprime. No es calibrable con este barrido.",
+    "diagnostico": "la propia presence de la cadena de verificacion cambia el layout y descalibra el readout principal"
+  },
+  "argumento_estructural_INFERIDO": "NO es una medida. Cuando el wrap dispara en la llamada k, las 9-k llamadas restantes quedan sin ejecutar (las trazas lo muestran: el flujo salta al bloque a_k y abandona la cadena). La celda queda en la posicion siguiente a movd en su ciclo xlat2, que para Nop x8/MovD es la posicion 0. Con la calibracion mod59049 (pre=[1,0,0,0,0]) la celda 1 avanza ademas +1. Prediccion: el readout RESETEA la cascada (celdas 2..5 a 0, celda 1 a 1).",
+  "clasificacion": {
+    "READOUT_NON_DESTRUCTIVE": "NOT_DEMONSTRATED",
+    "READOUT_IS_DESTRUCTIVE": "INFERRED",
+    "LIMITACION": "el readout solo es valido como medicion de un instante; no habilita lectura repetida del mismo estado, lectura incremental ni Stillwell"
+  },
+  "siguiente_paso_para_cerrarlo": "requiere una forma de insertar la lectura de verificacion SIN cambiar el layout de la seccion de datos del readout principal. Candidatos: colocar la cadena de verificacion en una seccion .DATA separada (LMAO admite varias secciones .DATA), o usar .OFFSET para fijarla en una direccion que no perturbe el layout del readout."
+}

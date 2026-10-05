@@ -1,0 +1,151 @@
+.CODE
+N1:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N2:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+S:
+	Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+MOVED:
+	MovD/Nop
+	Jmp
+
+MOV2:
+	MovD/Nop
+	Jmp
+
+.DATA {
+	ENTRY:
+	loop:
+	R_MOVED
+	N1 w1
+	S st1
+	MOVED loop
+	w1:
+	N2 w2
+	S st1
+	MOVED loop
+	w2:
+	ROT 'Z'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	st1:
+	MOV2 read_N1
+	read_N1:
+	N1 a1
+	N1 a2
+	N1 a3
+	N1 a4
+	N1 a5
+	N1 a6
+	N1 a7
+	N1 a8
+	N1 a9
+	a1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	a9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_N2
+	MOV2 read_N2
+	read_N2:
+	N2 b1
+	N2 b2
+	N2 b3
+	N2 b4
+	N2 b5
+	N2 b6
+	N2 b7
+	N2 b8
+	N2 b9
+	b1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	b9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

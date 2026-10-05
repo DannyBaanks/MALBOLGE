@@ -1,0 +1,24 @@
+/* hand-written HeLL: print 'H' then halt.
+   Two loop-resistant cells (ROT, OUT) and one single-shot Hlt cell. */
+
+.CODE
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+.DATA {
+ENTRY:
+	// copy operand 'H' into A with ROT, then restore the ROT cell
+	ROT 216 R_ROT
+	// write A to stdout, restore OUT
+	OUT ?- R_OUT
+	// halt
+	HALT ?-
+}

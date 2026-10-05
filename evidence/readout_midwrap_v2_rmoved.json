@@ -1,0 +1,95 @@
+{
+  "format": "malbolge-lmao-readout-midwrap-trace/2",
+  "question": "Por que una cadena que envuelve a mitad de secuencia (p in 1..8) inserta un digito extra 9-(p-1)?",
+  "null_hypothesis": "Celdas ejecutadas antes del wrap quedan cifradas y el salto MOVED entra en la celda equivocada.",
+  "metric": "out == str(9-p) + '9' para la variante de 2 celdas con parada de p posiciones",
+  "vm_facts_used": [
+    "malbolge.py:127-128 toda celda ejecutada se auto-cifra, y el cifrado se aplica DESPUES del salto (sobre la celda destino si op==4)",
+    "malbolge.py:102-103 jmp: c = mem[d]",
+    "malbolge.py:116-117 movd: d = mem[d]"
+  ],
+  "rows": [
+    {
+      "p": 1,
+      "predicted": "89",
+      "compile_rc": 0,
+      "stderr": "",
+      "status": "HALTED",
+      "steps": 13711,
+      "out": "899",
+      "hell_sha256": "0b96346e7eb5a1713b084b62bad905dfa498b092e7b30eb92a1e80613757a265",
+      "mb_sha256": "dbaeeba91fc92e912034a3e18594563b2ca9ff36f7a418fd6ddf6009387f7639",
+      "match": false
+    },
+    {
+      "p": 2,
+      "predicted": "79",
+      "compile_rc": 0,
+      "stderr": "",
+      "status": "HALTED",
+      "steps": 13751,
+      "out": "7899",
+      "hell_sha256": "c9c3acadbf00ffd66ff915e315e40310fd18efa19e026af2d16dafc372587a7a",
+      "mb_sha256": "3ac414a3fea30039d8284ac43ae8fa1b43bac22f528eb0bdcbadb2386b92c693",
+      "match": false
+    },
+    {
+      "p": 3,
+      "predicted": "69",
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 11 column 2."
+    },
+    {
+      "p": 4,
+      "predicted": "59",
+      "compile_rc": 0,
+      "stderr": "",
+      "status": "HALTED",
+      "steps": 13896,
+      "out": "567899",
+      "hell_sha256": "af704433cda197a0b97b3a2dd220f05d8503faaebc66ccf9bee71f97f5048709",
+      "mb_sha256": "72ce1624e2a4901122a1964cb7c6bea39a584281b08d7761625ea3c2464fc4bf",
+      "match": false
+    },
+    {
+      "p": 5,
+      "predicted": "49",
+      "compile_rc": 0,
+      "stderr": "",
+      "status": "HALTED",
+      "steps": 13993,
+      "out": "4567899",
+      "hell_sha256": "d2127cf5e411b85e8d93f8de9ce7a40c074df3f2e6d11c3d98b65d2fcbef3411",
+      "mb_sha256": "d56e16cb6c880706a36d191e1c538f55a741a60d426fe850a0820caf0c8d9671",
+      "match": false
+    },
+    {
+      "p": 6,
+      "predicted": "39",
+      "compile_rc": 0,
+      "stderr": "",
+      "status": "HALTED",
+      "steps": 13877,
+      "out": "34567899",
+      "hell_sha256": "60091bb48e0e82caa357dd9212967067d32b8f9a12b6e40ab246b2998b7825c3",
+      "mb_sha256": "b1df87b1bf93277a083c6748e2b6a20e173582a640c819984ac0bd18139bac81",
+      "match": false
+    },
+    {
+      "p": 7,
+      "predicted": "29",
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 11 column 2."
+    },
+    {
+      "p": 8,
+      "predicted": "19",
+      "compile_rc": 1,
+      "stderr": "Error: Forced xlat cycle doesn't exist at line 11 column 2."
+    }
+  ],
+  "n_match": 0,
+  "claim": "MIDWRAP_CHAIN_OK_CON_CLAVE (fix: restore R_MOVED en cada linea MOVED del readout)",
+  "trace_file": "/tmp/lmao_work/trace_p2_events.json (p=2)",
+  "scope": "Oraculo malbolge.py; solo 2 celdas; la correccion del readout de 5 celdas NO esta cerrada."
+}

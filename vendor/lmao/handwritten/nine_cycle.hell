@@ -1,0 +1,40 @@
+.CODE
+NINE_A:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+NINE_B:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+MOVED:
+	MovD/Nop
+	Jmp
+
+.DATA {
+loop:
+	R_MOVED
+ENTRY:
+	NINE_A wrapped_a
+	MOVED loop
+wrapped_a:
+	NINE_B wrapped_b
+	ROT C1 R_ROT
+	OUT ?- R_OUT
+	MOVED loop
+wrapped_b:
+	ROT 'B'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

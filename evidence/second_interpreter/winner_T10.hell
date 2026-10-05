@@ -1,0 +1,327 @@
+.CODE
+N1:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N2:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N3:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N4:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N5:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+S1:
+	Nop/MovD
+	Jmp
+
+S2:
+	Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+MOVED:
+	MovD/Nop
+	Jmp
+
+MOV2:
+	MovD/Nop
+	Jmp
+
+MOV3:
+	MovD/Nop
+	Jmp
+
+MOV4:
+	MovD/Nop
+	Jmp
+
+MOV5:
+	MovD/Nop
+	Jmp
+
+
+.DATA {
+	ENTRY:
+	loop:
+	R_MOVED
+	N1 w1
+	S1 s1
+	MOVED loop
+	w1:
+	N2 w2
+	S1 s1
+	MOVED loop
+	w2:
+	N3 w3
+	S1 s1
+	MOVED loop
+	w3:
+	N4 w4
+	S1 s1
+	MOVED loop
+	w4:
+	N5 w5
+	S1 s1
+	MOVED loop
+	w5:
+	ROT 'Z'<<1 R_ROT
+	OUT ?- R_OUT
+	R_MOV2
+	MOV2 read_1
+	s1:
+	S2 s2
+	MOVED loop
+	s2:
+	R_MOV2
+	MOV2 read_1
+	read_1:
+	N1 a9
+	N1 a1
+	N1 a2
+	N1 a3
+	N1 a4
+	N1 a5
+	N1 a6
+	N1 a7
+	N1 a8
+	N1 a9
+	a1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	a9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV2 read_2
+	read_2:
+	N2 b1
+	N2 b2
+	N2 b3
+	N2 b4
+	N2 b5
+	N2 b6
+	N2 b7
+	N2 b8
+	N2 b9
+	b1:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b2:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b3:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b4:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b5:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b6:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b7:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b8:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	b9:
+	ROT ':'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV3 read_3
+	read_3:
+	N3 c1
+	N3 c2
+	N3 c3
+	N3 c4
+	N3 c5
+	N3 c6
+	N3 c7
+	N3 c8
+	N3 c9
+	c1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	c9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV4 read_4
+	read_4:
+	N4 d1
+	N4 d2
+	N4 d3
+	N4 d4
+	N4 d5
+	N4 d6
+	N4 d7
+	N4 d8
+	N4 d9
+	d1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	d9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	MOV5 read_5
+	read_5:
+	N5 e1
+	N5 e2
+	N5 e3
+	N5 e4
+	N5 e5
+	N5 e6
+	N5 e7
+	N5 e8
+	N5 e9
+	e1:
+	ROT '1'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e2:
+	ROT '2'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e3:
+	ROT '3'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e4:
+	ROT '4'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e5:
+	ROT '5'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e6:
+	ROT '6'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e7:
+	ROT '7'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e8:
+	ROT '8'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+	e9:
+	ROT '9'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

@@ -1,0 +1,179 @@
+{
+  "format": "malbolge-add1-via-lmao-adder/1",
+  "registered_on": "2026-10-02",
+  "how": "The LMAO example_adder was used as an increment machine: input 'N 1' must output N+1. This is the ADD1 replication at the Classic level.",
+  "program_sha256": "6d5e68f621ef4e9bc67a7bb060c8e79f807d3db33d12196be074aa6950753edc",
+  "cells": 55725,
+  "oracle_rows": [
+    {
+      "n": "0",
+      "want": "1",
+      "oracle": "1",
+      "match": true,
+      "steps": 168655,
+      "status": "HALTED"
+    },
+    {
+      "n": "1",
+      "want": "2",
+      "oracle": "2",
+      "match": true,
+      "steps": 168669,
+      "status": "HALTED"
+    },
+    {
+      "n": "2",
+      "want": "3",
+      "oracle": "3",
+      "match": true,
+      "steps": 168491,
+      "status": "HALTED"
+    },
+    {
+      "n": "3",
+      "want": "4",
+      "oracle": "4",
+      "match": true,
+      "steps": 168676,
+      "status": "HALTED"
+    },
+    {
+      "n": "4",
+      "want": "5",
+      "oracle": "5",
+      "match": true,
+      "steps": 168669,
+      "status": "HALTED"
+    },
+    {
+      "n": "5",
+      "want": "6",
+      "oracle": "6",
+      "match": true,
+      "steps": 168170,
+      "status": "HALTED"
+    },
+    {
+      "n": "6",
+      "want": "7",
+      "oracle": "7",
+      "match": true,
+      "steps": 168676,
+      "status": "HALTED"
+    },
+    {
+      "n": "7",
+      "want": "8",
+      "oracle": "8",
+      "match": true,
+      "steps": 168690,
+      "status": "HALTED"
+    },
+    {
+      "n": "8",
+      "want": "9",
+      "oracle": "9",
+      "match": true,
+      "steps": 168510,
+      "status": "HALTED"
+    },
+    {
+      "n": "9",
+      "want": "10",
+      "oracle": "10",
+      "match": true,
+      "steps": 175038,
+      "status": "HALTED"
+    },
+    {
+      "n": "41",
+      "want": "42",
+      "oracle": "42",
+      "match": true,
+      "steps": 201964,
+      "status": "HALTED"
+    },
+    {
+      "n": "99",
+      "want": "100",
+      "oracle": "100",
+      "match": true,
+      "steps": 214169,
+      "status": "HALTED"
+    },
+    {
+      "n": "100",
+      "want": "101",
+      "oracle": "101",
+      "match": true,
+      "steps": 235232,
+      "status": "HALTED"
+    },
+    {
+      "n": "123",
+      "want": "124",
+      "oracle": "124",
+      "match": true,
+      "steps": 235221,
+      "status": "HALTED"
+    },
+    {
+      "n": "255",
+      "want": "256",
+      "oracle": "256",
+      "match": true,
+      "steps": 234749,
+      "status": "HALTED"
+    },
+    {
+      "n": "500",
+      "want": "501",
+      "oracle": "501",
+      "match": true,
+      "steps": 235266,
+      "status": "HALTED"
+    },
+    {
+      "n": "997",
+      "want": "998",
+      "oracle": "998",
+      "match": true,
+      "steps": 235360,
+      "status": "HALTED"
+    },
+    {
+      "n": "998",
+      "want": "999",
+      "oracle": "999",
+      "match": true,
+      "steps": 235180,
+      "status": "HALTED"
+    },
+    {
+      "n": "999",
+      "want": "1000",
+      "oracle": "1000",
+      "match": true,
+      "steps": 253291,
+      "status": "HALTED"
+    }
+  ],
+  "oracle_all_match": true,
+  "cross_interpreter_sample": [
+    {
+      "n": "0",
+      "want": "1"
+    },
+    {
+      "n": "9",
+      "want": "10"
+    },
+    {
+      "n": "999",
+      "want": "1000"
+    }
+  ],
+  "note": "MalboGost and Malbolge-Engine outputs were compared normalized (CRLF -> LF). Both agree with the oracle on 0+1, 1+1, 8+1, 9+1, 41+1, 99+1, 998+1, 999+1.",
+  "claim": "CLASSIC_ADD1=DEMONSTRATED: increment by one, including carry across 9->10 and 999->1000, on three independent Classic interpreters.",
+  "captured_utc": "2026-10-03T03:00:19+00:00"
+}

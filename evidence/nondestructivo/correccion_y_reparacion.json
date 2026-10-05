@@ -1,0 +1,105 @@
+{
+  "format": "malbolge-correction-and-repair/1",
+  "correccion": "Un parche mio de hoy (stop_first) habia quitado la llamada a la celda de parada de las cadenas 2-5, lo que altero el layout y rompio el readout base ('88999'->'68999'). Detectado comparando el sha256 del .hell con el del barrido registrado (3e5708e6fb60704f). Base restaurada byte-identica.",
+  "no_regresion_base": "5/12",
+  "consumo": {
+    "rows": [
+      {
+        "cell": 1,
+        "true": "8",
+        "after": "9",
+        "after1": "8",
+        "repaired": true
+      },
+      {
+        "cell": 2,
+        "true": "8",
+        "after": "9",
+        "after1": "8",
+        "repaired": true
+      },
+      {
+        "cell": 3,
+        "true": "9",
+        "after": "9",
+        "after1": "8",
+        "repaired": false
+      },
+      {
+        "cell": 4,
+        "true": "9",
+        "after": "9",
+        "after1": "8",
+        "repaired": false
+      },
+      {
+        "cell": 5,
+        "true": "9",
+        "after": "9",
+        "after1": "8",
+        "repaired": false
+      }
+    ]
+  },
+  "p1": {
+    "hit": true,
+    "pre": [
+      1,
+      0,
+      0
+    ]
+  },
+  "t12": {
+    "hit": true,
+    "pre_shift": [
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "reparacion_no_destructiva": {
+    "rows": [
+      {
+        "cell": 1,
+        "true": "8",
+        "cap0": "9",
+        "cap1": "8",
+        "cap2": "8",
+        "repair_cap": 1
+      },
+      {
+        "cell": 2,
+        "true": "8",
+        "cap0": "9",
+        "cap1": "8",
+        "cap2": "7",
+        "repair_cap": 1
+      },
+      {
+        "cell": 3,
+        "true": "9",
+        "cap0": "9",
+        "cap1": "9",
+        "cap2": "9",
+        "repair_cap": 1
+      },
+      {
+        "cell": 4,
+        "true": "9",
+        "cap0": "9",
+        "cap1": "9",
+        "cap2": "9",
+        "repair_cap": 1
+      },
+      {
+        "cell": 5,
+        "true": "9",
+        "cap0": "9",
+        "cap1": "9",
+        "cap2": "9",
+        "repair_cap": 1
+      }
+    ]
+  }
+}

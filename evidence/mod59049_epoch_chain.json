@@ -1,0 +1,49 @@
+{
+  "format": "malbolge-mod59049-epoch-chain/1",
+  "registered_on": "2026-10-02",
+  "method": "snapshot after the first N1 execution; then 3 epochs of exactly 10000 N1 ticks each (run-until-visit), snapshot each; resume from the third snapshot and finish. Compare against the monolithic run.",
+  "base_snapshot": {
+    "a": 58938,
+    "c": 58997,
+    "d": 58941,
+    "steps": 4250
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "steps": 56750,
+      "a": 58938,
+      "c": 58996,
+      "d": 58940,
+      "mem_hash": "9ed4f82935bde45d61a4d71437564c4e2b346c6d88face451d5b4cbea96ddf6b"
+    },
+    {
+      "epoch": 2,
+      "steps": 109250,
+      "a": 58938,
+      "c": 58996,
+      "d": 58940,
+      "mem_hash": "9ed4f82935bde45d61a4d71437564c4e2b346c6d88face451d5b4cbea96ddf6b"
+    },
+    {
+      "epoch": 3,
+      "steps": 161750,
+      "a": 58938,
+      "c": 58996,
+      "d": 58940,
+      "mem_hash": "9ed4f82935bde45d61a4d71437564c4e2b346c6d88face451d5b4cbea96ddf6b"
+    }
+  ],
+  "final_from_epochs": {
+    "steps": 314258,
+    "halted": true
+  },
+  "monolithic": {
+    "steps": 314258,
+    "halted": true
+  },
+  "chain_equals_monolithic": true,
+  "claim": "MOD59049_EPOCH_CHAIN=DEMONSTRATED: the counter can be advanced in bounded increments, snapshotted after each, and resumed; the chained execution is identical to a single run.",
+  "relevance": "Direct match for MALDOOM's E0-E4 epoch model: bounded per-epoch progress with fresh-VM resume.",
+  "captured_utc": "2026-10-03T04:20:42+00:00"
+}

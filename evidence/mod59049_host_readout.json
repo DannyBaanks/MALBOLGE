@@ -1,0 +1,242 @@
+{
+  "format": "malbolge-mod59049-host-readout/1",
+  "registered_on": "2026-10-02",
+  "method": "Run to the state just before the (k+1)th N1 execution. Each cycle cell's content is mapped to its position in that cell's xlat2 orbit (starting from the tick-0 runtime value), giving a base-9 digit; value = sum d_i*9^(i-1).",
+  "orbit_lengths": {
+    "N1": 9,
+    "N2": 9,
+    "N3": 9,
+    "N4": 9,
+    "N5": 9
+  },
+  "rows": [
+    {
+      "tick": 0,
+      "decoded": 0,
+      "expected": 0,
+      "digits": {
+        "N1": 0,
+        "N2": 0,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4249,
+      "match": true
+    },
+    {
+      "tick": 1,
+      "decoded": 1,
+      "expected": 1,
+      "digits": {
+        "N1": 1,
+        "N2": 0,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4254,
+      "match": true
+    },
+    {
+      "tick": 2,
+      "decoded": 2,
+      "expected": 2,
+      "digits": {
+        "N1": 2,
+        "N2": 0,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4259,
+      "match": true
+    },
+    {
+      "tick": 8,
+      "decoded": 8,
+      "expected": 8,
+      "digits": {
+        "N1": 8,
+        "N2": 0,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4289,
+      "match": true
+    },
+    {
+      "tick": 9,
+      "decoded": 9,
+      "expected": 9,
+      "digits": {
+        "N1": 0,
+        "N2": 1,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4296,
+      "match": true
+    },
+    {
+      "tick": 10,
+      "decoded": 10,
+      "expected": 10,
+      "digits": {
+        "N1": 1,
+        "N2": 1,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4301,
+      "match": true
+    },
+    {
+      "tick": 80,
+      "decoded": 80,
+      "expected": 80,
+      "digits": {
+        "N1": 8,
+        "N2": 8,
+        "N3": 0,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4665,
+      "match": true
+    },
+    {
+      "tick": 81,
+      "decoded": 81,
+      "expected": 81,
+      "digits": {
+        "N1": 0,
+        "N2": 0,
+        "N3": 1,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4674,
+      "match": true
+    },
+    {
+      "tick": 82,
+      "decoded": 82,
+      "expected": 82,
+      "digits": {
+        "N1": 1,
+        "N2": 0,
+        "N3": 1,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 4679,
+      "match": true
+    },
+    {
+      "tick": 728,
+      "decoded": 728,
+      "expected": 728,
+      "digits": {
+        "N1": 8,
+        "N2": 8,
+        "N3": 8,
+        "N4": 0,
+        "N5": 0
+      },
+      "steps": 8065,
+      "match": true
+    },
+    {
+      "tick": 729,
+      "decoded": 729,
+      "expected": 729,
+      "digits": {
+        "N1": 0,
+        "N2": 0,
+        "N3": 0,
+        "N4": 1,
+        "N5": 0
+      },
+      "steps": 8076,
+      "match": true
+    },
+    {
+      "tick": 1000,
+      "decoded": 1000,
+      "expected": 1000,
+      "digits": {
+        "N1": 1,
+        "N2": 3,
+        "N3": 3,
+        "N4": 1,
+        "N5": 0
+      },
+      "steps": 9497,
+      "match": true
+    },
+    {
+      "tick": 6561,
+      "decoded": 6561,
+      "expected": 6561,
+      "digits": {
+        "N1": 0,
+        "N2": 0,
+        "N3": 0,
+        "N4": 0,
+        "N5": 1
+      },
+      "steps": 38694,
+      "match": true
+    },
+    {
+      "tick": 59046,
+      "decoded": 59046,
+      "expected": 59046,
+      "digits": {
+        "N1": 6,
+        "N2": 8,
+        "N3": 8,
+        "N4": 8,
+        "N5": 8
+      },
+      "steps": 314231,
+      "match": true
+    },
+    {
+      "tick": 59047,
+      "decoded": 59047,
+      "expected": 59047,
+      "digits": {
+        "N1": 7,
+        "N2": 8,
+        "N3": 8,
+        "N4": 8,
+        "N5": 8
+      },
+      "steps": 314236,
+      "match": true
+    },
+    {
+      "tick": 59048,
+      "decoded": 59048,
+      "expected": 59048,
+      "digits": {
+        "N1": 8,
+        "N2": 8,
+        "N3": 8,
+        "N4": 8,
+        "N5": 8
+      },
+      "steps": 314241,
+      "match": true
+    }
+  ],
+  "all_match": true,
+  "claim": "MOD59049_HOST_READOUT=DEMONSTRATED: the tick is fully readable from a memory snapshot by a deterministic host decoder; decoded == k mod 59049 for all tested k including 59046..59048.",
+  "relevance": "MALDOOM epoch snapshots carry the state; this decoder reads the tick from them without a Malbolge-side readout fragment.",
+  "captured_utc": "2026-10-03T05:56:48+00:00"
+}

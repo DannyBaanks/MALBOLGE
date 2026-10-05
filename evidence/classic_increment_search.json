@@ -1,0 +1,31 @@
+{
+  "format": "malbolge-classic-increment-search/1",
+  "registered_on": "2026-10-02",
+  "question": "Does a straight-line Classic program IN; <transforms>; OUT; HALT implement b -> (b+1) mod 256 for every byte, with no TAPE_BASE and no assisted opcode?",
+  "family": {
+    "prefix": [
+      23
+    ],
+    "transforms": [
+      39,
+      62,
+      68,
+      40
+    ],
+    "suffix": [
+      5,
+      81
+    ],
+    "transform_length": "0..8",
+    "simulator": "malbolge.py crazy/rot/encrypt, prefix CAP, no full 59049 fill",
+    "control": "IN;OUT;HALT returns the identity on probe bytes (0,1,2,127,255)"
+  },
+  "result": "NO_HIT",
+  "claim": "CLASSIC_STRAIGHT_LINE_INCREMENT_LE8=NOT_FOUND",
+  "does_not_close": "README row 'Malbolge Classic aritmetico (sin TAPE_BASE)' stays NOT_IMPLEMENTED. This bound excludes JMP-into-fill and programs longer than 8 transforms.",
+  "plus_mal": {
+    "source": "KtJGHBFBDZBF",
+    "classic_load": "INVALID",
+    "reason": "position 0 decodes to opcode 75, not one of the eight Classic ops"
+  }
+}

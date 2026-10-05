@@ -1,0 +1,48 @@
+{
+  "format": "malbolge-mod59049-boundary/2",
+  "registered_on": "2026-10-02",
+  "method": "state[k] := the five cycle-cell values just BEFORE the (k+1)-th execution of N1 (i.e., after k ticks and their carry cascade). post_halt := state at program halt.",
+  "states": {
+    "S0": [
+      79,
+      50,
+      62,
+      76,
+      80
+    ],
+    "S59046": [
+      66,
+      73,
+      66,
+      62,
+      50
+    ],
+    "S59047": [
+      62,
+      73,
+      66,
+      62,
+      50
+    ],
+    "S59048": [
+      76,
+      73,
+      66,
+      62,
+      50
+    ],
+    "post_halt": [
+      79,
+      50,
+      62,
+      76,
+      80
+    ]
+  },
+  "wrap_S0_equals_post_halt": true,
+  "nontrivial_steps": true,
+  "claim": "MOD59049_BOUNDARY=DEMONSTRATED: after 59049 ticks and their carry cascade the state returns exactly to the initial state (wrap), and the last steps are all distinct.",
+  "correction": "The first version of this file captured the state right after the k-th N1 execution before carries; that phase shift made the wrap comparison wrong. This version defines the state at the carry-settled phase.",
+  "scope": "state is the tuple of cycle-cell values (the counter representation), not a single tape word.",
+  "captured_utc": "2026-10-03T04:31:24+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "format": "malbolge-readout-destructivity/2",
+  "pregunta": "El readout de 5 celdas altera la posicion de las celdas que lee?",
+  "diseno": "T=10 (stops=[2,5]), posiciones verdaderas [1,1,0,0,0]. El readout principal lee las 5 celdas y despues una cadena de verificacion relee UNA celda y hace HALT. La cadena de verificacion se calibra en el MISMO programa con un control de valor absoluto: leer la celda 5, cuya posicion verdadera es 0.",
+  "modes": {
+    "verify=1": "readout de 5 celdas + cadena de verificacion",
+    "v_cell": "que celda lee la cadena de verificacion",
+    "pre_v": "llamadas de advanceo de la cadena de verificacion"
+  },
+  "calibracion_absoluta_en_este_programa": {
+    "celda5_control": {
+      "posicion_verdadera": 0,
+      "digito_esperado": "9",
+      "pre_v=0": "9",
+      "pre_v=1": "8",
+      "conclusion": "pre_v=0 es el ajuste que lee absolutamente en este programa"
+    },
+    "nota": "la cadena de verificacion calibrada en verify=2 (entrada desde la parada) daria un offset distinto; por eso el control se hace DENTRO del programa medido"
+  },
+  "medicion": {
+    "celda1": {
+      "posicion_verdadera_antes_del_readout": 1,
+      "digito_esperado_antes": "8",
+      "lectura_con_el_ajuste_absoluto_pre_v0": "9",
+      "posicion_medida_despues": 0,
+      "conclusion": "la celda 1 paso de posicion 1 a posicion 0: el readout la RESETEA"
+    }
+  },
+  "reproducibilidad": [
+    {
+      "rep": 0,
+      "control_celda5_out": "889999",
+      "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+      "medicion_celda1_out": "889999",
+      "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+      "control_ok": true,
+      "medicion_ok": true
+    },
+    {
+      "rep": 1,
+      "control_celda5_out": "889999",
+      "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+      "medicion_celda1_out": "889999",
+      "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+      "control_ok": true,
+      "medicion_ok": true
+    },
+    {
+      "rep": 2,
+      "control_celda5_out": "889999",
+      "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+      "medicion_celda1_out": "889999",
+      "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+      "control_ok": true,
+      "medicion_ok": true
+    }
+  ],
+  "claims": {
+    "READOUT_IS_DESTRUCTIVE": "DEMONSTRATED (celda 1: posicion 1 -> 0 tras ser leida, con control absoluto en el mismo programa)",
+    "READOUT_NON_DESTRUCTIVE": "DESTROYED",
+    "LIMITACION": "el readout es valido como medicion de un instante; no habilita lectura repetida del mismo estado, lectura incremental ni Stillwell"
+  },
+  "correccion": "mi prediccion estructural previa decia 'celda 1 a 1' por el pre-call; la medicion da 0. El pre-call tambien queda consumido: la cadena de 9 llamadas desde posicion 2 envuelve en la llamada 7 y la celda queda en la posicion siguiente a movd, que es 0. Corregido: TODAS las celdas leidas quedan en 0.",
+  "alcance": "medido en T=10 con la celda 1; no verificado para las otras 4 celdas ni para otros T. Es una muestra, no unaRIX completa."
+}

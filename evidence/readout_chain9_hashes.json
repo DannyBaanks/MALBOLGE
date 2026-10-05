@@ -1,0 +1,1721 @@
+{
+  "files": {
+    "vendor/lmao/bin/lmao": {
+      "sha256": "5a6039efd995af1cf57b9bf4d6ec70da3a5303efe0ec6a1fe0fad3abc03f3f44",
+      "bytes": 112704
+    },
+    "vendor/lmao/handwritten/chain9.hell": {
+      "sha256": "b87f6ddddae9caffaee24caf5db5a1def5fd644b1bd73a72cc653b568f162868",
+      "bytes": 610
+    },
+    "vendor/lmao/handwritten/chain8.hell": {
+      "sha256": "d6e356758c6df8370ce181e0da28c1c3a40ee8bbd661a7fad7fbac1135efe729",
+      "bytes": 597
+    },
+    "readout_chain9_probe.py": {
+      "sha256": "b463993615331b826cc775936e6a597d6a754ec83694a621adba9919ae382f75",
+      "bytes": 3772
+    },
+    "readout_link_probe.py": {
+      "sha256": "87b3f0b3e20267b8c063ef8a9041ca6a579b41e2b3efedf3765963d553a6abeb",
+      "bytes": 4521
+    },
+    "readout5_sweep.py": {
+      "sha256": "487bd89411da6ea58d30271a8226b69cba407cf008f8e7b223ab8969f8d94e65",
+      "bytes": 6406
+    },
+    "evidence/chain9_report.json": {
+      "sha256": "9a093679504958611e08444e076dd6a3a84b94670a2af108a720f002397d28bd",
+      "bytes": 2214
+    },
+    "evidence/readout_link_report.json": {
+      "sha256": "452b321f2f84f675fa3c0ab6f5e21e740ac765ccd2055e03ea18a43e92a601b6",
+      "bytes": 1811
+    },
+    "evidence/readout5_report.json": {
+      "sha256": "785e5e0a8ecaec2634d80e84b6163d9df82c7f17b70b23748d9a1c7bb09f960a",
+      "bytes": 11503
+    },
+    "evidence/readout5_v1_negative.json": {
+      "sha256": "e062fc9c30c7e986bd7c2d8b1f88de208d7eb9aeae25981cfd4e3bd22b168b25",
+      "bytes": 8935
+    },
+    "evidence/readout5_v2_negative.json": {
+      "sha256": "93789c2efa1f548b055606202fa9d9dce6cbf1eedad69503ce4f260fc1fa058a",
+      "bytes": 9856
+    },
+    "readout_midwrap_v1.py": {
+      "sha256": "2fe9c5ecd0ab39a0bbae9586720438e1c5a06290cb40d019f7d37fd4f6dc9083",
+      "bytes": 5969
+    },
+    "readout_midwrap_v2.py": {
+      "sha256": "4365011441c16c4e613da77c6f0278b053402d840d0c7788b5711dbc6e4acae8",
+      "bytes": 5980
+    },
+    "readout_midwrap_v3.py": {
+      "sha256": "12c093ee9279071553fb58072217eb372196f68c4ffd0e173c40c284b2691fc4",
+      "bytes": 4856
+    },
+    "readout_midwrap_v4.py": {
+      "sha256": "11e4ef48332bea99fa8d5d45d2cfce9105be64455dd92ba1cb1bead29f3655d6",
+      "bytes": 4458
+    },
+    "evidence/readout_midwrap_v1_trace.json": {
+      "sha256": "3dc0fce03acf4d517a5b48cff8736261175a0fa489df04ac2c1c13ccfac84375",
+      "bytes": 3189
+    },
+    "evidence/readout_midwrap_v1_trace_events.json": {
+      "sha256": "2cac35b08e008a3cd730e9d14bd0d226a422d41414b12e948be18f31ae31ee04",
+      "bytes": 937571
+    },
+    "evidence/readout_midwrap_v2_rmoved.json": {
+      "sha256": "b11e8764c99b1c0fdfcd1fe3f8605efd24dff98fbe8c4130d25a0a656f9570ea",
+      "bytes": 3200
+    },
+    "evidence/readout_midwrap_v3_gateway.json": {
+      "sha256": "01e1338d76157f6e2ca1f347c8cc4a765a9f312e49c5463d844cfbc6015ba07f",
+      "bytes": 2974
+    },
+    "evidence/readout_midwrap_v4_dedicated.json": {
+      "sha256": "8852726f2dc6c48e4bc2d8ba217bd21fed359ddff1afdd57f4885daed421522d",
+      "bytes": 3045
+    },
+    "readout_xfer_xfer_micro.py": {
+      "sha256": "22c1547936fec20befd58ca50f94b57a2e735cf81c3edb73046b9a2fae4d1932",
+      "bytes": 5026
+    },
+    "readout_xfer_xfer_micro2.py": {
+      "sha256": "c6e4e1a6a2579d86fbfd51b62f6ca11b259b451f6af6dc86c8da5b298390552a",
+      "bytes": 7203
+    },
+    "readout_xfer_xfer_midwrap.py": {
+      "sha256": "f1d27fec30ceccc50dbe9189254c72fd3979f15e13541c6f22d82bd817f2ffab",
+      "bytes": 7881
+    },
+    "readout_xfer_xfer_v6.py": {
+      "sha256": "7e8c51b2e44b96e3e1317eb67235e8a749a86095d0a9d55a61a2266875aa58d3",
+      "bytes": 5559
+    },
+    "readout_xfer_xfer_v7.py": {
+      "sha256": "bfa7e65539311bd132130544bae2467f2a040b82c65cecdb0ee09d12ca912d29",
+      "bytes": 4401
+    },
+    "evidence/xfer_micro1_canonico_vs_solo.json": {
+      "sha256": "d65f74a51309ebbabd73a4c7aecc9b34c5c92c9ec4438ed825dfc1586cab9c01",
+      "bytes": 2109
+    },
+    "evidence/xfer_micro2_adversarial_layout.json": {
+      "sha256": "5e8e861f232b6a998c1e8bf8b753f9b565f97ea830bc5b735da4b64212a49bfe",
+      "bytes": 7518
+    },
+    "evidence/xfer_midwrap_v1_alignment.json": {
+      "sha256": "42cfcee69699dd3c66c7142b609635070db3e005269a2583c3224b654a58f29c",
+      "bytes": 15557
+    },
+    "evidence/xfer_midwrap_v2_precall.json": {
+      "sha256": "5a4f77aaf89c83843a4dbf919b2fd09b98f5a63278f500c51a516a062fa6393f",
+      "bytes": 4813
+    },
+    "evidence/xfer_midwrap_v3_dedicated.json": {
+      "sha256": "baca7bc6d679df7032ec0c5cb7d8cecbbce1c44d4bfd7ac9b009716ff114baeb",
+      "bytes": 4214
+    },
+    "evidence/xfer/v6pre_p2.dbg": {
+      "sha256": "249f2ada92632f0e6bb308c89d71e9c4a80ea75b01bf6d27492c09535c783b97",
+      "bytes": 7196
+    },
+    "evidence/xfer/v6pre_p2.hell": {
+      "sha256": "d36a19f10f73398ee6ec4b36389996da78f55b147d437057966b28aa1541d054",
+      "bytes": 1481
+    },
+    "evidence/xfer/v6pre_p2.mb": {
+      "sha256": "bc3d43802557934b709da9e2749085d31d3966ffbfc1e558af47b3c943e00094",
+      "bytes": 14342
+    },
+    "evidence/xfer/v7ded_p2.hell": {
+      "sha256": "42b3d3d2b9a7ef21af9ce4c6eb72e649612ce6c10b4239cfa728833f8671e58a",
+      "bytes": 1503
+    },
+    "evidence/xfer/v7ded_p2.mb": {
+      "sha256": "b10caf95afeb983a1a4f4c5e3045d57d9ef5742df0b2f9df7790719357d23638",
+      "bytes": 14342
+    },
+    "evidence/xfer/v7shared_p2.hell": {
+      "sha256": "9d3f802010d636b14bb02f627d765cde3f26ecec54f3d22cbde9c93be230549a",
+      "bytes": 1503
+    },
+    "evidence/xfer/v7shared_p2.mb": {
+      "sha256": "f4ca7af491286aae0a128735f66ca840d8de185ddf1d87293e93ba26fb1f2826",
+      "bytes": 14342
+    },
+    "evidence/xfer/v7shared_p6.hell": {
+      "sha256": "3252dc66ebe8d5129fd06ed45f0037a10d6395fdd93f726ef79e9847b437fe83",
+      "bytes": 1519
+    },
+    "evidence/xfer/v7shared_p6.mb": {
+      "sha256": "ed2444b7b1329e09d4b9e1dd0ddda4592ca3ec87a5e73fe887588d221a92d7ce",
+      "bytes": 14841
+    },
+    "evidence/xfer/xfer2_bare_direct.dbg": {
+      "sha256": "41364a0fb03c860a4477a541df27dc3c251d70ae83021c282e9f469564a5a202",
+      "bytes": 1522
+    },
+    "evidence/xfer/xfer2_bare_direct.hell": {
+      "sha256": "7c7fa8dac42ee366151ab9206fe92c6d7b4f6c341fc88f69c0b71cb623bb1fb4",
+      "bytes": 289
+    },
+    "evidence/xfer/xfer2_bare_direct.mb": {
+      "sha256": "df2b7f54ed6727e4afeba072da5bc087393aa5d950e10c530cf60384228661a2",
+      "bytes": 3461
+    },
+    "evidence/xfer/xfer2_bare_seed.dbg": {
+      "sha256": "446b11fa91672370c74c4b83a55fa6cfb458c8b8d96843bab610186a8031b219",
+      "bytes": 1700
+    },
+    "evidence/xfer/xfer2_bare_seed.hell": {
+      "sha256": "850ee30004213495b15c9b8d629c893ce436ec3bd22945efd35854ff9a2547ec",
+      "bytes": 344
+    },
+    "evidence/xfer/xfer2_bare_seed.mb": {
+      "sha256": "65eff27af91f58a1a05e9b3f073c7d92c83be1ae5e4e972d264b57f70955eb17",
+      "bytes": 3649
+    },
+    "evidence/xfer/xfer2_moved_direct.dbg": {
+      "sha256": "0ea93de5d77b3d8b34874f4326e404bc9adbab644b3c9b7f67e5bf5c6227a98b",
+      "bytes": 1548
+    },
+    "evidence/xfer/xfer2_moved_direct.hell": {
+      "sha256": "c6cced321c6733463fb2c19d1726ecaf4b42390bf9efe444fa6154b743ce3e7a",
+      "bytes": 295
+    },
+    "evidence/xfer/xfer2_moved_direct.mb": {
+      "sha256": "4a0587440821cbffc337306c070f69f1f4f2358ffdb794734bad3e2a8fb8f218",
+      "bytes": 3626
+    },
+    "evidence/xfer/xfer2_moved_seed.dbg": {
+      "sha256": "ad75e55448d3aa0048e106f1cbf1aedae6c0b37ba3f8db026e4ea933f3e8b731",
+      "bytes": 1726
+    },
+    "evidence/xfer/xfer2_moved_seed.hell": {
+      "sha256": "e77299d738c087bdf7acb6db2ea389ffafd03e0ca46a5c0b35cc867f06a7cc56",
+      "bytes": 350
+    },
+    "evidence/xfer/xfer2_moved_seed.mb": {
+      "sha256": "5678619354bab9849636942df08939442b0e536b17c0adb224d8aaa4b6076b00",
+      "bytes": 3837
+    },
+    "evidence/xfer/xfer4_v4.dbg": {
+      "sha256": "8eb8be0abe72343b51ce2cd6070ae93725e05a306bca75eee9a3f6fd2dc68b6c",
+      "bytes": 6872
+    },
+    "evidence/xfer/xfer4_v4.hell": {
+      "sha256": "c594ad7f66a7bf03aa4a5141b3e88e263ca31b15e673226ebb8a863734a834fa",
+      "bytes": 1394
+    },
+    "evidence/xfer/xfer4_v4.mb": {
+      "sha256": "1a06df31bc89babefc8dc17ccdd7ae7564cf937db25c7c353c4510a1ba0c69f3",
+      "bytes": 14060
+    },
+    "evidence/xfer/xfer4_v5a.dbg": {
+      "sha256": "4deabf69793de2772afd0a07c16c13ec645df4ebffbf13577cf8fd2d9c011734",
+      "bytes": 7120
+    },
+    "evidence/xfer/xfer4_v5a.hell": {
+      "sha256": "135f5425512fd5eed7d195bccb6ff83a8b8d277e01b47fff89fbac9dcfbc2dcd",
+      "bytes": 1430
+    },
+    "evidence/xfer/xfer4_v5a.mb": {
+      "sha256": "7ec5263f0f4bec037429f94845644e1fa17f1941a53653fa0cf9fb1f67a5f673",
+      "bytes": 14177
+    },
+    "evidence/xfer/xfer4_v5b.dbg": {
+      "sha256": "123eb2e846179871d403e5ab5c31c4526b1b35776970e53cd6b8baa8f6726a48",
+      "bytes": 7120
+    },
+    "evidence/xfer/xfer4_v5b.hell": {
+      "sha256": "b1a0fbf3cead9b9ffcf18b23d4dc08ac58542c94b55294badf9de7933da401ef",
+      "bytes": 1466
+    },
+    "evidence/xfer/xfer4_v5b.mb": {
+      "sha256": "759d746ed42e3cd728649aacda913788b14889436a09f6bed71203bb80df2156",
+      "bytes": 14271
+    },
+    "evidence/xfer/xfer4_v5c.dbg": {
+      "sha256": "15808dd086c6a76db2751aa9a499848204652d813bb3212ab773021965c49980",
+      "bytes": 7347
+    },
+    "evidence/xfer/xfer4_v5c.hell": {
+      "sha256": "f8b72531d1ea7493420724bf1fe99af35b2f07eae1b5a24cf7c651b544ec6724",
+      "bytes": 1520
+    },
+    "evidence/xfer/xfer4_v5c.mb": {
+      "sha256": "0c336b9470d3a02de551b272f8f908a0b1cb204374c5d7c16ddb518c12ea3adb",
+      "bytes": 14812
+    },
+    "evidence/xfer/xfer_m1_canonico.dbg": {
+      "sha256": "099052f81601aedb32a8968797dbed0ee79be7db42700bb1c7d8cc5c3af511d6",
+      "bytes": 1330
+    },
+    "evidence/xfer/xfer_m1_canonico.hell": {
+      "sha256": "6cf27d65778e0c6e9c59fb24a5902634f74756ad07950adff29c1d701b344c1d",
+      "bytes": 262
+    },
+    "evidence/xfer/xfer_m1_canonico.mb": {
+      "sha256": "552070629a17a3bcfa915d1765b31e799567a13106a6c6eccf4e5ee2bbde70de",
+      "bytes": 3561
+    },
+    "evidence/xfer/xfer_m2_solo.dbg": {
+      "sha256": "ebe50a62dcd9b3c98e479681d020d572aa2de4e92e0576a080de99b2f31637f0",
+      "bytes": 1298
+    },
+    "evidence/xfer/xfer_m2_solo.hell": {
+      "sha256": "41dfd6ecb08f74deba2f32ebb4ea639ad040f8eb28c66d545ce96f5e74306a9a",
+      "bytes": 253
+    },
+    "evidence/xfer/xfer_m2_solo.mb": {
+      "sha256": "69c06cc8219d28e03626ba3c2dbe63f1725f90df8b5add2ab89515c84ba2d719",
+      "bytes": 3532
+    },
+    "readout_xfer_u_offset.py": {
+      "sha256": "9c119fe00c2c25d28eb133fbcbd769f06522d852b6530c8f5b34ed663904c577",
+      "bytes": 7554
+    },
+    "readout_xfer_u_offset_final.py": {
+      "sha256": "dcb605f27355abe2d7ee8449d326020a46538f9a24ff563d4030d4a5c36939f3",
+      "bytes": 6621
+    },
+    "evidence/xfer_u/u_offset_matrix.json": {
+      "sha256": "edbf5afff0c3a5968ca25ecc79a424cef80bc30bf03f4e0d2b260a8bbee7e3cf",
+      "bytes": 26905
+    },
+    "evidence/xfer_u/u_offset_final_claims.json": {
+      "sha256": "23b1b0564be8a4ed1a02ce416efc7930c68fd9fa02522f72718872b4c2bde58d",
+      "bytes": 7449
+    },
+    "evidence/xfer_u/u_bare_pad0_seed0.dbg": {
+      "sha256": "ce1f40b6bd38fea007a0fc62def58798d495734a6bd640733219a7a3496d6de5",
+      "bytes": 1444
+    },
+    "evidence/xfer_u/u_bare_pad0_seed0.hell": {
+      "sha256": "0b2c31e36e27056c7984e789e7d245c4e12c7b50cbb551680fe14e6875e27f88",
+      "bytes": 279
+    },
+    "evidence/xfer_u/u_bare_pad0_seed0.mb": {
+      "sha256": "0a3bc91b1adc1b390f06d2c701707ba795fa53a3c08e7cea52a88f7ac8dbd414",
+      "bytes": 3367
+    },
+    "evidence/xfer_u/u_bare_pad0_seed3.dbg": {
+      "sha256": "d21ef9f3ee1fab8f4d58efc27c5d6167dce6baac20e72624c82a4d00814addaa",
+      "bytes": 1933
+    },
+    "evidence/xfer_u/u_bare_pad0_seed3.hell": {
+      "sha256": "b7ade55acb9d3a329496ef0f44de861c3453e519ec6d4323599a3c7f73849f1b",
+      "bytes": 390
+    },
+    "evidence/xfer_u/u_bare_pad0_seed3.mb": {
+      "sha256": "c7bde91bef54aa40dc691a447eef56bce390229d89c97ea7820257ca42354f83",
+      "bytes": 4501
+    },
+    "evidence/xfer_u/u_bare_pad1_seed0.dbg": {
+      "sha256": "219d0a451a6f23fa21fd5a81362130e089bf921832570877510ee2f10980d543",
+      "bytes": 1468
+    },
+    "evidence/xfer_u/u_bare_pad1_seed0.hell": {
+      "sha256": "a9db7bc9aabf761e7d0fc0c7ebdfc7374022d51e0c8c7b350f8208a0105597ca",
+      "bytes": 282
+    },
+    "evidence/xfer_u/u_bare_pad1_seed0.mb": {
+      "sha256": "c1764ca44e78139c144871303fd42f3604d745f56e76867d57aac5fd4a33e541",
+      "bytes": 3422
+    },
+    "evidence/xfer_u/u_bare_pad1_seed3.dbg": {
+      "sha256": "8f99b94c312ab4225f3430469c0f6076b4ce5f2f988cf91a05d031f11fd94148",
+      "bytes": 1957
+    },
+    "evidence/xfer_u/u_bare_pad1_seed3.hell": {
+      "sha256": "453948f26cc300c302f5b649bca0da36d84b4ce7367b78c9cc5eaf05141de20a",
+      "bytes": 393
+    },
+    "evidence/xfer_u/u_bare_pad1_seed3.mb": {
+      "sha256": "8e94b5e05ef93db3d276b10f3362f14863240c4d695c80819fb4a1634410002d",
+      "bytes": 4566
+    },
+    "evidence/xfer_u/u_moved_pad0_seed0.dbg": {
+      "sha256": "47d0f0b9077a68a43c14f1a0d7a0402ef16849a64809c9b0d60aa155da314a87",
+      "bytes": 1470
+    },
+    "evidence/xfer_u/u_moved_pad0_seed0.hell": {
+      "sha256": "b16532434c43365304b8ff57698820d346e6ce5103f06df27a6dbfd2709e7843",
+      "bytes": 285
+    },
+    "evidence/xfer_u/u_moved_pad0_seed0.mb": {
+      "sha256": "bf45c41c0eae7be0db61ac2f02a6746f4595b276020d22330a94298026f037d9",
+      "bytes": 3626
+    },
+    "evidence/xfer_u/u_moved_pad0_seed3.dbg": {
+      "sha256": "67d1133bd8dc8e171e715c4d09da60baf3ec74afa6461fb1668703cffe975e22",
+      "bytes": 1959
+    },
+    "evidence/xfer_u/u_moved_pad0_seed3.hell": {
+      "sha256": "5fcce1b78544dc8523360823b7c1b825b33d931f68beab70f61d573451170706",
+      "bytes": 396
+    },
+    "evidence/xfer_u/u_moved_pad0_seed3.mb": {
+      "sha256": "e8663329f8235c32d55abd4c2600ee005ebbc6cfab44ff32fc17b2a37dc7c16d",
+      "bytes": 4608
+    },
+    "evidence/xfer_u/u_moved_pad1_seed0.dbg": {
+      "sha256": "48d73cf0119f1326011e8af8c347dfc5999928a15dac055a02debc667a9607f5",
+      "bytes": 1494
+    },
+    "evidence/xfer_u/u_moved_pad1_seed0.hell": {
+      "sha256": "7778c9d138c1292f75636706b050ccfbe366bce67163937473557ce4d9d04b7d",
+      "bytes": 288
+    },
+    "evidence/xfer_u/u_moved_pad1_seed0.mb": {
+      "sha256": "b959cbc5ac61c589010fa5f64b2c511f4bfa107392c48ea93da656732dedeadf",
+      "bytes": 3555
+    },
+    "evidence/xfer_u/u_moved_pad1_seed3.dbg": {
+      "sha256": "4232939b49bab7901ddd19d22d05233b1a561d623c155b8b1174aaadcd4c7273",
+      "bytes": 1983
+    },
+    "evidence/xfer_u/u_moved_pad1_seed3.hell": {
+      "sha256": "af4a933fa443d519d907f44e3dae1d59627364f79b3f4724571ee0dc9e4d4fb1",
+      "bytes": 399
+    },
+    "evidence/xfer_u/u_moved_pad1_seed3.mb": {
+      "sha256": "3d3a17449d4523f0bcbfd1a64f5acbf78858b6088d2c1f6abb2de05269660656",
+      "bytes": 4495
+    },
+    "evidence/xfer_u/u_u__pad0_seed0.dbg": {
+      "sha256": "2319932444c1c68feaeb1d20e1449dc111ec9f91a711ee725cc5169441d0a0c5",
+      "bytes": 1441
+    },
+    "evidence/xfer_u/u_u__pad0_seed0.hell": {
+      "sha256": "5bbfe840e31171dcf5c435c45baeabc835bdbe03da935d5782e863f09dabf1b3",
+      "bytes": 289
+    },
+    "evidence/xfer_u/u_u__pad0_seed0.mb": {
+      "sha256": "580adfc165b6887f59ed5dd387785c41555c322c4a5446161bbe8558245d7b7b",
+      "bytes": 3367
+    },
+    "evidence/xfer_u/u_u__pad0_seed3.dbg": {
+      "sha256": "cff3f693a1e9539ebe6ed09dda571607e26ca6a1d6b4bc7115334b1349785dd3",
+      "bytes": 2332
+    },
+    "evidence/xfer_u/u_u__pad0_seed3.hell": {
+      "sha256": "aa6a65427c095bb292c5b8b25e102cb9cad89875717ad373ea81b4622d666448",
+      "bytes": 400
+    },
+    "evidence/xfer_u/u_u__pad0_seed3.mb": {
+      "sha256": "32f46d17ebf654ed5474c141ced6a32a09d47001fd561a76b956ed90a48f8d7c",
+      "bytes": 5318
+    },
+    "evidence/xfer_u/u_u__pad1_seed0.dbg": {
+      "sha256": "cedf8f4a3cddc23d68de1c999a00b33263ac585b81e62770ff9666233c2cbda4",
+      "bytes": 1465
+    },
+    "evidence/xfer_u/u_u__pad1_seed0.hell": {
+      "sha256": "8319b41779ab874e46a468b877f3d1267f44d961b45d9cef901f1ce35caa7768",
+      "bytes": 292
+    },
+    "evidence/xfer_u/u_u__pad1_seed0.mb": {
+      "sha256": "8e21be77203132258573f3d6c606da3aa5c877d434c27e771ce9b92bf5796783",
+      "bytes": 3386
+    },
+    "evidence/xfer_u/u_u__pad1_seed3.dbg": {
+      "sha256": "53417f923453c02611e804e689d869e761c1c65f6834eb223998920b92cdd2b3",
+      "bytes": 2356
+    },
+    "evidence/xfer_u/u_u__pad1_seed3.hell": {
+      "sha256": "98cb09c534d06aad6ea503df5c7f1b67ac605e1b20f7b9418678dc47d86bfed5",
+      "bytes": 403
+    },
+    "evidence/xfer_u/u_u__pad1_seed3.mb": {
+      "sha256": "54c37f0a88dd53f348738d9669f366f2f05a4844e532b78f8ee43520f0e28469",
+      "bytes": 5247
+    },
+    "run_variant_sweep.py": {
+      "sha256": "fe34ad9e1fcfcba87fe022cea623f3cd8bd0670f17b46301a60b900d436438a9",
+      "bytes": 5103
+    },
+    "run_variant_F.py": {
+      "sha256": "0bd451b5c344b8a83ed89d372dc9d310e7675571a0c4689cca300d0360f1df70",
+      "bytes": 4481
+    },
+    "run_readout2_winner.py": {
+      "sha256": "da4da85661cb81cb09795d0c6fdf801ac7d9357242b28daf685fb2c42675c1ef",
+      "bytes": 4133
+    },
+    "evidence/xfer_variants/c3x_100_p2.hell": {
+      "sha256": "6c22a7d79231d526fbc4743ea3fe68afccc74636a807e041ead37b96156bd98d",
+      "bytes": 2296
+    },
+    "evidence/xfer_variants/c3x_100_p2.mb": {
+      "sha256": "113c7e6b5415634741b8d558df01e208fd93d125de68c7668dd15735820059e2",
+      "bytes": 21321
+    },
+    "evidence/xfer_variants/c3x_101_p2.hell": {
+      "sha256": "3a2eb3d5481e37dfb0cc8f35bde3541fbab611371c114a2b0d79d546def3863e",
+      "bytes": 2305
+    },
+    "evidence/xfer_variants/c3x_101_p2.mb": {
+      "sha256": "d3b9c577d152ec1e4a257ed5f16df659d4fc3dceadaea841a2a38cbefded64bd",
+      "bytes": 21327
+    },
+    "evidence/xfer_variants/c3x_110_p2.hell": {
+      "sha256": "4a6219db57471a0c06eac5c79e319ef5c60cb48bc0905cb9feaaad9eaea49227",
+      "bytes": 2305
+    },
+    "evidence/xfer_variants/c3x_110_p2.mb": {
+      "sha256": "1f8add652a274068f8dd166008f4b365260bfcc436e906cc396126de91c7451b",
+      "bytes": 21327
+    },
+    "evidence/xfer_variants/c3x_111_p2.hell": {
+      "sha256": "54f2d69917436f6cc3ab602df9ccf3996c524c6bfe2f11e6cd86074f34b86a61",
+      "bytes": 2314
+    },
+    "evidence/xfer_variants/c3x_111_p2.mb": {
+      "sha256": "c62f71993372e51fc1ef56fd82fb5010efa6807caaddd24093248f6eff24815c",
+      "bytes": 21609
+    },
+    "evidence/xfer_variants/calibration_matrix.json": {
+      "sha256": "a13eb0343ace4fd57e25ffceea283199c1fc3a2548f4736bd42176171a79db8b",
+      "bytes": 6866
+    },
+    "evidence/xfer_variants/fix_plain_p2.hell": {
+      "sha256": "bb83f14d6796d083e30006861d08f7ea9096fff2d7e9f1d634bb66efad8684c8",
+      "bytes": 1409
+    },
+    "evidence/xfer_variants/fix_plain_p2.mb": {
+      "sha256": "43de9f2129831da248619e241ffa2aff1c109f7aa85f830d5fd7d57a6aa2e22a",
+      "bytes": 14271
+    },
+    "evidence/xfer_variants/fix_plain_p4.hell": {
+      "sha256": "86586cd5fc72671b01a2f3405a986625a297d05362d820c095d19630b0f06d3d",
+      "bytes": 1417
+    },
+    "evidence/xfer_variants/fix_plain_p4.mb": {
+      "sha256": "a5cf048ccf323b59fd830cf5bb8df98fb685bb1dbeebc2e768e1a3d0a44f9f19",
+      "bytes": 14326
+    },
+    "evidence/xfer_variants/fix_shift_p1.hell": {
+      "sha256": "fd857ed57b0afea8e013687581a0c41d3073c0379576c70483d0a73ff8785995",
+      "bytes": 1405
+    },
+    "evidence/xfer_variants/fix_shift_p1.mb": {
+      "sha256": "6e2e120791fe7754862857e60eba539569d7597c40506d38ee053ce61b9d7c20",
+      "bytes": 14326
+    },
+    "evidence/xfer_variants/fix_shift_p2.hell": {
+      "sha256": "f3fff0286e342a759ad8d22cfc7949665c50987cd849a59f6bbad2061ae8e439",
+      "bytes": 1409
+    },
+    "evidence/xfer_variants/fix_shift_p2.mb": {
+      "sha256": "2c2b1eb5c81aff4124cad05e8e11a078a3e3fcf347935595d2d4e6adcfb2c7bc",
+      "bytes": 14277
+    },
+    "evidence/xfer_variants/fix_shift_p4.hell": {
+      "sha256": "2fabba1be4ac6278ab697aa2f97cdf56a140636b40176d9a8bec4f706acfb764",
+      "bytes": 1417
+    },
+    "evidence/xfer_variants/fix_shift_p4.mb": {
+      "sha256": "37a2e790390878f5f0b88042072113ef6852bf7349724d8b75beb9c9a8288c44",
+      "bytes": 14342
+    },
+    "evidence/xfer_variants/fix_shift_p5.hell": {
+      "sha256": "509ffc9e21dd67a0370b31a200a6470f2333fb0ea8f5fd9f0821fef9844ab32c",
+      "bytes": 1421
+    },
+    "evidence/xfer_variants/fix_shift_p5.mb": {
+      "sha256": "47a71efeb9a81dfe72a72ec1bd658b57020ef53808ce3e764a82ff157099e08c",
+      "bytes": 14760
+    },
+    "evidence/xfer_variants/fix_shift_p6.hell": {
+      "sha256": "320f9eacbbab2059d945dad3eda32c26c2f3f2a9488baefc47bcfe040f98317a",
+      "bytes": 1425
+    },
+    "evidence/xfer_variants/fix_shift_p6.mb": {
+      "sha256": "d3f6de77d938d24d1c4aee43a657cc14d46528eb928745bf1fccfb5b7ef9b9a8",
+      "bytes": 14342
+    },
+    "evidence/xfer_variants/fix_shift_report.json": {
+      "sha256": "e030fd2b2753cf1e3349e4b0d6cc4440418bcf90190133bbfb65245320d3bbe2",
+      "bytes": 2563
+    },
+    "evidence/xfer_variants/order_report.json": {
+      "sha256": "dbf30ddf3a80988ab5d9b9b5077224b2f5f37f1866bf2e4bca7c871e9a0131e9",
+      "bytes": 3441
+    },
+    "evidence/xfer_variants/readout2_p1.hell": {
+      "sha256": "e446311f3135bacbb266d99214c2599727f7a1031533d5bf28474120e3ae3058",
+      "bytes": 1405
+    },
+    "evidence/xfer_variants/readout2_p1.mb": {
+      "sha256": "c064a288d40287410194de83bb7adcf54ef6d65d2e07d430531845cfe80e36d6",
+      "bytes": 14290
+    },
+    "evidence/xfer_variants/readout2_p2.hell": {
+      "sha256": "bb83f14d6796d083e30006861d08f7ea9096fff2d7e9f1d634bb66efad8684c8",
+      "bytes": 1409
+    },
+    "evidence/xfer_variants/readout2_p2.mb": {
+      "sha256": "bfe8d14ca272cc32d99257b8feec7d56f971cbbc8fc887e9be244b6ba21ea206",
+      "bytes": 14271
+    },
+    "evidence/xfer_variants/readout2_winner_report.json": {
+      "sha256": "9e6d240f90a574b7dd16b0aa318766f1264e9f516b5626bf9d60065d1c0aaf83",
+      "bytes": 2164
+    },
+    "evidence/xfer_variants/s2_A0.hell": {
+      "sha256": "7fcffa570726f74af743a34cf16d4f85422631b2bc3a7ab93f80f8b2bb24728f",
+      "bytes": 1400
+    },
+    "evidence/xfer_variants/s2_A0.mb": {
+      "sha256": "fae69c8b80b812d9b0d744e08d2e613c98280f8fe2e198cd6edfd4493bbaf043",
+      "bytes": 14271
+    },
+    "evidence/xfer_variants/s2_B0.hell": {
+      "sha256": "3963b1727ae60150dff147ff200893e0dae14d627f4e2c83064011a8daf2fbd6",
+      "bytes": 1463
+    },
+    "evidence/xfer_variants/s2_B0.mb": {
+      "sha256": "7cba6f0d90417418edc2df7a4c610ddaa250449753028df5da21d07c9a95ea6f",
+      "bytes": 14342
+    },
+    "evidence/xfer_variants/s2_C0.hell": {
+      "sha256": "2e514b4e54a3b2116d7dd663a1f12ad9c9c74cd507eea1d427c8ee5054c8b1b4",
+      "bytes": 1409
+    },
+    "evidence/xfer_variants/s2_C0.mb": {
+      "sha256": "eba097f217f32b3d9c556f762fb5ef90f03f6d550bab56ae7294c869a07d17b2",
+      "bytes": 13989
+    },
+    "evidence/xfer_variants/shift2_report.json": {
+      "sha256": "7a239cc62b0fe8c99142ecd5f9d5f7292fbd422ad594abcdca9d3934b8533848",
+      "bytes": 2900
+    },
+    "evidence/xfer_variants/three_cell_report.json": {
+      "sha256": "e480978adce3c45c705554b6da89f037b0fb595548c59f601dab7994bb57becf",
+      "bytes": 6768
+    },
+    "evidence/xfer_variants/variant_F_report.json": {
+      "sha256": "9c678032b628564d0527d77d639b44ae4da09c5821e91792ca3658feae35bacb",
+      "bytes": 4637
+    },
+    "evidence/xfer_variants/variant_sweep_p2.json": {
+      "sha256": "233c223b3b23697d8fa3aed6515f4be9da9109f52229e36b8a557c9d5486f6e9",
+      "bytes": 5307
+    },
+    "readout3_gen.py": {
+      "sha256": "ca5f5443d1a044110ce97d35c67248854cc06c984596d6dae16d018efe33ea4b",
+      "bytes": 11659
+    },
+    "evidence/readout3/fase0_baseline.json": {
+      "sha256": "1923e0bc13fa65411d464c95c24a5835b7c14b34b1eb7b887119c486d972e3bb",
+      "bytes": 2706
+    },
+    "evidence/readout3/n3_sweep.json": {
+      "sha256": "0c9f358a9a0963db542fa3c4eef440fc7fd754c43499d25218fa640f8e85b27a",
+      "bytes": 25628
+    },
+    "evidence/readout3/readout3_run1.json": {
+      "sha256": "7be01843961e35ebce5ce2f8be43095a8ee2a82e7e2c84b56ad278e9ed65bf86",
+      "bytes": 2916
+    },
+    "evidence/readout3/readout3_run2.json": {
+      "sha256": "a1c701ec4e7d6c20074598c35e1491eb99f808bc6546585aed1f18ea18b1616b",
+      "bytes": 2916
+    },
+    "evidence/readout3_offset_origin/entry_cell.json": {
+      "sha256": "006340898175aecaf653b8bf9d5a89a85373f9cb7507843a5c6eba4c200b22f0",
+      "bytes": 38259
+    },
+    "evidence/readout3_offset_origin/entry_shape.json": {
+      "sha256": "ca4181f1f3ad948be36dc38af08b1d2e8302b7856e0389f58b597221884a6cdf",
+      "bytes": 24865
+    },
+    "evidence/readout3_offset_origin/fase0_baseline.json": {
+      "sha256": "1923e0bc13fa65411d464c95c24a5835b7c14b34b1eb7b887119c486d972e3bb",
+      "bytes": 2706
+    },
+    "evidence/readout3_offset_origin/n3_sweep.json": {
+      "sha256": "0c9f358a9a0963db542fa3c4eef440fc7fd754c43499d25218fa640f8e85b27a",
+      "bytes": 25628
+    },
+    "evidence/readout3_offset_origin/offset_origin.json": {
+      "sha256": "f3e013cc776bb17130568c7a0d4183af742d6cbbfae82c7cd0feb4e215f8dc68",
+      "bytes": 23826
+    },
+    "evidence/readout3_offset_origin/probe1_block_reuse.json": {
+      "sha256": "f3e013cc776bb17130568c7a0d4183af742d6cbbfae82c7cd0feb4e215f8dc68",
+      "bytes": 23826
+    },
+    "evidence/readout3_offset_origin/probe2_entry_shape_confounded.json": {
+      "sha256": "ca4181f1f3ad948be36dc38af08b1d2e8302b7856e0389f58b597221884a6cdf",
+      "bytes": 24865
+    },
+    "evidence/readout3_offset_origin/probe3_entry_cell_neutral.json": {
+      "sha256": "006340898175aecaf653b8bf9d5a89a85373f9cb7507843a5c6eba4c200b22f0",
+      "bytes": 38259
+    },
+    "evidence/readout3_offset_origin/readout3_run1.json": {
+      "sha256": "7be01843961e35ebce5ce2f8be43095a8ee2a82e7e2c84b56ad278e9ed65bf86",
+      "bytes": 2916
+    },
+    "evidence/readout3_offset_origin/readout3_run2.json": {
+      "sha256": "a1c701ec4e7d6c20074598c35e1491eb99f808bc6546585aed1f18ea18b1616b",
+      "bytes": 2916
+    },
+    "readout5_gen.py": {
+      "sha256": "ca5f5443d1a044110ce97d35c67248854cc06c984596d6dae16d018efe33ea4b",
+      "bytes": 11659
+    },
+    "evidence/readout5/chain4_sweep.json": {
+      "sha256": "49dcf315c969803eb35a15ab3cfc15415a9831b7946bb4a74144c2bb62a33b3d",
+      "bytes": 13543
+    },
+    "evidence/readout5/chain5_sweep.json": {
+      "sha256": "f743931faad6c7ef638bc02414bd01457ebb2c9b007363652de8fcd51fd8b7d7",
+      "bytes": 14179
+    },
+    "evidence/readout5/readout5_run1.json": {
+      "sha256": "10f7f5bec472b66e3e422f6710f9a794cf870084bdef0f6eb82ba995871175ec",
+      "bytes": 3749
+    },
+    "evidence/readout5/readout5_run2.json": {
+      "sha256": "99244a5976a87dc91f1e2f8e13f3e62181b3c58c821efa13574aef78d4c3aeec",
+      "bytes": 3749
+    },
+    "mod59049_readout_gen.py": {
+      "sha256": "63ed9763798beb03c5f488e287ab34ca2a1e9af8673c21b4dd4f1deeca1c2fea",
+      "bytes": 18541,
+      "nota": "copia del generador CANONICO con la base restaurada; la copia anterior estaba rota"
+    },
+    "evidence/mod59049_readout/k1_dbg": {
+      "sha256": "c75f15f9f719ffc6c5f2e6f50ecf5bb309c07d4bed0bfc03fdc3c3bab4feca35",
+      "bytes": 16552
+    },
+    "evidence/mod59049_readout/k1_hell": {
+      "sha256": "8d85a11b8e5b8b529efd36c88b3be64dcf0892f56aad00b255194b068e1c3ae5",
+      "bytes": 3295
+    },
+    "evidence/mod59049_readout/k1_mb": {
+      "sha256": "37b0f770adcdacc3e3f15b15ec9796beda0a43826247d90a1fd047d0b079f627",
+      "bytes": 32695
+    },
+    "evidence/mod59049_readout/k2_dbg": {
+      "sha256": "66ac20012c50aece56add9e55ee51c9cfd2db9e59d7da600274dd6587aa3ca6c",
+      "bytes": 17036
+    },
+    "evidence/mod59049_readout/k2_hell": {
+      "sha256": "48bf58930d5647c24c7d38e27cb6612a03b2e18cf05562efcdd52d097bc79dc9",
+      "bytes": 3379
+    },
+    "evidence/mod59049_readout/k2_mb": {
+      "sha256": "199c50ae79b733c6a0cf32ff10b4cf76946d15aa197e3e5bbd6e65761c28d2fd",
+      "bytes": 33259
+    },
+    "evidence/mod59049_readout/k3_dbg": {
+      "sha256": "3819b35e1f3f9da54251a7c2c5ebc5eaa6fcfed01b5ed8d7416cbc155decf34b",
+      "bytes": 17246
+    },
+    "evidence/mod59049_readout/k3_hell": {
+      "sha256": "3914e32936819fba1bf10c8bd97bbfd6224e73b6f93a8586d151ad22568fb545",
+      "bytes": 3415
+    },
+    "evidence/mod59049_readout/k3_mb": {
+      "sha256": "f797e2f0ecd92e57c0c0af9a8861432fc7052eb6d7d417d5bbe3bbbee4463119",
+      "bytes": 33842
+    },
+    "evidence/mod59049_readout/k4_dbg": {
+      "sha256": "173eabb765f233ec1e31e5ce1c3cb06014c23abd18ecb3e0f1f860409167b1bf",
+      "bytes": 17854
+    },
+    "evidence/mod59049_readout/k4_hell": {
+      "sha256": "d2125637637a1cedc46d788f2c7c89fd77f38df9c82ebf06824c42a66423fe07",
+      "bytes": 3523
+    },
+    "evidence/mod59049_readout/k4_mb": {
+      "sha256": "43d071b26251bff18dd0ad706951883698bf304c14623c317d378dfcc9be5606",
+      "bytes": 34387
+    },
+    "evidence/mod59049_readout/k5_dbg": {
+      "sha256": "3fddb35576f9ad3581e03c28f7505358e8ce710339b2945e8d6b835a82e60856",
+      "bytes": 18262
+    },
+    "evidence/mod59049_readout/k5_hell": {
+      "sha256": "b798cf02de7b4cbad59d9f99988dbe33b1378c3240658054f6846bfa9406888a",
+      "bytes": 3595
+    },
+    "evidence/mod59049_readout/k5_mb": {
+      "sha256": "afce73239fcfd95b52f6d9192615cac6e9e54286351f393b449d9535037ebe84",
+      "bytes": 35233
+    },
+    "evidence/mod59049_readout/mod2_hell": {
+      "sha256": "234788efc7e85944073ea07deb8b8a6a685ebd3472c422c7de14301de09c58dc",
+      "bytes": 3379
+    },
+    "evidence/mod59049_readout/mod2_mb": {
+      "sha256": "3e41e131e4c22c1cd3316cd051d6220fd4ee4cb0edabb2a00e05916dc2881eb1",
+      "bytes": 33259
+    },
+    "evidence/mod59049_readout/mod59049_integration.json": {
+      "sha256": "2f8da1a917b1d73a4afd560d0f8df8f3be77e6eb7afb5f33bb1213673986b403",
+      "bytes": 2970
+    },
+    "evidence/mod59049_readout/mod59049_sweep.json": {
+      "sha256": "00eae0f8cf192b666faea347f4eb380e94a4b956d4883efe2029aef3fbc6c1bd",
+      "bytes": 6409
+    },
+    "evidence/mod59049_readout/sweep_mod.py": {
+      "sha256": "886893fa5b215c0bdf56114cb4914b387aa8e29fb32b539526c3afed352a46fd",
+      "bytes": 2089
+    },
+    "evidence/second_interpreter/readout_gen.py": {
+      "sha256": "8eb25495238a974d586c8cb684cb410b5e81419fe9b65d8d4efa652fa13d8b4b",
+      "bytes": 15618
+    },
+    "evidence/second_interpreter/run_second_interpreter.py": {
+      "sha256": "3f1ea9279720d55051bb3ea53937347a07c8b5f4d2adfb11ce50ca636fac9776",
+      "bytes": 3817
+    },
+    "evidence/second_interpreter/second_interpreter_report.json": {
+      "sha256": "2e5295ad4859183f728c69591441112b018b6ae8c420862fb6db340eb48694eb",
+      "bytes": 4912
+    },
+    "evidence/second_interpreter/winner_T10.hell": {
+      "sha256": "3e5708e6fb60704f0919aa6a63b615d964f7ea5c8252e09099623cb57f230264",
+      "bytes": 3335
+    },
+    "evidence/second_interpreter/winner_T10.mb": {
+      "sha256": "00f7aa7b86737fb1fe97fcc423f816b3df7266912c7e7cf006fb30b00a79ffe6",
+      "bytes": 33090
+    },
+    "evidence/nondestructivity/nondestructivity_report.json": {
+      "sha256": "d8a76e7178ce618a70213302279705a9b46959e78badb1934ee2c390f5773c6a",
+      "bytes": 2648
+    },
+    "evidence/nondestructivity/readout_gen_verify_modes.py": {
+      "sha256": "c082fab3e3124005b232f9c041433782d77befb55a3dc63451b490cf5b30023d",
+      "bytes": 16736
+    },
+    "evidence/destructivity/destructivity_final.json": {
+      "sha256": "1eb2d0f0d5b78af412900557c010f259d0c8cc58820d86b7e109e66622864327",
+      "bytes": 3278
+    },
+    "evidence/destructivity/readout_gen.py": {
+      "sha256": "797a47356246961f1e3a1974ddc4644293bb98deca3837d227872d1380351821",
+      "bytes": 16619
+    },
+    "evidence/consumption_p1_p3/consumption.json": {
+      "sha256": "39aed736aaf7a995eaaa6e5363d2098bd6aef5f33b8d5b9972aa78e2804d9e50",
+      "bytes": 1138
+    },
+    "evidence/consumption_p1_p3/readout_gen.py": {
+      "sha256": "92811d6c47989d972ae722f753d2b536df229fa39005288d7fdccf34f6772c07",
+      "bytes": 17312
+    },
+    "evidence/nondestructivo/consumption.json": {
+      "sha256": "39aed736aaf7a995eaaa6e5363d2098bd6aef5f33b8d5b9972aa78e2804d9e50",
+      "bytes": 1138
+    },
+    "evidence/nondestructivo/correccion_y_reparacion.json": {
+      "sha256": "62cef99007e8712b870a90735ac8fbb29f9bd1f33e47a29db102749f3a8c3fa0",
+      "bytes": 2015
+    },
+    "evidence/nondestructivo/free_space_budget.json": {
+      "sha256": "b76d1aa26a739d367a0dc63339a751212920340b3086ec45fccb0fcce1c8a064",
+      "bytes": 1601
+    },
+    "evidence/nondestructivo/no_destructivo_generalidad.json": {
+      "sha256": "7c4918d43d100aa9ea543d6b3ace13f1dffc1077994312cc7a0cc740a0140f62",
+      "bytes": 1940
+    },
+    "evidence/nondestructivo/nondestructivo_confirmado.json": {
+      "sha256": "4fd36a3c7af71caea7e6d0973a3a50738927e35e9dd046b994a0eca6b5396e19",
+      "bytes": 344
+    },
+    "evidence/nondestructivo/readout_gen.py": {
+      "sha256": "63ed9763798beb03c5f488e287ab34ca2a1e9af8673c21b4dd4f1deeca1c2fea",
+      "bytes": 18541
+    },
+    "evidence/lectura_incremental/lectura_incremental.json": {
+      "sha256": "c946cbfdb68d11d98c36ac6afa2fc19cde8240c7789718e3f339cab2f7213835",
+      "bytes": 616
+    },
+    "evidence/lectura_incremental/readout_gen.py": {
+      "sha256": "5ae4a47b2576cb246e69b615a592f04381fe7fc1104c84c3db12315092ce33ff",
+      "bytes": 18677
+    },
+    "evidence/lectura_incremental/reentrada.json": {
+      "sha256": "901c61a6ae62833d830311ec881a9f224d8b814fcccc87bea7dde71711ad278d",
+      "bytes": 1155
+    },
+    "evidence/lectura_incremental/rot_feeds_out.json": {
+      "sha256": "2537a3894852f61ef8dd58192bb1331ac1ef7b7b5614725ec6a21c446c3d4a09",
+      "bytes": 1097
+    },
+    "evidence/lectura_incremental/selfencryption_probe.json": {
+      "sha256": "dadec8c0df87bcf217c6e48f8888a8d9ab1554aefcd2d074b6ff67fc5442ff3a",
+      "bytes": 240
+    },
+    "evidence/lectura_incremental/escape_refutado.json": {
+      "sha256": "5b3135a855b27034056ae26a686119c5da7c8cd0b2db66378be35f63737061f1",
+      "bytes": 570
+    },
+    "evidence/lectura_incremental/cascada_pasada2.json": {
+      "sha256": "08d6f45b942b1bdac88c14abb899d09841323a9604058aedeb899bd00c55c28d",
+      "bytes": 1009
+    },
+    "evidence/lectura_incremental/offset_por_T.json": {
+      "sha256": "9fa098034158931cf3a9a5310326c618e0838363a006969353f27189bc7d5fd4",
+      "bytes": 728
+    },
+    "evidence/lectura_incremental/offset_estructura.json": {
+      "sha256": "1561baf58b4320693396c21b914e304fe91dcf2bf8e93e82d414d012883015ac",
+      "bytes": 1037
+    },
+    "evidence/lectura_incremental/offset_confirm.json": {
+      "sha256": "55f4e4a5144c89c1baf1a2e15d773551ce18b94ec5b7c31dad89e22e8a3d1c7e",
+      "bytes": 779
+    },
+    "evidence/lectura_incremental/cascada_blancos.json": {
+      "sha256": "eb184c12dabe82378c0924cd99e6e9a533fb124a41e9be9ad2bb5ee888692ae9",
+      "bytes": 188
+    },
+    "evidence/lectura_incremental/t90_no_destructivo.json": {
+      "sha256": "6d247a960fc222315a01346f94b3d650ff8dbad44a9575c358963ed0b589e450",
+      "bytes": 359
+    },
+    "evidence/lectura_incremental/t90_preservacion.json": {
+      "sha256": "47efce4dd6cb419247d26b3910a3ec8a0d44936a306777d6ec956d98c147fccd",
+      "bytes": 88
+    }
+  },
+  "document": {
+    "format": "malbolge-lmao-readout-chain9-hashes/1",
+    "registered_utc": "2026-10-03",
+    "experiment": "readout del estado propio de Malbolge desde dentro de Malbolge (LMAO/HeLL Classic)",
+    "question": "Puede un programa Malbolge emitir el estado de su cascada de ciclos como digitos, sin interprete externo?",
+    "null_hypothesis": "La cadena de 9 llamadas no despacha al noveno label, y/o el readout de 5 celdas no imprime los digitos esperados.",
+    "baselines_and_controls": [
+      "chain9 (H1): 9 llamadas a una celda de 9 en posicion 0 -> imprime '9' (6442 pasos)",
+      "chain8 (CONTROL): 8 llamadas + 'X' explicito -> imprime 'X' (6421 pasos): el wrap no ocurre antes de la 9a llamada",
+      "readout_link bare (CONTROL NEGATIVO): etiqueta desnuda en fallthrough -> imprime '9' (1 digito): no encadena",
+      "readout_link gateway y moved: ambos imprimen '99' -> el encadenado existe via MOVED <etiqueta>",
+      "readout5 T=0 y T=9: 5 digitos correctos ('99999', '98999')"
+    ],
+    "metric": "out == ''.join(str(9 - ((T // 9**(i-1)) % 9)) for i in 1..5)",
+    "claims": {
+      "MOD59049_READOUT_INTEGRADO": "DEMONSTRATED",
+      "MOD59049_SECOND_INTERPRETER": "DEMONSTRATED",
+      "READOUT_IS_DESTRUCTIVE": "DEMONSTRATED",
+      "READOUT_NON_DESTRUCTIVE": "DEMONSTRATED (T=10 5/5; generalidad T=5,6,9,10,12,90 con celdas de parada de 2 y 3)",
+      "OFFSET_ORIGIN": "CARACTERIZADO (offset = funcion de la estructura de la cascada de paradas: (+1,-1,0,0,0) estandar; -8 en celda 1 si hay celda de parada de 9; se reparte con muchas celdas; no depende de T ni del orden)",
+      "LECTURA_INCREMENTAL_STILLWELL": "NOT_DEMONSTRATED (el readout ya no consume, pero la lectura incremental de N celdas entre ticks sigue sin medirse)",
+      "LECTURA_REPETIDA_SIN_REPARACION": "DEMONSTRATED (relectura dentro del mismo programa, sin volver al bucle)",
+      "READOUT_P1": "DEMONSTRATED",
+      "DIGIT_POSITION_3_REACHABLE": "DEMONSTRATED",
+      "LECTURA_INCREMENTAL": "NOT_DEMONSTRATED",
+      "READOUT_NO_DESTRUCTIVE": "DEMONSTRATED (T=10 5/5 celdas; generalidad 5/6 T)",
+      "LECTURA_INCREMENTAL_MECHANISM": "DEMONSTRATED (trazado: OUT imprime el valor de la celda de datos; entre lecturas el puntero d se mueve y el readout cae en direcciones sin calibrar)",
+      "ESCAPE_ANCLAR_D": "REFUTADO (trazo de c: el flujo de codigo no regresa al readout; anclar d no aplica)",
+      "LECURTA_INCREMENTAL_CAUSA_RAIZ": "DEMONSTRATED (auto-cifrado del codigo de la cascada corrompe el flujo en la segunda pasada)",
+      "K_COPIAS_FRESCAS": "REFUTADO (trazo de ops por pasada: la cascada no re-rutear en la pasada 2)",
+      "LECTURA_INCREMENTAL_LIMIT": "DEMONSTRATED",
+      "OFFSET_ORIGIN_STRUCTURE_DEPENDENT": "DEMONSTRATED",
+      "T90_NON_DESTRUCTIVE": "DEMONSTRATED"
+    },
+    "negative_results_preserved": [
+      "evidence/readout5_v1_negative.json (0/16, continuacion por etiqueta desnuda)",
+      "evidence/readout5_v2_negative.json (0/16, gateway; ademas 2 defectos del arnes: fallthrough a HALT dummy y bucle desenrollado reencadenado)",
+      "T=3,7,8: 'Forced xlat cycle doesn't exist' (LMAO no acepta ciclos de 3,7,8 posiciones en esa posicion de codigo)",
+      "T>=18 con parada de 2+ celdas: 'Label S1 is defined multiple times' (defecto del generador, no de LMAO)"
+    ],
+    "self_corrections": [
+      "La regeneracion del reporte v1 sobrescribio el de v2; se detecto por comparing 'format' y se regenero v2. Los dos negativos ahora son distinguibles.",
+      "El reporte inicial no capturaba compile_stderr, lo que hacia los 0/12 de v2 ilegibles; anadido antes de v3."
+    ],
+    "environment": {
+      "os": "Linux (Ubuntu 24.04)",
+      "lmao": "v0.6.0 (Matthias Lutter), compilado en vendor/lmao/bin/lmao",
+      "oracle": "malbolge.py del repo MALBOLGE",
+      "cwd": "/home/danny/Development/ISyCo Git/MALBOLGE"
+    },
+    "next_experiment": "Localizar con traza por paso por que una cadena que envuelve a mitad de secuencia (p in 1..8) inserta un digito extra 9-(p-1): las celdas ejecutadas antes del wrap quedan cifradas y el salto MOVED entra en la celda equivocada. Medir el readout de 1 y 2 celdas con posicion p in 1..8 antes de tocar el barrido de 5.",
+    "midwrap_localization": {
+      "pregunta": "Por que una cadena que envuelve a mitad de secuencia (p in 1..8) rompe el readout?",
+      "traza": "evidence/readout_midwrap_v1_trace_events.json (p=2, 7238 eventos no-nop con c,d,a y etiquetas del .dbg de LMAO)",
+      "causa_raiz_v1": "MOVED[C] op=INV44 en s=13464: el bloque MOVED COMPARTIDO llega cifrado al readout porque `MOVED loop` se usa 3 veces por tick y el readout no re-pasa por `loop: R_MOVED`. Su movd no ejecuta, el jmp cae en a8 (no en read_N2) y se imprime un digito extra 9-(p-1).",
+      "variantes_medidas": {
+        "v1_MOVED_compartido_sin_restore": "0/5 -> digito extra 9-(p-1)",
+        "v2_MOVED_con_R_MOVED": "0/5 -> racha (p=6 -> '34567899')",
+        "v3_gateway_precargado": "0/5 -> caida al bloque de etiqueta siguiente (p=6 -> '4567898')",
+        "v4_MOV2_dedicado": "0/5 -> el primer digito ya es correcto en los 5 casos, pero la transicion sigue recorriendo el bloque de etiqueta siguiente (p=6 -> '458')"
+      },
+      "hallazgo_estructural": "El encadenado de cadenas SOLO funciona cuando el wrap cae en la ULTIMA llamada de la cadena (p=0: T=0 y T=9 dieron '99999' y '98999' correctos). Con wrap a mitad de secuencia, ninguna de las 4 variantes transfiere el control a la cadena siguiente.",
+      "claim": "READOUT5_MALBOLGE=NOT_DEMONSTRATED para p in 1..8; DEMONSTRATED solo para celdas en posicion 0 (lectura trivial).",
+      "restriccion_de_diseno_descubierta": "Para leer una celda en posicion arbitraria hay que resolver la transferencia de control fuera de un wrap a mitad de cadena. Candidatos no medidos: (a) forzar el wrap a la ultima llamada, lo que exige conocer p antes de la cadena; (b) contador de iteraciones con salida por wrap (bucle while) y lectura del contador, que es circular; (c) buscar en LMAO una primitiva de salto incondicional a celda de datos (el .dbg y el mecanismo de dispatch solo exponen jmp=mem[d])."
+    },
+    "xfer_surface_study": {
+      "pregunta_prioritaria": "Puede LMAO transferir control inequivocamente a un target conocido?",
+      "respuesta": "SI, via `MOVED <target>` (destrecha), y la forma canonica de los ejemplos es `R_<bloque>` + `MOVED <target>` en lineas de datos consecutivas.",
+      "superficie_inspeccionada": [
+        "vendor/lmao/README.md (HeLL Language Reference): SOME_LABEL=address-1; R_LABEL=address+1; U_TARGET ANCHOR=address(TARGET)-distancia; .OFFSET; ENTRY",
+        "vendor/lmao/src/prefix.c:43 resolve_prefix_for_dataatom (R_ valida sucesor; U_ offset relativo + RNop virtuales)",
+        "vendor/lmao/src/label.c:81 get_label (CODE vs DATA, un destino por etiqueta)",
+        "vendor/lmao/src/layout.c:28 add_codeblock_to_memory_layout (reserva celda previa, restriccion xlat2 de posicion)",
+        "vendor/lmao/src/layout.c:218 put_all_memcells_together",
+        "vendor/lmao/example_hello_world.hell:146-175,259,264,282-284,300-301 (R_ + MOVED <target>; CARRY como branch condicional)"
+      ],
+      "semanticas_observadas": {
+        "MOVED <target>": "entra al bloque MOVED, su movd hace d=mem[d] y el jmp siguiente lee mem[d]. Transfiere POR DIRECCION: sobrevive 3 bloques SEED intercalados (moved_seed -> 'XC'). DEPENDE de d alineado en la celda de operando.",
+        "linea de datos con etiqueta desnuda": "NO transfiere: microtest bare -> 'X' + halt. Esto explica el fallo de readout v1.",
+        "salto entre code blocks consecutivos": "va por palabra encadenada (la celda de datos siguiente) y es d-independiente",
+        "R_ <bloque>": "R_LABEL = address+1; re-arma la celda sucesora del ciclo xlat2. Solo restaura la celda que sigue al bloque, no la primera (medido: R_MOV2 no rescata el movd de MOV2).",
+        "U_ <target> <anchor>": "pre-compensa la distancia: address(TARGET) menos distancia hasta ANCHOR. NO MEDIDO en este turno."
+      },
+      "microexperimento": {
+        "fixture": "A imprime 'X'; B imprimiria 'BD'; C imprime 'C' y HALT",
+        "m2_solo (MOVED C)": "XC PASS",
+        "m1_canonico (R_MOVED + MOVED C)": "XBDC FAIL en este fixture (el par canonico necesita el contexto de d de los ejemplos)",
+        "moved_seed (3 bloques SEED entre la transferencia y C)": "XC PASS -> control adversario: usa la direccion, no la contiguidad",
+        "bare (linea con etiqueta)": "X FAIL"
+      },
+      "trace_medio_wrap": {
+        "p": 2,
+        "eventos_clave": [
+          "s=13996 c=14255 jmp md=14253 -> entra al bloque MOV2",
+          "s=13997 c=14254 MOV2[C] op=INV36 -> el movd NO ejecuta (celda en estado xlat2 cifrado)",
+          "s=13998 c=14255 jmp md=14158 -> cae al bloque ROT siguiente: fallthrough",
+          "s=14015 c=14254 MOV2[C] op=INV36 ; s=14016 c=14255 jmp md=58810 -> c=58810 -> N2[C]: la transferencia SI ocurre cuando d cae alineado"
+        ],
+        "trace_legible": "evidence/xfer_midwrap_v1_alignment.json (rows[].trace_after_first_digit)"
+      },
+      "dos_defectos_separados": {
+        "control_fLOW": "la transferencia existe y es alcanzable desde el wrap (s=14015-14017); lo que falla es la disponibilidad/alineacion del movd",
+        "digito_desfasado_una_unidad": "la cadena de 9 llamadas mide p-1. Una llamada de advanceo con etiqueta a9 corrige el primer digito (p=2 -> '7' correcto) pero no elimina los digitos extra."
+      },
+      "correccion_de_claim_previo": "El turno anterior afirmo que en v4 'el PRIMER digito ya es correcto en los 5 casos'. FALSO: v4 imprimia 10-p (p=2 -> '8', p=6 -> '4'), es decir media p-1. La afirmacion queda retractada; la evidencia previa no se modifica.",
+      "h0_destruida": "v7shared (un bloque para dos transiciones) y v7ded (bloque dedicado por transicion) dan salidas IDENTICAS -> el agotamiento del bloque MOVED no es la causa unica; la causa restante es la alineacion de d.",
+      "claims": {
+        "XFER_VIA_MOVED_ADDRESSED": "DEMONSTRATED_LOCALLY (micro + control adversario de layout)",
+        "BARE_LABEL_DATA_CELL_AS_TRANSFER": "NOT_DEMONSTRATED (micro bare -> 'X' + halt)",
+        "READOUT2_MIDWRAP": "NOT_DEMONSTRATED (0/5 en v5b, v6_pre, v7shared, v7ded)",
+        "READOUT5_MALBOLGE": "NOT_DEMONSTRATED para p != 0"
+      },
+      "veredicto": "INFERRED: la primitiva de transferencia existe y esta medida; el readout mid-wrap sigue abierto por alineacion de d, con U_ como candidato no medido.",
+      "siguiente_prueba_minima": "Medir `U_<bloque> <anchor>` como transferencia: preparar mem[d] con pre-compensacion de distancia para que el destino no dependa de donde caiga d. Fixture minimo: el mismo A/B/C con el par U_ en vez de MOVED, con y sin SEED, y despues en la cadena de 9 llamadas.",
+      "not_demonstrated": [
+        "readout 5 celdas",
+        "mod59049 real",
+        "segundo interprete",
+        "p=3,7,8",
+        "U_ sin medir"
+      ]
+    },
+    "u_offset_study": {
+      "pregunta": "Puede U_ transferir control en una condicion de offset/desalineacion de d donde MOVED falla?",
+      "fuente": {
+        "prefix.c:73-87": "U_ -> number = -m (m = celdas hasta el anchor) + m RNop virtuales ante el code label",
+        "initialize.c:72-87": "valor emitido = addr(TARGET) + number - 1 = addr(TARGET) - m - 1",
+        "runtime": "el jmp que lee la celda U_ hace c=addr(TARGET)-m; el autoincremento entra al primer RNop virtual y camina hasta TARGET",
+        "lectura": "U_ pre-compensa el DESTINO, no el punto de entrada de d"
+      },
+      "perturbaciones": {
+        "pad": "una celda `?` (no ejecuta) antes de la linea de transferencia: desplaza d en +1",
+        "seed": "3 bloques SEED intercalados entre transferencia y target: no-contiguidad"
+      },
+      "matriz_control_alcanzado": {
+        "moved_pad0": "True/True (seed0/seed3)",
+        "moved_pad1": "False/False",
+        "bare_pad0": "False/False",
+        "bare_pad1": "False/False",
+        "u_pad0": "True/True (c llega a TC: s=3065 addr 3255; s=5068 addr 58997)",
+        "u_pad1": "False/False"
+      },
+      "claims": {
+        "U_RELATIVE_TRANSFER": "DEMONSTRATED (el control llega al code label destino; sobrevive SEED)",
+        "U_OFFSET_RESISTANT_XFER": "DESTROYED (con pad=1 U_ pierde el target igual que MOVED)",
+        "MIDWRAP_P2_XFER": "NOT_DEMONSTRATED",
+        "READOUT2_MIDWRAP": "NOT_DEMONSTRATED"
+      },
+      "stop_condition": "STOP #2 aplicado: el fixture limpio pasa pero el adversarial d falla igual que MOVED. No se generaron mas variantes.",
+      "nota_de_oraculo": "U_ apunta a un CODE label: su semantica es 'el control llega al bloque', no 'imprime C'. Se midio control_reached_target por traza; por eso el caso u_ pad0 da 'XBDC' con el target alcanzado (el jmp final de TC cae luego en el ROT de B).",
+      "siguiente_prueba_minima": "No es U_. La variable libre es d: hace falta fijar d antes de la lectura, no compensarla. Candidatos: (a) un bloque 'ANCLA' cuyo movd cargue d desde una celda conocida y cuya posicion en el layout se controle con .OFFSET/@; (b) U_ con el anchor colocado de modo que la celda U_ quede en la posicion que d alcanza tras el wrap; (c) medir primero cuantos pasos ejecuta el wrap para obtener d como funcion de k, y usar eso para construir el bloque de transferencia con la longitud correcta."
+    },
+    "variant_sweep_readout2": {
+      "pregunta": "Intentos de variantes nuevas: alguna cierra el readout mid-wrap?",
+      "autocorreccion": "El '4/5' comunicado a mitad de turno era un BUG de mi generador (ch=k+1 if (shift2 and k<9) else 9 hacia que TODOS los bloques b_k imprimian '9'). Rerun con la tabla de digitos correcta: el 4/5 se reproduce, pero por la razon correcta.",
+      "receta_ganadora_2_celdas": {
+        "1": "la celda de parada S se llama DESPUES de la celda de cascada en el tick",
+        "2": "una llamada de advanceo (`N1 a9`, etiqueta a9) antes de la cadena de N1",
+        "3": "sin llamada de advanceo antes de la cadena de N2",
+        "4": "trasferencia con MOV2 dedicado (un uso por transicion) desde los 9 bloques a_k",
+        "5": "la tabla de digitos de la cadena 2 se corrige +1 (b_k imprime k+1), porque esa cadena mide p2+1"
+      },
+      "matriz_2_celdas": {
+        "p=1": "'7:' FAIL",
+        "p=2": "'79' PASS",
+        "p=4": "'59' PASS",
+        "p=5": "'49' PASS",
+        "p=6": "'39' PASS"
+      },
+      "claims": {
+        "READOUT2_MIDWRAP_p_2_4_5_6": "DEMONSTRATED (4/4)",
+        "READOUT2_MIDWRAP_p_1": "NOT_DEMONSTRATED (celda de parada de 1 posicion: envuelve en el primer tick, ya despues de la llamada a N1)",
+        "READOUT3": "NOT_DEMONSTRATED (cadenas 1 y 2 leen bien; la 3 cae en fallthrough: 0/6 combinaciones de pre-call)",
+        "READOUT5_MALBOLGE": "NOT_DEMONSTRATED"
+      },
+      "variante_descartadas": {
+        "A pad1/2/3": "sensibles a d; rompen el bloque -> basura",
+        "D transfer primero": "'7898' 4 digitos: el fallthrough sigue",
+        "E MOV2 duplicado": "'78'/'78' identico a A0: no cambia nada",
+        "orden S antes que N1": "arregla p=1,2 pero rompe p>=4: complementaria, ninguna sola da 5/5"
+      },
+      "siguiente_paso": "Extender la correccion por cadena a 3 celdas: la cadena 3 necesita su propio calibrado (offset y posible shift de tabla). Los 6 barridos de 3 celdas dieron 0/6 con la receta de 2 celdas, lo que indica que el offset NO compone trivialmente."
+    },
+    "readout3_calibration": {
+      "hueco_de_procedencia_cerrado": "El generador persistido como 'ganador' del turno anterior (run_readout2_winner.py) NO includia el shift +1 y daba 0/5; el 4/4 salio de un heredoc inline. readout3_gen.py incluye la receta completa y es el generador canonico de ahora.",
+      "fase0_baseline": "READOUT2 con pre=[1,0] shift=[0,1]: 4/4 en p in {2,4,5,6}. Reproducido dos veces con sha de fuente identico.",
+      "hallazgo_de_layout": "Un bloque con menos celdas que los demas (p.ej. un bloque 'muerto' de 1 celda) desplaza d y rompe la alineacion: se midio 6-8 digitos de salida. Todos los bloques deben ocupar el mismo numero de celdas; el bloque con caracter fuera de rango se emite uniforme (':') y es inalcanzable.",
+      "ejes_barridos": {
+        "pre3": "{0,1,2} (offsets observados +-1; +-2 cubre un paso extra)",
+        "shift3": "{-1,0,1} (-1 valido porque k-1=0)",
+        "excluidos": {
+          "padding": "medido inestable (A pad1/2/3) y rompe la uniformidad de layout"
+        }
+      },
+      "resultado_barrido": {
+        "pre3=0_shift3=0": "4/4 match, 4/4 digit3_ok, 4/4 xfer3_ok",
+        "pre3=1_shift3=1": "4/4 match, 4/4 digit3_ok, 4/4 xfer3_ok",
+        "resto": "0/4"
+      },
+      "receta_readout3": {
+        "pre_por_cadena": [
+          1,
+          0,
+          0
+        ],
+        "shift_por_cadena": [
+          0,
+          1,
+          0
+        ],
+        "nota": "pre y shift son compensaciones equivalentes del mismo offset: (0,0) y (1,1) dan lo mismo"
+      },
+      "matriz_readout3": {
+        "p=2": "'799' PASS",
+        "p=4": "'599' PASS",
+        "p=5": "'499' PASS",
+        "p=6": "'399' PASS"
+      },
+      "reproducibilidad": "dos ejecuciones: sha de .hell identicos y outputs identicos en los 4 p",
+      "anti_falso_positivo": "9 bloques por cadena, caracteres distintos dentro de cada cadena (cadena1 '123456789', cadena2 '23456789:', cadena3 '123456789'); sin colisiones dentro de cadena; el ':' de b9 es inalcanzable y delataria el fallo.",
+      "calibraciones_medidas": {
+        "cadena1": {
+          "pre": 1,
+          "shift": 0
+        },
+        "cadena2": {
+          "pre": 0,
+          "shift": 1
+        },
+        "cadena3": {
+          "pre": 0,
+          "shift": 0
+        }
+      },
+      "h1_h2_h3": {
+        "H1_offset_independiente_por_cadena": "SOPORTADA (medido: offsets 1,1,0)",
+        "H2_existe_combinacion_finita": "SOPORTADA (pre=[1,0,0] shift=[0,1,0] -> 4/4)",
+        "H3_calibracion_empircica_sin_formula": "SOPORTADA (barrido, no formula)"
+      },
+      "mecanismo_inferido_NO_medido": "El offset +1 de las cadenas 1 y 2 correlaciona con que su bloque de transferencia MOV2 se usa dos veces (en st1 y en los bloques a_k), mientras la cadena 3 transfiere con MOV3, un bloque fresco, y no necesita compensacion. Es INFERIDO: la prueba minima seria dar a la cadena 1 un bloque fresco y ver si su offset pasa a 0.",
+      "claims": {
+        "READOUT2_MIDWRAP_p_2_4_5_6": "DEMONSTRATED (mantiene)",
+        "READOUT2_MIDWRAP_p_1": "NOT_DEMONSTRATED (rama separada, celda S de longitud 1)",
+        "N3_CALIBRATION": "DEMONSTRATED (calibracion medida: pre=0, shift=0)",
+        "READOUT3_p_2_4_5_6": "DEMONSTRATED (4/4)",
+        "READOUT3": "DEMONSTRATED para p in {2,4,5,6}",
+        "READOUT5_MALBOLGE": "NOT_DEMONSTRATED"
+      },
+      "siguiente_prueba_minima": "Dar a la cadena 1 un bloque de transferencia fresco (MOV_A, no usado en st1) y medir si su offset pasa de +1 a 0. Eso distingue 'el offset viene de la reutilizacion del bloque MOV' de 'el offset viene de la posicion en la cascada'."
+    },
+    "offset_origin_probes": {
+      "objetivo": "Decidir si el offset por cadena (-1,+1,0) viene de la reutilizacion del bloque MOV, de la forma de la entrada, o del layout.",
+      "modelo_de_signos": "medido: pre y shift tienen signos opuestos (pre avanza la celda -> q+1; shift reetiqueta -> q-1). Con eso los offsets medidos son cadena1=-1, cadena2=+1, cadena3=0, y se explica que (pre3=0,shift3=0) y (pre3=1,shift3=1) den ambos 4/4.",
+      "probe1_reutilizacion_del_bloque": {
+        "diseno": "st1 usa MOV2 (reusa el bloque que luego usan los bloques a_k) o MOVST (bloque fresco solo para la entrada); se barre la calibracion de la cadena 1 con 2 y 3 congeladas",
+        "resultado": "MOV2 y MOVST dan resultados IDENTICOS: (pre1=1,shift1=0) 4/4 y las otras tres 0/4, en ambos modos",
+        "veredicto": "DESTROYED: el offset +1 de la cadena 1 NO viene de la reutilizacion del bloque MOV"
+      },
+      "probe2_forma_de_la_entrada": {
+        "diseno": "anteponer R_MOVx a todas las transiciones (igualar la entrada de la cadena 1 con las de las 2 y 3)",
+        "resultado": "d1 sigue 4/4 pero d2 cae a 0/4 y d3 queda en 1/4 independientemente de la calibracion de la cadena 3",
+        "veredicto": "CONFOUNDED: la sonda no aísla la forma de la entrada, porque la celda extra cambia el layout y el ROT lee su constante de una celda dependiente de d"
+      },
+      "probe3_celda_neutra_en_layout": {
+        "diseno": "celda extra antes de la transferencia con el MISMO numero de celdas: R_MOVx vs don't-care '?'",
+        "resultado": "entry_cell=none -> 4/4 d1/d2/d3; entry_cell=R -> d1 4/4, d2 0/4, d3 1/4; entry_cell=? -> d1 4/4, d2 0/4, d3 0/4. Ninguna calibracion de la cadena 3 recupera d2.",
+        "veredicto": "DESTROYED la explicacion por semantica de la celda extra: R_MOVx y '?' se comportan igual. Lo que cuenta es la PRESENCIA de la celda (layout/alineacion de d)."
+      },
+      "conclusion": "El offset por cadena queda acotado a una propiedad del layout exacto de la seccion de datos. Tres candidatas medidas: reutilizacion del bloque (DESTROYED), semantica de la celda de entrada (DESTROYED), forma de la entrada (CONFOUNDED). No hay regla derivable todavia; la generalizacion a 4 y 5 celdas debe MEDIRSE celda por celda, no asumirse.",
+      "claims": {
+        "READOUT3_p_2_4_5_6": "DEMONSTRATED (4/4, se mantiene)",
+        "N3_CALIBRATION": "DEMONSTRATED (pre=0, shift=0)",
+        "OFFSET_FROM_BLOCK_REUSE": "DESTROYED",
+        "OFFSET_FROM_ENTRY_CELL_SEMANTICS": "DESTROYED",
+        "OFFSET_FROM_ENTRY_SHAPE": "CONFOUNDED",
+        "OFFSET_ORIGIN": "NOT_DEMONSTRATED",
+        "READOUT5_MALBOLGE": "NOT_DEMONSTRATED"
+      },
+      "siguiente_prueba_minima": "Medir la calibracion de la cadena 4 con el mismo metodo (barrido pre4 x shift4 con 1,2,3 congeladas en [1,0,0]/[0,1,0]). Si la cadena 4 tambien sale con offset 0, el patron 'el offset no crece con la posicion' se strengthens; si sale con offset distinto, queda definitivamente empirico y no derivable."
+    },
+    "readout4_readout5": {
+      "metodo": "Misma calibracion independiente por cadena que se uso para la cadena 3: barrido pre x shift in {0,1}^2 con las cadenas anteriores congeladas en su valor demostrado. Control de no-regresion de la receta de 3 celdas antes de cada parche del generador.",
+      "cadena4": {
+        "congeladas": "pre=[1,0,0] shift=[0,1,0]",
+        "barrido": "pre4 x shift4 in {0,1}^2 x p in {2,4,5,6}",
+        "ganadoras": "pre4=0 shift4=0 -> 4/4 ; pre4=1 shift4=1 -> 4/4",
+        "perdedoras": "(0,+1) y (1,0) -> 0/4",
+        "offset": 0
+      },
+      "cadena5": {
+        "congeladas": "pre=[1,0,0,0] shift=[0,1,0,0]",
+        "barrido": "pre5 x shift5 in {0,1}^2 x p in {2,4,5,6}",
+        "ganadoras": "pre5=0 shift5=0 -> 4/4 ; pre5=1 shift5=1 -> 4/4",
+        "perdedoras": "(0,+1) y (1,0) -> 0/4",
+        "offset": 0
+      },
+      "receta_5_celdas": {
+        "pre": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "shift": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "offsets_medidos_por_cadena": {
+        "cadena1": -1,
+        "cadena2": 1,
+        "cadena3": 0,
+        "cadena4": 0,
+        "cadena5": 0
+      },
+      "matriz_5_celdas": {
+        "p=2": "'79999' PASS",
+        "p=4": "'59999' PASS",
+        "p=5": "'49999' PASS",
+        "p=6": "'39999' PASS"
+      },
+      "reproducibilidad": "dos ejecuciones: sha de .hell identicos y outputs identicos en los 4 p",
+      "anti_falso_positivo": "9 bloques por cadena, sin repeticiones dentro de cadena: cadena1 '123456789', cadena2 '23456789:' (el ':' es el unico fuera de 0-9, inalcanzable, y delataria el fallo), cadenas 3,4,5 '123456789'",
+      "claims": {
+        "READOUT4_p_2_4_5_6": "DEMONSTRATED (4/4)",
+        "READOUT5_p_2_4_5_6": "DEMONSTRATED (4/4)",
+        "OFFSET_ORIGIN": "NOT_DEMONSTRATED (sigue sin regla; los offsets medidos son -1,+1,0,0,0)",
+        "READOUT2_MIDWRAP_p_1": "NOT_DEMONSTRATED (rama separada)"
+      },
+      "not_demonstrated": [
+        "el mod59049 real (T=59048/59049) con el readout integrado",
+        "segundo interprete",
+        "p=1",
+        "p=3,7,8",
+        "lectura no destructiva / incremental"
+      ],
+      "siguiente_prueba_minima": "Integrar el readout en el mod59049 real con una cascada de parada de k celdas de 9 posiciones (dispara en T=9^k) y medir el estado en T in {9,81,729,6561,59049}; los digitos esperados son 98999, 99899, 99989, 99998, 99999. Ojo: anadir la cascada de parada cambia el layout del tick, asi que la calibracion puede requerir re-barrido; ese es el riesgo real y hay que medirlo, no asumirlo."
+    },
+    "mod59049_readout_integration": {
+      "pregunta": "Puede un programa Malbolge emitir el estado real de una cascada mod59049 como 5 digitos base 9, sin interprete externo?",
+      "diseno": "cascada de 5 celdas de 9 posiciones + cascada de parada de celdas de longitud {2,4,5,6,9} (las unicas que LMAO acepta como ciclo xlat2). La parada dispara en T = producto, y el readout mide el estado de la cascada en ese instante. Calibracion greedy por cadena e INDEPENDIENTE por T, porque anadir la cascada de parada cambia el layout del tick.",
+      "riesgo_confirmado": "La calibracion medida en el contador de prueba (pre=[1,0,0,0,0] shift=[0,1,0,0,0]) NO se transfiere: al integrar la cascada de parada, la cadena 2 paso de offset +1 a -1 y la integracion fallo. Hubo que recalibrar, como se habia anticipado.",
+      "calibracion_en_la_estructura_mod59049": {
+        "pre": "siempre [1,0,0,0,0]",
+        "shift": "[0,1,0,0,0] para T con 1 o 2 celdas de parada; [0,0,0,0,0] para 3 o mas"
+      },
+      "barrido_end_to_end": {
+        "n": 12,
+        "n_match": 12,
+        "casos": [
+          [
+            2,
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "79999",
+            "79999",
+            "PASS"
+          ],
+          [
+            4,
+            [
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "59999",
+            "59999",
+            "PASS"
+          ],
+          [
+            5,
+            [
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "49999",
+            "49999",
+            "PASS"
+          ],
+          [
+            6,
+            [
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            "39999",
+            "39999",
+            "PASS"
+          ],
+          [
+            8,
+            [
+              8,
+              0,
+              0,
+              0,
+              0
+            ],
+            "19999",
+            "19999",
+            "PASS"
+          ],
+          [
+            10,
+            [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "88999",
+            "88999",
+            "PASS"
+          ],
+          [
+            20,
+            [
+              2,
+              2,
+              0,
+              0,
+              0
+            ],
+            "77999",
+            "77999",
+            "PASS"
+          ],
+          [
+            45,
+            [
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            "94999",
+            "94999",
+            "PASS"
+          ],
+          [
+            90,
+            [
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "98899",
+            "98899",
+            "PASS"
+          ],
+          [
+            54,
+            [
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            "93999",
+            "93999",
+            "PASS"
+          ],
+          [
+            81,
+            [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "99899",
+            "99899",
+            "PASS"
+          ],
+          [
+            180,
+            [
+              0,
+              2,
+              2,
+              0,
+              0
+            ],
+            "97799",
+            "97799",
+            "PASS"
+          ]
+        ]
+      },
+      "puntos_de_potencia_de_9": {
+        "T=9": "98999",
+        "T=81": "99899",
+        "T=729": "99989",
+        "T=6561": "99998",
+        "T=59049": "Z99999 (el Z es el wrap de N5; el readout emite 99999)"
+      },
+      "validacion_fuerte": "T=10 -> '88999' y T=20 -> '77999': dos digitos no-9 en las posiciones correctas, imposible que sea un patron accidental. T=45 -> '94999', T=90 -> '98899', T=180 -> '97799' confirman las posiciones altas.",
+      "reproducibilidad": "dos corridas de los 5 casos de potencia de 9: sha de .hell identicos y outputs identicos",
+      "restricciones": {
+        "LMAO": "solo acepta ciclos xlat2 de 2,4,5,6,9; T con factores 3,7,8,10 no compila ('Forced xlat cycle doesn't exist')",
+        "offset": "sigue sin regla derivable (OFFSET_ORIGIN=NOT_DEMONSTRATED); el shift de la cadena 2 depende del numero de celdas de parada, lo que confirma la sensibilidad al layout"
+      },
+      "claims": {
+        "MOD59049_READOUT_INTEGRADO": "DEMONSTRATED (12/12 barrido + 5/5 potencias de 9, con digitos mezclados verificados)",
+        "READOUT5_MALBOLGE": "DEMONSTRATED (contador de prueba 4/4)",
+        "OFFSET_ORIGIN": "NOT_DEMONSTRATED",
+        "MOD59049_SEGUNDO_INTERPRETE": "NOT_DEMONSTRATED",
+        "LECTURA_NO_DESTRUCTIVA_O_INCREMENTAL": "NOT_DEMONSTRATED",
+        "p_1_3_7_8": "NOT_DEMONSTRATED (LMAO no acepta esos ciclos)"
+      },
+      "not_demonstrated": [
+        "corrida en un segundo interprete Malbolge",
+        "lectura repetida del mismo estado (no destructividad)",
+        "T no alcanzable con factores 2,4,5,6,9",
+        "mod59049 con la lectura de un estado arbitrario sin celdas de parada"
+      ],
+      "siguiente_prueba_minima": "Corrida del artifact winners (.hell y .mb persistidos) en un segundo interprete Malbolge ya disponible en el repo (Malbolge-Engine, MalboGost, bolge.exe, Rustbolge) para corroboracion secundaria; y medir si el readout es no destructivo leyendolo dos veces seguidas."
+    },
+    "puntos_1_2_3": {
+      "1_segundo_interprete": {
+        "status": "DEMONSTRATED",
+        "veredicto": "6/6 coinciden en output Y numero de pasos",
+        "int1": "malbolge.py (referencia python del repo)",
+        "int2": "intermediate_vm_runner compilado nativo desde intermediate_vm_runner.zig con zig build-exe -O ReleaseSafe, dimension 10 (59049 celtas); implementacion independiente",
+        "nota": "el binario versionado en el repo es PE32+ (Windows) y no tiene bit de ejecucion; se reconstruyo nativo en Linux sin tocar el archivo del repo",
+        "runner_sha256": "101b6876e52ecdbe599b43f7b8e44ac6e7381aece308ed32b1a5d821e987554b",
+        "casos": {
+          "T=2": [
+            "79999",
+            32249
+          ],
+          "T=9": [
+            "98999",
+            32615
+          ],
+          "T=45": [
+            "94999",
+            32981
+          ],
+          "T=81": [
+            "99899",
+            32952
+          ],
+          "T=90": [
+            "98899",
+            33757
+          ],
+          "T=180": [
+            "97799",
+            34904
+          ]
+        },
+        "detalle_tecnico": "el runner escribe RESULT en stderr; el primer parseo solo leia stdout y por eso reportaba steps=-1. Corregido a stderr+stdout, igual que region_witness_search.py"
+      },
+      "2_no_destructividad": {
+        "status": "NOT_DEMONSTRATED por medicion",
+        "prueba": "dos lecturas con 9 ticks entre medias (modo multi-lectura: la salida de la lectura vuelve al bucle con R_MOVED + MOVED loop y el HALT natural llega por el wrap de N5)",
+        "medido": "la PRIMERA lectura es correcta ('98999' con la calibracion pre=[1,1,0,0,0] shift=[0,1,0,0,0]), pero la segunda devuelve basura ('¢â¨¨¨'). El fallo esta en el camino de RETORNO al bucle, no se puede atribuir al readout",
+        "bloqueo": "anadir el camino de retorno cambia el layout y la calibracion hay que recalibrarla; con la calibracion buscada la primera lectura es correcta pero el retorno sigue roto. Es el mismo muro de sensibilidad al layout, ya medido",
+        "argumento_estructural_INFERIDO": "NO es una medida: cuando el wrap dispara en la llamada k, las 9-k llamadas restantes quedan sin ejecutar (las trazas lo muestran: el flujo salta al bloque a_k y abandona la cadena). Por tanto la celda queda en la posicion siguiente a movd en su ciclo xlat2, que para el ciclo Nop x8/MovD es la posicion 0. Con la calibracion mod59049 (pre=[1,0,0,0,0]) la celda 1 additionally avanza +1. Prediccion: el readout RESETEA la cascada (celdas 2..5 a 0, celda 1 a 1), no la conserva",
+        "clasificación": "READOUT_NON_DESTRUCTIVE = NOT_DEMONSTRATED; READOUT_IS_DESTRUCTIVE = INFERRED (argumento estructural, sin medicion end-to-end)",
+        "actualizado": "Se intento una segunda via (cadena de verificacion que relee la celda 1 sin volver al bucle). El instrumento quedo CALIBRADO y verificado por separado: verify=2 con pre_v=1 lee el estado verdadero ('8' con posicion 1). Pero al combinarlo con el readout principal, ninguna de las 16 configuraciones barridas produce 6 digitos: la lectura principal no imprime. Verificado NOT_DEMONSTRATED por medicion, con dos caminos fallidos y el mismo diagnostico (sensibilidad al layout).",
+        "cerrado": "CERRADO por medicion. READOUT_IS_DESTRUCTIVE=DEMONSTRATED, READOUT_NON_DESTRUCTIVE=DESTROYED. Ver evidence/destructivity/destructivity_final.json."
+      },
+      "3_documentacion_de_la_limitacion": "registrada aqui y en el manifiesto; la limitacion vigente es que el readout consume estado: solo es valido como medicion de un instante, no como lectura repetida del mismo estado, y no habilita lectura incremental ni Stillwell",
+      "claims": {
+        "READOUT_NON_DESTRUCTIVE": "NOT_DEMONSTRATED",
+        "READOUT_IS_DESTRUCTIVE": "INFERRED"
+      },
+      "siguiente_prueba_minima": "Medir la destructividad sin pasar por el bucle: un programa que lee en T, y en vez de volver al bucle ejecuta un HALT inmediato, junto a un programa identico SIN readout; comparar el numero de ticks hasta el wrap de N5. Si el readout no altera el numero de ticks, la perturbacion esta acotada al estado de las celdas; si lo altera, es evidencia directa de consumo de estado sin depender del camino de retorno."
+    },
+    "destructividad_CERRADA": {
+      "format": "malbolge-readout-destructivity/2",
+      "pregunta": "El readout de 5 celdas altera la posicion de las celdas que lee?",
+      "diseno": "T=10 (stops=[2,5]), posiciones verdaderas [1,1,0,0,0]. El readout principal lee las 5 celdas y despues una cadena de verificacion relee UNA celda y hace HALT. La cadena de verificacion se calibra en el MISMO programa con un control de valor absoluto: leer la celda 5, cuya posicion verdadera es 0.",
+      "modes": {
+        "verify=1": "readout de 5 celdas + cadena de verificacion",
+        "v_cell": "que celda lee la cadena de verificacion",
+        "pre_v": "llamadas de advanceo de la cadena de verificacion"
+      },
+      "calibracion_absoluta_en_este_programa": {
+        "celda5_control": {
+          "posicion_verdadera": 0,
+          "digito_esperado": "9",
+          "pre_v=0": "9",
+          "pre_v=1": "8",
+          "conclusion": "pre_v=0 es el ajuste que lee absolutamente en este programa"
+        },
+        "nota": "la cadena de verificacion calibrada en verify=2 (entrada desde la parada) daria un offset distinto; por eso el control se hace DENTRO del programa medido"
+      },
+      "medicion": {
+        "celda1": {
+          "posicion_verdadera_antes_del_readout": 1,
+          "digito_esperado_antes": "8",
+          "lectura_con_el_ajuste_absoluto_pre_v0": "9",
+          "posicion_medida_despues": 0,
+          "conclusion": "la celda 1 paso de posicion 1 a posicion 0: el readout la RESETEA"
+        }
+      },
+      "reproducibilidad": [
+        {
+          "rep": 0,
+          "control_celda5_out": "889999",
+          "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+          "medicion_celda1_out": "889999",
+          "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+          "control_ok": true,
+          "medicion_ok": true
+        },
+        {
+          "rep": 1,
+          "control_celda5_out": "889999",
+          "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+          "medicion_celda1_out": "889999",
+          "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+          "control_ok": true,
+          "medicion_ok": true
+        },
+        {
+          "rep": 2,
+          "control_celda5_out": "889999",
+          "control_hell_sha256": "f95a522fa58fb10cb1bd6e0dea5ed5b12ffbe4fd6b641668558d749fb3a9db2c",
+          "medicion_celda1_out": "889999",
+          "medicion_hell_sha256": "2a7b6f62c9d8ca4864c9cc3df9cf057bef7530e3fa36129f049d66039cd8123f",
+          "control_ok": true,
+          "medicion_ok": true
+        }
+      ],
+      "claims": {
+        "READOUT_IS_DESTRUCTIVE": "DEMONSTRATED (celda 1: posicion 1 -> 0 tras ser leida, con control absoluto en el mismo programa)",
+        "READOUT_NON_DESTRUCTIVE": "DESTROYED",
+        "LIMITACION": "el readout es valido como medicion de un instante; no habilita lectura repetida del mismo estado, lectura incremental ni Stillwell"
+      },
+      "correccion": "mi prediccion estructural previa decia 'celda 1 a 1' por el pre-call; la medicion da 0. El pre-call tambien queda consumido: la cadena de 9 llamadas desde posicion 2 envuelve en la llamada 7 y la celda queda en la posicion siguiente a movd, que es 0. Corregido: TODAS las celdas leidas quedan en 0.",
+      "alcance": "medido en T=10 con la celda 1; no verificado para las otras 4 celdas ni para otros T. Es una muestra, no unaRIX completa."
+    },
+    "generador_bug_corregido": "El generador readout_gen.py estaba ROTO desde un restructure por regex: las lineas terminadoras de bloque acababan en la lista equivocada y el caso base devolvia salida vacia. Detectado por el control de no-regresion, reescrito limpio, y verificado reproduciendo el barrido 12/12 exacto. Todas las pruebas verify con el generador roto quedan ANULADAS.",
+    "tres_huecos_atacados": {
+      "consumo_y_reparacion": {
+        "pregunta": "Cuanto consume el readout por celda y es reparable con llamadas fijas?",
+        "diseno": "T=10 (stops=[2,5]), posiciones verdaderas [1,1,0,0,0]. Entre el readout y la cadena de verificacion se insertan R llamadas a la celda leida; la verificacion usa la calibracion ABSOLUTA (pre_v=0) validada por el control de la celda 5.",
+        "medido": {
+          "celda1": {
+            "verdadera": 8,
+            "tras_readout": 9,
+            "tras_1_llamada": 8,
+            "veredicto": "REPARADA con 1 llamada"
+          },
+          "celda2": {
+            "verdadera": 8,
+            "tras_readout": 9,
+            "tras_1_llamada": 8,
+            "veredicto": "REPARADA con 1 llamada"
+          },
+          "celdas3_4_5": {
+            "verdadera": 9,
+            "tras_readout": 9,
+            "tras_1_llamada": 8,
+            "veredicto": "ya estaban en 0; una llamada de mas las desplaza"
+          }
+        },
+        "regla": "tras leer, una celda queda SIEMPRE en posicion 0, sea cual sea su posicion previa. Por tanto reparar una celda en posicion p exige p llamadas: la reparacion es circular con respecto al dato que se quiere leer.",
+        "sha256_reporte": "39aed736aaf7a995eaaa6e5363d2098bd6aef5f33b8d5b9972aa78e2804d9e50",
+        "claims": {
+          "READOUT_CONSUMES_ONE_POSITION": "DEMONSTRATED",
+          "READOUT_REPAIR_NEEDS_KNOWN_POSITION": "DEMONSTRATED (circular)"
+        }
+      },
+      "p1_cerrado": {
+        "pregunta": "El dominio p=1 (celda de parada de 1 posicion) se puede cerrar?",
+        "diseno": "orden POR PROGRAMA: la celda de parada se llama antes que la de cascada solo en el programa de T=1. Cada T es un programa separado, asi que el orden no obliga a romper p>=4 como hizo el barrido global anterior.",
+        "resultado": "T=1 -> '89999' con pre=[1,0,0,0,0] shift=[0,0,0,0,0] y stop_first, 32188 pasos",
+        "claims": {
+          "READOUT_P1": "DEMONSTRATED"
+        }
+      },
+      "digito_de_posicion_3": {
+        "pregunta": "El digito de posicion 3 es alcanzable aunque la celda de parada no pueda tener 3 posiciones?",
+        "diseno": "stops=[2,6] -> T=12 -> p=[3,1,0,0,0]",
+        "resultado": "'68999' con pre=[0,0,0,0,0] shift=[1,1,0,0,0], 32453 pasos",
+        "claims": {
+          "DIGIT_POSITION_3_REACHABLE": "DEMONSTRATED (via T=12); los digitos 3 y 7 son alcanzables por T, no por longitud de celda de parada"
+        }
+      },
+      "claims": {
+        "MOD59049_READOUT_INTEGRADO": "DEMONSTRATED",
+        "MOD59049_SECOND_INTERPRETER": "DEMONSTRATED",
+        "READOUT_IS_DESTRUCTIVE": "DEMONSTRATED",
+        "READOUT_NON_DESTRUCTIVE": "DESTROYED",
+        "READOUT_CONSUMES_ONE_POSITION": "DEMONSTRATED",
+        "READOUT_REPAIR_NEEDS_KNOWN_POSITION": "DEMONSTRATED",
+        "READOUT_P1": "DEMONSTRATED",
+        "DIGIT_POSITION_3_REACHABLE": "DEMONSTRATED",
+        "LECTURA_REPETIDA_SIN_REPARACION": "NOT_DEMONSTRATED",
+        "OFFSET_ORIGIN": "NOT_DEMONSTRATED",
+        "LECTURA_INCREMENTAL_STILLWELL": "NOT_DEMONSTRATED"
+      },
+      "siguiente_paso_concreto": "Diseno no destructivo, sin(info circular): que el wrap de la cadena NO abandone el resto de la cadena. En vez de que el bloque a_k transfiera a read_2, que transfiera a la llamada a_{k+1} de la misma cadena (y a_9 -> read_2). Asi las 9-k llamadas restantes SI se ejecutan, la celda termina en su posicion original (9 llamadas = identidad) y el readout no consume. Coste: 8 transferencias extra por cadena, cada una calibrable como las ya medidas. Es el unico camino que no requiere conocer p en runtime."
+    },
+    "READOUT_NO_DESTRUCTIVO_DEMOSTRADO": {
+      "pregunta": "Se puede leer el estado sin consumirlo?",
+      "mecanismo": "Al entrar en el bloque a_kk se han ejecutado kk llamadas y la (kk+1)-ma acaba de envolver, asi que la celda quedo en posicion 0. Anadir UNA llamada de restauracion en cada bloque la devuelve a su posicion. El numero necesario es una CONSTANTE de ese bloque, no un dato de runtime, luego no hay circularidad.",
+      "por_que_una_sola_y_no_9_kk": "La cadena ejecuta pre + kk llamadas y envuelve exactamente una vez, luego la posicion verdadera es 9 - pre - kk. Con nd_cap=1 la restauracion coincide con esa cantidad en los T donde se midio; nd_cap=2 se pasa de largo (la celda 2 lee '7' en vez de '8').",
+      "restriccion_de_LMAO": "Las llamadas de restauracion van rotuladas a etiquetas que LMAO valida EN COMPILACION, asi que no pueden apuntar a una etiqueta inexistente aunque la llamada nunca envuelva: se reapuntan al destino terminal que la cadena ya usa. Ademas LMAO tiene un presupuesto de espacio libre: con ~130 instrucciones extra avisa y a ~165 falla con 'Free space exceeded', asi que reparar los 9 bloques de las 5 cadenas (180 instrucciones) NO cabe; de ahi que se repare solo lo necesario.",
+      "medido": {
+        "T10_celda1": "tras readout '9' (posicion 0), con no destructivo '8' (posicion 1) = valor verdadero",
+        "T10_celda2": "'9' -> '8' correcto",
+        "T10_celdas3_4_5": "'9' -> '9' correcto",
+        "relectura": "destructivo 889999 (celda 1 releida '9' erroneo) vs no destructivo 889998 (celda 1 releida '8' correcto)",
+        "5_celdas": "5/5 conservan su posicion",
+        "impresion": "la variante no destructiva sigue imprimiendo los 5 digitos correctos '88999' con la MISMA calibracion que la destructiva"
+      },
+      "generalidad": {
+        "reproducidos": [
+          "T=5 '49999'",
+          "T=6 '39999'",
+          "T=9 '99999'",
+          "T=10 '88999'",
+          "T=12 '68999'"
+        ],
+        "todos_con_la_misma_calibracion": "pre=[1,0,0,0,0] shift=[0,1,0,0,0]",
+        "no_reproducido": "T=90 con stops=[2,45]: 144 configs (pre 0-2, shift 0-3) sin coincidir. T=90 tiene 3 digitos no nulos y nd_cap=1 no basta para alguna de sus cadenas.",
+        "veredicto": "5/6 T con 3 digitos no nulos o menos"
+      },
+      "claims": {
+        "READOUT_NON_DESTRUCTIVE": "DEMONSTRATED (T=10, 5/5 celdas, relectura correcta)",
+        "READOUT_NON_DESTRUCTIVE_GENERALIDAD": "DEMONSTRATED en T=5,6,9,10,12; NOT_DEMONSTRATED en T=90",
+        "LMAO_VALIDATES_LABELS_AT_COMPILE_TIME": "DEMONSTRATED",
+        "LMAO_FREE_SPACE_BUDGET": "DEMONSTRATED (~130 instrucciones extra avisa, ~165 falla)"
+      }
+    },
+    "CORRECCION_INSTRUMENTO": "Al anadir el parametro stop_first, un parche mio elimino por error la llamada a la celda de parada de las cadenas 2-5. Eso altero el layout y rompio el readout base ('88999' -> '68999'). Detectado comparando el sha256 del .hell generado con el del barrido registrado (3e5708e6fb60704f): 12/12 .hell byte-identicos tras la correccion. Los resultados de consumo, p=1 y T=12 de esta sesion se produjeron con la base rota y se re-ejecutaron con la base restaurada.",
+    "LECTURA_INCREMENTAL": {
+      "pregunta": "Con un readout que no consume, ¿se puede observar la cascada tick a tick?",
+      "definicion_operacional": "READOUT_NO_DESTRUCTIVO + retorno al bucle de ticks; la lectura k debe coincidir con la posicion del tick T+k calculada de forma independiente como ((T+k)//9^i) mod 9.",
+      "resultado": "NOT_DEMONSTRATED. La PRIMERA lectura es siempre correcta ('78999' en T=2, tick 2). Las lecturas siguientes no contienen NINGUN digito: imprimen bytes no imprimibles (p.ej. '¢î¨\\x1a\\x1a\\x1aOå').",
+      "controles_que_aislan_la_causa": [
+        "NO es el restore: la variante destructiva y la no destructiva fallan de forma identica (0 digitos en las lecturas siguientes).",
+        "NO es el punto de reentrada al bucle: 4 etiquetas de reentrada distintas (loop, w1, s1, read_1) con 4 fuentes byte-distintas fallan igual.",
+        "La corrupcion NO es auto-cifrado de bloques ya ejecutados: entre lectura 1 (tick 2, bloque a7) y lectura 2 (tick 4, bloque a5) intervienen bloques DISTINTOS, y a5 no se habia ejecutado en la lectura 1."
+      ],
+      "mecanismo": "NO_DEMONSTRATED. Dos candidatos sin medir: (a) el valor que imprime OUT depende del estado de la celda de datos y no solo del literal del bloque, asi que tras un ciclo completo de la cascada el valor rotado deja de coincidir con el literal; (b) la alineacion del puntero de datos se pierde por las transferencias del readout y no se recupera al volver al bucle.",
+      "errores_de_herramienta_en_esta_sesion": [
+        "passes>1 era CODIGO MUERTO: la condicion 'verify == 0 or passes == 1' cortocircuitaba siempre, asi que el readout nunca volvia al bucle. Corregido a 'passes == 1'.",
+        "La primera prueba de reentrada paso el parametro reentry en la firma pero NO en la llamada: el fuente no cambiaba y el test era vacuo. Detectado porque las 4 fuentes darwin hash identico. Repetido con el paramero pasado.",
+        "Ambas correcciones verificadas con el control de no-regresion: 12/12 .hell byte-identicos a los registrados."
+      ]
+    },
+    "LECTURA_INCREMENTAL_mecanismo_medido": {
+      "pregunta": "¿Que imprime OUT y por que la segunda lectura da basura?",
+      "fuente": "el oraculo malbolge.py (semantica Malbolge clasica, 8 ops, 59049 celdas) + traza del .mb de un programa T=2 en modo bucle.",
+      "hallazgos": [
+        "OUT imprime a%256, y a lo puso el ROT anterior (a = mem[d] rotado). No hay literal en el bloque: el digito es el VALOR de una celda de datos en ese instante.",
+        "Lectura 1: ROT en d=58572,58670,58768,58858,58956 -> 55,56,57,57,57 = '78999' (digito correcto por la calibracion pre/shift).",
+        "Lectura 2: ROT en d=58956,29456,29479,29530,29530 -> 54,238,14,26,26 = '6'+basura. El puntero d avanza entre lecturas (el bucle de ticks lo mueve), asi que el readout cae en direcciones distintas y sin calibrar."
+      ],
+      "conclusion": "El readout es una medicion calibrada para (i) un numero fijo de ticks T y (ii) la posicion del puntero de datos al entrar. El bucle de ticks avanza tanto las celdas como el puntero, rompiendo la calibracion en cada lectura posterior. Re-calibrar por tick exigiria conocer el numero de tick (circular). Mecanismo MEDIDO, ya no un candidato.",
+      "por_que_es_una_limite_interna_y_no_un_bug": "No hay defecto en el readout: es el comportamiento esperado de Malbolge clasica, donde OUT solo expone valores de celda de datos y la posicion de la celda esta codificada en su valor, no en un registro legible. Para leer la posicion directamente sin calibracion faltaria una op que no existe en el conjunto de 8 ops.",
+      "reconciliacion": "READOUT_NON_DESTRUCTIVE (no consumir) y LECTURA_INCREMENTAL (releer tras el bucle) siguen siendo capacidades distintas: la primera es DEMONSTRATED como medicion de un instante; la segunda queda NOT_DEMONSTRATED con mecanismo medido."
+    },
+    "ESCAPE_ANCLAR_D_REFUTADO": {
+      "hipotesis_a_probar": "si el offset relativo puntero<->celdas se mantiene estable, anclar el readout con un movd a una base fija antes de cada lectura.",
+      "medicion": "trazo del flujo de CODIGO (c), no solo de datos (d), en un programa T=2 en bucle.",
+      "resultado": [
+        "Lectura 1: OUT en c=33019 (region del readout), ROT en c=159..171.",
+        "Lectura 2: OUT en c=92,56,92,57,92 (region de la CASCADa), ROT en c=171..180.",
+        "Tras el ultimo OUT de la lectura 1 (paso 32913) el control sale del readout correctamente (pasos 32914-32917) pero desde el 32918 NUNCA regresa a c=33019 o a 159..171."
+      ],
+      "veredicto": "REFUTADO. Anclar el puntero de datos d no arregla nada: lo roto es c (flujo de codigo), no d (alineacion de datos). La segunda lectura no es el readout; el flujo de control se queda en la cascada ejecutando codigo ya auto-cifrado.",
+      "causa_raiz_refinada": "No es solo que d se mueva: el codigo de la cascada (bucle de ticks) se AUTO-CIFRA al ejecutarse, y en la segunda pasada ese codigo ya cifrado no trae el control de vuelta al readout. Es una limitacion fundamental de Malbolge: el codigo que se ejecuta se auto-cifra y no se puede re-ejecutar de forma confiable.",
+      "unica_alternativa_viable_no_probada": "K copias FRESCAS del bloque de readout, una por lectura, cada una en su propia region de codigo (K=2 para 2 lecturas). Encargable: K * tamano_readout celdas de codigo, acotado por la region de 59049. Es el unico camino que no depende de re-ejecutar codigo ya cifrado."
+    },
+    "K_COPIAS_FRESCAS_REFUTADO": {
+      "ataque": "diseno de K copias FRESCAS del bloque de readout (una por lectura, cada una en su region de codigo) para evitar re-ejecutar codigo ya cifrado.",
+      "medicion_decisiva": "histograma de ops ejecutados por pasada en un programa T=2 en bucle.",
+      "resultado": [
+        "Pasada 1 (la lectura): jmp=55, movd=8, out=5, rot=4 -> flujo de control COHERENTE.",
+        "Pasada 2 (la cascada de vuelta): nop=21, out=8, jmp=8, crazy=7, rot=5, in=4, movd=2, + ~50 codigos de op distintos -> sopa de codigo auto-cifrado INCOHERENTE."
+      ],
+      "veredicto": "REFUTADO. La cascada no puede re-rutear a NINGUNA copia del readout: su codigo de flujo de control se auto-cifro en basura. Solo hay 10 jmp/movd en la pasada 2 frente a 63 en la pasada 1: no alcanza para sostener un ciclo de T ticks. K copias del readout no sirven si la cascada no puede llegar a ellas.",
+      "limite_fundamental": "La cascada es una ESTRUCTURA DE FLUJO DE CONTROL DE UN SOLO USO: es una maquina de estados (loop->w1->...->w5->readout) que SALTA fuera al readout, no un ciclo que regresa a su inicio. En Malbolge se puede tener una estructura cíclica (que vuelve a su inicio), pero no una que cicla K veces y sale K veces, porque la salida consume el estado.",
+      "lo_que_faltaria": "Rediseñar la CASCAAdA (no el readout) como una estructura de flujo estable para K pasadas: un layout de Malbolge nuevo en el que el codigo de la cascada, tras K*T ejecuciones, siga decodificando a las ops de control correctas. Es una tarea de layout de LMAO, no un cambio del generador; no la he implementado."
+    },
+    "OFFSET_ORIGIN_CARACTERIZADO": {
+      "pregunta": "De donde viene el offset de calibracion del readout (OFFSET_ORIGIN)?",
+      "metodo": "se mide el offset CRUDO (readout sin calibrar) contra el valor verdadero para muchas estructuras de cascada y se busca la dependencia.",
+      "hallazgos": [
+        "El offset es una funcion de la ESTRUCTURA de la cascada de paradas, no de T ni del orden de las celdas de parada.",
+        "Estructuras estandar (celdas de parada de longitud 2,4,5,6; sin celda de 9; pocas celdas): offset = (+1,-1,0,0,0) en digitos = (-1,+1,0,0,0) en posiciones. Reproducible en T=4,8,10,16,20,24 y en distintas descomposiciones del mismo T ([4] vs [2,2]; [2,5] vs [5,2]).",
+        "Cualquier estructura con UNA CELDA DE PARADA DE 9: offset de la celda 1 = -8 (offset total (-8,0,0,0,0)). Reproducible en T=9,18,36,45, con el 9 en cualquier posicion.",
+        "Muchas celdas de parada de 2: el offset se REPARTE entre varias celdas (p.ej. 7 celdas de 2 -> +1,-1,-6,-1,0; 10 celdas -> todavia mas celdas no nulas).",
+        "Longitud de parada 3: LMAO la rechaza (ciclo xlat invalido), no hay readout."
+      ],
+      "origen": "El readout se dispara al completar la cascada de paradas (s_last); la fase de esa disparacion depende de las longitudes de las celdas de parada. Esa fase determina cuanto ha avanzado cada celda de cascada respecto al punto de lectura ideal, y de ahi el offset. Es un efecto de FASE del disparo, no un artefacto del estado ni de la forma de entrada (que ya quedaron DESTROYED).",
+      "lo_que_faltaria": "Una formula primera-principios del offset como funcion exacta de la multiconjunto de longitudes de parada. Eso exigiria el layout completo de LMAO (como se mapea la fase de la cascada de paradas a los valores de las celdas espejo). No lo he derivado; el offset esta MEDIDO y CARACTERIZADO empíricamente."
+    },
+    "T90_CERRADO": {
+      "pregunta": "T=90 no-destructivo (habia fallado con stops=[2,45] porque 45 no es ciclo xlat valido).",
+      "resultado": "Con la descomposicion correcta de 3 celdas [9,2,5] y sus permutaciones, el readout no destructivo da los 5 digitos correctos '98899' y la preservacion se confirma: celdas 2 y 3 (posicion 1) se re-leen como '8' (no destructivo) vs '9' (destructivo)."
+    }
+  }
+}

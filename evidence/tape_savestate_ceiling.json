@@ -1,0 +1,63 @@
+{
+  "format": "malbolge-tape-savestate-ceiling/1",
+  "registered_on": "2026-10-02",
+  "question": "For generated_bf(N) (read N cells, increment cell 0, write N cells) on the Free backend, where does the reference transition stop holding?",
+  "instrument": "native rebuild of epochtool.zig, Zig 0.16.0 ReleaseSafe, binary not committed",
+  "control": "fixtures/tape_epoch_100.json replayed on this binary: status=HALTED steps=903 stdout byte-identical to the sealed state_after_hex",
+  "correction": "A first write of this file claimed FIRST_FAIL=111 for every state. That was false. N=111 matches on a patterned state and does not halt on a zero tail. This file replaces that claim.",
+  "mechanism": "TAPE_BASE starts at cell 1000. N=110 compiles to 993 cells. N=111 compiles to 1002 cells, which overlaps the assisted tape. Behavior above that overlap is state-dependent, not a uniform reject.",
+  "probes": [
+    {
+      "n": 110,
+      "label": "zero_tail",
+      "compiled_cells": 993,
+      "mal_file_bytes": 993,
+      "status": "HALTED",
+      "steps": 993,
+      "out_len": 110,
+      "match": true
+    },
+    {
+      "n": 111,
+      "label": "zero_tail",
+      "compiled_cells": 1002,
+      "mal_file_bytes": 1002,
+      "status": "MAX_STEPS",
+      "steps": 5000000,
+      "out_len": 53148,
+      "match": false
+    },
+    {
+      "n": 111,
+      "label": "pattern",
+      "compiled_cells": 1002,
+      "mal_file_bytes": 1002,
+      "status": "HALTED",
+      "steps": 1012,
+      "out_len": 111,
+      "match": true
+    },
+    {
+      "n": 112,
+      "label": "pattern",
+      "compiled_cells": 1011,
+      "mal_file_bytes": 1011,
+      "status": "HALTED",
+      "steps": 1012,
+      "out_len": 111,
+      "match": false
+    },
+    {
+      "n": 112,
+      "label": "zero_tail",
+      "compiled_cells": 1011,
+      "mal_file_bytes": 1011,
+      "status": "MAX_STEPS",
+      "steps": 5000000,
+      "out_len": 53148,
+      "match": false
+    }
+  ],
+  "ladder_pattern_100_to_111": "PASS for every N in 100..111 on state (7*i+3)&255, measured in the preceding run and N=111 rechecked here",
+  "claim": "SAVESTATE_EPOCH_UNBOUNDED=NOT_DEMONSTRATED. Measured: patterned state matches for N=100..111 and fails at N=112 (halts, wrong length). Zero tail matches at N=110 and does not halt at N=111 within 5e6 steps. The bound is the program/TAPE_BASE collision near cell 1000, and it is input-dependent."
+}

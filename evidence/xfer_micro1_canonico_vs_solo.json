@@ -1,0 +1,50 @@
+{
+  "format": "malbolge-lmao-xfer-micro/1",
+  "question": "Puede LMAO transferir el control a un target conocido sin depender del fallthrough?",
+  "null_hypothesis": "No existe tal forma en la superficie inspeccionada (H0).",
+  "metric": "out == 'XC' y nunca 'XBC'",
+  "fixture": "A imprime 'X'; B imprimiria 'BD'; C imprime 'C' y hace HALT.",
+  "surface_inspected": [
+    "vendor/lmao/README.md (HeLL Language Reference): SOME_LABEL = address-1; R_LABEL = address+1; U_TARGET ANCHOR = address(TARGET) - distancia; .OFFSET; ENTRY",
+    "vendor/lmao/src/prefix.c:43 resolve_prefix_for_dataatom (R_ valida sucesor; U_ calcula offset relativo y sintetiza RNop)",
+    "vendor/lmao/src/label.c:81 get_label (CODE vs DATA, un solo destino por etiqueta)",
+    "vendor/lmao/src/layout.c:28 add_codeblock_to_memory_layout (reserva la celda previa; restriccion xlat2 de posicion)",
+    "vendor/lmao/example_hello_world.hell:259,264,282-284,300-301 (forma canonica R_<bloque> + MOVED <target>)"
+  ],
+  "rows": [
+    {
+      "variant": "m2_solo",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "41dfd6ecb08f74deba2f32ebb4ea639ad040f8eb28c66d545ce96f5e74306a9a",
+      "mb_sha256": "69c06cc8219d28e03626ba3c2dbe63f1725f90df8b5add2ab89515c84ba2d719",
+      "status": "HALTED",
+      "steps": 3287,
+      "out": "XC",
+      "out_hex": "5843",
+      "match": true
+    },
+    {
+      "variant": "m1_canonico",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "6cf27d65778e0c6e9c59fb24a5902634f74756ad07950adff29c1d701b344c1d",
+      "mb_sha256": "552070629a17a3bcfa915d1765b31e799567a13106a6c6eccf4e5ee2bbde70de",
+      "status": "HALTED",
+      "steps": 3217,
+      "out": "XBDC",
+      "out_hex": "58424443",
+      "match": false
+    }
+  ],
+  "winner": "m2_solo",
+  "claim": "XFER_CANONICAL_PAIR=DEMONSTRATED_LOCALLY (R_MOVED + MOVED target)",
+  "scope": "Microexperimento de 2 bloques; oraculo malbolge.py. No cierra el readout de 5 celdas.",
+  "not_demonstrated": [
+    "readout 5 celdas",
+    "mod59049 real",
+    "segundo interprete"
+  ]
+}

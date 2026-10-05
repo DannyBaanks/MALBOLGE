@@ -1,0 +1,403 @@
+{
+  "format": "malbolge-lmao-mod59049-sweep/1",
+  "pregunta": "El readout de 5 celdas lee el estado real de una cascada mod59049 en multiples T?",
+  "diseno": "celdas de parada de longitud {2,4,5,6,9} (unicas que LMAO acepta como ciclo xlat2); T = producto. Calibracion greedy por cadena e independiente por T porque el layout cambia con cada T.",
+  "restriccion": "T con factores 3,7,8,10 no compila: 'Forced xlat cycle doesn't exist'",
+  "rows": [
+    {
+      "stops": [
+        2
+      ],
+      "T": 2,
+      "positions": [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "79999",
+      "out": "79999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32249,
+      "hell_sha256": "6662abaff9f313e9b0376e13aaba7c3e3c58f01db2445d169b5215b7a8748e78"
+    },
+    {
+      "stops": [
+        4
+      ],
+      "T": 4,
+      "positions": [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "59999",
+      "out": "59999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32356,
+      "hell_sha256": "8961d1d7af48ac05efa24f529834ccb2b383ddad66a9b128eb0cf4b45fa440dd"
+    },
+    {
+      "stops": [
+        5
+      ],
+      "T": 5,
+      "positions": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "49999",
+      "out": "49999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32322,
+      "hell_sha256": "4205671a159aa11c8f2eadb93f7566e82338e97b57762a18e0464d592517060f"
+    },
+    {
+      "stops": [
+        6
+      ],
+      "T": 6,
+      "positions": [
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "39999",
+      "out": "39999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32368,
+      "hell_sha256": "06ea0485bcb968b8676bbd58873a2ea02df4efd5f3ee65231f6f31b1eb088380"
+    },
+    {
+      "stops": [
+        2,
+        4
+      ],
+      "T": 8,
+      "positions": [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "19999",
+      "out": "19999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32742,
+      "hell_sha256": "3c0be35f3a9ab070868979579ead8e0085338465485e3533697825047794d60b"
+    },
+    {
+      "stops": [
+        2,
+        5
+      ],
+      "T": 10,
+      "positions": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expected": "88999",
+      "out": "88999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32893,
+      "hell_sha256": "3e5708e6fb60704f0919aa6a63b615d964f7ea5c8252e09099623cb57f230264"
+    },
+    {
+      "stops": [
+        4,
+        5
+      ],
+      "T": 20,
+      "positions": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "expected": "77999",
+      "out": "77999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "steps": 32872,
+      "hell_sha256": "6e15af066477e73e08f124c0f51f35e4a0f54263ee481b55a825faf9483fa8dd"
+    },
+    {
+      "stops": [
+        5,
+        9
+      ],
+      "T": 45,
+      "positions": [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      "expected": "94999",
+      "out": "94999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 32981,
+      "hell_sha256": "2c2f5fa359cc9fd053ba7f328fdc65036813303e80e2cf11139902c3fcd73ad9"
+    },
+    {
+      "stops": [
+        2,
+        5,
+        9
+      ],
+      "T": 90,
+      "positions": [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "expected": "98899",
+      "out": "98899",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 33757,
+      "hell_sha256": "1a196475e39b5a5e69b4c4ffa0d544fce4069f7ebb2a0c3776b7f38ff65cab83"
+    },
+    {
+      "stops": [
+        6,
+        9
+      ],
+      "T": 54,
+      "positions": [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "expected": "93999",
+      "out": "93999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 33014,
+      "hell_sha256": "798fe8abb3e779b52b2971d8caa1ec4255a960a9d0d0bacdb88c56303249d3b0"
+    },
+    {
+      "stops": [
+        9,
+        9
+      ],
+      "T": 81,
+      "positions": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "expected": "99899",
+      "out": "99899",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 32952,
+      "hell_sha256": "48bf58930d5647c24c7d38e27cb6612a03b2e18cf05562efcdd52d097bc79dc9"
+    },
+    {
+      "stops": [
+        4,
+        5,
+        9
+      ],
+      "T": 180,
+      "positions": [
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "expected": "97799",
+      "out": "97799",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 34904,
+      "hell_sha256": "3914e32936819fba1bf10c8bd97bbfd6224e73b6f93a8586d151ad22568fb545"
+    }
+  ],
+  "n_match": 12
+}

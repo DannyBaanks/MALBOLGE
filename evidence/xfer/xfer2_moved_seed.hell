@@ -1,0 +1,43 @@
+.CODE
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+MOVED:
+	MovD/Nop
+	Jmp
+
+ROT2:
+	Rot/Nop
+	Jmp
+
+OUT2:
+	Out/Nop
+	Jmp
+
+.DATA {
+	ENTRY:
+	ROT 'X'<<1 R_ROT
+	OUT ?- R_OUT
+	MOVED C
+	s1:
+	ROT2 '1'<<1 R_ROT2
+	OUT2 ?- R_OUT2
+	s2:
+	ROT2 '2'<<1 R_ROT2
+	OUT2 ?- R_OUT2
+	s3:
+	ROT2 '3'<<1 R_ROT2
+	OUT2 ?- R_OUT2
+	C:
+	ROT 'C'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

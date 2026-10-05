@@ -1,0 +1,106 @@
+{
+  "format": "malbolge-lmao-tick-order/1",
+  "hipotesis": "llamar la celda de parada ANTES que la celda de cascada hace que el readout vea p-1 de forma uniforme, con lo que la llamada de advanceo da 9-p tambien en p=1",
+  "rows": [
+    {
+      "stop_first": false,
+      "p": 1,
+      "expected": "89",
+      "observed": "79",
+      "match": false,
+      "steps": 13896,
+      "hell_sha256": "e446311f3135bacbb266d99214c2599727f7a1031533d5bf28474120e3ae3058",
+      "mb_sha256": "131c7f8af33fa7f6398326b970bda49d1a238b220710700766cace4efb21d42c"
+    },
+    {
+      "stop_first": false,
+      "p": 2,
+      "expected": "79",
+      "observed": "78",
+      "match": false,
+      "steps": 13849,
+      "hell_sha256": "bb83f14d6796d083e30006861d08f7ea9096fff2d7e9f1d634bb66efad8684c8",
+      "mb_sha256": "70a974e522546788163f809c919762aa1cb8612054e366c52bb464f6bb3f1b0a"
+    },
+    {
+      "stop_first": false,
+      "p": 4,
+      "expected": "59",
+      "observed": "58",
+      "match": false,
+      "steps": 14049,
+      "hell_sha256": "86586cd5fc72671b01a2f3405a986625a297d05362d820c095d19630b0f06d3d",
+      "mb_sha256": "243b34dbbd8a6b6af6ff492003d21b8c7a810f958ea5f7db6eff05019b6afffc"
+    },
+    {
+      "stop_first": false,
+      "p": 5,
+      "expected": "49",
+      "observed": "48",
+      "match": false,
+      "steps": 14247,
+      "hell_sha256": "1175371e2f7f661a550407b55ca167c101cc60fa25ab3ab2dcb75bc0c864df82",
+      "mb_sha256": "4936d9c5d21c22983a4b4b7e9a635136be791cdd89212f4bb68b61a106d6e276"
+    },
+    {
+      "stop_first": false,
+      "p": 6,
+      "expected": "39",
+      "observed": "38",
+      "match": false,
+      "steps": 14012,
+      "hell_sha256": "45b518ad8d90f2899109dbf43298a228f3b7aec90a663a9cbea4d819885f167b",
+      "mb_sha256": "ad2e0c8dcad78f2afe57ab4b912a10bdd4b5d3e3bd09a894d4baf62cc340fc92"
+    },
+    {
+      "stop_first": true,
+      "p": 1,
+      "expected": "89",
+      "observed": "89",
+      "match": true,
+      "steps": 13888,
+      "hell_sha256": "529d65e01d6a09489402e811c599a1d94782d91c0f2107f660c53eb51ce1865e",
+      "mb_sha256": "b5926d9a3e21304098be2a804859ef8366818b6fae96cd027eccf48b93a7e35b"
+    },
+    {
+      "stop_first": true,
+      "p": 2,
+      "expected": "79",
+      "observed": "79",
+      "match": true,
+      "steps": 13994,
+      "hell_sha256": "aeaa47037455b836302a63938a56ddf992aa6c6a304f682835f748d18aa87cc5",
+      "mb_sha256": "ee976d59589255a855cad80ede099d27aa0b9ff0f147960669eb1d410a7370a7"
+    },
+    {
+      "stop_first": true,
+      "p": 4,
+      "expected": "59",
+      "observed": "68",
+      "match": false,
+      "steps": 14069,
+      "hell_sha256": "11dd3a3a118d5929a29c9fbe49f7809ecc48b84f6e4e560c5363c8e0fcce0445",
+      "mb_sha256": "ae2a2bed8ce3d7e00ed7af41c566ed26c5f58025285e715c4e2edc8d90128485"
+    },
+    {
+      "stop_first": true,
+      "p": 5,
+      "expected": "49",
+      "observed": "58",
+      "match": false,
+      "steps": 14260,
+      "hell_sha256": "30f507b71e1ae63771c1a974abfa10519f31ad37e5abe2f5782ce3b3c5945a73",
+      "mb_sha256": "9f502bb900222d6cc31a6f277ad8c6de7efaf74d7c9fa96f2dd602d2dc595acd"
+    },
+    {
+      "stop_first": true,
+      "p": 6,
+      "expected": "39",
+      "observed": "48",
+      "match": false,
+      "steps": 14066,
+      "hell_sha256": "a604ee10eb96c2c2cc69352546d33b76923424ebb172d2fab451bf0a71647698",
+      "mb_sha256": "b51e73ad93fc0c88faaff08089882d705570bd26a1d20fdf9e27b2778633791c"
+    }
+  ]
+}

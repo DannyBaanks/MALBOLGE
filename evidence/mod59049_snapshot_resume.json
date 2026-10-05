@@ -1,0 +1,24 @@
+{
+  "format": "malbolge-mod59049-snapshot-resume/1",
+  "registered_on": "2026-10-02",
+  "method": "run mod59049 counter to step 120000, capture (a,c,d,full memory), resume in a fresh interpreter, compare with the monolithic run.",
+  "snapshot": {
+    "step": 120000,
+    "a": 58938,
+    "c": 4483,
+    "d": 58938,
+    "mem_hash_1k": "e993a696f102fe99096b9e6af0642be2f72befe66d834a8c4226bbd213e95ee8"
+  },
+  "resumed": {
+    "halted": true,
+    "final_step": 314258
+  },
+  "monolithic": {
+    "halted": true,
+    "final_step": 314258
+  },
+  "resume_equals_full": true,
+  "claim": "MOD59049_COUNTER_SNAPSHOT_RESUME=DEMONSTRATED: the tick state lives entirely in machine memory; a fresh VM resumed from a mid-count snapshot finishes identically.",
+  "relevance": "This is exactly the MALDOOM epoch model (fresh-VM continuation): the counter is composable with epoch chaining.",
+  "captured_utc": "2026-10-03T04:19:24+00:00"
+}

@@ -1,0 +1,332 @@
+{
+  "format": "malbolge-lmao-xfer-micro/2",
+  "question": "Que via de LMAO transfiere el control a un target conocido sin depender del fallthrough ni de la alineacion de d?",
+  "null_hypothesis": "Ninguna via cumple ambas condiciones (H0).",
+  "metric": "out == 'XC' (nunca 'XBC'/'XBDC'); con SEED intercalado, out == 'XC'",
+  "rows": [
+    {
+      "case": "moved_direct",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "c6cced321c6733463fb2c19d1726ecaf4b42390bf9efe444fa6154b743ce3e7a",
+      "mb_sha256": "4a0587440821cbffc337306c070f69f1f4f2358ffdb794734bad3e2a8fb8f218",
+      "status": "HALTED",
+      "steps": 3287,
+      "out": "XC",
+      "match": true,
+      "trace_around_outs": [
+        [
+          {
+            "s": 3273,
+            "c": 3443,
+            "d": 58939,
+            "op": "rot",
+            "md": 264,
+            "a": 58937
+          },
+          {
+            "s": 3274,
+            "c": 3444,
+            "d": 58940,
+            "op": "jmp",
+            "md": 3443,
+            "a": 88
+          },
+          {
+            "s": 3275,
+            "c": 3444,
+            "d": 58941,
+            "op": "jmp",
+            "md": 3408,
+            "a": 88
+          },
+          {
+            "s": 3276,
+            "c": 3409,
+            "d": 58942,
+            "op": "out",
+            "md": 81,
+            "a": 88,
+            "OUT": "X"
+          },
+          {
+            "s": 3277,
+            "c": 3410,
+            "d": 58943,
+            "op": "jmp",
+            "md": 3409,
+            "a": 88
+          }
+        ],
+        [
+          {
+            "s": 3281,
+            "c": 3443,
+            "d": 58959,
+            "op": "rot",
+            "md": 201,
+            "a": 88
+          },
+          {
+            "s": 3282,
+            "c": 3444,
+            "d": 58960,
+            "op": "jmp",
+            "md": 3443,
+            "a": 67
+          },
+          {
+            "s": 3283,
+            "c": 3444,
+            "d": 58961,
+            "op": "jmp",
+            "md": 3408,
+            "a": 67
+          },
+          {
+            "s": 3284,
+            "c": 3409,
+            "d": 58962,
+            "op": "out",
+            "md": 81,
+            "a": 67,
+            "OUT": "C"
+          },
+          {
+            "s": 3285,
+            "c": 3410,
+            "d": 58963,
+            "op": "jmp",
+            "md": 3409,
+            "a": 67
+          }
+        ]
+      ]
+    },
+    {
+      "case": "bare_direct",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "7c7fa8dac42ee366151ab9206fe92c6d7b4f6c341fc88f69c0b71cb623bb1fb4",
+      "mb_sha256": "df2b7f54ed6727e4afeba072da5bc087393aa5d950e10c530cf60384228661a2",
+      "status": "HALTED",
+      "steps": 3206,
+      "out": "X",
+      "match": false,
+      "trace_around_outs": [
+        [
+          {
+            "s": 3159,
+            "c": 3349,
+            "d": 58939,
+            "op": "rot",
+            "md": 264,
+            "a": 58937
+          },
+          {
+            "s": 3160,
+            "c": 3350,
+            "d": 58940,
+            "op": "jmp",
+            "md": 3349,
+            "a": 88
+          },
+          {
+            "s": 3161,
+            "c": 3350,
+            "d": 58941,
+            "op": "jmp",
+            "md": 3314,
+            "a": 88
+          },
+          {
+            "s": 3162,
+            "c": 3315,
+            "d": 58942,
+            "op": "out",
+            "md": 29443,
+            "a": 88,
+            "OUT": "X"
+          },
+          {
+            "s": 3163,
+            "c": 3316,
+            "d": 58943,
+            "op": "jmp",
+            "md": 3315,
+            "a": 88
+          }
+        ]
+      ]
+    },
+    {
+      "case": "moved_seed",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "e77299d738c087bdf7acb6db2ea389ffafd03e0ca46a5c0b35cc867f06a7cc56",
+      "mb_sha256": "5678619354bab9849636942df08939442b0e536b17c0adb224d8aaa4b6076b00",
+      "status": "HALTED",
+      "steps": 3561,
+      "out": "XC",
+      "match": true,
+      "trace_around_outs": [
+        [
+          {
+            "s": 3547,
+            "c": 3725,
+            "d": 58939,
+            "op": "rot",
+            "md": 264,
+            "a": 58937
+          },
+          {
+            "s": 3548,
+            "c": 3726,
+            "d": 58940,
+            "op": "jmp",
+            "md": 3725,
+            "a": 88
+          },
+          {
+            "s": 3549,
+            "c": 3726,
+            "d": 58941,
+            "op": "jmp",
+            "md": 3690,
+            "a": 88
+          },
+          {
+            "s": 3550,
+            "c": 3691,
+            "d": 58942,
+            "op": "out",
+            "md": 29443,
+            "a": 88,
+            "OUT": "X"
+          },
+          {
+            "s": 3551,
+            "c": 3692,
+            "d": 58943,
+            "op": "jmp",
+            "md": 3691,
+            "a": 88
+          }
+        ],
+        [
+          {
+            "s": 3555,
+            "c": 3725,
+            "d": 58965,
+            "op": "rot",
+            "md": 201,
+            "a": 88
+          },
+          {
+            "s": 3556,
+            "c": 3726,
+            "d": 58966,
+            "op": "jmp",
+            "md": 3725,
+            "a": 67
+          },
+          {
+            "s": 3557,
+            "c": 3726,
+            "d": 58967,
+            "op": "jmp",
+            "md": 3690,
+            "a": 67
+          },
+          {
+            "s": 3558,
+            "c": 3691,
+            "d": 58968,
+            "op": "out",
+            "md": 29443,
+            "a": 67,
+            "OUT": "C"
+          },
+          {
+            "s": 3559,
+            "c": 3692,
+            "d": 58969,
+            "op": "jmp",
+            "md": 3691,
+            "a": 67
+          }
+        ]
+      ]
+    },
+    {
+      "case": "bare_seed",
+      "expected": "XC",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "850ee30004213495b15c9b8d629c893ce436ec3bd22945efd35854ff9a2547ec",
+      "mb_sha256": "65eff27af91f58a1a05e9b3f073c7d92c83be1ae5e4e972d264b57f70955eb17",
+      "status": "HALTED",
+      "steps": 3385,
+      "out": "X",
+      "match": false,
+      "trace_around_outs": [
+        [
+          {
+            "s": 3344,
+            "c": 3537,
+            "d": 58939,
+            "op": "rot",
+            "md": 264,
+            "a": 58937
+          },
+          {
+            "s": 3345,
+            "c": 3538,
+            "d": 58940,
+            "op": "jmp",
+            "md": 3537,
+            "a": 88
+          },
+          {
+            "s": 3346,
+            "c": 3538,
+            "d": 58941,
+            "op": "jmp",
+            "md": 3502,
+            "a": 88
+          },
+          {
+            "s": 3347,
+            "c": 3503,
+            "d": 58942,
+            "op": "out",
+            "md": 29443,
+            "a": 88,
+            "OUT": "X"
+          },
+          {
+            "s": 3348,
+            "c": 3504,
+            "d": 58943,
+            "op": "jmp",
+            "md": 3503,
+            "a": 88
+          }
+        ]
+      ]
+    }
+  ],
+  "n_match": 2,
+  "winner": "moved_direct",
+  "claim": "XFER_VIA_MOVED=DEMONSTRATED_LOCALLY_pero_d_dependiente",
+  "scope": "Microexperimento; oraculo malbolge.py; control adversario con 3 bloques SEED intercalados.",
+  "not_demonstrated": [
+    "readout 5 celdas",
+    "mod59049 real",
+    "segundo interprete",
+    "d-alignment en contexto de wrap"
+  ]
+}

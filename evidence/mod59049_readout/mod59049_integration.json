@@ -1,0 +1,124 @@
+{
+  "format": "malbolge-lmao-mod59049-integration/1",
+  "pregunta": "El readout de 5 celdas lee el estado real de una cascada mod59049 en T=9^k?",
+  "riesgo_medido": "Anadir la cascada de parada cambia el layout del tick y el readout es sensible al layout: con la calibracion medida para el contador de prueba (pre=[1,0,0,0,0] shift=[0,1,0,0,0]) la integracion falla. Cada k requiere calibracion propia.",
+  "metodo": "Calibracion greedy por cadena: para cada k, se barre pre x shift in {0,1}^2 de cada cadena congelando las anteriores; se puntua el digito de esa cadena, luego la longitud (sin fallthrough) y luego el match global.",
+  "resultados": {
+    "1": {
+      "T": 9,
+      "expected": "98999",
+      "out": "98999",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 32615,
+      "hell_sha256": "4763dcceb73bf84d0f0fbbb1a15b49086e5036c986e0654ac4ada150ae3a8f59",
+      "mb_sha256": "2fe47cfea2a295e7259d9a110100905dd161abd57949d042d0a4d660058d7ea9"
+    },
+    "2": {
+      "T": 81,
+      "expected": "99899",
+      "out": "99899",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 32952,
+      "hell_sha256": "48bf58930d5647c24c7d38e27cb6612a03b2e18cf05562efcdd52d097bc79dc9",
+      "mb_sha256": "fea2c89228d08c7fc011f17756c803ef26418d58e8e13573faf3abd61f4a1bad"
+    },
+    "3": {
+      "T": 729,
+      "expected": "99989",
+      "out": "99989",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 38447,
+      "hell_sha256": "464b2f8bfd396e18b483979cee9bfaaaf6ccdf019ea6a99a4b80c5e17e7a3faa",
+      "mb_sha256": "9d2c8a1a78e51d1419ad27f0d384bc29042a862770ccd3ea8dd9386f149b4e0a"
+    },
+    "4": {
+      "T": 6561,
+      "expected": "99998",
+      "out": "99998",
+      "match": true,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 82963,
+      "hell_sha256": "d2125637637a1cedc46d788f2c7c89fd77f38df9c82ebf06824c42a66423fe07",
+      "mb_sha256": "8f25ab5b50256b1d867a5a3affa58e3982219a4cb056e8b866fc2ac5b4218cb9"
+    },
+    "5": {
+      "T": 59049,
+      "expected": "99999",
+      "out": "Z99999",
+      "match": true,
+      "pre": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "steps": 476812,
+      "hell_sha256": "c45d1e740f02ca9f1176aafcec8cd3da550fd6cb138262418eede53149f3d3f6",
+      "mb_sha256": "9e3abc7ab503faf5ec643eab0a38f000952ebac4ad5408505ff53ba34a321155"
+    }
+  },
+  "claims": {}
+}

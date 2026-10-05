@@ -1,0 +1,206 @@
+{
+  "format": "malbolge-mod59049-readout-second-interpreter/1",
+  "runner": {
+    "path": "/tmp/ivm_runner_native",
+    "sha256": "101b6876e52ecdbe599b43f7b8e44ac6e7381aece308ed32b1a5d821e987554b",
+    "source": "intermediate_vm_runner.zig (repo MALBOLGE), compilado con zig build-exe -O ReleaseSafe",
+    "dimension": 10
+  },
+  "note": "el binario versionado en el repo es PE32+ (Windows); se reconstruyo nativo en Linux para esta corrida",
+  "rows": [
+    {
+      "T": 2,
+      "stops": [
+        2
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expected": "79999",
+      "mb_sha256": "80a4e4558dc8080b79cb262912fcc657fd6deefee4f3782eb2214ace0de2064c",
+      "py_status": "HALTED",
+      "py_steps": 32249,
+      "py_out": "79999",
+      "zig_status": "HALTED",
+      "zig_steps": 32249,
+      "zig_out_hex": "3739393939",
+      "zig_initial_tape_sha256": "96b1817cb4e1f85f2e8a475c3bf57ff9b5a44f61d5be7d521011e5698a644158",
+      "zig_final_tape_sha256": "0feadf425a32ae75fad80bba237d694687459bebb36b3eba963ffc8cb9f36a6c",
+      "agree": true
+    },
+    {
+      "T": 45,
+      "stops": [
+        5,
+        9
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "94999",
+      "mb_sha256": "acf71e811a7fb9d94ecf213a1bc3940712ffb90148e77ac54cc51edbe742f6b0",
+      "py_status": "HALTED",
+      "py_steps": 32981,
+      "py_out": "94999",
+      "zig_status": "HALTED",
+      "zig_steps": 32981,
+      "zig_out_hex": "3934393939",
+      "zig_initial_tape_sha256": "e498cd1454ac437ce739cc9bed4ccaa676769db1ee4086d231f400ec773551c8",
+      "zig_final_tape_sha256": "e63bddd36b1bfd1bee029aae8d97a42290b1400c4503c494a72ba60d5dbf6f2a",
+      "agree": true
+    },
+    {
+      "T": 90,
+      "stops": [
+        2,
+        5,
+        9
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "98899",
+      "mb_sha256": "b1ad5a4a4c6c7fb5b2fc86f1ab5498ed9d894e670035e6fae6b119aacd8ddd3d",
+      "py_status": "HALTED",
+      "py_steps": 33757,
+      "py_out": "98899",
+      "zig_status": "HALTED",
+      "zig_steps": 33757,
+      "zig_out_hex": "3938383939",
+      "zig_initial_tape_sha256": "f7423f26b85948d56aea68d8db2c3476afd9d29d5709f3feed426a255668c986",
+      "zig_final_tape_sha256": "73fd6aca603f1b83ba1fb02365db9cc3e4be0b300fa83d7fcd836771bec6ad02",
+      "agree": true
+    },
+    {
+      "T": 81,
+      "stops": [
+        9,
+        9
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "99899",
+      "mb_sha256": "98473d29beec50ea994bfa410bee627756eb800fca166abf536e2f1d6f69ab47",
+      "py_status": "HALTED",
+      "py_steps": 32952,
+      "py_out": "99899",
+      "zig_status": "HALTED",
+      "zig_steps": 32952,
+      "zig_out_hex": "3939383939",
+      "zig_initial_tape_sha256": "1fa8a2143248ff60f926d53ea13f06dc8c24672fd745aaf624d9d7b3dd8be7bb",
+      "zig_final_tape_sha256": "f23096f2071c9d1bd8326ad81a31af02af0edee692e686f98485b0b6a4a1ea8b",
+      "agree": true
+    },
+    {
+      "T": 180,
+      "stops": [
+        4,
+        5,
+        9
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "97799",
+      "mb_sha256": "e1a87780253a1e1fb853e45562f79fda5f4c9b09d7c287022e59ab68f345fbae",
+      "py_status": "HALTED",
+      "py_steps": 34904,
+      "py_out": "97799",
+      "zig_status": "HALTED",
+      "zig_steps": 34904,
+      "zig_out_hex": "3937373939",
+      "zig_initial_tape_sha256": "6a432cbe124ed31d2c3771fdd803d15efc0908258cafffbf271629baec4b819d",
+      "zig_final_tape_sha256": "9ecbaa1039135c0188d29e4648923eb09dc584fd1ad8ba308841bea3c9977b7b",
+      "agree": true
+    },
+    {
+      "T": 9,
+      "stops": [
+        9
+      ],
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "98999",
+      "mb_sha256": "4bcc61b64192e08edb8a5a989db9840a14273a7ba99b9cb104b4ff495cfe7077",
+      "py_status": "HALTED",
+      "py_steps": 32615,
+      "py_out": "98999",
+      "zig_status": "HALTED",
+      "zig_steps": 32615,
+      "zig_out_hex": "3938393939",
+      "zig_initial_tape_sha256": "5e8922e0b035da4c1927f3e6acaa9fb44b17cd278b9d7940f9cf29e81f483d64",
+      "zig_final_tape_sha256": "4f6d71085b3f7f3d600b924eb6d0e88a591aa0145a61f1068d309d35269960f2",
+      "agree": true
+    }
+  ],
+  "n_agree": 6,
+  "n_total": 6
+}

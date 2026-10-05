@@ -1,0 +1,49 @@
+{
+  "format": "malbolge-readout-consumption/1",
+  "pregunta": "Cuanto consume el readout por celda y es reparable con un numero fijo de llamadas?",
+  "diseno": "T=10 (stops=[2,5]), posiciones verdaderas [1,1,0,0,0]. Entre el readout y la verificacion se insertan R llamadas a la celda leida; la verificacion usa la calibracion ABSOLUTA (pre_v=0), validada por el control de la celda 5.",
+  "rows": [
+    {
+      "cell": 1,
+      "true": "8",
+      "after": "9",
+      "after1": "8",
+      "repaired": true,
+      "unchanged": false
+    },
+    {
+      "cell": 2,
+      "true": "8",
+      "after": "9",
+      "after1": "8",
+      "repaired": true,
+      "unchanged": false
+    },
+    {
+      "cell": 3,
+      "true": "9",
+      "after": "9",
+      "after1": "8",
+      "repaired": false,
+      "unchanged": true
+    },
+    {
+      "cell": 4,
+      "true": "9",
+      "after": "9",
+      "after1": "8",
+      "repaired": false,
+      "unchanged": true
+    },
+    {
+      "cell": 5,
+      "true": "9",
+      "after": "9",
+      "after1": "8",
+      "repaired": false,
+      "unchanged": true
+    }
+  ],
+  "n_repaired": 2,
+  "n_unchanged": 3
+}

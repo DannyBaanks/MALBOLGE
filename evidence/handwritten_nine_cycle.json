@@ -1,0 +1,15 @@
+{
+  "format": "malbolge-handwritten-nine-cycle-carry/1",
+  "registered_on": "2026-10-02",
+  "program": "NINE_A advances every loop call; when it wraps (every 9th), NINE_B advances and 'T' is printed; when NINE_B wraps (every 81st) 'B' is printed and the program halts.",
+  "why_T": "C1 = 29524 = 0t1111111111 is invariant under ROT (all trits equal); 29524 % 256 = 84 = 'T'. Printing it is stable across iterations, unlike a char loaded by ROT of a non-invariant operand.",
+  "expected": "TTTTTTTTB (8 T: B en Nop en su 1a..8a llamada; B=MovD en la 9a, coincidiendo con el 9o wrap de A)",
+  "observed": "TTTTTTTTB",
+  "status": "HALTED",
+  "steps": 3746,
+  "hell_sha256": "8f1be877c050c67f7f1d6c05b24c50aba0dc3e40ad06a0f49fca5db0ad4dfe5b",
+  "mb_sha256": "8bd1f5ab7fc289df887999857fce3fb978a4a91743e74ad035ec514ba138924a",
+  "claim": "HANDWRITTEN_NINE_CYCLE_RIPPLE_CARRY=DEMONSTRATED on the local Classic oracle.",
+  "captured_utc": "2026-10-03T03:18:36+00:00",
+  "correction": "El valor esperado original decia 9 T; el correcto es 8 T + B, porque el 9no avance de B es el que dispara wrapped_b y no imprime T. La salida observada siempre fue correcta."
+}

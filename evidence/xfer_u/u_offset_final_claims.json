@@ -1,0 +1,201 @@
+{
+  "format": "malbolge-lmao-u-offset/2",
+  "question": "Puede U_ transferir control en una condicion de offset/desalineacion de d donde MOVED falla?",
+  "source_semantics": {
+    "prefix.c:73-87": "U_ fija data->number = -m (m = celdas hasta el anchor) y sintetiza m RNop virtuales ante el code label destino",
+    "initialize.c:72-87": "valor emitido = addr(TARGET) + number - 1 = addr(TARGET) - m - 1",
+    "runtime": "el jmp que lee la celda U_ hace c = addr(TARGET)-m; el autoincremento entra al primer RNop virtual y camina hasta TARGET",
+    "conclusion": "U_ pre-compensa el LADO DEL DESTINO. La celda U_ sigue exigiendo que d este exactamente en su direccion para ser leida."
+  },
+  "oracle_note": "U_ apunta a un CODE label: su semantica es 'el control llega al bloque', no 'imprime C'. Por eso se midio control_reached_target por traza, no solo stdout.",
+  "perturbation": {
+    "pad": "una celda `?` (no ejecuta nada) insertada justo antes de la linea de transferencia: desplaza d en +1",
+    "seed": "3 bloques SEED intercalados entre la transferencia y el target B/C: prueba de no-contiguidad"
+  },
+  "rows": [
+    {
+      "case": "u_moved_pad0_seed0",
+      "mech": "moved",
+      "pad": 0,
+      "seed": 0,
+      "target_code_label": "HALT",
+      "target_addr": 3385,
+      "control_reached_target": true,
+      "first_step_at_target": 3246,
+      "hell_sha256": "b16532434c43365304b8ff57698820d346e6ce5103f06df27a6dbfd2709e7843",
+      "mb_sha256": "bf45c41c0eae7be0db61ac2f02a6746f4595b276020d22330a94298026f037d9"
+    },
+    {
+      "case": "u_moved_pad0_seed3",
+      "mech": "moved",
+      "pad": 0,
+      "seed": 3,
+      "target_code_label": "HALT",
+      "target_addr": 4419,
+      "control_reached_target": true,
+      "first_step_at_target": 4316,
+      "hell_sha256": "5fcce1b78544dc8523360823b7c1b825b33d931f68beab70f61d573451170706",
+      "mb_sha256": "e8663329f8235c32d55abd4c2600ee005ebbc6cfab44ff32fc17b2a37dc7c16d"
+    },
+    {
+      "case": "u_moved_pad1_seed0",
+      "mech": "moved",
+      "pad": 1,
+      "seed": 0,
+      "target_code_label": "HALT",
+      "target_addr": 3385,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "7778c9d138c1292f75636706b050ccfbe366bce67163937473557ce4d9d04b7d",
+      "mb_sha256": "b959cbc5ac61c589010fa5f64b2c511f4bfa107392c48ea93da656732dedeadf"
+    },
+    {
+      "case": "u_moved_pad1_seed3",
+      "mech": "moved",
+      "pad": 1,
+      "seed": 3,
+      "target_code_label": "HALT",
+      "target_addr": 4325,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "af4a933fa443d519d907f44e3dae1d59627364f79b3f4724571ee0dc9e4d4fb1",
+      "mb_sha256": "3d3a17449d4523f0bcbfd1a64f5acbf78858b6088d2c1f6abb2de05269660656"
+    },
+    {
+      "case": "u_bare_pad0_seed0",
+      "mech": "bare",
+      "pad": 0,
+      "seed": 0,
+      "target_code_label": "HALT",
+      "target_addr": 3197,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "0b2c31e36e27056c7984e789e7d245c4e12c7b50cbb551680fe14e6875e27f88",
+      "mb_sha256": "0a3bc91b1adc1b390f06d2c701707ba795fa53a3c08e7cea52a88f7ac8dbd414"
+    },
+    {
+      "case": "u_bare_pad0_seed3",
+      "mech": "bare",
+      "pad": 0,
+      "seed": 3,
+      "target_code_label": "HALT",
+      "target_addr": 4325,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "b7ade55acb9d3a329496ef0f44de861c3453e519ec6d4323599a3c7f73849f1b",
+      "mb_sha256": "c7bde91bef54aa40dc691a447eef56bce390229d89c97ea7820257ca42354f83"
+    },
+    {
+      "case": "u_bare_pad1_seed0",
+      "mech": "bare",
+      "pad": 1,
+      "seed": 0,
+      "target_code_label": "HALT",
+      "target_addr": 3197,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "a9db7bc9aabf761e7d0fc0c7ebdfc7374022d51e0c8c7b350f8208a0105597ca",
+      "mb_sha256": "c1764ca44e78139c144871303fd42f3604d745f56e76867d57aac5fd4a33e541"
+    },
+    {
+      "case": "u_bare_pad1_seed3",
+      "mech": "bare",
+      "pad": 1,
+      "seed": 3,
+      "target_code_label": "HALT",
+      "target_addr": 4325,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "453948f26cc300c302f5b649bca0da36d84b4ce7367b78c9cc5eaf05141de20a",
+      "mb_sha256": "8e94b5e05ef93db3d276b10f3362f14863240c4d695c80819fb4a1634410002d"
+    },
+    {
+      "case": "u_u__pad0_seed0",
+      "mech": "u_",
+      "pad": 0,
+      "seed": 0,
+      "target_code_label": "TC",
+      "target_addr": 3255,
+      "control_reached_target": true,
+      "first_step_at_target": 3065,
+      "hell_sha256": "5bbfe840e31171dcf5c435c45baeabc835bdbe03da935d5782e863f09dabf1b3",
+      "mb_sha256": "580adfc165b6887f59ed5dd387785c41555c322c4a5446161bbe8558245d7b7b"
+    },
+    {
+      "case": "u_u__pad0_seed3",
+      "mech": "u_",
+      "pad": 0,
+      "seed": 3,
+      "target_code_label": "TC",
+      "target_addr": 58997,
+      "control_reached_target": true,
+      "first_step_at_target": 5068,
+      "hell_sha256": "aa6a65427c095bb292c5b8b25e102cb9cad89875717ad373ea81b4622d666448",
+      "mb_sha256": "32f46d17ebf654ed5474c141ced6a32a09d47001fd561a76b956ed90a48f8d7c"
+    },
+    {
+      "case": "u_u__pad1_seed0",
+      "mech": "u_",
+      "pad": 1,
+      "seed": 0,
+      "target_code_label": "TC",
+      "target_addr": 3255,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "8319b41779ab874e46a468b877f3d1267f44d961b45d9cef901f1ce35caa7768",
+      "mb_sha256": "8e21be77203132258573f3d6c606da3aa5c877d434c27e771ce9b92bf5796783"
+    },
+    {
+      "case": "u_u__pad1_seed3",
+      "mech": "u_",
+      "pad": 1,
+      "seed": 3,
+      "target_code_label": "TC",
+      "target_addr": 58997,
+      "control_reached_target": false,
+      "first_step_at_target": null,
+      "hell_sha256": "98cb09c534d06aad6ea503df5c7f1b67ac605e1b20f7b9418678dc47d86bfed5",
+      "mb_sha256": "54c37f0a88dd53f348738d9669f366f2f05a4844e532b78f8ee43520f0e28469"
+    }
+  ],
+  "summary": {
+    "moved_pad0": [
+      true,
+      true
+    ],
+    "moved_pad1": [
+      false,
+      false
+    ],
+    "u_pad0": [
+      true,
+      true
+    ],
+    "u_pad1": [
+      false,
+      false
+    ]
+  },
+  "claims": {
+    "U_RELATIVE_TRANSFER": "DEMONSTRATED",
+    "U_OFFSET_RESISTANT_XFER": "DESTROYED",
+    "MIDWRAP_P2_XFER": "NOT_DEMONSTRATED",
+    "READOUT2_MIDWRAP": "NOT_DEMONSTRATED"
+  },
+  "stop_condition_hit": "STOP #2 del compose: 'El fixture limpio pasa pero el adversarial d falla igual que MOVED'. Medido: con pad=1 tanto MOVED como U_ pierden el target. No se intentaron mas variantes.",
+  "evidence_key": {
+    "u_pad0_reaches_TC": "traza u_u__pad0_seed0: s=3064 c=3222 jmp md=3254 -> c=3254 -> c++ = 3255 = TC",
+    "u_pad1_fails": "u_u__pad1_seed0 out='X¨¨¨¨DâÞ' (basura); el control no llega al target",
+    "moved_pad0_reaches": "traza u_moved_pad0_seed0: s=3238 movd; s=3239 jmp md=3446 -> 3447 = ROT de C; OUT 'C'",
+    "moved_pad1_fails": "u_moved_pad1_seed0 out='X'; s=3253 c=29444 op=INV43 (celda no ejecutable)"
+  },
+  "not_demonstrated": [
+    "readout 2 celdas mid-wrap",
+    "readout 5 celdas",
+    "mod59049 real",
+    "segundo interprete",
+    "p=3,7,8",
+    "U_ en el interior de la cadena de 9 llamadas"
+  ],
+  "scope": "Microfixtures A/B/C; oraculo malbolge.py + traza; sin cambios en el readout previo."
+}

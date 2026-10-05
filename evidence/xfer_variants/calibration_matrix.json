@@ -1,0 +1,433 @@
+{
+  "format": "malbolge-lmao-calibration/1",
+  "metric": "out == str(9-p)+'9'",
+  "c1": "llamadas de advanceo antes de la cadena N1",
+  "c2": "llamadas de advanceo antes de la cadena N2",
+  "rows": [
+    {
+      "c1": 0,
+      "c2": 0,
+      "p": 1,
+      "expected": "89",
+      "observed": "89",
+      "match": true
+    },
+    {
+      "c1": 0,
+      "c2": 0,
+      "p": 2,
+      "expected": "79",
+      "observed": "88",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 0,
+      "p": 4,
+      "expected": "59",
+      "observed": "68",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 0,
+      "p": 5,
+      "expected": "49",
+      "observed": "58",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 0,
+      "p": 6,
+      "expected": "39",
+      "observed": "48",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 1,
+      "p": 1,
+      "expected": "89",
+      "observed": "88",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 1,
+      "p": 2,
+      "expected": "79",
+      "observed": "87",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 1,
+      "p": 4,
+      "expected": "59",
+      "observed": "67",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 1,
+      "p": 5,
+      "expected": "49",
+      "observed": "57",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 1,
+      "p": 6,
+      "expected": "39",
+      "observed": "47",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 2,
+      "p": 1,
+      "expected": "89",
+      "observed": "87",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 2,
+      "p": 2,
+      "expected": "79",
+      "observed": "86",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 2,
+      "p": 4,
+      "expected": "59",
+      "observed": "66",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 2,
+      "p": 5,
+      "expected": "49",
+      "observed": "56",
+      "match": false
+    },
+    {
+      "c1": 0,
+      "c2": 2,
+      "p": 6,
+      "expected": "39",
+      "observed": "46",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 0,
+      "p": 1,
+      "expected": "89",
+      "observed": "79",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 0,
+      "p": 2,
+      "expected": "79",
+      "observed": "78",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 0,
+      "p": 4,
+      "expected": "59",
+      "observed": "58",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 0,
+      "p": 5,
+      "expected": "49",
+      "observed": "48",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 0,
+      "p": 6,
+      "expected": "39",
+      "observed": "38",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 1,
+      "p": 1,
+      "expected": "89",
+      "observed": "78",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 1,
+      "p": 2,
+      "expected": "79",
+      "observed": "77",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 1,
+      "p": 4,
+      "expected": "59",
+      "observed": "57",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 1,
+      "p": 5,
+      "expected": "49",
+      "observed": "47",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 1,
+      "p": 6,
+      "expected": "39",
+      "observed": "37",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 2,
+      "p": 1,
+      "expected": "89",
+      "observed": "77",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 2,
+      "p": 2,
+      "expected": "79",
+      "observed": "76",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 2,
+      "p": 4,
+      "expected": "59",
+      "observed": "56",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 2,
+      "p": 5,
+      "expected": "49",
+      "observed": "46",
+      "match": false
+    },
+    {
+      "c1": 1,
+      "c2": 2,
+      "p": 6,
+      "expected": "39",
+      "observed": "36",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 0,
+      "p": 1,
+      "expected": "89",
+      "observed": "69",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 0,
+      "p": 2,
+      "expected": "79",
+      "observed": "68",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 0,
+      "p": 4,
+      "expected": "59",
+      "observed": "48",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 0,
+      "p": 5,
+      "expected": "49",
+      "observed": "38",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 0,
+      "p": 6,
+      "expected": "39",
+      "observed": "28",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 1,
+      "p": 1,
+      "expected": "89",
+      "observed": "68",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 1,
+      "p": 2,
+      "expected": "79",
+      "observed": "67",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 1,
+      "p": 4,
+      "expected": "59",
+      "observed": "47",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 1,
+      "p": 5,
+      "expected": "49",
+      "observed": "37",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 1,
+      "p": 6,
+      "expected": "39",
+      "observed": "27",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 2,
+      "p": 1,
+      "expected": "89",
+      "observed": "67",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 2,
+      "p": 2,
+      "expected": "79",
+      "observed": "66",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 2,
+      "p": 4,
+      "expected": "59",
+      "observed": "46",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 2,
+      "p": 5,
+      "expected": "49",
+      "observed": "36",
+      "match": false
+    },
+    {
+      "c1": 2,
+      "c2": 2,
+      "p": 6,
+      "expected": "39",
+      "observed": "26",
+      "match": false
+    }
+  ],
+  "by_combo": {
+    "c10_c20": {
+      "1": "89",
+      "2": "88",
+      "4": "68",
+      "5": "58",
+      "6": "48"
+    },
+    "c10_c21": {
+      "1": "88",
+      "2": "87",
+      "4": "67",
+      "5": "57",
+      "6": "47"
+    },
+    "c10_c22": {
+      "1": "87",
+      "2": "86",
+      "4": "66",
+      "5": "56",
+      "6": "46"
+    },
+    "c11_c20": {
+      "1": "79",
+      "2": "78",
+      "4": "58",
+      "5": "48",
+      "6": "38"
+    },
+    "c11_c21": {
+      "1": "78",
+      "2": "77",
+      "4": "57",
+      "5": "47",
+      "6": "37"
+    },
+    "c11_c22": {
+      "1": "77",
+      "2": "76",
+      "4": "56",
+      "5": "46",
+      "6": "36"
+    },
+    "c12_c20": {
+      "1": "69",
+      "2": "68",
+      "4": "48",
+      "5": "38",
+      "6": "28"
+    },
+    "c12_c21": {
+      "1": "68",
+      "2": "67",
+      "4": "47",
+      "5": "37",
+      "6": "27"
+    },
+    "c12_c22": {
+      "1": "67",
+      "2": "66",
+      "4": "46",
+      "5": "36",
+      "6": "26"
+    }
+  }
+}

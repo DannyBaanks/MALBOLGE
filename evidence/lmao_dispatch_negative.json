@@ -1,0 +1,25 @@
+{
+  "format": "malbolge-lmao-negative-dispatch-table/1",
+  "registered_on": "2026-10-02",
+  "goal": "Value-indexed computed branch: jump to a handler selected by a runtime value v, via 'd = v then Jmp reads mem[d]'. This is the structure a word-level ADD1 readout would need.",
+  "attempts": [
+    {
+      "design": "table at addresses 1..3, SEL holds v (0..2), d after MovD = v and post-increment makes Jmp read mem[v+1]",
+      "result": "COMPILE ERROR: 'HeLL program overlaps with generated initialization code'"
+    },
+    {
+      "design": "same but table at @49..51 with SEL holding an ASCII digit char ('0'..'2') so addresses stay in 49..51",
+      "result": "COMPILE ERROR: same overlap"
+    }
+  ],
+  "cause": "LMAO generates its runtime initialization code at the low addresses and refuses any program block (including a forced-offset data table) that overlaps it. A value-indexed dispatch table needs memory at address ~v, i.e. the very low range, for small values.",
+  "implication": "A value-indexed computed branch (the structure needed to decode the cycle-state tick into a word, and the structure behind Scheffer's 243-way branch for word ADD1) is not directly expressible as an LMAO data table at low addresses. The adder and the mod59049 counter avoid this entirely by encoding values in xlat2 cycle states and branching on which instruction (Nop vs MovD) the cycle cell currently executes.",
+  "claim": "LMAO_LOW_ADDRESS_DISPATCH_TABLE=NOT_DEMONSTRATED (bounded negative, two designs).",
+  "next_options": [
+    "Check whether LMAO has an option to relocate its init code or reserve low addresses.",
+    "Build the handler table at high addresses and find an arithmetic-free way to set d = base+v (e.g. keep the value pre-biased at all times).",
+    "Keep the cycle-state representation for MALDOOM's tick instead of a word readout."
+  ],
+  "captured_utc": "2026-10-03T04:45:03+00:00",
+  "superseded_by": "evidence/lmao_dispatch_mechanism.json (the broad conclusion was wrong; the narrow low-address-table negative stands)"
+}

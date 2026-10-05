@@ -1,0 +1,56 @@
+{
+  "format": "malbolge-e11-e14-vm-parity-hashes/1",
+  "captured_utc": "2026-10-02T18:24:34+00:00",
+  "algorithm": "sha256",
+  "files": {
+    "e15_vm_probe.py": "d3034341ad415216b728536aa510b0381d35b30dd5e7c7a3d26a138619bbb6a9",
+    "e11_e14_vm_parity.py": "f814471b56ef4c17925f0a5e66ce1425633292184efccce7c38ca2941029ceec",
+    "test_crazy_width_general.py": "1eb5882a8adfeda5c858fc3408cabf0a86d0c0199329762abbc6699c6f75d70c",
+    "test_e15_vm_probe.py": "846c834a529ede0aa8816ea6e2673a40ce7a6ecb75b483a6f37f4de8fd15fb64",
+    "evidence/e11_e14_vm_preregistration.json": "fcf5a61435cc925520d4353fda8e98d38794e5ed51f76cc24b5ec3def6f1af0d",
+    "evidence/e11_e14_vm_report.json": "a0d961072250892d75d4be1ae60bf575aebf85af68f8d5a179cf197ebb4eaa47",
+    "evidence/e15_vm_probe_pre_generalization_20261002.py.bak": "ca31bf1c398da652ea34abcce97367a4224013a0966d295836e38036d6e7552d"
+  },
+  "supersedes": {
+    "file": "evidence/e15_vm_hashes.json",
+    "entry": {
+      "e15_vm_probe.py": "ca31bf1c398da652ea34abcce97367a4224013a0966d295836e38036d6e7552d"
+    },
+    "reason": "e15_vm_probe.py was generalized 2026-10-02: load_full and execute now use crazy_width_general for arbitrary dimension (previously hardcoded 2-chunk/3-chunk branches). The superseded revision is preserved verbatim at evidence/e15_vm_probe_pre_generalization_20261002.py.bak (hash verified == the hash recorded in e15_vm_hashes.json). MALBOLGE had zero commits at edit time, so no git-history copy exists."
+  },
+  "e15_reverification_20261002": {
+    "method": "ad-hoc replica of e15_vm_probe.main() invariants with the generalized module; report not overwritten",
+    "e10_baseline": {
+      "run": "HALTED steps=3 stdout=5a regs a=90,c=2,d=2",
+      "initial_tape_sha256_match": true,
+      "final_tape_sha256_match": true
+    },
+    "e15_target": {
+      "run": "HALTED steps=3 stdout=5a regs a=90,c=2,d=2",
+      "initial_tape_sha256_match": true,
+      "final_tape_sha256_match": true
+    },
+    "recorded_in": "evidence/e15_vm_report.json + evidence/e15_vm_hashes.json full_tape_hashes"
+  },
+  "full_tape_hashes": {
+    "e11_initial": "c4687c7494e07debd9f3fd637d3ddfb34dc1bdd129a443c2417c7094898b35dc",
+    "e11_final": "0015a46ee198fc09398450a0eb90a3317528d86d44b52a79047b8a4f83c3c215",
+    "e12_initial": "8eee3d197742c7919c1b92e41a90742dd00fca79c41f168cfb65acfb2d6f5392",
+    "e12_final": "ceb4c6aa500e8c8deed4bcda205496aa354527a8c5ca21a8699c63635e0e7bc0",
+    "e13_initial": "d1e7fd076f5bc7cdb4f3341063647fbe814cff78a82d898aa17818cb629b423e",
+    "e13_final": "8c5d95c1dd1b179f976181ef71e774a3aa9104523d5b288329d728762f99e408",
+    "e14_initial": "e83c39c1f5213f4f8b62ed160803260bed3b45ffeca9ffc1c2d1373f73225462",
+    "e14_final": "b3a90f34c02c570c7ba8584255d8993cd180f4668b33adacaf5eb7821a24f072"
+  },
+  "negative_control": {
+    "dimension": 12,
+    "corruption": "offset[0] 0->1 applied to the frozen source at load/execute",
+    "observed": "INVALID invalid_opcode_24_at_0 steps=0",
+    "pass": true
+  },
+  "tests": {
+    "suite_command": "python3 -m unittest test_crazy_width_general test_e15_vm_probe test_e15_region_probe test_offset_epoch_ladder -v",
+    "result": "11/11 OK",
+    "unrelated_pre_existing_env_errors": "9 errors in test_labeled_asm (Windows .exe on Linux) and test_piton_malbolge_mirror (missing piton binary)"
+  }
+}

@@ -19,7 +19,18 @@ V0 (malbolge-anchuring)  V1 (episodic)                      V2 (primitivas)
   (el anchor NO computa)     (macro-observador ve 0→1)           = una época Malbolge
 ```
 
-## Los dos experimentos, ya ejecutados
+## Índice
+
+- [Los cuatro experimentos, ya ejecutados](#los-cuatro-experimentos-ya-ejecutados)
+- [Esposas (heredadas de V0, no negociables)](#esposas-heredadas-de-v0-no-negociables)
+- [Límites honestos](#límites-honestos)
+- [Reproducir desde cero](#reproducir-desde-cero)
+- [Tests](#tests)
+- [Readout del estado propio (cascada mod59049)](#readout-del-estado-propio-cascada-mod59049)
+- [Procedencia](#procedencia)
+- [License](#license)
+
+## Los cuatro experimentos, ya ejecutados
 
 ### V1 — la frontera (Classic, autocontenido)
 
@@ -118,6 +129,24 @@ tampered epoch output -> REJECTS (seal mismatch)
 computación Malbolge completa, y el loop retorna a través del anchor. El
 resultado es byte-idéntico al intérprete Brainfuck canónico.
 
+### V4 — estado completo en la frontera
+
+`v4.py` transporta `[ptr][cell0..cell7]` como un payload completo de 9 bytes.
+La época lee y vuelve a emitir los nueve bytes, incrementando el byte 1. Tres
+épocas producen `000000000000000000 -> 000100000000000000 ->
+000200000000000000 -> 000300000000000000`. Cada entrada y salida tiene SHA-256;
+replay y tamper gate pasan. El primer diseño con cursor interno largo falló la
+conservación del payload y se conserva en `evidence/v4_fullstate_probe.txt`.
+Esto demuestra transporte completo + transformación de slot seleccionado, no
+indexado dinámico arbitrario por el puntero.
+
+`dynamic_epoch.py` cierra la selección dinámica acotada: usa el payload de 17
+bytes `[ptr][flag0,cell0]...[flag7,cell7]`. El puntero escalar persiste y los
+flags one-hot son workspace consumible; la época Malbolge suma cada flag a su
+celda correspondiente. Los ocho valores de `ptr` pasan, con replay y tamper.
+La evidencia está en `evidence/dynamic_pointer_probe.txt`. Esto no reclama una
+cinta sin cota.
+
 ## Esposas (heredadas de V0, no negociables)
 
 - NO process resumption — cada época arranca fresca.
@@ -144,24 +173,6 @@ Arquitectura V3 (dicha recta): el driver posee la cinta + puntero + pc; cada
 cinta completa. Las primitivas de valor (`+ - > <`) son aritméticas reales; las
 de I/O y salto (`. , [ ]`) son épocas-testigo selladas. Nada de esto es un
 device de completitud; es la frontera macro expandida a las 8 primitivas.
-
-### V4 — estado completo en la frontera
-
-`v4.py` transporta `[ptr][cell0..cell7]` como un payload completo de 9 bytes.
-La época lee y vuelve a emitir los nueve bytes, incrementando el byte 1. Tres
-épocas producen `000000000000000000 -> 000100000000000000 ->
-000200000000000000 -> 000300000000000000`. Cada entrada y salida tiene SHA-256;
-replay y tamper gate pasan. El primer diseño con cursor interno largo falló la
-conservación del payload y se conserva en `evidence/v4_fullstate_probe.txt`.
-Esto demuestra transporte completo + transformación de slot seleccionado, no
-indexado dinámico arbitrario por el puntero.
-
-`dynamic_epoch.py` cierra la selección dinámica acotada: usa el payload de 17
-bytes `[ptr][flag0,cell0]...[flag7,cell7]`. El puntero escalar persiste y los
-flags one-hot son workspace consumible; la época Malbolge suma cada flag a su
-celda correspondiente. Los ocho valores de `ptr` pasan, con replay y tamper.
-La evidencia está en `evidence/dynamic_pointer_probe.txt`. Esto no reclama una
-cinta sin cota.
 
 ## Reproducir desde cero
 
@@ -372,6 +383,60 @@ Los tests que necesitan `./epoch` se marcan `skipped` si el binario no existe;
 rutas de los binarios se pueden forzar con `MALBOLGE_EPOCH` y
 `MALBOLGE_VM_RUNNER`. CI (`.github/workflows/tests.yml`) compila los binarios con
 zig 0.16 y corre la suite completa en Linux.
+
+## Readout del estado propio (cascada mod59049)
+
+`mod59049_readout_gen.py` genera programas HeLL/LMAO con 5 celdas de cascada
+(N1..N5) y celdas de parada, de modo que tras `T` ticks (producto de las
+longitudes de parada; ciclos xlat válidos: 2, 4, 5, 6, 9) un readout imprime
+los 5 dígitos base-9 del **estado de la cascada, leído desde dentro del
+mismo programa Malbolge** — no desde un host. Cada dígito lo produce una
+cadena de lectura mid-wrap (una llamada por posición, un wrap, y los bloques
+`a_kk` imprimen y transfieren). La verificación es doble: oráculo `malbolge.py`
+y segundo intérprete (`intermediate_vm_runner.zig`, compilado natively).
+
+| Claim | Estado |
+|---|---|
+| Readout integrado mod59049 (barrido 12/12 + potencias de 9 hasta 59049) | **DEMONSTRATED** |
+| Segundo intérprete (6/6 coincidencia en salida y pasos) | **DEMONSTRATED** |
+| Readout **no destructivo**: restauración estática (T=10, 5/5 celdas; generalidad T=5, 6, 9, 10, 12, 90 con paradas de 2 y 3 celdas) | **DEMONSTRATED** |
+| Lectura repetida sin reparación (relectura dentro del programa) | **DEMONSTRATED** |
+| `p=1` (orden de tick por programa) y dígito de posición 3 (T=12) | **DEMONSTRATED** |
+| LMAO valida etiquetas en compilación; presupuesto de espacio libre (~130 instr. avisa, ~165 falla) | **DEMONSTRATED** |
+| El readout simple es destructivo: consume 1 posición por celda; reparar exige conocer la posición (circular) | **DEMONSTRATED** |
+| `OFFSET_ORIGIN`: el offset crudo es función de la estructura de la cascada de paradas — `(+1,−1,0,0,0)` en dígitos para paradas estándar; `−8` en la celda 1 si hay parada de 9; se reparte con muchas paradas; independiente de T y del orden | **CARACTERIZADO** |
+| Lectura incremental (leer tick a tick pasando por el bucle) | **NOT_DEMONSTRATED** (límite fundamental) |
+
+Mecanismo (trazado sobre el `.mb` compilado):
+
+- `OUT` imprime el valor de una **celda de datos** (`a%256`, fijado por el
+  `ROT` anterior), no un literal del bloque: el dígito es un valor calibrado
+  de la celda espejo, y la calibración (`pre`/`shift` por cadena) compensa la
+  fase de la cascada.
+- El readout simple consume 1 posición por celda leída; añadir en cada bloque
+  `a_kk` las `9−kk` llamadas de restauración (constante de ese bloque) lo hace
+  no destructivo — acotado por el presupuesto de espacio libre de LMAO.
+- La lectura incremental falla porque la cascada es **flujo de control de un
+  solo uso**: en la segunda pasada su código ya está auto-cifrado (trazo:
+  pasada 1 = 55 `jmp`/8 `movd`; pasada 2 = sopa de ~50 ops distintos).
+  Refutadas por medición: "anclar `d` con `movd`" (lo roto es el flujo de
+  código, no la alineación de datos) y "K copias frescas del readout" (la
+  cascada no puede llegar a ninguna copia).
+
+Límites honestos:
+
+- **Lectura incremental:** para leerla K veces haría falta una cascada de
+  K pasadas (layout de flujo de control estable para K×T ejecuciones), que es
+  una tarea de layout de LMAO, no de generador.
+- **Offset:** caracterizado empíricamente; no hay fórmula primera-principios
+  sin el layout completo de LMAO.
+
+Evidencia: manifiesto append-only `evidence/readout_chain9_hashes.json`
+(223 archivos, SHA-256 por artifact) y los directorios por experimento:
+`evidence/mod59049_readout/` (barrido 12/12), `evidence/second_interpreter/`
+(6/6), `evidence/nondestructivo/` (consumo, reparación, generalidad),
+`evidence/destructivity/` (medición de destructividad con control absoluto),
+`evidence/lectura_incremental/` (trazos ROT→OUT, refutaciones, offsets).
 
 ## Procedencia
 

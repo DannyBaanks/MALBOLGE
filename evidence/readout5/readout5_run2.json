@@ -1,0 +1,214 @@
+{
+  "format": "malbolge-lmao-readout-gen/1",
+  "ncells": 5,
+  "pre": [
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "shift": [
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "st1_block": "MOV2",
+  "entry_restore": false,
+  "entry_cell": "none",
+  "sweep": [
+    2,
+    4,
+    5,
+    6
+  ],
+  "rows": [
+    {
+      "p": 2,
+      "ncells": 5,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "st1_block": "MOV2",
+      "entry_restore": false,
+      "entry_cell": "none",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "c8780bb50a6b98832512f415df50bc14d361a9fcbe6582cdb0afdb76be2912c7",
+      "mb_sha256": "af1659c5fc3ff3244233c35968a6913b44180041687941a2d89d1e418ae3bfd4",
+      "status": "HALTED",
+      "steps": 32350,
+      "out": "79999",
+      "len": 5,
+      "expected_digits": [
+        7,
+        9,
+        9,
+        9,
+        9
+      ],
+      "expected": "79999",
+      "digit_ok": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 4,
+      "ncells": 5,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "st1_block": "MOV2",
+      "entry_restore": false,
+      "entry_cell": "none",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "5af21d5fc2fb7ed64b17060ff66b744f67a4afd20c44bccdeffdd86ae18b9ca5",
+      "mb_sha256": "3cea82bc47dc37a26472fb953c9b0ebf115bfef4e0c213fd89c742aab8b10257",
+      "status": "HALTED",
+      "steps": 32343,
+      "out": "59999",
+      "len": 5,
+      "expected_digits": [
+        5,
+        9,
+        9,
+        9,
+        9
+      ],
+      "expected": "59999",
+      "digit_ok": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 5,
+      "ncells": 5,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "st1_block": "MOV2",
+      "entry_restore": false,
+      "entry_cell": "none",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "e690146be5240ca114e4de23a67cf2a4ee48000953ebfe65736157ae29af5f8e",
+      "mb_sha256": "a7187567bb7229b55358a69b30668070e5f25c51d4410dcfe22a9f6a86ddab71",
+      "status": "HALTED",
+      "steps": 32457,
+      "out": "49999",
+      "len": 5,
+      "expected_digits": [
+        4,
+        9,
+        9,
+        9,
+        9
+      ],
+      "expected": "49999",
+      "digit_ok": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 6,
+      "ncells": 5,
+      "pre": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "shift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "st1_block": "MOV2",
+      "entry_restore": false,
+      "entry_cell": "none",
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "ecbefdcb5c92e5cf9101aa29063610c2e47549ead2341e2780a41acae16487ed",
+      "mb_sha256": "85a9ab531361378daf63a9deef23820bcb3354b563764eb889de62396d81d6d1",
+      "status": "HALTED",
+      "steps": 32325,
+      "out": "39999",
+      "len": 5,
+      "expected_digits": [
+        3,
+        9,
+        9,
+        9,
+        9
+      ],
+      "expected": "39999",
+      "digit_ok": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    }
+  ],
+  "n_match": 4
+}

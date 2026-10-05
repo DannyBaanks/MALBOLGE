@@ -1,0 +1,64 @@
+{
+  "format": "malbolge-handwritten-mod59049-counter/1",
+  "registered_on": "2026-10-02",
+  "what": "Five cascaded xlat2 cycles of length 9 (N1..N5). N1 advances on every loop call; each wrap of Ni advances N(i+1). The wrap of N5 happens after exactly 9^5 = 59049 calls, prints 'Z' and halts.",
+  "why_59049": "9^5 = 59049 = 3^10, the exact modulus of the MALDOOM tick counter. Cycle length 9 exists in the xlat2 permutation (measured: cycle lengths 2,4,5,6,9,68).",
+  "oracle": {
+    "status": "HALTED",
+    "steps": 314258,
+    "out": "Z"
+  },
+  "counted_visits_to_N1": {
+    "measured": 59049,
+    "expected": 59049,
+    "exact": true,
+    "method": "instrumented copy of the classic interpreter counts C-register visits to N1 address 58996 (from LMAO .dbg); halts at the same step count as the oracle (314258)"
+  },
+  "program_sha256": "98db1b625e017cf4b824e651e27505871b825b6eac228da86edd05e9390d5cab",
+  "mb_cells": 4495,
+  "claim": "HANDWRITTEN_MOD59049_COUNTER=DEMONSTRATED: a Classic Malbolge program, hand-written in HeLL, whose top-level cycle wraps after exactly 59049 iterations and prints Z.",
+  "limit": "This is a counter modulo 59049 living in code-cell cycles; it is NOT yet a composable [d] = [d]+1 fragment on a memory word as MALDOOM's epoch contract wants.",
+  "captured_utc": "2026-10-03T04:04:21+00:00",
+  "rebuild_stability": {
+    "claim": "Byte-level builds are NOT reproducible (rand() fills unused cells, srand(time(NULL))); behavior is identical across builds.",
+    "measured": [
+      {
+        "attempt": 1,
+        "cells_sha256_prefix": "ffc36ae597f8a4cd9569",
+        "behavior": "Z"
+      },
+      {
+        "attempt": 2,
+        "cells_sha256_prefix": "dbbbbcd985253d45b701",
+        "behavior": "Z"
+      },
+      {
+        "attempt": 3,
+        "cells_sha256_prefix": "dd5912a893682d783360",
+        "behavior": "Z"
+      },
+      {
+        "attempt_earlier": "ad566f17c5c80f02",
+        "behavior": "Z"
+      }
+    ],
+    "note": "An earlier pair of rebuilds was byte-identical by chance (same time seed). Three spaced rebuilds produce three distinct hashes. Never record an 'expected' .mb hash for LMAO output."
+  },
+  "cross_interpreter": {
+    "oracle": {
+      "out": "Z",
+      "steps": 314258
+    },
+    "malbogost": {
+      "out": "Z"
+    },
+    "malbolge_engine": {
+      "out": "Z"
+    },
+    "bolge_zig": {
+      "out": "Z",
+      "steps": 314258,
+      "caveat": "the BOLG1 packing must strip whitespace from the .mb (the Zig VM does not strip it; malbolge.py does). With the raw file it reports input_underflow at 4256 steps; stripped, it matches exactly."
+    }
+  }
+}

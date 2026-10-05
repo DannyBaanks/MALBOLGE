@@ -1,0 +1,145 @@
+{
+  "format": "malbolge-lmao-readout-gen/1",
+  "ncells": 2,
+  "pre": [
+    1,
+    0
+  ],
+  "shift": [
+    0,
+    1
+  ],
+  "sweep": [
+    2,
+    4,
+    5,
+    6
+  ],
+  "rows": [
+    {
+      "p": 2,
+      "ncells": 2,
+      "pre": [
+        1,
+        0
+      ],
+      "shift": [
+        0,
+        1
+      ],
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "ef15841cb8c7c18b84f2a2ee6795884cf4d14d963775e77dd74a967d5c821614",
+      "mb_sha256": "ae376d2b14627db835c9cb032dec32678eb17af80d679096c74e3adf81842fd8",
+      "status": "HALTED",
+      "steps": 13872,
+      "out": "79",
+      "len": 2,
+      "expected_digits": [
+        7,
+        9
+      ],
+      "expected": "79",
+      "digit_ok": [
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 4,
+      "ncells": 2,
+      "pre": [
+        1,
+        0
+      ],
+      "shift": [
+        0,
+        1
+      ],
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "5221477384a35c5fd77405c3df4bdb2c722e9a75e9165b126efb06fcf35ea0d9",
+      "mb_sha256": "23be0139907d8d23ee76e27bc486ca3c31c18c18c2ce5eac2b29794fa5fddcf0",
+      "status": "HALTED",
+      "steps": 14065,
+      "out": "59",
+      "len": 2,
+      "expected_digits": [
+        5,
+        9
+      ],
+      "expected": "59",
+      "digit_ok": [
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 5,
+      "ncells": 2,
+      "pre": [
+        1,
+        0
+      ],
+      "shift": [
+        0,
+        1
+      ],
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "73182f8740e3554c4b4ef94fdf5b53ad426fabd4f9ead0b09e61ab19c91a3b26",
+      "mb_sha256": "ffb5c477c224bbf23bfcf7ababce3881008e08a80d8a823e89509951d1f534b7",
+      "status": "HALTED",
+      "steps": 14259,
+      "out": "49",
+      "len": 2,
+      "expected_digits": [
+        4,
+        9
+      ],
+      "expected": "49",
+      "digit_ok": [
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    },
+    {
+      "p": 6,
+      "ncells": 2,
+      "pre": [
+        1,
+        0
+      ],
+      "shift": [
+        0,
+        1
+      ],
+      "compile_rc": 0,
+      "stderr": "",
+      "hell_sha256": "61f683216e83518573f3244f2d4abe9a2d7b8e71f5919d31e4a3d214b98b49a1",
+      "mb_sha256": "2e685a16ab979efe56ed17cfbd01869e4b8e407f801bbcf0045d5cecc0858c58",
+      "status": "HALTED",
+      "steps": 14028,
+      "out": "39",
+      "len": 2,
+      "expected_digits": [
+        3,
+        9
+      ],
+      "expected": "39",
+      "digit_ok": [
+        true,
+        true
+      ],
+      "no_fallthrough": true,
+      "match": true
+    }
+  ],
+  "n_match": 4
+}

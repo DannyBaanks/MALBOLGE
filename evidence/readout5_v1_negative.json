@@ -1,0 +1,277 @@
+{
+  "format": "malbolge-lmao-readout5/1",
+  "question": "Puede un programa Malbolge (Classic, LMAO/HeLL) emitir el estado de su cascada de 5 ciclos de 9 como 5 digitos, sin interprete externo?",
+  "null_hypothesis": "El digito impreso no depende de la posicion previa p, o la cadena de 5 celdas no encadena (H0).",
+  "metric": "out == ''.join(str(9 - ((T // 9**(i-1)) % 9)) for i in 1..5) para cada T del sweep",
+  "relation": "T = sum_{i=1..5} (9 - D_i) * 9^(i-1)",
+  "sweep": [
+    0,
+    1,
+    2,
+    7,
+    8,
+    9,
+    10,
+    17,
+    18,
+    79,
+    80,
+    81
+  ],
+  "rows": [
+    {
+      "T": 0,
+      "predicted": "99999",
+      "hell_sha256": "a09596727fb9935e9111ee6391300dd0f76502d00f9d8aaa260f750701481b4a",
+      "hell_bytes": 3060,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "39fbea8cb45fd21cf93d640f4199a8b03efe7d3531a05ad738b943368f801e88",
+      "mb_bytes": 26585,
+      "oracle_raw": "('HALTED', 25818, b'9')",
+      "steps": 25818,
+      "out": "9",
+      "wall_s": 0.04,
+      "match": false
+    },
+    {
+      "T": 1,
+      "predicted": "89999",
+      "hell_sha256": "f022ab28ab82a6e11652d876900e3750ad61ea7571bca4ac6ac41b55e997c0b5",
+      "hell_bytes": 3150,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "d1154b2f20e0f0483f3b69987dc5d16c0d486628f03a1c298feaf9db0a790ef2",
+      "mb_bytes": 27450,
+      "oracle_raw": "('HALTED', 27208, b'8\\xb8\\xb8\\xdb\\xa8\\xed\\x17\\xa8\\x0f')",
+      "steps": 27208,
+      "out": "8¸¸Û¨í\u0017¨\u000f",
+      "wall_s": 0.04,
+      "match": false
+    },
+    {
+      "T": 2,
+      "predicted": "79999",
+      "hell_sha256": "3cc811033aa9cf11129c69085f7d54b65c75be6cd45712304060278615ae4b47",
+      "hell_bytes": 3300,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "0f36aa18bb479f75cb59a165292ebb78d8673cad7ade8b26c919b0ec5563c8d9",
+      "mb_bytes": 28283,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.91,
+      "match": false
+    },
+    {
+      "T": 7,
+      "predicted": "29999",
+      "hell_sha256": "cd70080bfedc9345a190cfdeacc01df473f97e1c17ee6f3da7d801e654209da7",
+      "hell_bytes": 4050,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "d13fee14788aa2afc54d5148109eb9a325b0a6cef3aa6da5d2661cc41f47e863",
+      "mb_bytes": 34199,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.88,
+      "match": false
+    },
+    {
+      "T": 8,
+      "predicted": "19999",
+      "hell_sha256": "2a4bf6bf7c5d7f26c6ed6bda189247e42c2340fb3c7eaeb1601d786f30425162",
+      "hell_bytes": 4200,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "094c1948440b331d9d5fec457ea7f257e13a373ffa704e0b268a45df07aeb9eb",
+      "mb_bytes": 35946,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.9,
+      "match": false
+    },
+    {
+      "T": 9,
+      "predicted": "98999",
+      "hell_sha256": "7a7c35f4d64c4e3c9292069a42315b1703d5803a40b41e8a29536f78aa757fb8",
+      "hell_bytes": 4350,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "c140d2ac7ce63cb93904d40bc34e99aa444a95b9d3820cf1b049495372fa5ecc",
+      "mb_bytes": 37589,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.88,
+      "match": false
+    },
+    {
+      "T": 10,
+      "predicted": "88999",
+      "hell_sha256": "5ec297d7a03513b626e81da14dd22cf43745d848ecad698afe739deb70b18ea6",
+      "hell_bytes": 4500,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "7520a8e82b550e6333c177184196d2fd19e9f67eca9a7f0577347c798121830a",
+      "mb_bytes": 38782,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.9,
+      "match": false
+    },
+    {
+      "T": 17,
+      "predicted": "18999",
+      "hell_sha256": "20102770511c0c4e9d0da7c0f2e7b4b9c7ef096272f11c30a350f323e1ec2c10",
+      "hell_bytes": 5620,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "9b03a0be908bf30bf79bed9eb08c4aaccdf0ca7f9bcb5cac1ffcf44a95a2390a",
+      "mb_bytes": 48299,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.89,
+      "match": false
+    },
+    {
+      "T": 18,
+      "predicted": "97999",
+      "hell_sha256": "146558b2b62f023bc0014afa65e1c340f90122e9f9b0c769d42767ea9ec8b963",
+      "hell_bytes": 5780,
+      "compile_rc": 0,
+      "compile_stderr": "",
+      "mb_sha256": "34134094e158905b21488140ff38ab03679dcfafa0974212789278f33c248e79",
+      "mb_bytes": 49433,
+      "oracle_raw": "('OUT_OF_FUEL', 5000000, b'')",
+      "steps": 5000000,
+      "out": "",
+      "wall_s": 0.94,
+      "match": false
+    },
+    {
+      "T": 79,
+      "predicted": "21999",
+      "hell_sha256": "016aa9cc164de1d8cf4eb48ae2c4152b86f08acf503d7c7d72878822ecc894d4",
+      "hell_bytes": 15540,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57902.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57902.\nError: Memory usage conflict while generating initialization c"
+    },
+    {
+      "T": 80,
+      "predicted": "11999",
+      "hell_sha256": "630cd794c1ae994b80de3c958e13004ab666903ea2f0d91bd9316eb79705ad06",
+      "hell_bytes": 15700,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Memory usage conflict while generating initialization c"
+    },
+    {
+      "T": 81,
+      "predicted": "99899",
+      "hell_sha256": "0cc71559297e9b9bec3f5a4933b814a24a3e0265afcc7a63290c1111b558f1bc",
+      "hell_bytes": 15860,
+      "compile_rc": 1,
+      "compile_stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Memory usage conflict while generating initialization c"
+    }
+  ],
+  "n_rows": 12,
+  "n_match": 0,
+  "mismatches": [
+    {
+      "T": 0,
+      "predicted": "99999",
+      "got": "9",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 1,
+      "predicted": "89999",
+      "got": "8¸¸Û¨í\u0017¨\u000f",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 2,
+      "predicted": "79999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 7,
+      "predicted": "29999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 8,
+      "predicted": "19999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 9,
+      "predicted": "98999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 10,
+      "predicted": "88999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 17,
+      "predicted": "18999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 18,
+      "predicted": "97999",
+      "got": "",
+      "compile_rc": 0,
+      "stderr": ""
+    },
+    {
+      "T": 79,
+      "predicted": "21999",
+      "got": null,
+      "compile_rc": 1,
+      "stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57902.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generat"
+    },
+    {
+      "T": 80,
+      "predicted": "11999",
+      "got": null,
+      "compile_rc": 1,
+      "stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generat"
+    },
+    {
+      "T": 81,
+      "predicted": "99899",
+      "got": null,
+      "compile_rc": 1,
+      "stderr": "Error: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generate initialization code for cell 57807.\nError: Free space exceeded (Add Malbolge command).\nInternal error: Cannot generat"
+    }
+  ],
+  "claim": "READOUT5_MALBOLGE=NOT_DEMONSTRATED",
+  "scope": "Oraculo malbolge.py unicamente; T desenrollado <=81 (el contador real llega a 59048 por wrap natural de N5). NO demuestra Stillwell ni lectura incremental.",
+  "not_demonstrated": [
+    "lectura en el mod59049 real (T=59048) sin desenrollar",
+    "replicacion en un segundo interprete",
+    "lectura sin destruir el estado (no destructiva) a escala"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "format": "malbolge-mod59049-instrumented/1",
+  "registered_on": "2026-10-02",
+  "method": "instrumented run of the same .mb; counts C-register visits to each cycle cell (addresses from LMAO .dbg).",
+  "visits": {
+    "N1": 59049,
+    "N2": 6561,
+    "N3": 729,
+    "N4": 81,
+    "N5": 9
+  },
+  "expected": {
+    "N1": 59049,
+    "N2": 6561,
+    "N3": 729,
+    "N4": 81,
+    "N5": 9
+  },
+  "base9_exact": true,
+  "claim": "The five 9-cycles implement a base-9 mixed-radix counter: N1 advances every call, and each Ni wraps exactly once per 9 advances of N(i-1). The chain is arithmetic, not a marker.",
+  "steps": 314258
+}

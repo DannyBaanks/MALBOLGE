@@ -1,0 +1,116 @@
+{
+  "format": "malbolge-lmao-digit-shift/1",
+  "hipotesis": "cada cadena despues de la primera tiene un desfase +1 de posicion; se compensa corrigiendo su tabla de digitos",
+  "rows": [
+    {
+      "shift2": false,
+      "p": 1,
+      "expected": "89",
+      "observed": "79",
+      "match": false,
+      "d1_ok": false,
+      "d2_ok": true,
+      "steps": 14098,
+      "hell_sha256": "9982f60182768609f8addfe56f0b815d8a6eb471991057188ad7df6f4adc302a"
+    },
+    {
+      "shift2": false,
+      "p": 2,
+      "expected": "79",
+      "observed": "79",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 13753,
+      "hell_sha256": "fa7a88ee67df755ad56cd17b1ac31362669e7e7dd03c07ddfbca321579820e2f"
+    },
+    {
+      "shift2": false,
+      "p": 4,
+      "expected": "59",
+      "observed": "59",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14450,
+      "hell_sha256": "7aa720a959f6244815179e4480f16c6dd564e879bf87c3ab5f77ea436ada5f19"
+    },
+    {
+      "shift2": false,
+      "p": 5,
+      "expected": "49",
+      "observed": "49",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14324,
+      "hell_sha256": "33b394365b10ee3f38ba6205a8225cb7ba9e2c47eabd55e25909d9d0e88a9016"
+    },
+    {
+      "shift2": false,
+      "p": 6,
+      "expected": "39",
+      "observed": "39",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14413,
+      "hell_sha256": "ddf42e39db6be41268aeb3debf81fc1181b031a58d115fdd185303425a1d90d0"
+    },
+    {
+      "shift2": true,
+      "p": 1,
+      "expected": "89",
+      "observed": "79",
+      "match": false,
+      "d1_ok": false,
+      "d2_ok": true,
+      "steps": 13932,
+      "hell_sha256": "200e6f99f45b5f0e879ed178cf9b1373929c670070582af1579ec7249cb68f9f"
+    },
+    {
+      "shift2": true,
+      "p": 2,
+      "expected": "79",
+      "observed": "79",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 13892,
+      "hell_sha256": "72de919afff0d49bb6d083d9d062ca13e7344c7475ccb9ba87dbb864b25c4097"
+    },
+    {
+      "shift2": true,
+      "p": 4,
+      "expected": "59",
+      "observed": "59",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14162,
+      "hell_sha256": "a3527d7edbbbb0f2fd2a30a68d26af45cc95ecc135d7dbe49e47ac0abaed62e3"
+    },
+    {
+      "shift2": true,
+      "p": 5,
+      "expected": "49",
+      "observed": "49",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14250,
+      "hell_sha256": "c47d9bc38fe7ef1ed2dba70809517a0d07818e2d628683a6df186f9631b01dce"
+    },
+    {
+      "shift2": true,
+      "p": 6,
+      "expected": "39",
+      "observed": "39",
+      "match": true,
+      "d1_ok": true,
+      "d2_ok": true,
+      "steps": 14048,
+      "hell_sha256": "6e8c29b2af778538bf387ab6da22f21d6ffef1410c9110b43f1ce02bf5560bb2"
+    }
+  ]
+}

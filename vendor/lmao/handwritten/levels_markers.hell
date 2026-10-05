@@ -1,0 +1,67 @@
+.CODE
+N1:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N2:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N3:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N4:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+N5:
+	Nop/Nop/Nop/Nop/Nop/Nop/Nop/Nop/MovD
+	Jmp
+
+ROT:
+	Rot/Nop
+	Jmp
+
+OUT:
+	Out/Nop
+	Jmp
+
+HALT:
+	Hlt
+
+MOVED:
+	MovD/Nop
+	Jmp
+
+.DATA {
+loop:
+	R_MOVED
+ENTRY:
+	N1 w1
+	MOVED loop
+w1:
+	N2 w2
+	ROT C1 R_ROT
+	OUT ?- R_OUT
+	MOVED loop
+w2:
+	N3 w3
+	ROT C1 R_ROT
+	OUT ?- R_OUT
+	MOVED loop
+w3:
+	N4 w4
+	ROT C1 R_ROT
+	OUT ?- R_OUT
+	MOVED loop
+w4:
+	N5 w5
+	ROT C1 R_ROT
+	OUT ?- R_OUT
+	MOVED loop
+w5:
+	ROT 'Z'<<1 R_ROT
+	OUT ?- R_OUT
+	HALT ?-
+}

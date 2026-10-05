@@ -1,0 +1,38 @@
+{
+  "format": "malbolge-handwritten-lmao-hell/1",
+  "registered_on": "2026-10-02",
+  "what": "Three hand-written HeLL programs assembled to Classic Malbolge with the vendored LMAO and executed on the classic oracle malbolge.py.",
+  "programs": [
+    {
+      "name": "counter5",
+      "out": "....W",
+      "status": "HALTED",
+      "steps": 3906,
+      "hell_sha256": "2db9700bd586b5edf1c41b30e5e563488a776bfecbf7e0ab2e9c5ec47d880ffd"
+    },
+    {
+      "name": "carry_5x2",
+      "out": "5X",
+      "status": "HALTED",
+      "steps": 3370,
+      "hell_sha256": "cfd204f0e85332184b90307509b6d65f17fbf8152880461783adc2762dce921a"
+    },
+    {
+      "name": "print_h",
+      "out": "H",
+      "status": "HALTED",
+      "steps": 1833,
+      "hell_sha256": "7bcbccff251ed6c19ea74fed055eb2b1fda71a9ef2df12316da147ccd128fecb"
+    },
+    {
+      "name": "nine_cycle",
+      "out": "TTTTTTTTB",
+      "status": "HALTED",
+      "steps": 3746,
+      "hell_sha256": "8f1be877c050c67f7f1d6c05b24c50aba0dc3e40ad06a0f49fca5db0ad4dfe5b"
+    }
+  ],
+  "mechanism": "counter5 advances a 5-cycle on every call and prints 'W' when the cycle wraps. carry_5x2 adds a second 2-cycle that advances only when the 5-cycle wraps ('5' at the first wrap of LOW, 'X' at the wrap of HIGH), which is the ripple-carry mechanism the LMAO adder uses for decimal digits. print_h loads 'H' by rotating 216 (rot(216)=72) and outputs it.",
+  "claim": "HANDWRITTEN_HELL_CYCLES_AND_CARRY=DEMONSTRATED on the local Classic oracle.",
+  "captured_utc": "2026-10-03T03:10:44+00:00"
+}

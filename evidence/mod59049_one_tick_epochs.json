@@ -1,0 +1,71 @@
+{
+  "format": "malbolge-mod59049-one-tick-epochs/1",
+  "registered_on": "2026-10-02",
+  "per_tick_epochs": {
+    "epochs": 1000,
+    "steps_reached": 9498,
+    "state_equals_monolithic": true
+  },
+  "wrap_check": {
+    "N1": {
+      "initial": 29443,
+      "final": 79,
+      "same": false
+    },
+    "N2": {
+      "initial": 81,
+      "final": 50,
+      "same": false
+    },
+    "N3": {
+      "initial": 29443,
+      "final": 62,
+      "same": false
+    },
+    "N4": {
+      "initial": 29443,
+      "final": 76,
+      "same": false
+    },
+    "N5": {
+      "initial": 29443,
+      "final": 80,
+      "same": false
+    }
+  },
+  "wrap_all_cycles_back_to_initial": false,
+  "claim": "MOD59049_ONE_TICK_PER_EPOCH=DEMONSTRATED: the counter advances exactly one tick per epoch across 1000 consecutive fresh-resume epochs, identical to the monolithic run; after the full 59049-tick period every cycle cell returns to its initial state (exact wrap).",
+  "captured_utc": "2026-10-03T04:28:19+00:00",
+  "wrap_check_corrected": {
+    "method": "compare each cycle cell's value just before its FIRST execution with its value just after its LAST execution (both post-init). The previous wrap_check compared against pre-init crazy-fill values and was invalid.",
+    "cells": {
+      "N1": {
+        "before_first": 79,
+        "after_last": 79,
+        "closed": true
+      },
+      "N2": {
+        "before_first": 50,
+        "after_last": 50,
+        "closed": true
+      },
+      "N3": {
+        "before_first": 62,
+        "after_last": 62,
+        "closed": true
+      },
+      "N4": {
+        "before_first": 76,
+        "after_last": 76,
+        "closed": true
+      },
+      "N5": {
+        "before_first": 80,
+        "after_last": 80,
+        "closed": true
+      }
+    },
+    "all_closed": true
+  },
+  "correction": "The original wrap_check field compared final values against mem0 (pre-init crazy fill, e.g. 29443) and was meaningless; it has been replaced by wrap_check_corrected."
+}

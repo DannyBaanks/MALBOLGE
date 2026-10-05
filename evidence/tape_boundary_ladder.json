@@ -1,0 +1,46 @@
+{
+  "format": "malbolge-tape-boundary-ladder/1",
+  "registered_on": "2026-10-02",
+  "question": "What actually limits the savestate epoch generated_bf(N) on the Free-assisted backend, and is the limit address space?",
+  "method": [
+    "1. Compiling and running generated_bf(N) directly gave a ceiling that looked like 110 and moved with the input state, so it was not a clean capacity number.",
+    "2. semantic.differential() compares the Free backend against the independent BFIR1 reference VM on stdout, the whole 256-cell tape and the final pointer. On the unpatched tree it is OK for N<=110 and BackendNotHalted for N>=111.",
+    "3. Padding the Brainfuck with semantically inert ',[-]' after all output, holding N=105 fixed, moves the same boundary. So the limit is compiled program length, not tape cells.",
+    "4. Boundary search on padding: last OK at 990 compiled cells, first fail at 1004.",
+    "5. MalbolgeCore.runWithTrace showed the first bad opcode at c=1000, with cells there holding 0/1 instead of program characters. max_addr for N=111 is 3412 vs 1255 for N=110.",
+    "6. The Free core hardcodes the tape base in three places: cellWrite(1000 + tape_index, 0), d = 999, and while (tape_index < 256).",
+    "7. Parameterising all three in a /tmp copy of vendor/malfuck (repo untouched) lifts the differential to N=4096."
+  ],
+  "three_hardcoded_literals": {
+    "malbolge_free.zig:448": "try self.cellWrite(1000 + tape_index, 0);",
+    "malbolge_free.zig:453": "d = 999;",
+    "malbolge_free.zig:447": "while (tape_index < 256)",
+    "note": "semantic.zig also declares TAPE_BASE_ADDR=1000, but that one is only the read-back; changing it alone moved nothing, which is what proved the limit was elsewhere."
+  },
+  "evidence_before_patch": {
+    "differential_ok_max_N": 110,
+    "boundary_last_ok_program_cells": 990,
+    "boundary_first_fail_program_cells": 1004,
+    "first_bad_opcode_at_cell": 1000,
+    "max_addr_touched_N110": 1255,
+    "max_addr_touched_N111": 3412
+  },
+  "evidence_after_patch": {
+    "TAPE_BASE_RUNTIME": 50000,
+    "TAPE_LEN_RUNTIME": 4096,
+    "TAPE_SIZE": 4096,
+    "differential_ok": [
+      256,
+      384,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "status": "backend Free == BFIR1 reference on stdout, full 4096-cell tape and final pointer"
+  },
+  "residual_limit": "The compiled program must end below TAPE_BASE. At ~9 program cells per tape cell and TAPE_BASE=10000, N=1024 (9219 cells) passes and N=2048 (18435 cells) collides again; TAPE_BASE=50000 lifts it.",
+  "claim": "TAPE_SIZE_IS_NOT_THE_LIMIT=DEMONSTRATED. SAVESTATE_EPOCH_TWO_IMPL_PARITY=DEMONSTRATED up to 4096 cells under a parameterised base. SAVESTATE_EPOCH_UNBOUNDED=NOT_DEMONSTRATED, now bounded by TAPE_BASE vs program length rather than by 256.",
+  "repo_untouched": true,
+  "captured_utc": "2026-10-02T23:30:30+00:00"
+}

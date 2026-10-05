@@ -1,0 +1,55 @@
+{
+  "format": "malbolge-lmao-chain9/1",
+  "question": "Puede Malbolge leer su propio estado de ciclo (posicion p) emitiendo un digito, sin salirse a un interprete externo?",
+  "null_hypothesis": "La cadena de 9 llamadas no despacha al noveno label (H0).",
+  "control": "chain8 = 8 llamadas + 'X' explicito en fallthrough: prueba que el wrap NO ocurre antes de la novena llamada.",
+  "metric": "chain9_out == '9' AND chain8_out == 'X'",
+  "cases": {
+    "chain9": {
+      "hell_sha256": "b87f6ddddae9caffaee24caf5db5a1def5fd644b1bd73a72cc653b568f162868",
+      "hell_bytes": 610,
+      "compile_rc": 0,
+      "compile_stdout": "This is LMAO v0.6.0 (Low-level Malbolge Assembler, Ooh!) by Matthias Lutter.\nMalbolge code written to /tmp/lmao_work/chain9.mb",
+      "compile_stderr": "",
+      "mb_sha256": "87667af6ce656d9edd12986c7a5e215530b22ef382a4237c1b3ba01fe23e314d",
+      "mb_bytes": 6657,
+      "oracle_raw": "('HALTED', 6442, b'9')",
+      "halted": true,
+      "steps": 6442,
+      "out_bytes": [
+        57
+      ],
+      "out": "9",
+      "wall_s": 0.08
+    },
+    "chain8": {
+      "hell_sha256": "d6e356758c6df8370ce181e0da28c1c3a40ee8bbd661a7fad7fbac1135efe729",
+      "hell_bytes": 597,
+      "compile_rc": 0,
+      "compile_stdout": "This is LMAO v0.6.0 (Low-level Malbolge Assembler, Ooh!) by Matthias Lutter.\nMalbolge code written to /tmp/lmao_work/chain8.mb",
+      "compile_stderr": "",
+      "mb_sha256": "d5da41082a78bbc1f06252cd09e36e4fa0a032eee5bb886a81a8ccfe419979b6",
+      "mb_bytes": 6657,
+      "oracle_raw": "('HALTED', 6421, b'X')",
+      "halted": true,
+      "steps": 6421,
+      "out_bytes": [
+        88
+      ],
+      "out": "X",
+      "wall_s": 0.08
+    }
+  },
+  "verdict": {
+    "metric": "chain9_out == '9' AND chain8_out == 'X'",
+    "chain9_out": "9",
+    "chain8_out": "X",
+    "h1_supported": true
+  },
+  "claim": "CHAIN_CALL_WRAP_LABEL=DEMONSTRATED (llamada k -> label k solo al envolver; ciclo en 0 envuelve en la 9)",
+  "scope": "Solo el idioma HeLL/LMAO Classic y el oráculo malbolge.py. NO demuestra readout de 5 digitos ni de mod59049.",
+  "not_demonstrated": [
+    "readout completo de 5 celdas (59049 estados)",
+    "replicacion en un segundo interprete"
+  ]
+}

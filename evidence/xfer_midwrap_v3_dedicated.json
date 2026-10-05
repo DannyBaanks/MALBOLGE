@@ -1,0 +1,132 @@
+{
+  "format": "malbolge-lmao-xfer-v7/1",
+  "question": "El fallo del readout mid-wrap es agotamiento del bloque MOVED compartido o alineacion de d?",
+  "null_hypothesis": "Es agotamiento del bloque compartido (H0).",
+  "metric": "out == str(9-p) + '9' para p in {1,2,4,5,6}",
+  "result": "v7shared y v7ded producen salidas IDENTIFIQUES -> H0 DESTRUIDA como causa unica",
+  "rows": [
+    {
+      "variant": "v7shared_p1",
+      "p": 1,
+      "expected": "89",
+      "compile_rc": 0,
+      "hell_sha256": "b3c8217eec74d385d26847543dac707cffb03f01c0a92c96b4122abe237d5981",
+      "mb_sha256": "1d395a3129306e05df5ac28648b5b566dbc971f0877391d6fac973001051ca9a",
+      "status": "HALTED",
+      "steps": 14048,
+      "out": "7899",
+      "match": false
+    },
+    {
+      "variant": "v7shared_p2",
+      "p": 2,
+      "expected": "79",
+      "compile_rc": 0,
+      "hell_sha256": "9d3f802010d636b14bb02f627d765cde3f26ecec54f3d22cbde9c93be230549a",
+      "mb_sha256": "f4ca7af491286aae0a128735f66ca840d8de185ddf1d87293e93ba26fb1f2826",
+      "status": "HALTED",
+      "steps": 14039,
+      "out": "7898",
+      "match": false
+    },
+    {
+      "variant": "v7shared_p4",
+      "p": 4,
+      "expected": "59",
+      "compile_rc": 0,
+      "hell_sha256": "3c91896bf0acdc30c873c2109ca482dc28e4a7472637d7937abc21b37c480332",
+      "mb_sha256": "37ff653e74880374f23dafd4ab0523a2438f44679f7f4245bfd456b5cbc69126",
+      "status": "HALTED",
+      "steps": 13864,
+      "out": "567898",
+      "match": false
+    },
+    {
+      "variant": "v7shared_p5",
+      "p": 5,
+      "expected": "49",
+      "compile_rc": 0,
+      "hell_sha256": "21f76d2cfc0982d9446f49b007278f6677eeaada1f7fd83947e1634cf2e3e241",
+      "mb_sha256": "9e704ea98e04380588f0d25f0df71e99d0611dff35dd0de12c80fb8524cea058",
+      "status": "HALTED",
+      "steps": 13852,
+      "out": "4567898",
+      "match": false
+    },
+    {
+      "variant": "v7shared_p6",
+      "p": 6,
+      "expected": "39",
+      "compile_rc": 0,
+      "hell_sha256": "3252dc66ebe8d5129fd06ed45f0037a10d6395fdd93f726ef79e9847b437fe83",
+      "mb_sha256": "ed2444b7b1329e09d4b9e1dd0ddda4592ca3ec87a5e73fe887588d221a92d7ce",
+      "status": "HALTED",
+      "steps": 13855,
+      "out": "34567898",
+      "match": false
+    },
+    {
+      "variant": "v7ded_p1",
+      "p": 1,
+      "expected": "89",
+      "compile_rc": 0,
+      "hell_sha256": "94133f6a609921ecda9debdc6f48507f56aa2802f941923613ed6741a3e5386e",
+      "mb_sha256": "3610426384ed54fceafc3a50e41cfc8a917242c3d3f4fee62b4367968a9d24d1",
+      "status": "HALTED",
+      "steps": 13960,
+      "out": "7899",
+      "match": false
+    },
+    {
+      "variant": "v7ded_p2",
+      "p": 2,
+      "expected": "79",
+      "compile_rc": 0,
+      "hell_sha256": "42b3d3d2b9a7ef21af9ce4c6eb72e649612ce6c10b4239cfa728833f8671e58a",
+      "mb_sha256": "b10caf95afeb983a1a4f4c5e3045d57d9ef5742df0b2f9df7790719357d23638",
+      "status": "HALTED",
+      "steps": 13987,
+      "out": "7898",
+      "match": false
+    },
+    {
+      "variant": "v7ded_p4",
+      "p": 4,
+      "expected": "59",
+      "compile_rc": 0,
+      "hell_sha256": "317b6c7ed01eeb4cb22b4b93f7c714b3f4458c5345335490cf7844ca625f0ebb",
+      "mb_sha256": "8648a6b103e675a25a19725e7bb16265bca3eaa6a778727b42a501cfc2db35e9",
+      "status": "HALTED",
+      "steps": 13765,
+      "out": "567898",
+      "match": false
+    },
+    {
+      "variant": "v7ded_p5",
+      "p": 5,
+      "expected": "49",
+      "compile_rc": 0,
+      "hell_sha256": "0cc73fa078f5cf11882f2cb482cbdb0875d01b0e207cccbc4309969e9205cc6e",
+      "mb_sha256": "38ab5ddf46dc387303c75084ad32ca884b425f350a648ae7b814b9b55a64ff65",
+      "status": "HALTED",
+      "steps": 14229,
+      "out": "4567898",
+      "match": false
+    },
+    {
+      "variant": "v7ded_p6",
+      "p": 6,
+      "expected": "39",
+      "compile_rc": 0,
+      "hell_sha256": "b41b9483ae2bfc6e64bdd8f614f20b80d346bdd190cbbb8c869a9410cccb7d8d",
+      "mb_sha256": "8aba94763bd7bc72e72199f016b12fe1576895ac717cbaa7a72af8320651ac3c",
+      "status": "HALTED",
+      "steps": 13756,
+      "out": "34567898",
+      "match": false
+    }
+  ],
+  "n_shared": 0,
+  "n_ded": 0,
+  "claim": "XFER_MIDWRAP=NOT_DEMONSTRATED; causaRemaining=ALIGNMENT_D"
+}
