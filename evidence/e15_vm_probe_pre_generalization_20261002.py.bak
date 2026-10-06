@@ -43,33 +43,6 @@ def crazy_chunk_table() -> array:
 CRAZY_CHUNKS = crazy_chunk_table()
 
 
-def crazy_width_general(a: int, b: int, dimension: int) -> int:
-    """crazy over exactly `dimension` trits, for ANY dimension >= 1.
-
-    Additive generalization of crazy_width (which refuses non-multiples of 5).
-    crazy is tritwise-independent, so full 5-trit chunks come from the table
-    and the leftover high trits (< 5) are processed directly. For dimensions
-    divisible by 5 the remainder loop runs zero times and the result is
-    bit-identical to crazy_width. Verified by test_general_parity below.
-    """
-    if dimension < 1:
-        raise ValueError("dimension must be >= 1")
-    value, place = 0, 1
-    remaining = dimension
-    while remaining >= CHUNK_TRITS:
-        value += CRAZY_CHUNKS[(a % CHUNK_BASE) * CHUNK_BASE + b % CHUNK_BASE] * place
-        a //= CHUNK_BASE
-        b //= CHUNK_BASE
-        place *= CHUNK_BASE
-        remaining -= CHUNK_TRITS
-    for _ in range(remaining):
-        value += CRAZY[b % 3][a % 3] * place
-        a //= 3
-        b //= 3
-        place *= 3
-    return value
-
-
 def crazy_width(a: int, b: int, dimension: int) -> int:
     if dimension % CHUNK_TRITS:
         raise ValueError("probe supports dimensions divisible by five")
@@ -102,15 +75,20 @@ def load_full(source: str, dimension: int, offsets: tuple[int, int, int]):
         if opcode not in VALID_OPS:
             return None, f"invalid_opcode_{opcode}_at_{position}", time.perf_counter() - started
         tape[position] = value
-    # Generalized 2026-10-02: any dimension >= 1. crazy is tritwise-independent,
-    # so the table handles full 5-trit chunks and the remainder loop handles the
-    # leftover high trits (runs zero times for E10/E15, hence bit-identical there;
-    # verified against committed E15 full-tape hashes, see test_general_parity).
-    # This replaces the hardcoded 2-chunk/3-chunk branches, which are preserved
-    # in git history but no longer needed.
+    chunks = dimension // CHUNK_TRITS
+    if chunks not in (2, 3):
+        raise ValueError("this probe supports only E10 and E15")
+    table, base = CRAZY_CHUNKS, CHUNK_BASE
     for position in range(len(chars), size):
         a, b = tape[position - 1], tape[position - 2]
-        tape[position] = crazy_width_general(a, b, dimension)
+        if chunks == 2:
+            tape[position] = (table[(a % base) * base + b % base] +
+                              table[((a // base) % base) * base + (b // base) % base] * base)
+        else:
+            tape[position] = (table[(a % base) * base + b % base] +
+                              table[((a // base) % base) * base + (b // base) % base] * base +
+                              table[((a // (base * base)) % base) * base +
+                                    (b // (base * base)) % base] * base * base)
     return tape, "loaded", time.perf_counter() - started
 
 
@@ -146,7 +124,7 @@ def execute(source: str, dimension: int, offsets: tuple[int, int, int],
         elif opcode == 40:
             d = tape[d]
         elif opcode == 62:
-            tape[d] = crazy_width_general(a, tape[d], dimension)
+            tape[d] = crazy_width(a, tape[d], dimension)
             a = tape[d]
         elif opcode == 81:
             return {"status": "HALTED", "halt_reason": "halt_opcode", "steps": steps,
