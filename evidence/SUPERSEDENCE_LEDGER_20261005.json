@@ -1,0 +1,184 @@
+{
+  "format": "malbolge.evidence-supersedence-ledger/1",
+  "generated": "2026-10-05",
+  "baseline_commit": "3dac801278fa0b90efaf7170e35ca306dc8ef6c2",
+  "scope": "path->sha256 refs in files/sha256 contexts of evidence/**/*.json, flat and nested forms (288 total). 277 close against HEAD; 11 reconciled here. Originals untouched. Embedded per-row artifact hashes (rows[*].hell_sha256 etc.) are data, not path references, and are out of scope.",
+  "method": "each recorded hash checked against every revision of its path (raw/LF/CRLF) and the HEAD tree",
+  "totals": {
+    "refs_total": 288,
+    "closed": 277,
+    "reconciled": 11,
+    "informational_supersedes_notes": 1
+  },
+  "entries": [
+    {
+      "evidence_file": "evidence/direct_encoding_20260912.hashes.json",
+      "entry": "quijote_divergence.py",
+      "recorded_sha256": "ccf86ed5ba668afe90f9295feef1143b66fb2085dcccb90a8b1fb6bbe7900005",
+      "current_sha256": "6508bcb1900fe8c636917c14de564c0dc489bfd60d748fa041dd8688b7661488",
+      "classification": "superseded-by-commit",
+      "detail": {
+        "predicate": "sha256(raw(blob@82076be)) == recorded",
+        "old_revision": "82076bea7750d821ccbb3e83242d8a17f2de9247",
+        "old_variant": "raw",
+        "superseded_by": "8d184127738362d7250cb685af0a13be84d08654",
+        "superseded_by_subject": "Mantenimiento: soporte Linux, tests del núcleo V1-V4, LICENSE y CI",
+        "superseded_by_date": "2026-09-24"
+      },
+      "reason": "Changed by the Linux port (82076be -> 8d18412, 2026-09-24). Recorded bytes are the pre-port revision.",
+      "verify": "git show 82076be:quijote_divergence.py | sha256sum"
+    },
+    {
+      "evidence_file": "evidence/direct_encoding_20260912.hashes.json",
+      "entry": "evidence/quijote_first_divergence_20260912.json",
+      "recorded_sha256": "b0d51afcd4975833e82668d0b810fbbb4b9daaef6f7a5dc66af831210f729834",
+      "current_sha256": "debbedcc7a3006e38be684a138ea5aa4ce7e16c343af00c7fb7f6583482a33d1",
+      "classification": "eol-artifact",
+      "detail": {
+        "predicate": "sha256(crlf(current_bytes)) == recorded",
+        "unchanged_since": "82076be",
+        "current_lf_sha256": "debbedcc7a3006e38be684a138ea5aa4ce7e16c343af00c7fb7f6583482a33d1"
+      },
+      "reason": "Captured on a Windows checkout (CRLF). Content identical; only line endings differ.",
+      "verify": "python3 verify_evidence_refs.py"
+    },
+    {
+      "evidence_file": "evidence/e15_region_hashes.json",
+      "entry": "evidence/e15_region_report.json",
+      "recorded_sha256": "832d958f098f51cf6df497c6f21751b22750d3bbe74ec18dc82b921fced0ce0f",
+      "current_sha256": "e61c1e139be90a1aec384dd32fd83053e97acaf2eae2912ab26c4a5dcf5cc8e7",
+      "classification": "eol-artifact",
+      "detail": {
+        "predicate": "sha256(crlf(current_bytes)) == recorded",
+        "unchanged_since": "82076be",
+        "current_lf_sha256": "e61c1e139be90a1aec384dd32fd83053e97acaf2eae2912ab26c4a5dcf5cc8e7"
+      },
+      "reason": "Captured on a Windows checkout (CRLF). Content identical; only line endings differ.",
+      "verify": "python3 verify_evidence_refs.py"
+    },
+    {
+      "evidence_file": "evidence/e15_vm_hashes.json",
+      "entry": "evidence/e15_vm_report.json",
+      "recorded_sha256": "71b841de0829f20ca7d77e298a5efe3dee08e80d5331bcaf6948fdb5920299e3",
+      "current_sha256": "a7a722ab141f24ec2c4a350a84f4c5c1558c11d9eec145102d73cb8fcb1b35c4",
+      "classification": "eol-artifact",
+      "detail": {
+        "predicate": "sha256(crlf(current_bytes)) == recorded",
+        "unchanged_since": "82076be",
+        "current_lf_sha256": "a7a722ab141f24ec2c4a350a84f4c5c1558c11d9eec145102d73cb8fcb1b35c4"
+      },
+      "reason": "Captured on a Windows checkout (CRLF). Content identical; only line endings differ.",
+      "verify": "python3 verify_evidence_refs.py"
+    },
+    {
+      "evidence_file": "evidence/e15_vm_hashes.json",
+      "entry": "evidence/E15_VM_EXPERIMENT.md",
+      "recorded_sha256": "5510fc18fa771de785819324f25293164f501f33ff1a6bbb430ca28d53e187ec",
+      "current_sha256": "7a162ff4a05725e339a4d96ff2a491619d628b5ec9115049933af6a2764803c9",
+      "classification": "not-recoverable",
+      "detail": {
+        "predicate": "none (recorded revision was never committed)",
+        "checked_revisions": 2,
+        "current_sha256": "7a162ff4a05725e339a4d96ff2a491619d628b5ec9115049933af6a2764803c9"
+      },
+      "reason": "Recorded revision matches no committed revision of the path (raw/LF/CRLF); presumed Windows-era working copy never committed.",
+      "verify": "python3 verify_evidence_refs.py   # documented gap"
+    },
+    {
+      "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",
+      "entry": "intermediate_vm_runner.exe",
+      "recorded_sha256": "006b585706d41138c9f9813ef09a261a856ecdee3540d15d48956e35a34917f1",
+      "current_sha256": null,
+      "classification": "artifact-excluded",
+      "detail": {
+        "predicate": "sha256(local artifact) == recorded (when present)",
+        "local_sha256": "006b585706d41138c9f9813ef09a261a856ecdee3540d15d48956e35a34917f1",
+        "local_size": 931328,
+        "regenerate": "python3 build_native.py (zig 0.16; on Linux emits extension-less intermediate_vm_runner)",
+        "note": "excluded by .gitignore (*.exe) on both sides; not present in a clean clone"
+      },
+      "reason": "Windows build artifact, excluded by policy and regenerable from intermediate_vm_runner.zig.",
+      "verify": "python3 verify_evidence_refs.py   # checks the local artifact when present"
+    },
+    {
+      "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",
+      "entry": "run_intermediate_sweep.py",
+      "recorded_sha256": "e92cfd155cdf860a9f431002092b60137efe4b0ac6c7293f13b890098b0a1e1c",
+      "current_sha256": "76799009320de698e26f65e8f746662a547a757d04b22464db29ce36f217db4c",
+      "classification": "superseded-by-commit",
+      "detail": {
+        "predicate": "sha256(raw(blob@82076be)) == recorded",
+        "old_revision": "82076bea7750d821ccbb3e83242d8a17f2de9247",
+        "old_variant": "raw",
+        "superseded_by": "8d184127738362d7250cb685af0a13be84d08654",
+        "superseded_by_subject": "Mantenimiento: soporte Linux, tests del núcleo V1-V4, LICENSE y CI",
+        "superseded_by_date": "2026-09-24"
+      },
+      "reason": "Changed by the Linux port (82076be -> 8d18412, 2026-09-24). Recorded bytes are the pre-port revision.",
+      "verify": "git show 82076be:run_intermediate_sweep.py | sha256sum"
+    },
+    {
+      "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",
+      "entry": "GUIA_BARRIDO_E11_E18.md",
+      "recorded_sha256": "4e6b015ebe4aeec38d6987381b420cfcfd1ddde17d5fe7b7564a3780286fcc96",
+      "current_sha256": "00a080806a5be51a00c45da759a65e637eda458d0f908cb19c05a1b52dfb4b6f",
+      "classification": "superseded-by-commit",
+      "detail": {
+        "predicate": "sha256(crlf(blob@82076be)) == recorded",
+        "old_revision": "82076bea7750d821ccbb3e83242d8a17f2de9247",
+        "old_variant": "crlf",
+        "superseded_by": "8d184127738362d7250cb685af0a13be84d08654",
+        "superseded_by_subject": "Mantenimiento: soporte Linux, tests del núcleo V1-V4, LICENSE y CI",
+        "superseded_by_date": "2026-09-24"
+      },
+      "reason": "Changed by the Linux port (82076be -> 8d18412, 2026-09-24); recorded as CRLF-normalized old bytes.",
+      "verify": "git show 82076be:GUIA_BARRIDO_E11_E18.md | sha256sum  # then CRLF-normalize"
+    },
+    {
+      "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",
+      "entry": "evidence/intermediate_vm_sweep_preregistration_addendum.json",
+      "recorded_sha256": "8f291e3b2badbe7173ae95c113056b457c8178c36a281c5b0637833f7c40d7e6",
+      "current_sha256": "eb0aaa03e2497a9266973dc2df9937c69e732ffe73713a33ebfc82b1369a8d3a",
+      "classification": "eol-artifact",
+      "detail": {
+        "predicate": "sha256(crlf(current_bytes)) == recorded",
+        "unchanged_since": "82076be",
+        "current_lf_sha256": "eb0aaa03e2497a9266973dc2df9937c69e732ffe73713a33ebfc82b1369a8d3a"
+      },
+      "reason": "Captured on a Windows checkout (CRLF). Content identical; only line endings differ.",
+      "verify": "python3 verify_evidence_refs.py"
+    },
+    {
+      "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",
+      "entry": "evidence/intermediate_vm_sweep_report.json",
+      "recorded_sha256": "e813ee861ff0269b18016c6031a5834c1aa444662e1f9731501397cd71402822",
+      "current_sha256": "d71b12894d9ec98ba967160dfa6dba02d614df196a297e013d8200168839c0ff",
+      "classification": "eol-artifact",
+      "detail": {
+        "predicate": "sha256(crlf(current_bytes)) == recorded",
+        "unchanged_since": "82076be",
+        "current_lf_sha256": "d71b12894d9ec98ba967160dfa6dba02d614df196a297e013d8200168839c0ff"
+      },
+      "reason": "Captured on a Windows checkout (CRLF). Content identical; only line endings differ.",
+      "verify": "python3 verify_evidence_refs.py"
+    },
+    {
+      "evidence_file": "evidence/e15_vm_hashes.json",
+      "entry": "e15_vm_probe.py",
+      "recorded_sha256": "ca31bf1c398da652ea34abcce97367a4224013a0966d295836e38036d6e7552d",
+      "current_sha256": "d3034341ad415216b728536aa510b0381d35b30dd5e7c7a3d26a138619bbb6a9",
+      "classification": "superseded-by-commit",
+      "detail": {
+        "predicate": "sha256(raw(blob@c6eae9f)) == recorded",
+        "old_revision": "c6eae9f957043079da3948745a9d69b84e5647d6",
+        "old_variant": "raw",
+        "superseded_by": "3dac801278fa0b90efaf7170e35ca306dc8ef6c2",
+        "superseded_by_subject": "e15_vm_probe: generalizacion crazy_width_general + snapshot pre-generalizacion",
+        "superseded_by_date": "2026-10-05"
+      },
+      "reason": "e15_vm_probe.py generalized 2026-10-02 (crazy_width_general); new revision published in 3dac801. Documented in evidence/e11_e14_vm_hashes.json (supersedes).",
+      "verify": "git show c6eae9f:e15_vm_probe.py | sha256sum"
+    }
+  ],
+  "no_original_modified": true
+}
