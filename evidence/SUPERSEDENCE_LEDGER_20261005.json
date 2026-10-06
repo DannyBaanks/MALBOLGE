@@ -1,14 +1,20 @@
 {
   "format": "malbolge.evidence-supersedence-ledger/1",
   "generated": "2026-10-05",
-  "baseline_commit": "3dac801278fa0b90efaf7170e35ca306dc8ef6c2",
+  "baseline_commit": "0a06e32c3e98c1a3e2facc8e3de323e9c966afbc",
   "scope": "path->sha256 refs in files/sha256 contexts of evidence/**/*.json, flat and nested forms (288 total). 277 close against HEAD; 11 reconciled here. Originals untouched. Embedded per-row artifact hashes (rows[*].hell_sha256 etc.) are data, not path references, and are out of scope.",
   "method": "each recorded hash checked against every revision of its path (raw/LF/CRLF) and the HEAD tree",
   "totals": {
     "refs_total": 288,
     "closed": 277,
     "reconciled": 11,
-    "informational_supersedes_notes": 1
+    "informational_supersedes_notes": 1,
+    "by_class": {
+      "artifact-excluded": 1,
+      "eol-artifact": 5,
+      "recovered-revision": 1,
+      "superseded-by-commit": 4
+    }
   },
   "entries": [
     {
@@ -75,14 +81,15 @@
       "entry": "evidence/E15_VM_EXPERIMENT.md",
       "recorded_sha256": "5510fc18fa771de785819324f25293164f501f33ff1a6bbb430ca28d53e187ec",
       "current_sha256": "7a162ff4a05725e339a4d96ff2a491619d628b5ec9115049933af6a2764803c9",
-      "classification": "not-recoverable",
+      "classification": "recovered-revision",
       "detail": {
-        "predicate": "none (recorded revision was never committed)",
-        "checked_revisions": 2,
-        "current_sha256": "7a162ff4a05725e339a4d96ff2a491619d628b5ec9115049933af6a2764803c9"
+        "predicate": "sha256(sidecar) == recorded",
+        "sidecar": "evidence/E15_VM_EXPERIMENT_pre_addendum_20260912.md",
+        "reconstruction": "slice before '## Correction addendum', strip trailing whitespace, single trailing LF (4313 bytes)",
+        "cross_check": "TIO recovery session cse_01LrXt4L3ooRxFUAGSoDs69f: addendum appended 2026-09-12 20:22:49 (COMMANDS.jsonl:178); e15_vm_hashes.json already existed at 19:53 (pre-addendum); sweep seal 20:23:20 recorded 7a162ff4 (current bytes)"
       },
-      "reason": "Recorded revision matches no committed revision of the path (raw/LF/CRLF); presumed Windows-era working copy never committed.",
-      "verify": "python3 verify_evidence_refs.py   # documented gap"
+      "reason": "Recovered byte-exactly: the recorded revision is the pre-addendum document.",
+      "verify": "sha256sum evidence/E15_VM_EXPERIMENT_pre_addendum_20260912.md"
     },
     {
       "evidence_file": "evidence/intermediate_vm_sweep_hashes.json",

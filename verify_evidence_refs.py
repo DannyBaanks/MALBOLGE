@@ -14,6 +14,8 @@ are handled through the ledger). References that do not close are reconciled in
   superseded-by-commit recorded = sha256(blob at an older revision, given variant)
   artifact-excluded    recorded = sha256 of a local build artifact excluded by
                        policy (.gitignore); not present in a clean clone
+  recovered-revision   recorded revision recovered byte-exactly into a sidecar
+                       file committed with the ledger
   not-recoverable      recorded revision was never committed; documented gap
 
 Exit status: 0 when every manifest reference is closed or reconciled, 1 if any
@@ -129,6 +131,12 @@ def classify(ref, index) -> tuple[str, str]:
                 return "reconciled", "artifact-excluded: local artifact matches recorded"
             return "UNKNOWN", "artifact-excluded: local artifact present but hash mismatch"
         return "reconciled", "artifact-excluded: not present in this checkout (expected)"
+    if cls == "recovered-revision":
+        detail = ent.get("detail", {})
+        side = HERE / str(detail.get("sidecar", ""))
+        if side.exists() and sha256_bytes(side.read_bytes()) == want:
+            return "reconciled", "recovered-revision: sidecar matches recorded"
+        return "UNKNOWN", "recovered-revision: sidecar missing or hash mismatch"
     if cls == "not-recoverable":
         return "reconciled", "not-recoverable: documented gap (see ledger)"
     return "UNKNOWN", f"unknown ledger class {cls!r}"
