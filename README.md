@@ -1,9 +1,14 @@
-# MALBOLGE — Episodic Anchuring
+# MALBOLGE v2.0 — Episodic Anchuring & Transiciones Atómicas
+
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/DannyBaanks/MALBOLGE)
+[![Classic](https://img.shields.io/badge/paradigm-Episodic%20Anchuring-purple.svg)]()
 
 El ancla (`malbolge-anchuring`) llevada a su conclusión conceptual:
 
 > **una ejecución Malbolge completa ≡ una transición atómica de la máquina
 > superior.**
+
+Parte de la **Suite Experimental de Macroestados y Épocas v2.0** del ecosistema Malbolge de ISyCo.
 
 No decimos que una *instrucción* Malbolge sea una *instrucción* Brainfuck.
 Decimos que una **época completa** de Malbolge es **una operación atómica** del
